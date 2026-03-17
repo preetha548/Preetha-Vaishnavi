@@ -1,29 +1,73 @@
-let index = 0;
-let slides = document.getElementsByClassName("banner");
+let students = [];
 
-function showSlide(i){
+// Navigation
+function showSection(id) {
+  document.querySelectorAll("#dashboard, #students, #attendance, #fees, #reports, #settings")
+    .forEach(sec => sec.style.display = "none");
 
-for(let s of slides){
-s.style.display = "none";
+  document.getElementById(id).style.display = "block";
 }
 
-slides[i].style.display = "block";
+// Add student
+function addStudent() {
+  let name = document.getElementById("name").value;
+  let marks = document.getElementById("marks").value;
+
+  students.push({name, marks});
+  displayStudents();
 }
 
-function changeSlide(step){
-index += step;
+// Display
+function displayStudents() {
+  let table = document.getElementById("studentTable");
+  table.innerHTML = "";
 
-if(index >= slides.length){
-index = 0;
+  students.forEach(s => {
+    table.innerHTML += `<tr><td>${s.name}</td><td>${s.marks}</td></tr>`;
+  });
+
+  document.getElementById("totalStudents").innerText = students.length;
+  document.getElementById("reportStudents").innerText = students.length;
 }
 
-if(index < 0){
-index = slides.length - 1;
+// Search
+function searchStudent() {
+  let value = document.getElementById("search").value.toLowerCase();
+
+  let rows = document.querySelectorAll("#studentTable tr");
+  rows.forEach(row => {
+    row.style.display = row.innerText.toLowerCase().includes(value) ? "" : "none";
+  });
 }
 
-showSlide(index);
+// Attendance
+function markAttendance() {
+  document.getElementById("attendanceStatus").innerText = "Marked Present ✔";
 }
 
-setInterval(function(){
-changeSlide(1);
-},3000);
+// Fees
+function payFees() {
+  let amt = document.getElementById("amount").value;
+  document.getElementById("paymentStatus").innerText = "Paid ₹" + amt;
+}
+
+// Dark Mode
+function darkMode() {
+  document.body.classList.toggle("bg-dark");
+  document.body.classList.toggle("text-white");
+}
+
+// Chart
+const ctx = document.getElementById('chart');
+
+new Chart(ctx, {
+  type: 'bar',
+  data: {
+    labels: ['Math', 'Science', 'English'],
+    datasets: [{
+      label: 'Marks',
+      data: [80, 70, 90],
+      backgroundColor: ['blue','green','orange']
+    }]
+  }
+});
