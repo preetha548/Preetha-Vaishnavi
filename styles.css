@@ -1,15 +1,43 @@
 body {
   font-family: sans-serif;
-  -webkit-font-smoothing: auto;
-  -moz-font-smoothing: auto;
-  -moz-osx-font-smoothing: grayscale;
-  font-smoothing: auto;
-  text-rendering: optimizeLegibility;
-  font-smooth: always;
-  -webkit-tap-highlight-color: transparent;
-  -webkit-touch-callout: none;
 }
 
-h1 {
-  font-size: 1.5rem;
+.header {
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.navigation {
+  margin: 1rem auto;
+  padding: 0.25rem;
+}
+
+.body-container {
+  max-width: 600px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  margin: 1rem auto;
+}
+
+input {
+  max-width: 40%;
+  margin: 1rem auto;
+  padding: 0.5rem;
+}
+
+button {
+  max-width: 50%;
+  margin: 1rem auto;
+  padding: 0.5rem;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+#output {
+  margin: 1rem auto;
+  font-weight: bold;
+  font-size: 18px;
 }
