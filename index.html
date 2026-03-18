@@ -2,148 +2,123 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Honda Coupon</title>
+<title>Customer Appreciation Special</title>
 <style>
-  body {
+body {
     font-family: Arial, sans-serif;
     background: #f4f4f4;
-    display: flex;
-    justify-content: center;
-    padding: 20px;
-  }
+}
 
-  .coupon {
-    width: 800px;
-    background: #fff;
+.coupon {
+    width: 700px;
+    margin: 30px auto;
     border: 2px dashed #333;
-    padding: 20px;
+    background: url('https://images.unsplash.com/photo-1511910849309-0dffb5a5d2c9') no-repeat center/cover;
+    color: #000;
     position: relative;
-  }
+    padding: 20px;
+    background-blend-mode: overlay;
+    background-color: rgba(255,255,255,0.85);
+}
 
-  .header {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-  }
-
-  .header h1 {
-    font-size: 28px;
-    margin: 0;
-  }
-
-  .header span {
-    color: #1e73be;
+.header {
+    font-size: 36px;
     font-weight: bold;
-  }
+    color: #1e4fa1;
+}
 
-  .title {
-    text-align: center;
-    font-weight: bold;
-    font-size: 26px;
-    margin: 15px 0;
-  }
-
-  .offer {
-    text-align: center;
-    font-size: 40px;
-    font-weight: bold;
-  }
-
-  .offer span {
-    font-size: 20px;
-    font-weight: normal;
-  }
-
-  .subtext {
-    text-align: center;
-    margin: 10px 0;
-    font-size: 16px;
-  }
-
-  .save {
-    position: absolute;
-    left: 10px;
-    top: 120px;
+.sub-header {
     font-size: 18px;
-    font-weight: bold;
-    transform: rotate(-10deg);
-  }
+    margin-top: 10px;
+}
 
-  .scissors {
-    position: absolute;
-    left: 10px;
-    bottom: 80px;
-    font-size: 40px;
-  }
-
-  .footer {
-    font-size: 12px;
-    color: #555;
+.table {
     margin-top: 20px;
-    text-align: center;
-  }
+    width: 100%;
+}
 
-  button {
-    display: block;
-    margin: 15px auto;
-    padding: 10px 20px;
+.row {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 0;
+    border-bottom: 1px dotted #555;
+}
+
+.left {
+    color: #d35400;
+    font-weight: bold;
+}
+
+.right {
+    color: #d35400;
+    font-weight: bold;
+}
+
+.footer {
+    margin-top: 20px;
+    font-size: 12px;
+}
+
+.logo {
+    font-size: 28px;
+    color: #1e4fa1;
+    font-weight: bold;
+    margin-top: 15px;
+}
+
+button {
+    margin-top: 15px;
+    padding: 10px 15px;
+    background: #1e4fa1;
+    color: white;
     border: none;
-    background: #1e73be;
-    color: #fff;
     cursor: pointer;
     border-radius: 5px;
-  }
+}
 
-  button:hover {
-    background: #155a94;
-  }
+button:hover {
+    background: #163b7a;
+}
 </style>
 </head>
+
 <body>
 
 <div class="coupon" id="coupon">
-  
-  <div class="header">
-    <h1>802 <span>Honda</span></h1>
-  </div>
+    <div class="header">CUSTOMER<br>APPRECIATION SPECIAL</div>
 
-  <div class="title">KEEP YOUR COOL ON THE ROAD</div>
+    <div class="sub-header">
+        Spend This on Parts or Service Repairs &nbsp;&nbsp;&nbsp; Save This:
+    </div>
 
-  <div class="offer">
-    SAVE 10% <span>off parts and labor</span>
-  </div>
+    <div class="table">
+        <div class="row"><div class="left">$50 - $100</div><div class="right">$10</div></div>
+        <div class="row"><div class="left">$101 - $200</div><div class="right">$20</div></div>
+        <div class="row"><div class="left">$201 - $300</div><div class="right">$30</div></div>
+        <div class="row"><div class="left">$301 - $400</div><div class="right">$40</div></div>
+        <div class="row"><div class="left">$401 - $500</div><div class="right">$50</div></div>
+        <div class="row"><div class="left">$501 or more</div><div class="right">$60</div></div>
+    </div>
 
-  <div class="subtext">
-    On any air conditioning work during the month of July and August.
-  </div>
+    <div class="logo">Honda Universe</div>
 
-  <div class="save">SAVE</div>
-  <div class="scissors">✂</div>
+    <div class="footer">
+        *Valid only at Honda Universe. Discount not applicable to tires or batteries.
+        Cannot be combined with other offers. Coupon must be presented at time of write-up.
+    </div>
 
-  <div class="footer">
-    Prices may vary by model. Plus taxes and fees where applicable.
-    Coupon not valid with any other offer. Limit one coupon per person.
-    Valid only at 802 Honda. Expires 8/31/2022.
-  </div>
-
-  <button onclick="printCoupon()">Print Coupon</button>
-
+    <button onclick="printCoupon()">Print Coupon</button>
 </div>
 
 <script>
 function printCoupon() {
-  const content = document.getElementById("coupon").innerHTML;
-  const win = window.open('', '', 'width=900,height=700');
-  win.document.write(`
-    <html>
-    <head>
-      <title>Print Coupon</title>
-    </head>
-    <body>${content}</body>
-    </html>
-  `);
-  win.document.close();
-  win.print();
+    var content = document.getElementById("coupon").innerHTML;
+    var win = window.open('', '', 'width=800,height=600');
+    win.document.write('<html><head><title>Print Coupon</title></head><body>');
+    win.document.write(content);
+    win.document.write('</body></html>');
+    win.document.close();
+    win.print();
 }
 </script>
 
