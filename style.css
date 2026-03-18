@@ -1,70 +1,39 @@
 body {
-  font-family: Arial, sans-serif;
-  background: #f4f4f4;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f0f0f0;
+}
+
+.header {
+    background: #007BFF;
+    color: white;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .container {
-  width: 700px;
-  margin: 30px auto;
-  background: white;
-  padding: 25px;
-  border: 2px solid #ddd;
+    padding: 20px;
 }
 
-h1 {
-  text-align: center;
-  margin-bottom: 20px;
-}
-
-h3 {
-  margin-top: 20px;
-}
-
-label {
-  display: block;
-  margin-top: 10px;
-  font-weight: bold;
-}
-
-input, textarea {
-  width: 100%;
-  padding: 8px;
-  margin-top: 5px;
-  border: none;
-  border-bottom: 1px solid #000;
-  outline: none;
-}
-
-textarea {
-  resize: none;
-  height: 60px;
-}
-
-.row {
-  display: flex;
-  gap: 10px;
-}
-
-.row input {
-  flex: 1;
+input, button {
+    margin: 5px;
+    padding: 8px;
 }
 
 button {
-  margin-top: 20px;
-  width: 100%;
-  padding: 10px;
-  background: black;
-  color: white;
-  border: none;
-  cursor: pointer;
+    cursor: pointer;
 }
 
-button:hover {
-  background: #333;
+table {
+    width: 100%;
+    margin-top: 10px;
+    border-collapse: collapse;
 }
 
-#message {
-  text-align: center;
-  color: green;
-  margin-top: 10px;
+table th, table td {
+    padding: 10px;
+    text-align: left;
 }
