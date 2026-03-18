@@ -1,43 +1,94 @@
 body {
-  font-family: sans-serif;
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f4f4f4;
 }
 
-.header {
-  max-width: 600px;
-  margin: 0 auto;
+.container {
+  max-width: 1100px;
+  margin: auto;
+  padding: 20px;
   text-align: center;
 }
 
-.navigation {
-  margin: 1rem auto;
-  padding: 0.25rem;
+header {
+  margin-bottom: 20px;
 }
 
-.body-container {
-  max-width: 600px;
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: #0077cc;
+}
+
+.logo span {
+  display: block;
+  font-size: 18px;
+}
+
+h1 {
+  color: #0077cc;
+  margin-top: 10px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.card {
+  border: 3px dashed #0077cc;
+  padding: 15px;
+  background: white;
+  border-radius: 10px;
+  text-align: left;
+}
+
+.card h2 {
+  color: #0077cc;
   text-align: center;
-  display: flex;
-  flex-direction: column;
-  margin: 1rem auto;
 }
 
-input {
-  max-width: 40%;
-  margin: 1rem auto;
-  padding: 0.5rem;
+.card h3 {
+  text-align: center;
+}
+
+.highlight {
+  color: red;
+  font-weight: bold;
+  text-align: center;
+}
+
+.price {
+  color: red;
+  font-size: 28px;
+  text-align: center;
+  font-weight: bold;
+}
+
+ul {
+  padding-left: 20px;
 }
 
 button {
-  max-width: 50%;
-  margin: 1rem auto;
-  padding: 0.5rem;
+  margin-top: 20px;
+  padding: 12px 25px;
+  background: red;
+  color: white;
+  border: none;
+  font-size: 16px;
   border-radius: 5px;
-  font-weight: bold;
   cursor: pointer;
 }
 
-#output {
-  margin: 1rem auto;
-  font-weight: bold;
-  font-size: 18px;
+button:hover {
+  background: darkred;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
 }

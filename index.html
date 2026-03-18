@@ -1,80 +1,151 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Registration Form</title>
-  <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<title>Honda Coupon</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    background: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+  }
+
+  .coupon {
+    width: 800px;
+    background: #fff;
+    border: 2px dashed #333;
+    padding: 20px;
+    position: relative;
+  }
+
+  .header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .header h1 {
+    font-size: 28px;
+    margin: 0;
+  }
+
+  .header span {
+    color: #1e73be;
+    font-weight: bold;
+  }
+
+  .title {
+    text-align: center;
+    font-weight: bold;
+    font-size: 26px;
+    margin: 15px 0;
+  }
+
+  .offer {
+    text-align: center;
+    font-size: 40px;
+    font-weight: bold;
+  }
+
+  .offer span {
+    font-size: 20px;
+    font-weight: normal;
+  }
+
+  .subtext {
+    text-align: center;
+    margin: 10px 0;
+    font-size: 16px;
+  }
+
+  .save {
+    position: absolute;
+    left: 10px;
+    top: 120px;
+    font-size: 18px;
+    font-weight: bold;
+    transform: rotate(-10deg);
+  }
+
+  .scissors {
+    position: absolute;
+    left: 10px;
+    bottom: 80px;
+    font-size: 40px;
+  }
+
+  .footer {
+    font-size: 12px;
+    color: #555;
+    margin-top: 20px;
+    text-align: center;
+  }
+
+  button {
+    display: block;
+    margin: 15px auto;
+    padding: 10px 20px;
+    border: none;
+    background: #1e73be;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+
+  button:hover {
+    background: #155a94;
+  }
+</style>
 </head>
 <body>
 
-<div class="container">
-  <h1>Registration Form</h1>
+<div class="coupon" id="coupon">
+  
+  <div class="header">
+    <h1>802 <span>Honda</span></h1>
+  </div>
 
-  <form id="regForm">
+  <div class="title">KEEP YOUR COOL ON THE ROAD</div>
 
-    <label>Child’s Name</label>
-    <input type="text" id="childName" required>
+  <div class="offer">
+    SAVE 10% <span>off parts and labor</span>
+  </div>
 
-    <label>Parent/Guardian Name</label>
-    <input type="text" id="parentName" required>
+  <div class="subtext">
+    On any air conditioning work during the month of July and August.
+  </div>
 
-    <label>Address</label>
-    <textarea id="address" required></textarea>
+  <div class="save">SAVE</div>
+  <div class="scissors">✂</div>
 
-    <label>E-mail Address</label>
-    <input type="email" id="email" required>
+  <div class="footer">
+    Prices may vary by model. Plus taxes and fees where applicable.
+    Coupon not valid with any other offer. Limit one coupon per person.
+    Valid only at 802 Honda. Expires 8/31/2022.
+  </div>
 
-    <label>Phone Numbers</label>
-    <div class="row">
-      <input type="text" placeholder="Home">
-      <input type="text" placeholder="Cell">
-      <input type="text" placeholder="Work">
-    </div>
+  <button onclick="printCoupon()">Print Coupon</button>
 
-    <h3>Age Information</h3>
-    <div class="row">
-      <input type="date" id="dob">
-      <input type="number" id="age" placeholder="Age">
-    </div>
-
-    <label>Last School Grade Completed</label>
-    <input type="text">
-
-    <label>Home Church</label>
-    <input type="text">
-
-    <label>Allergies / Medical Information / Other</label>
-    <textarea></textarea>
-
-    <h3>Emergency Contacts</h3>
-    <div class="row">
-      <input type="text" placeholder="Name">
-      <input type="text" placeholder="Phone">
-    </div>
-    <div class="row">
-      <input type="text" placeholder="Name">
-      <input type="text" placeholder="Phone">
-    </div>
-
-    <h3>Dismissal Information</h3>
-    <textarea placeholder="Who may pick up this child"></textarea>
-
-    <h3>Other Information</h3>
-    <input type="text" placeholder="Visioneer Group">
-
-    <label>Are parents helping with VBS?</label>
-    <div class="row">
-      <input type="text" placeholder="Yes/No">
-      <input type="text" placeholder="If yes, where?">
-    </div>
-
-    <button type="submit">Submit</button>
-
-  </form>
-
-  <p id="message"></p>
 </div>
 
-<script src="script.js"></script>
+<script>
+function printCoupon() {
+  const content = document.getElementById("coupon").innerHTML;
+  const win = window.open('', '', 'width=900,height=700');
+  win.document.write(`
+    <html>
+    <head>
+      <title>Print Coupon</title>
+    </head>
+    <body>${content}</body>
+    </html>
+  `);
+  win.document.close();
+  win.print();
+}
+</script>
+
 </body>
 </html>
