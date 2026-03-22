@@ -1,20 +1,23 @@
 {
-  "name": "small-3d-engine",
+  "name": "atm-demo",
   "version": "1.0.0",
-  "description": "It's not finished ...",
+  "description": "",
   "main": "index.html",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "serve"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/codesandbox-app/static-template.git"
   },
   "keywords": [],
-  "author": "Yarflam",
+  "author": "Ives van Hoorne",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/codesandbox-app/static-template/issues"
   },
-  "homepage": "https://github.com/codesandbox-app/static-template#readme"
+  "homepage": "https://github.com/codesandbox-app/static-template#readme",
+  "devDependencies": {
+    "serve": "^11.2.0"
+  }
 }

@@ -6,16 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Static Template</title>
+    <script src="money.js"></script>
     <link = rel="stylesheet" href="styles.css">
   </head>
   <body>
-    <div class="welcome">
-      <h1>Welcome</h1>
-      <a href="validation.html"
-        ><button type="button" class="begin">Begin</button></a
-      >
-    </div>
-    <footer class="main-footer">
+    <h2>
+      How much would you like to take?
+      <input type="text" id="withdraw" />
+    </h2>
+    <button onclick="withdraw(false)">Withdraw</button>
+    <footer>
       <p>24 Blue Street, Glasgow, MK64 97T | email@gmail.com</p>
       <a href="#">Help</a>
     </footer>
