@@ -1,50 +1,23 @@
-html,
-body {
-  border: solid 2px red;
-}
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700");
 
 body {
-  font-family: Arial, Helvetica, sans-serif;
-  margin: 0px;
+  margin: 0;
+  background: #000;
+  font-family: "Open Sans";
 }
-
 h1 {
-  font-size: 5rem;
-  color: white;
-  text-decoration: underline;
-}
-header {
-  margin: 0px;
-  padding: 25px;
-}
-
-footer {
-  background-color: darkgray;
-  padding: 5px;
-}
-
-.welcome {
-  background-image: linear-gradient(#37bfc9, #a6cbce);
-  padding-top: 50px;
-  padding-bottom: 100px;
-  height: 100%;
-}
-
-.main-header,
-.main-footer,
-.welcome {
+  color: #ffffff;
   text-align: center;
+  font-size: 20px;
 }
-
-.begin {
-  color: white;
-  margin-top: 150px;
-  background-color: transparent;
-  border: solid 5px white;
-  border-radius: 10px;
-  font-size: 2rem;
-}
-
-.total-amount {
-  color: black;
+canvas {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 500px;
+  height: 500px;
+  margin: auto;
+  border: 2px solid white;
 }
