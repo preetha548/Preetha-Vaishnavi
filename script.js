@@ -1,28 +1,31 @@
-const stairs = document.getElementById("stairs");
-const person = document.getElementById("person");
+document.getElementById("loanForm").addEventListener("submit", function(e) {
+  e.preventDefault();
 
-// Create stairs dynamically
-let stepCount = 10;
-for (let i = 0; i < stepCount; i++) {
-    let step = document.createElement("div");
-    step.classList.add("step");
-    step.style.marginLeft = i * 30 + "px";
-    stairs.appendChild(step);
-}
+  const firstName = document.getElementById("firstName").value.trim();
+  const lastName = document.getElementById("lastName").value.trim();
+  const email = document.getElementById("email").value.trim();
+  const mobile = document.getElementById("mobile").value.trim();
+  const marital = document.querySelector('input[name="marital"]:checked');
 
-// Animation
-function startClimb() {
-    let step = 0;
+  if (!firstName || !lastName || !email || !mobile) {
+    alert("Please fill all required fields.");
+    return;
+  }
 
-    let interval = setInterval(() => {
-        if (step >= stepCount) {
-            clearInterval(interval);
-            return;
-        }
+  if (!marital) {
+    alert("Please select marital status.");
+    return;
+  }
 
-        person.style.left = step * 30 + "px";
-        person.style.bottom = step * 25 + "px";
+  if (!validateEmail(email)) {
+    alert("Invalid email.");
+    return;
+  }
 
-        step++;
-    }, 500);
+  alert("Application submitted successfully!");
+  this.reset();
+});
+
+function validateEmail(email) {
+  return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
 }
