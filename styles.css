@@ -1,23 +1,61 @@
-@import url("https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700");
+:root {
+  --background: #f8f8f8;
+  --dark: #303032;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
 
 body {
-  margin: 0;
-  background: #000;
-  font-family: "Open Sans";
+  display: flex;
+  min-height: 100vh;
+  justify-content: center;
+  align-items: center;
+  background: var(--background);
 }
-h1 {
-  color: #ffffff;
-  text-align: center;
-  font-size: 20px;
+
+.box {
+  position: relative;
+  width: 8rem;
+  height: 8rem;
+  border: 0.4rem solid var(--dark);
+  background: var(--dark);
+  overflow: hidden;
+  outline: 0;
 }
-canvas {
+
+.box::before {
+  content: "YJ";
+  color: var(--background);
+  font-size: 3rem;
+  font-weight: 600;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.box::after {
+  content: "";
   position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  width: 500px;
-  height: 500px;
-  margin: auto;
-  border: 2px solid white;
+  left: 50%;
+  top: 50%;
+  width: 400%;
+  height: 400%;
+  background: var(--background);
+  border-radius: 45%;
+  animation: test 10s ease-in-out infinite;
+}
+
+@keyframes test {
+  0% {
+    transform: translate(-50%, -80%) rotate(0);
+  }
+  100% {
+    transform: translate(-50%, -150%) rotate(800deg);
+  }
 }
