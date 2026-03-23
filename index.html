@@ -1,88 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Loan Application (Table)</title>
-  <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-
-<div class="container">
-  <h2>Loan Application Form</h2>
-
-  <form id="loanForm">
-    <table>
-      <tr>
-        <td>First Name</td>
-        <td><input type="text" id="firstName" required></td>
-      </tr>
-
-      <tr>
-        <td>Last Name</td>
-        <td><input type="text" id="lastName" required></td>
-      </tr>
-
-      <tr>
-        <td>Title</td>
-        <td>
-          <select id="title" required>
-            <option value="">Select</option>
-            <option>Mr</option>
-            <option>Mrs</option>
-            <option>Ms</option>
-            <option>Dr</option>
-          </select>
-        </td>
-      </tr>
-
-      <tr>
-        <td>Marital Status</td>
-        <td>
-          <label><input type="radio" name="marital" value="Single"> Single</label>
-          <label><input type="radio" name="marital" value="Married"> Married</label>
-          <label><input type="radio" name="marital" value="Other"> Other</label>
-        </td>
-      </tr>
-
-      <tr>
-        <td>Email</td>
-        <td><input type="email" id="email" required></td>
-      </tr>
-
-      <tr>
-        <td>Mobile Number</td>
-        <td><input type="tel" id="mobile" required></td>
-      </tr>
-
-      <tr>
-        <td>Home Number</td>
-        <td><input type="tel" id="home"></td>
-      </tr>
-
-      <tr>
-        <td>Address</td>
-        <td><textarea id="address" required></textarea></td>
-      </tr>
-
-      <tr>
-        <td>City</td>
-        <td><input type="text" id="city" required></td>
-      </tr>
-
-      <tr>
-        <td>State / Province</td>
-        <td><input type="text" id="state" required></td>
-      </tr>
-
-      <tr>
-        <td colspan="2" style="text-align:center;">
-          <button type="submit">Submit Application</button>
-        </td>
-      </tr>
-    </table>
-  </form>
-</div>
-
-<script src="script.js"></script>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Boutons</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Fira+Sans:300"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css"
+    />
+    <link rel="stylesheet" href="./button.css" />
+  </head>
+  <body>
+    <!-- partial:index.partial.html -->
+    <div class="buttons">
+      <button class="B1">B1</button>
+      <button class="B2">B2</button>
+      <button class="B3">B3</button>
+      <button class="B4">B4</button>
+      <button class="B5">B5</button>
+      <button class="B6">B6</button>
+      <button class="B7">B7</button>
+    </div>
+    <!-- partial -->
+  </body>
 </html>
