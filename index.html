@@ -1,148 +1,27 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<title>Net Banking</title>
+<html>
+  <head>
+    <title>Drag and Drop</title>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
 
-<style>
-body {
-    font-family: Arial;
-    background:#eef2f5;
-    margin:0;
-}
-
-.container {
-    max-width:400px;
-    margin:60px auto;
-    background:white;
-    padding:20px;
-    border-radius:8px;
-    box-shadow:0 0 10px rgba(0,0,0,0.1);
-}
-
-h2 {
-    text-align:center;
-    color:#0a7b63;
-}
-
-input {
-    width:100%;
-    padding:10px;
-    margin:8px 0;
-}
-
-button {
-    width:100%;
-    padding:10px;
-    background:#0a7b63;
-    color:white;
-    border:none;
-    cursor:pointer;
-}
-
-button:hover {
-    background:#065f4e;
-}
-
-.dashboard {
-    display:none;
-    max-width:600px;
-    margin:20px auto;
-}
-
-.card {
-    background:white;
-    padding:15px;
-    margin-bottom:10px;
-    border-radius:6px;
-}
-
-.logout {
-    background:red;
-}
-
-</style>
-</head>
-
-<body>
-
-<!-- LOGIN -->
-<div class="container" id="loginBox">
-    <h2>Net Banking Login</h2>
-    <input type="text" id="username" placeholder="Username">
-    <input type="password" id="password" placeholder="Password">
-    <button onclick="login()">Login</button>
-</div>
-
-<!-- DASHBOARD -->
-<div class="dashboard" id="dashboard">
-
-    <div class="card">
-        <h3>Welcome, User</h3>
-        <p><strong>Balance:</strong> ₹<span id="balance">10000</span></p>
+  <body>
+    <div id="app">
+      <header>
+        <h1>DRAG AND DROP</h1>
+      </header>
+      <div class="lists">
+        <div class="list">
+          <div class="list-item" draggable="true">List item 1</div>
+          <div class="list-item" draggable="true">List item 2</div>
+          <div class="list-item" draggable="true">List item 3</div>
+        </div>
+        <div class="list"></div>
+        <div class="list"></div>
+      </div>
     </div>
 
-    <!-- TRANSFER -->
-    <div class="card">
-        <h3>Transfer Money</h3>
-        <input type="text" id="toAccount" placeholder="Account Number">
-        <input type="number" id="amount" placeholder="Amount">
-        <button onclick="transfer()">Transfer</button>
-    </div>
-
-    <!-- TRANSACTIONS -->
-    <div class="card">
-        <h3>Transaction History</h3>
-        <ul id="history"></ul>
-    </div>
-
-    <button class="logout" onclick="logout()">Logout</button>
-</div>
-
-<script>
-let balance = 10000;
-
-function login() {
-    let user = document.getElementById("username").value;
-    let pass = document.getElementById("password").value;
-
-    if(user === "admin" && pass === "1234") {
-        document.getElementById("loginBox").style.display = "none";
-        document.getElementById("dashboard").style.display = "block";
-    } else {
-        alert("Invalid login!");
-    }
-}
-
-function transfer() {
-    let acc = document.getElementById("toAccount").value;
-    let amt = parseFloat(document.getElementById("amount").value);
-
-    if(!acc || !amt || amt <= 0) {
-        alert("Enter valid details");
-        return;
-    }
-
-    if(amt > balance) {
-        alert("Insufficient balance");
-        return;
-    }
-
-    balance -= amt;
-    document.getElementById("balance").innerText = balance;
-
-    let li = document.createElement("li");
-    li.textContent = "Transferred ₹" + amt + " to A/C " + acc;
-    document.getElementById("history").appendChild(li);
-
-    document.getElementById("toAccount").value = "";
-    document.getElementById("amount").value = "";
-}
-
-function logout() {
-    location.reload();
-}
-</script>
-
-</body>
+    <script src="index.js"></script>
+  </body
 </html>
