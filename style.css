@@ -1,53 +1,59 @@
 body {
+  margin: 0;
   font-family: Arial, sans-serif;
-  background: #f2f2f2;
-}
-
-.container {
-  width: 500px;
-  margin: 40px auto;
-  background: #fff;
-  padding: 20px;
-  border-radius: 8px;
-}
-
-h2 {
+  background: linear-gradient(to top, #87CEEB, #ffffff);
   text-align: center;
 }
 
-table {
-  width: 100%;
-  border-collapse: collapse;
+.container {
+  margin-top: 50px;
 }
 
-td {
-  padding: 10px;
+h1 {
+  color: #0077b6;
 }
 
-td:first-child {
-  font-weight: bold;
-  width: 40%;
+.water {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  margin: 30px auto;
+  background: #00bfff;
+  border-radius: 15px;
+  overflow: hidden;
 }
 
-input, select, textarea {
-  width: 100%;
-  padding: 8px;
-  border: 1px solid #e57373;
-  border-radius: 4px;
+/* Waves */
+.wave {
+  position: absolute;
+  width: 200%;
+  height: 200%;
+  background: rgba(255, 255, 255, 0.4);
+  top: -50%;
+  left: -50%;
+  border-radius: 40%;
 }
 
-textarea {
-  height: 70px;
+/* Different wave animations */
+.wave1 {
+  animation: rotate 6s linear infinite;
 }
 
-button {
-  padding: 10px 20px;
-  background: #333;
-  color: white;
-  border: none;
-  cursor: pointer;
+.wave2 {
+  animation: rotate 10s linear infinite reverse;
+  opacity: 0.5;
 }
 
-button:hover {
-  background: #555;
+.wave3 {
+  animation: rotate 14s linear infinite;
+  opacity: 0.3;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }

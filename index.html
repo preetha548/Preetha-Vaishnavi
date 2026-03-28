@@ -1,27 +1,120 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Drag and Drop</title>
-    <meta charset="UTF-8" />
-    <link rel="stylesheet" href="styles.css" />
-  </head>
+<head>
+  <title>Salt Water Mini Project</title>
+  <style>
+    body {
+      margin: 0;
+      overflow: hidden;
+      font-family: Arial;
+    }
 
-  <body>
-    <div id="app">
-      <header>
-        <h1>DRAG AND DROP</h1>
-      </header>
-      <div class="lists">
-        <div class="list">
-          <div class="list-item" draggable="true">List item 1</div>
-          <div class="list-item" draggable="true">List item 2</div>
-          <div class="list-item" draggable="true">List item 3</div>
-        </div>
-        <div class="list"></div>
-        <div class="list"></div>
-      </div>
-    </div>
+    /* Ocean Background */
+    .ocean {
+      width: 100%;
+      height: 100vh;
+      background: linear-gradient(to bottom, #4facfe, #00f2fe);
+      position: relative;
+    }
 
-    <script src="index.js"></script>
-  </body
+    /* Waves */
+    .wave {
+      position: absolute;
+      width: 200%;
+      height: 200px;
+      top: 60%;
+      left: -50%;
+      background: rgba(255,255,255,0.4);
+      border-radius: 43%;
+      animation: wave 6s linear infinite;
+    }
+
+    .wave2 {
+      top: 65%;
+      opacity: 0.5;
+      animation: wave 10s linear infinite reverse;
+    }
+
+    /* Bubble */
+    .bubble {
+      position: absolute;
+      bottom: 0;
+      width: 10px;
+      height: 10px;
+      background: white;
+      border-radius: 50%;
+      opacity: 0.7;
+      animation: rise 5s infinite ease-in;
+    }
+
+    @keyframes wave {
+      0% { transform: translateX(0) rotate(0deg); }
+      100% { transform: translateX(50%) rotate(360deg); }
+    }
+
+    @keyframes rise {
+      0% { transform: translateY(0); }
+      100% { transform: translateY(-100vh); }
+    }
+
+    /* Button */
+    .btn {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      padding: 10px 20px;
+      background: white;
+      border: none;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+
+    /* Info Box */
+    .info {
+      position: absolute;
+      top: 70px;
+      left: 20px;
+      background: rgba(255,255,255,0.9);
+      padding: 15px;
+      border-radius: 10px;
+      display: none;
+      width: 250px;
+    }
+  </style>
+</head>
+
+<body>
+
+<div class="ocean">
+
+  <div class="wave"></div>
+  <div class="wave wave2"></div>
+
+  <!-- Bubbles -->
+  <div class="bubble" style="left:20%; animation-delay:0s;"></div>
+  <div class="bubble" style="left:40%; animation-delay:2s;"></div>
+  <div class="bubble" style="left:60%; animation-delay:1s;"></div>
+  <div class="bubble" style="left:80%; animation-delay:3s;"></div>
+
+  <!-- Button -->
+  <button class="btn" onclick="showInfo()">About Salt Water</button>
+
+  <!-- Info -->
+  <div class="info" id="infoBox">
+    <h3>Salt Water</h3>
+    <p>Salt water contains dissolved salts like NaCl.</p>
+    <p>It is found in oceans and seas.</p>
+    <p>About 97% of Earth's water is salt water.</p>
+  </div>
+
+</div>
+
+<script>
+function showInfo() {
+  var box = document.getElementById("infoBox");
+  box.style.display = (box.style.display === "block") ? "none" : "block";
+}
+</script>
+
+</body>
 </html>
