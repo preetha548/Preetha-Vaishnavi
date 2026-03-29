@@ -1,21 +1,15 @@
 {
-  "name": "game-rock-paper-scissor",
+  "name": "cat-api",
   "version": "1.0.0",
-  "description": "Fun game to play in free time and relax.\n\nuser has to choose from rock, paper, scissor and user is playing against system.\nRules are like : Rock crushes scissors, scissors cut paper, and paper covers rock. \n\nUser is given 5 turns after that you see if you win or lose! :)",
-  "main": "index.html",
+  "description": "Random cat image app using Cat API",
   "scripts": {
-    "start": "parcel index.html --open",
+    "start": "parcel index.html",
     "build": "parcel build index.html"
   },
-  "dependencies": {
-    "parcel-bundler": "^1.6.1"
-  },
+  "dependencies": {},
   "devDependencies": {
-    "@babel/core": "7.2.0",
-    "typescript": "4.4.4"
+    "parcel": "^2.10.0"
   },
-  "resolutions": {
-    "@babel/preset-env": "7.13.8"
-  },
-  "keywords": []
+  "keywords": ["cat", "api", "javascript"],
+  "license": "ISC"
 }
