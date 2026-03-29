@@ -1,59 +1,83 @@
 body {
   margin: 0;
   font-family: Arial, sans-serif;
-  background: linear-gradient(to top, #87CEEB, #ffffff);
+}
+
+header {
+  background: #222;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 30px;
+}
+
+nav a {
+  color: white;
+  margin-left: 15px;
+  text-decoration: none;
+}
+
+.hero {
+  background: url('https://images.unsplash.com/photo-1503387762-592deb58ef4e') no-repeat center/cover;
+  color: white;
+  text-align: center;
+  padding: 100px 20px;
+}
+
+.hero button {
+  padding: 10px 20px;
+  background: orange;
+  border: none;
+  cursor: pointer;
+}
+
+#services {
+  padding: 40px;
   text-align: center;
 }
 
-.container {
-  margin-top: 50px;
+.service-box {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
 }
 
-h1 {
-  color: #0077b6;
+.card {
+  background: #f4f4f4;
+  padding: 20px;
+  width: 200px;
+  border-radius: 10px;
+  transition: 0.3s;
 }
 
-.water {
-  position: relative;
-  width: 300px;
-  height: 300px;
-  margin: 30px auto;
-  background: #00bfff;
-  border-radius: 15px;
-  overflow: hidden;
+.card:hover {
+  transform: scale(1.1);
+  background: #ddd;
 }
 
-/* Waves */
-.wave {
-  position: absolute;
-  width: 200%;
-  height: 200%;
-  background: rgba(255, 255, 255, 0.4);
-  top: -50%;
-  left: -50%;
-  border-radius: 40%;
+#contact {
+  padding: 40px;
+  text-align: center;
+  background: #f9f9f9;
 }
 
-/* Different wave animations */
-.wave1 {
-  animation: rotate 6s linear infinite;
+form input, form textarea {
+  display: block;
+  margin: 10px auto;
+  padding: 10px;
+  width: 250px;
 }
 
-.wave2 {
-  animation: rotate 10s linear infinite reverse;
-  opacity: 0.5;
+button {
+  background: #222;
+  color: white;
+  padding: 10px;
+  border: none;
 }
 
-.wave3 {
-  animation: rotate 14s linear infinite;
-  opacity: 0.3;
-}
-
-@keyframes rotate {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
+footer {
+  background: #222;
+  color: white;
+  text-align: center;
+  padding: 10px;
 }

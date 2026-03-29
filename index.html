@@ -1,15 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-  </head>
-  <body>
-    <!-- <div id="app"></div> -->
-    <img alt="" />
+<head>
+  <meta charset="UTF-8">
+  <title>Vetri Builders</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
-    <script src="index.js"></script>
-  </body>
+  <!-- Navbar -->
+  <header>
+    <h1>Vetri Builders</h1>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#services">Services</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="home" class="hero">
+    <h2>Building Your Dream Home</h2>
+    <p>Quality | Trust | Innovation</p>
+    <button onclick="showMessage()">Get Started</button>
+  </section>
+
+  <!-- Services -->
+  <section id="services">
+    <h2>Our Services</h2>
+    <div class="service-box">
+      <div class="card">
+        <h3>Construction</h3>
+        <p>We build residential & commercial buildings.</p>
+      </div>
+      <div class="card">
+        <h3>Interior Design</h3>
+        <p>Modern and stylish interior solutions.</p>
+      </div>
+      <div class="card">
+        <h3>Renovation</h3>
+        <p>Upgrade your old spaces with new designs.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <form onsubmit="return submitForm()">
+      <input type="text" id="name" placeholder="Your Name" required>
+      <input type="email" id="email" placeholder="Your Email" required>
+      <textarea id="message" placeholder="Your Message"></textarea>
+      <button type="submit">Send</button>
+    </form>
+    <p id="response"></p>
+  </section>
+
+  <footer>
+    <p>© 2026 Vetri Builders</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
 </html>
