@@ -2,248 +2,200 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>BrandShield - Online Protection</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Digital Net Solutions</title>
 
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-
-<script src="https://unpkg.com/react@18/umd/react.development.js"></script>
-<script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
-<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 
 <style>
 body {
-  background: linear-gradient(135deg,#f1f5f9,#e2e8f0);
-  color:#1e293b;
+  margin: 0;
+  font-family: Arial;
+  background: url("https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5") no-repeat center center/cover;
+  min-height: 100vh;
+  color: white;
 }
 
-.login-bg {
-  background: linear-gradient(rgba(255,255,255,0.9),rgba(255,255,255,0.9)),
-              url('https://images.unsplash.com/photo-1550751827-4bd374c3f58b') center/cover;
-  height:100vh;
-  display:flex;
-  align-items:center;
-  justify-content:center;
+.overlay {
+  background: rgba(0,0,0,0.78);
+  min-height: 100vh;
+  padding-bottom: 50px;
 }
 
-.card {
-  background:white;
-  border-radius:12px;
-  padding:20px;
-  box-shadow:0 4px 20px rgba(0,0,0,0.1);
+/* GLASS UI */
+.glass {
+  background: rgba(255,255,255,0.08);
+  backdrop-filter: blur(12px);
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.4);
 }
 
-.hero {
-  background: linear-gradient(rgba(255,255,255,0.7),rgba(255,255,255,0.7)),
-              url('https://images.unsplash.com/photo-1605902711622-cfb43c4437d1') center/cover;
-  height:180px;
-  border-radius:12px;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  margin-bottom:20px;
+/* NAV */
+.navbar {
+  background: rgba(0,0,0,0.5);
 }
 
-.safe-card { background:#dcfce7; }
-.unsafe-card { background:#fee2e2; }
+/* SECTION CONTROL */
+section { display: none; }
+#home { display: block; }
+
+/* IMAGES */
+img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+/* HOVER */
+.card-box:hover {
+  transform: scale(1.05);
+  transition: 0.3s;
+}
+
+/* VIDEO */
+iframe {
+  width: 100%;
+  height: 200px;
+  border-radius: 12px;
+}
 </style>
 </head>
 
 <body>
-<div id="root"></div>
 
-<script type="text/babel">
+<div class="overlay">
 
-function App(){
-  const [user,setUser]=React.useState(null);
-  const [url,setUrl]=React.useState("");
-  const [report,setReport]=React.useState(null);
+<!-- NAVBAR -->
+<nav class="navbar navbar-dark px-3">
+  <a class="navbar-brand fw-bold">Digital Net Solutions</a>
 
-  const [safeCount,setSafeCount]=React.useState(0);
-  const [unsafeCount,setUnsafeCount]=React.useState(0);
+  <div class="ms-auto">
+    <button class="btn btn-outline-light btn-sm" onclick="show('home')">Home</button>
+    <button class="btn btn-outline-light btn-sm" onclick="show('services')">Services</button>
+    <button class="btn btn-outline-light btn-sm" onclick="show('contact')">Contact</button>
+    <button class="btn btn-info btn-sm" onclick="show('login')">Login</button>
+  </div>
+</nav>
 
-  // 🔐 Login
-  const login=(u,p)=>{
-    if(u==="admin" && p==="1234"){
-      setUser(u);
-    } else {
-      alert("Invalid login (Use admin / 1234)");
-    }
-  };
+<!-- 🏠 HOME PAGE -->
+<section id="home" class="container py-5">
 
-  const logout=()=>setUser(null);
+<div class="glass text-center mb-4">
+  <h1>🚀 Digital Net Solutions</h1>
+  <p>Web Development • Cloud • Digital Marketing • AI Solutions</p>
+</div>
 
-  // 🔍 Website Analysis Logic
-  const analyzeURL=(url)=>{
-    let score=100;
-    let reasons=[];
+<div class="row g-4">
 
-    try{
-      const parsed=new URL(url);
-      const host=parsed.hostname.toLowerCase();
+<div class="col-md-4">
+  <div class="glass card-box text-center">
+    <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085">
+    <h5 class="mt-2">💻 Web Development</h5>
+  </div>
+</div>
 
-      if(parsed.protocol!=="https:"){
-        score-=30;
-        reasons.push("Not using HTTPS");
-      }
+<div class="col-md-4">
+  <div class="glass card-box text-center">
+    <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa">
+    <h5 class="mt-2">☁ Cloud Solutions</h5>
+  </div>
+</div>
 
-      if(/^\d+\.\d+\.\d+\.\d+$/.test(host)){
-        score-=25;
-        reasons.push("Using IP address");
-      }
+<div class="col-md-4">
+  <div class="glass card-box text-center">
+    <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71">
+    <h5 class="mt-2">📊 Digital Marketing</h5>
+  </div>
+</div>
 
-      const words=["login","verify","bank","secure","free","gift"];
-      words.forEach(w=>{
-        if(url.toLowerCase().includes(w)){
-          score-=8;
-          reasons.push("Suspicious keyword: "+w);
-        }
-      });
+</div>
 
-      if(url.length>70){
-        score-=10;
-        reasons.push("URL too long");
-      }
+</section>
 
-    }catch{
-      return {score:0,status:"Unsafe",reasons:["Invalid URL"]};
-    }
+<!-- 💼 SERVICES -->
+<section id="services" class="container py-5">
 
-    if(score<0) score=0;
+<h2 class="text-center mb-4">Our Services</h2>
 
-    return {
-      score,
-      status: score>=70?"Safe":"Unsafe",
-      reasons
-    };
-  };
+<div class="row g-4">
 
-  const scan=()=>{
-    if(!url.startsWith("http")){
-      alert("Enter valid URL (https://...)");
-      return;
-    }
+<div class="col-md-4">
+  <div class="glass text-center">
+    <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085">
+    <h5>Web Development</h5>
+    <p>Modern responsive websites</p>
+    <iframe src="https://www.youtube.com/embed/1Rs2ND1ryYc"></iframe>
+  </div>
+</div>
 
-    const result=analyzeURL(url);
-    setReport({...result,url});
+<div class="col-md-4">
+  <div class="glass text-center">
+    <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa">
+    <h5>Cloud Solutions</h5>
+    <p>Secure cloud hosting & storage</p>
+    <iframe src="https://www.youtube.com/embed/2LaAJq1lB1Q"></iframe>
+  </div>
+</div>
 
-    if(result.status==="Safe"){
-      setSafeCount(safeCount+1);
-    }else{
-      setUnsafeCount(unsafeCount+1);
-    }
-  };
+<div class="col-md-4">
+  <div class="glass text-center">
+    <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71">
+    <h5>Digital Marketing</h5>
+    <p>SEO, Ads & Social Growth</p>
+    <iframe src="https://www.youtube.com/embed/nU-IIXBWlS4"></iframe>
+  </div>
+</div>
 
-  if(!user) return <Login login={login}/>;
+</div>
+</section>
 
-  return(
-    <div className="container py-4">
+<!-- 📞 CONTACT -->
+<section id="contact" class="container py-5">
+  <div class="glass text-center" style="max-width:500px;margin:auto;">
+    <h2>Contact Us</h2>
+    <input class="form-control my-2" placeholder="Name">
+    <input class="form-control my-2" placeholder="Email">
+    <textarea class="form-control my-2" placeholder="Message"></textarea>
+    <button class="btn btn-info w-100" onclick="alert('Message Sent Successfully!')">Send</button>
+  </div>
+</section>
 
-      {/* HERO */}
-      <div className="hero">
-        <h2>🛡️ Brand Protection Dashboard</h2>
-      </div>
+<!-- 🔐 LOGIN -->
+<section id="login" class="container py-5">
+  <div class="glass text-center" style="max-width:350px;margin:auto;">
+    <h3>Login</h3>
+    <input id="user" class="form-control my-2" placeholder="Username">
+    <input id="pass" type="password" class="form-control my-2" placeholder="Password">
+    <button class="btn btn-info w-100" onclick="login()">Login</button>
+    <p id="msg"></p>
+  </div>
+</section>
 
-      <button className="btn btn-danger mb-3" onClick={logout}>Logout</button>
+</div>
 
-      {/* DASHBOARD */}
-      <div className="row text-center mb-3">
-        <div className="col-md-4">
-          <div className="card">
-            <h5>✅ Safe</h5>
-            <h2>{safeCount}</h2>
-          </div>
-        </div>
-
-        <div className="col-md-4">
-          <div className="card">
-            <h5>⚠️ Unsafe</h5>
-            <h2>{unsafeCount}</h2>
-          </div>
-        </div>
-
-        <div className="col-md-4">
-          <div className="card">
-            <h5>📊 Total</h5>
-            <h2>{safeCount+unsafeCount}</h2>
-          </div>
-        </div>
-      </div>
-
-      {/* SCANNER */}
-      <div className="card mb-3">
-        <h4>🔍 Analyze Website</h4>
-        <input className="form-control mb-2" placeholder="Enter URL"
-          onChange={e=>setUrl(e.target.value)} />
-        <button className="btn btn-primary" onClick={scan}>Analyze</button>
-      </div>
-
-      {/* RESULT */}
-      {report && (
-        <>
-          <div className={`card mb-3 ${report.status==="Safe"?"safe-card":"unsafe-card"}`}>
-            <h4>{report.status==="Safe" ? "✅ Safe Website" : "⚠️ Unsafe Website"}</h4>
-            <h2>{report.score}%</h2>
-          </div>
-
-          <div className="card">
-            <h5>📄 Report</h5>
-            <p><b>URL:</b> {report.url}</p>
-            <p><b>Status:</b> {report.status}</p>
-            <p><b>Score:</b> {report.score}%</p>
-
-            <h6>⚠️ Reasons:</h6>
-            {report.reasons.length===0 ? (
-              <p>No issues detected</p>
-            ) : (
-              <ul>
-                {report.reasons.map((r,i)=>(
-                  <li key={i}>{r}</li>
-                ))}
-              </ul>
-            )}
-          </div>
-        </>
-      )}
-
-    </div>
-  );
+<!-- JS -->
+<script>
+function show(id){
+  document.querySelectorAll("section").forEach(s => s.style.display = "none");
+  document.getElementById(id).style.display = "block";
 }
 
+function login(){
+  let u = user.value;
+  let p = pass.value;
 
-// 🔐 LOGIN PAGE
-function Login({login}){
-  const [u,setU]=React.useState("");
-  const [p,setP]=React.useState("");
-
-  return(
-    <div className="login-bg">
-      <div className="card" style={{width:"350px"}}>
-
-        <img src="https://images.unsplash.com/photo-1510511233900-1982d92bd835"
-             className="img-fluid mb-3 rounded"/>
-
-        <h3 className="text-center">🔐 Admin Login</h3>
-
-        <input className="form-control mb-2" placeholder="Username"
-          onChange={e=>setU(e.target.value)} />
-
-        <input type="password" className="form-control mb-2" placeholder="Password"
-          onChange={e=>setP(e.target.value)} />
-
-        <button className="btn btn-primary w-100"
-          onClick={()=>login(u,p)}>Login</button>
-
-        <small className="text-muted d-block text-center mt-2">
-          Demo: admin / 1234
-        </small>
-
-      </div>
-    </div>
-  );
+  if(u === "admin" && p === "1234"){
+    msg.innerHTML = "✅ Login Successful!";
+    msg.style.color = "lightgreen";
+    show("home");
+  } else {
+    msg.innerHTML = "❌ Invalid Login!";
+    msg.style.color = "red";
+  }
 }
-
-ReactDOM.createRoot(document.getElementById('root')).render(<App/>);
-
 </script>
+
 </body>
 </html>
