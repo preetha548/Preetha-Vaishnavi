@@ -1,201 +1,108 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Digital Net Solutions</title>
-
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Kalvi Group Poster</title>
 
 <style>
-body {
-  margin: 0;
-  font-family: Arial;
-  background: url("https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5") no-repeat center center/cover;
-  min-height: 100vh;
-  color: white;
-}
+  body{
+    margin:0;
+    font-family: Arial, sans-serif;
+    background:#f4f6f8;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    min-height:100vh;
+  }
 
-.overlay {
-  background: rgba(0,0,0,0.78);
-  min-height: 100vh;
-  padding-bottom: 50px;
-}
+  .container{
+    width:900px;
+    background:#fff;
+    padding:40px;
+    box-shadow:0 10px 30px rgba(0,0,0,0.1);
+  }
 
-/* GLASS UI */
-.glass {
-  background: rgba(255,255,255,0.08);
-  backdrop-filter: blur(12px);
-  border-radius: 15px;
-  padding: 20px;
-  box-shadow: 0 8px 32px rgba(0,0,0,0.4);
-}
+  .header{
+    display:flex;
+    align-items:center;
+    gap:15px;
+  }
 
-/* NAV */
-.navbar {
-  background: rgba(0,0,0,0.5);
-}
+  .logo{
+    width:90px;
+  }
 
-/* SECTION CONTROL */
-section { display: none; }
-#home { display: block; }
+  .title{
+    font-size:26px;
+    font-weight:bold;
+    color:#222;
+  }
 
-/* IMAGES */
-img {
-  width: 100%;
-  height: 180px;
-  object-fit: cover;
-  border-radius: 12px;
-}
+  .subtitle{
+    margin-top:5px;
+    font-size:18px;
+    color:#444;
+    font-weight:600;
+  }
 
-/* HOVER */
-.card-box:hover {
-  transform: scale(1.05);
-  transition: 0.3s;
-}
+  .content{
+    margin-top:20px;
+    line-height:1.7;
+    color:#333;
+    font-size:15px;
+    text-align:justify;
+  }
 
-/* VIDEO */
-iframe {
-  width: 100%;
-  height: 200px;
-  border-radius: 12px;
-}
+  .image-box{
+    margin-top:25px;
+    text-align:center;
+  }
+
+  .image-box img{
+    width:100%;
+    border-radius:10px;
+    box-shadow:0 8px 20px rgba(0,0,0,0.15);
+  }
+
+  .highlight{
+    font-weight:bold;
+    margin-top:10px;
+    display:block;
+  }
 </style>
 </head>
 
 <body>
 
-<div class="overlay">
+<div class="container">
 
-<!-- NAVBAR -->
-<nav class="navbar navbar-dark px-3">
-  <a class="navbar-brand fw-bold">Digital Net Solutions</a>
+  <!-- Header -->
+  <div class="header">
+    <img class="logo"
+      src="https://kalvigroup.com/images/product/logos/kalvi-public.jpg"
+      alt="Kalvi Logo">
 
-  <div class="ms-auto">
-    <button class="btn btn-outline-light btn-sm" onclick="show('home')">Home</button>
-    <button class="btn btn-outline-light btn-sm" onclick="show('services')">Services</button>
-    <button class="btn btn-outline-light btn-sm" onclick="show('contact')">Contact</button>
-    <button class="btn btn-info btn-sm" onclick="show('login')">Login</button>
+    <div>
+      <div class="title">KALVI GROUP OF SCHOOLS</div>
+    </div>
   </div>
-</nav>
 
-<!-- 🏠 HOME PAGE -->
-<section id="home" class="container py-5">
+  <div class="subtitle">Welcome to KALVI Group of Schools</div>
 
-<div class="glass text-center mb-4">
-  <h1>🚀 Digital Net Solutions</h1>
-  <p>Web Development • Cloud • Digital Marketing • AI Solutions</p>
-</div>
-
-<div class="row g-4">
-
-<div class="col-md-4">
-  <div class="glass card-box text-center">
-    <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085">
-    <h5 class="mt-2">💻 Web Development</h5>
+  <!-- Text -->
+  <div class="content">
+    KALVI, the educational destination for ambitious students has carved a niche for itself and proclaims of its peerless reputation in producing a world-class learning community. It promotes the amalgamation of human and humane excellence. With academic brilliance and multidimensional development as the primary objectives, it has opened up new avenues of global perspectives to meet the growing demand for quality education. All our teachers meet the international quality standards set by Kalvi and in turn they are elated to be under the canopy of KALVI. They have access to the resources of proven professionals, experts and advisors around the world.
+    <br><br>
+    <span class="highlight">In a nutshell, Kalvi Dares to dream and learns to excel.</span>
   </div>
-</div>
 
-<div class="col-md-4">
-  <div class="glass card-box text-center">
-    <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa">
-    <h5 class="mt-2">☁ Cloud Solutions</h5>
+  <!-- Image -->
+  <div class="image-box">
+    <img src="https://images.unsplash.com/photo-1564981797816-1043664bf78d" >
   </div>
-</div>
-
-<div class="col-md-4">
-  <div class="glass card-box text-center">
-    <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71">
-    <h5 class="mt-2">📊 Digital Marketing</h5>
-  </div>
-</div>
 
 </div>
-
-</section>
-
-<!-- 💼 SERVICES -->
-<section id="services" class="container py-5">
-
-<h2 class="text-center mb-4">Our Services</h2>
-
-<div class="row g-4">
-
-<div class="col-md-4">
-  <div class="glass text-center">
-    <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085">
-    <h5>Web Development</h5>
-    <p>Modern responsive websites</p>
-    <iframe src="https://www.youtube.com/embed/1Rs2ND1ryYc"></iframe>
-  </div>
-</div>
-
-<div class="col-md-4">
-  <div class="glass text-center">
-    <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa">
-    <h5>Cloud Solutions</h5>
-    <p>Secure cloud hosting & storage</p>
-    <iframe src="https://www.youtube.com/embed/2LaAJq1lB1Q"></iframe>
-  </div>
-</div>
-
-<div class="col-md-4">
-  <div class="glass text-center">
-    <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71">
-    <h5>Digital Marketing</h5>
-    <p>SEO, Ads & Social Growth</p>
-    <iframe src="https://www.youtube.com/embed/nU-IIXBWlS4"></iframe>
-  </div>
-</div>
-
-</div>
-</section>
-
-<!-- 📞 CONTACT -->
-<section id="contact" class="container py-5">
-  <div class="glass text-center" style="max-width:500px;margin:auto;">
-    <h2>Contact Us</h2>
-    <input class="form-control my-2" placeholder="Name">
-    <input class="form-control my-2" placeholder="Email">
-    <textarea class="form-control my-2" placeholder="Message"></textarea>
-    <button class="btn btn-info w-100" onclick="alert('Message Sent Successfully!')">Send</button>
-  </div>
-</section>
-
-<!-- 🔐 LOGIN -->
-<section id="login" class="container py-5">
-  <div class="glass text-center" style="max-width:350px;margin:auto;">
-    <h3>Login</h3>
-    <input id="user" class="form-control my-2" placeholder="Username">
-    <input id="pass" type="password" class="form-control my-2" placeholder="Password">
-    <button class="btn btn-info w-100" onclick="login()">Login</button>
-    <p id="msg"></p>
-  </div>
-</section>
-
-</div>
-
-<!-- JS -->
-<script>
-function show(id){
-  document.querySelectorAll("section").forEach(s => s.style.display = "none");
-  document.getElementById(id).style.display = "block";
-}
-
-function login(){
-  let u = user.value;
-  let p = pass.value;
-
-  if(u === "admin" && p === "1234"){
-    msg.innerHTML = "✅ Login Successful!";
-    msg.style.color = "lightgreen";
-    show("home");
-  } else {
-    msg.innerHTML = "❌ Invalid Login!";
-    msg.style.color = "red";
-  }
-}
-</script>
 
 </body>
 </html>
