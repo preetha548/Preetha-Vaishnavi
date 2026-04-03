@@ -1,0 +1,40 @@
+body{
+    font-family: Arial;
+    background: linear-gradient(to right,#ff9a9e,#fad0c4);
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.container{
+    background:white;
+    padding:40px;
+    border-radius:10px;
+    text-align:center;
+    box-shadow:0 0 10px rgba(0,0,0,0.2);
+}
+
+h1{
+    color:#ff4d4d;
+}
+
+button{
+    padding:10px 20px;
+    font-size:18px;
+    border:none;
+    border-radius:5px;
+    background:#ff4d4d;
+    color:white;
+    cursor:pointer;
+}
+
+button:hover{
+    background:#e60000;
+}
+
+#message{
+    margin-top:20px;
+    font-size:20px;
+    color:green;
+}
