@@ -1,0 +1,19 @@
+{
+  "name": "calendar-meeting-tailwind",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.html",
+  "scripts": {
+    "start": "parcel index.html --open",
+    "build": "parcel build index.html"
+  },
+  "dependencies": {
+    "autoprefixer": "9.2.1",
+    "tailwindcss": "0.6.6"
+  },
+  "devDependencies": {
+    "@types/autoprefixer": "9.1.0",
+    "parcel-bundler": "^1.6.1"
+  },
+  "keywords": []
+}
