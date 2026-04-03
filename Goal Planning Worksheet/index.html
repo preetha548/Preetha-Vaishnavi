@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Goal Setting Worksheet</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f4f4;
+      display: flex;
+      justify-content: center;
+      padding: 20px;
+    }
+
+    .container {
+      background: #fff;
+      width: 800px;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    h1 {
+      text-align: center;
+      font-weight: normal;
+    }
+
+    .title {
+      text-align: center;
+      font-size: 32px;
+      margin-bottom: 20px;
+    }
+
+    .row {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 15px;
+    }
+
+    label {
+      font-size: 14px;
+      margin-right: 5px;
+    }
+
+    input[type="date"], input[type="text"] {
+      padding: 5px;
+      width: 150px;
+    }
+
+    .full-width {
+      width: 100%;
+      margin-bottom: 15px;
+    }
+
+    textarea {
+      width: 100%;
+      height: 80px;
+      padding: 8px;
+      resize: none;
+    }
+
+    .large-box {
+      height: 100px;
+    }
+
+    .two-columns {
+      display: flex;
+      gap: 20px;
+      margin-top: 15px;
+    }
+
+    .box {
+      flex: 1;
+      border: 1px solid #ccc;
+      padding: 10px;
+      border-radius: 5px;
+    }
+
+    .box h3 {
+      text-align: center;
+      margin-bottom: 10px;
+    }
+
+    .item {
+      display: flex;
+      align-items: center;
+      margin-bottom: 8px;
+    }
+
+    .item input[type="text"] {
+      flex: 1;
+      margin-left: 5px;
+      border: none;
+      border-bottom: 1px solid #000;
+    }
+
+    .notes {
+      margin-top: 20px;
+    }
+
+    button {
+      margin-top: 15px;
+      padding: 10px;
+      width: 100%;
+      background: #333;
+      color: #fff;
+      border: none;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+
+    button:hover {
+      background: #555;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+
+  <div class="title"><b>Goal Setting Worksheet</b></div>
+
+  <div class="row">
+    <div>
+      <label>Start Date:</label>
+      <input type="date" id="startDate">
+    </div>
+    <div>
+      <label>End Date:</label>
+      <input type="date" id="endDate">
+    </div>
+    <div>
+      <label>Date:</label>
+      <input type="date" id="todayDate">
+    </div>
+  </div>
+
+  <div class="full-width">
+    <label>Goal:</label>
+    <input type="text" id="goal" style="width:100%;">
+  </div>
+
+  <div class="full-width">
+    <label>What steps will I take toward my goal?</label>
+    <textarea id="steps" class="large-box"></textarea>
+  </div>
+
+  <div class="two-columns">
+    
+    <div class="box" id="priorities">
+      <h3>Top Priorities</h3>
+    </div>
+
+    <div class="box" id="todo">
+      <h3>To-Do List</h3>
+    </div>
+
+  </div>
+
+  <div class="notes">
+    <label>Notes:</label>
+    <textarea id="notes"></textarea>
+  </div>
+
+  <button onclick="addItem('priorities')">Add Priority</button>
+  <button onclick="addItem('todo')">Add To-Do</button>
+
+</div>
+
+<script>
+  function addItem(sectionId) {
+    const container = document.getElementById(sectionId);
+
+    const div = document.createElement("div");
+    div.classList.add("item");
+
+    div.innerHTML = `
+      <input type="checkbox">
+      <input type="text" placeholder="Enter item">
+    `;
+
+    container.appendChild(div);
+  }
+</script>
+
+</body>
+</html>
