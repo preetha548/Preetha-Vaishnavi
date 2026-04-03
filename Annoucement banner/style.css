@@ -1,0 +1,44 @@
+body{
+font-family: Arial;
+margin:0;
+}
+
+.banner-container{
+position: relative;
+max-width: 1000px;
+margin: auto;
+overflow: hidden;
+}
+
+.banner{
+width:100%;
+display:none;
+}
+
+.banner:first-child{
+display:block;
+}
+
+.prev, .next{
+position:absolute;
+top:50%;
+transform:translateY(-50%);
+background:rgba(0,0,0,0.5);
+color:white;
+border:none;
+padding:15px;
+cursor:pointer;
+font-size:20px;
+}
+
+.prev{
+left:10px;
+}
+
+.next{
+right:10px;
+}
+
+.prev:hover, .next:hover{
+background:black;
+}
