@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>dotNice Solutions - Brand Protection</title>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+
+/* GLOBAL */
+html {
+  scroll-behavior: smooth;
+}
+
+/* HERO */
+#home {
+  height: 100vh;
+  background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),
+  url('https://images.unsplash.com/photo-1550751827-4bd374c3f58b');
+  background-size: cover;
+  background-position: center;
+  color: white;
+}
+
+/* SECTION TITLE */
+.section-title {
+  font-weight: bold;
+  margin-bottom: 40px;
+}
+
+/* CARD EFFECT */
+.card:hover {
+  transform: translateY(-8px);
+  transition: 0.3s;
+}
+
+/* IMAGE STYLE */
+.feature-img {
+  width: 100%;
+  border-radius: 12px;
+}
+
+/* NAV ACTIVE STYLE */
+.nav-link {
+  font-weight: 500;
+}
+
+.nav-link:hover {
+  color: #ffc107 !important;
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- ================= NAVBAR ================= -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+<div class="container">
+
+  <!-- LOGO -->
+  <a class="navbar-brand d-flex align-items-center" href="#home">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png"
+         height="35" class="me-2">
+    <span class="fw-bold text-warning">dotNice Solutions</span>
+  </a>
+
+  <!-- MENU -->
+  <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#menu">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="menu">
+    <ul class="navbar-nav ms-auto">
+
+      <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+      <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+      <li class="nav-item"><a class="nav-link" href="#media">Media</a></li>
+      <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+
+    </ul>
+  </div>
+
+</div>
+</nav>
+
+<!-- ================= HOME MODULE ================= -->
+<section id="home" class="d-flex align-items-center text-center">
+  <div class="container">
+
+    <h1 class="display-3 fw-bold">PROTECT YOUR BRAND</h1>
+    <p class="lead">Advanced Digital Brand Protection Platform</p>
+
+    <a href="#services" class="btn btn-warning mt-3">Explore Services</a>
+
+  </div>
+</section>
+
+<!-- ================= SERVICES MODULE ================= -->
+<section id="services" class="py-5 text-center bg-light">
+<div class="container">
+
+  <h2 class="section-title">Our Services</h2>
+
+  <div class="row g-4">
+
+    <div class="col-md-4">
+      <div class="card shadow p-4">
+        <i class="fa fa-shield fa-3x text-primary"></i>
+        <h4 class="mt-3">Brand Protection</h4>
+        <p>Secure your brand identity from online threats and misuse.</p>
+      </div>
+    </div>
+
+    <div class="col-md-4">
+      <div class="card shadow p-4">
+        <i class="fa fa-search fa-3x text-success"></i>
+        <h4 class="mt-3">Monitoring</h4>
+        <p>24/7 AI-powered tracking of domains and digital assets.</p>
+      </div>
+    </div>
+
+    <div class="col-md-4">
+      <div class="card shadow p-4">
+        <i class="fa fa-gavel fa-3x text-danger"></i>
+        <h4 class="mt-3">Enforcement</h4>
+        <p>Remove fake, illegal and harmful content instantly.</p>
+      </div>
+    </div>
+
+  </div>
+
+</div>
+</section>
+
+<!-- ================= MEDIA MODULE ================= -->
+<section id="media" class="py-5 text-center">
+<div class="container">
+
+  <h2 class="section-title">Media & Insights</h2>
+
+  <div class="row g-4">
+
+    <!-- IMAGE -->
+    <div class="col-md-6">
+      <img class="feature-img"
+           src="https://images.unsplash.com/photo-1451187580459-43490279c0fa"
+           alt="AI Security">
+      <p class="mt-2">AI Security Monitoring System</p>
+    </div>
+
+    <!-- VIDEO -->
+    <div class="col-md-6">
+      <div class="ratio ratio-16x9">
+        <iframe src="https://www.youtube.com/embed/inWWhr5tnEA"
+                allowfullscreen></iframe>
+      </div>
+      <p class="mt-2">How Brand Protection Works</p>
+    </div>
+
+  </div>
+
+</div>
+</section>
+
+<!-- ================= CONTACT MODULE ================= -->
+<section id="contact" class="py-5 bg-light text-center">
+<div class="container">
+
+  <h2 class="section-title">Contact Us</h2>
+
+  <form id="contactForm" class="mx-auto" style="max-width:500px;">
+
+    <input type="text" class="form-control mb-3" placeholder="Your Name" required>
+
+    <input type="email" class="form-control mb-3" placeholder="Your Email" required>
+
+    <textarea class="form-control mb-3" rows="5" placeholder="Your Message"></textarea>
+
+    <button class="btn btn-primary w-100">Send Message</button>
+
+  </form>
+
+</div>
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer class="bg-dark text-white text-center p-3">
+  © 2026 dotNice Solutions | All Rights Reserved
+</footer>
+
+<!-- BOOTSTRAP -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- JS -->
+<script>
+document.getElementById("contactForm").addEventListener("submit", function(e){
+  e.preventDefault();
+  alert("Message sent successfully ✔");
+  this.reset();
+});
+</script>
+
+</body>
+</html>
