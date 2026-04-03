@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Marriage Certificate</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="certificate">
+
+    <h1>Marriage</h1>
+
+    <p>This certifies that</p>
+
+    <input type="text" id="person1" placeholder="Person 1 Name">
+
+    <p>and</p>
+
+    <input type="text" id="person2" placeholder="Person 2 Name">
+
+    <p>were united before God in marriage</p>
+
+    <label>At</label>
+    <input type="text" id="place">
+
+    <label>On</label>
+    <input type="date" id="date">
+
+    <label>By</label>
+    <input type="text" id="officer">
+
+    <button onclick="generateCertificate()">Generate Certificate</button>
+
+    <div id="result"></div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
