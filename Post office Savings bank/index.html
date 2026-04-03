@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Post Office Savings Bank Form</title>
+
+<style>
+
+body{
+    font-family: Arial;
+    background:#f4f4f4;
+}
+
+.container{
+    width:900px;
+    margin:auto;
+    background:white;
+    padding:20px;
+    border:1px solid #ccc;
+}
+
+h2,h3{
+    text-align:center;
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+    margin-bottom:15px;
+}
+
+table,th,td{
+    border:1px solid #000;
+}
+
+th,td{
+    padding:6px;
+    font-size:14px;
+}
+
+input,select{
+    width:100%;
+    border:none;
+    outline:none;
+}
+
+.section-title{
+    background:#eee;
+    font-weight:bold;
+}
+
+button{
+    padding:10px 20px;
+    background:#0077cc;
+    color:white;
+    border:none;
+    cursor:pointer;
+}
+
+button:hover{
+    background:#005fa3;
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+<div class="container">
+
+<h2>POST OFFICE SAVINGS BANK</h2>
+<h3>ACCOUNT OPENING / PURCHASE OF CERTIFICATE APPLICATION FORM</h3>
+
+<table>
+
+<tr class="section-title">
+<td colspan="4">Account Information</td>
+</tr>
+
+<tr>
+<td>Post Office</td>
+<td><input type="text"></td>
+<td>Date</td>
+<td><input type="date"></td>
+</tr>
+
+<tr>
+<td>Account Registration No</td>
+<td><input type="text"></td>
+<td>SOL ID</td>
+<td><input type="text"></td>
+</tr>
+
+</table>
+
+
+<table>
+
+<tr class="section-title">
+<td colspan="5">Applicant Details</td>
+</tr>
+
+<tr>
+<th>First Name</th>
+<th>Middle Name</th>
+<th>Last Name</th>
+<th>Gender</th>
+<th>DOB</th>
+</tr>
+
+<tr>
+<td><input type="text"></td>
+<td><input type="text"></td>
+<td><input type="text"></td>
+
+<td>
+<select>
+<option>Male</option>
+<option>Female</option>
+<option>Other</option>
+</select>
+</td>
+
+<td><input type="date"></td>
+
+</tr>
+
+</table>
+
+
+<table>
+
+<tr class="section-title">
+<td colspan="2">Residential Address</td>
+</tr>
+
+<tr>
+<td>Flat / Building</td>
+<td><input type="text"></td>
+</tr>
+
+<tr>
+<td>Street / Locality</td>
+<td><input type="text"></td>
+</tr>
+
+<tr>
+<td>City</td>
+<td><input type="text"></td>
+</tr>
+
+<tr>
+<td>State</td>
+<td><input type="text"></td>
+</tr>
+
+<tr>
+<td>Pin Code</td>
+<td><input type="number"></td>
+</tr>
+
+<tr>
+<td>Mobile</td>
+<td><input type="number"></td>
+</tr>
+
+<tr>
+<td>Email</td>
+<td><input type="email"></td>
+</tr>
+
+</table>
+
+
+<table>
+
+<tr class="section-title">
+<td colspan="2">KYC Details</td>
+</tr>
+
+<tr>
+<td>Photo ID Type</td>
+<td>
+<select>
+<option>Aadhaar</option>
+<option>PAN</option>
+<option>Passport</option>
+<option>Driving License</option>
+</select>
+</td>
+</tr>
+
+<tr>
+<td>Document Number</td>
+<td><input type="text"></td>
+</tr>
+
+</table>
+
+
+<table>
+
+<tr class="section-title">
+<td colspan="2">First Deposit</td>
+</tr>
+
+<tr>
+<td>Amount (Rs)</td>
+<td><input type="number" id="amount"></td>
+</tr>
+
+<tr>
+<td>Mode of Deposit</td>
+<td>
+<select>
+<option>Cash</option>
+<option>Cheque</option>
+<option>Online Transfer</option>
+</select>
+</td>
+</tr>
+
+</table>
+
+
+<table>
+
+<tr class="section-title">
+<td colspan="2">Nomination</td>
+</tr>
+
+<tr>
+<td>Nominee Name</td>
+<td><input type="text"></td>
+</tr>
+
+<tr>
+<td>Relationship</td>
+<td><input type="text"></td>
+</tr>
+
+<tr>
+<td>Share (%)</td>
+<td><input type="number"></td>
+</tr>
+
+</table>
+
+
+<center>
+<button onclick="submitForm()">Submit Form</button>
+</center>
+
+</div>
+
+
+<script>
+
+function submitForm(){
+
+let amount = document.getElementById("amount").value;
+
+if(amount == ""){
+alert("Please enter deposit amount");
+return;
+}
+
+alert("Form Submitted Successfully!");
+
+}
+
+</script>
+
+</body>
+</html>
