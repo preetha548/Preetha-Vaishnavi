@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>FlowerBox React App</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- React CDN -->
+<script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+<script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+<style>
+body {
+  margin: 0;
+  font-family: Arial;
+  background: linear-gradient(to right, #ffe6f0, #ffffff);
+}
+
+/* NAVBAR */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  background: #d63384;
+  color: white;
+  padding: 15px;
+}
+
+.navbar button {
+  margin-left: 10px;
+  background: white;
+  color: #d63384;
+  border: none;
+  padding: 8px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+/* COMMON */
+.container {
+  padding: 20px;
+  text-align: center;
+}
+
+h1 {
+  color: #d63384;
+}
+
+/* GRID */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  background: white;
+  padding: 15px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.card img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+button.primary {
+  background: #d63384;
+  color: white;
+  border: none;
+  padding: 8px;
+  margin: 5px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.qty-btn {
+  padding: 5px 10px;
+  margin: 5px;
+}
+</style>
+</head>
+
+<body>
+
+<div id="root"></div>
+
+<script type="text/babel">
+
+function App() {
+  const [page, setPage] = React.useState("home");
+  const [cart, setCart] = React.useState([]);
+
+  const flowers = [
+    { id: 1, name: "Rose Bouquet", price: 499, image: "https://images.unsplash.com/photo-1518895949257-7621c3c786d7" },
+    { id: 2, name: "Tulip Basket", price: 699, image: "https://images.unsplash.com/photo-1526045612212-70caf35c14df" },
+    { id: 3, name: "Lily Box", price: 599, image: "https://images.unsplash.com/photo-1501004318641-b39e6451bec6" },
+    { id: 4, name: "Mixed Flowers", price: 799, image: "https://images.unsplash.com/photo-1490750967868-88aa4486c946" }
+  ];
+
+  // ADD TO CART
+  const addToCart = (product) => {
+    const exist = cart.find(item => item.id === product.id);
+    if (exist) {
+      setCart(cart.map(item =>
+        item.id === product.id
+          ? { ...item, qty: item.qty + 1 }
+          : item
+      ));
+    } else {
+      setCart([...cart, { ...product, qty: 1 }]);
+    }
+  };
+
+  // REMOVE
+  const removeItem = (id) => {
+    setCart(cart.filter(item => item.id !== id));
+  };
+
+  // INCREASE
+  const increaseQty = (id) => {
+    setCart(cart.map(item =>
+      item.id === id ? { ...item, qty: item.qty + 1 } : item
+    ));
+  };
+
+  // DECREASE
+  const decreaseQty = (id) => {
+    setCart(cart.map(item =>
+      item.id === id && item.qty > 1
+        ? { ...item, qty: item.qty - 1 }
+        : item
+    ));
+  };
+
+  return (
+    <div>
+
+      {/* NAVBAR */}
+      <div className="navbar">
+        <h2>🌸 FlowerBox</h2>
+        <div>
+          <button onClick={() => setPage("home")}>Home</button>
+          <button onClick={() => setPage("products")}>Products</button>
+          <button onClick={() => setPage("cart")}>
+            Cart ({cart.length})
+          </button>
+        </div>
+      </div>
+
+      {/* PAGES */}
+      {page === "home" && <Home />}
+      {page === "products" && <Products flowers={flowers} addToCart={addToCart} />}
+      {page === "cart" && (
+        <Cart
+          cart={cart}
+          removeItem={removeItem}
+          increaseQty={increaseQty}
+          decreaseQty={decreaseQty}
+        />
+      )}
+
+    </div>
+  );
+}
+
+/* HOME */
+function Home() {
+  return (
+    <div className="container">
+      <h1>Welcome to FlowerBox 🌸</h1>
+      <p>Buy beautiful flowers online 💐</p>
+    </div>
+  );
+}
+
+/* PRODUCTS */
+function Products({ flowers, addToCart }) {
+  return (
+    <div className="container">
+      <h1>Our Flowers 🌼</h1>
+      <div className="grid">
+        {flowers.map(f => (
+          <div className="card" key={f.id}>
+            <img src={f.image} />
+            <h3>{f.name}</h3>
+            <p>₹{f.price}</p>
+            <button className="primary" onClick={() => addToCart(f)}>
+              Add to Cart
+            </button>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+}
+
+/* CART */
+function Cart({ cart, removeItem, increaseQty, decreaseQty }) {
+
+  const total = cart.reduce((sum, item) => sum + item.price * item.qty, 0);
+
+  return (
+    <div className="container">
+      <h1>Your Cart 🛒</h1>
+
+      {cart.length === 0 ? (
+        <p>No items in cart</p>
+      ) : (
+        cart.map(item => (
+          <div key={item.id}>
+            {item.name} - ₹{item.price}
+            <br/>
+
+            <button className="qty-btn" onClick={() => decreaseQty(item.id)}>-</button>
+            {item.qty}
+            <button className="qty-btn" onClick={() => increaseQty(item.id)}>+</button>
+
+            <button onClick={() => removeItem(item.id)}>Remove</button>
+            <hr/>
+          </div>
+        ))
+      )}
+
+      <h2>Total: ₹{total}</h2>
+    </div>
+  );
+}
+
+/* RENDER */
+const root = ReactDOM.createRoot(document.getElementById("root"));
+root.render(<App />);
+
+</script>
+
+</body>
+</html>
