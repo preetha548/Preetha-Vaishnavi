@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>React Blog App</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- React CDN -->
+  <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+  <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f5f6fa;
+      margin: 0;
+    }
+
+    header {
+      background: #6c5ce7;
+      color: white;
+      padding: 15px;
+      text-align: center;
+      font-size: 24px;
+    }
+
+    .container {
+      width: 90%;
+      max-width: 900px;
+      margin: 20px auto;
+    }
+
+    .form {
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      margin-bottom: 20px;
+      box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+    }
+
+    input, textarea {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+
+    button {
+      padding: 10px 15px;
+      border: none;
+      border-radius: 5px;
+      background: #6c5ce7;
+      color: white;
+      cursor: pointer;
+      margin-right: 5px;
+    }
+
+    button:hover {
+      background: #5a4bd1;
+    }
+
+    .post {
+      background: white;
+      padding: 15px;
+      margin-bottom: 15px;
+      border-radius: 10px;
+      box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+    }
+
+    .post h3 {
+      margin: 0;
+    }
+
+    .actions {
+      margin-top: 10px;
+    }
+
+    .delete {
+      background: #e74c3c;
+    }
+
+    .edit {
+      background: #f39c12;
+    }
+  </style>
+</head>
+
+<body>
+  <header>React Blog App</header>
+  <div id="root"></div>
+
+  <script type="text/babel">
+
+    function BlogApp() {
+      const [posts, setPosts] = React.useState([]);
+      const [title, setTitle] = React.useState("");
+      const [content, setContent] = React.useState("");
+      const [editIndex, setEditIndex] = React.useState(null);
+
+      const handleSubmit = () => {
+        if (!title || !content) return alert("Fill all fields");
+
+        if (editIndex !== null) {
+          const updated = [...posts];
+          updated[editIndex] = { title, content };
+          setPosts(updated);
+          setEditIndex(null);
+        } else {
+          setPosts([...posts, { title, content }]);
+        }
+
+        setTitle("");
+        setContent("");
+      };
+
+      const handleEdit = (index) => {
+        setTitle(posts[index].title);
+        setContent(posts[index].content);
+        setEditIndex(index);
+      };
+
+      const handleDelete = (index) => {
+        const updated = posts.filter((_, i) => i !== index);
+        setPosts(updated);
+      };
+
+      return (
+        <div className="container">
+          <div className="form">
+            <h2>{editIndex !== null ? "Edit Post" : "Create Post"}</h2>
+
+            <input
+              type="text"
+              placeholder="Post Title"
+              value={title}
+              onChange={(e) => setTitle(e.target.value)}
+            />
+
+            <textarea
+              rows="5"
+              placeholder="Post Content"
+              value={content}
+              onChange={(e) => setContent(e.target.value)}
+            ></textarea>
+
+            <button onClick={handleSubmit}>
+              {editIndex !== null ? "Update" : "Publish"}
+            </button>
+          </div>
+
+          {posts.map((post, index) => (
+            <div key={index} className="post">
+              <h3>{post.title}</h3>
+              <p>{post.content}</p>
+
+              <div className="actions">
+                <button className="edit" onClick={() => handleEdit(index)}>
+                  Edit
+                </button>
+                <button className="delete" onClick={() => handleDelete(index)}>
+                  Delete
+                </button>
+              </div>
+            </div>
+          ))}
+        </div>
+      );
+    }
+
+    ReactDOM.createRoot(document.getElementById("root")).render(<BlogApp />);
+  </script>
+</body>
+</html>
