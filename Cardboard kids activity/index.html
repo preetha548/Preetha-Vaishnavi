@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Nature Kids Activity</title>
+
+<style>
+body {
+  margin: 0;
+  font-family: 'Comic Sans MS', cursive;
+  background: linear-gradient(#dcedc8, #c5e1a5);
+}
+
+/* Cardboard Board */
+.board {
+  width: 90%;
+  max-width: 900px;
+  margin: 20px auto;
+  background: linear-gradient(#d7ccc8, #bcaaa4);
+  border: 10px solid #6d4c41;
+  border-radius: 20px;
+  padding: 20px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+}
+
+h1 {
+  text-align: center;
+  color: #2e7d32;
+}
+
+/* Row */
+.row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #f1f8e9;
+  border: 3px dashed #6d4c41;
+  padding: 12px;
+  margin: 10px 0;
+  border-radius: 12px;
+}
+
+/* Nature Items */
+.items {
+  font-size: 24px;
+  width: 40%;
+}
+
+/* Options */
+.options button {
+  background: #aed581;
+  border: 2px solid #33691e;
+  border-radius: 8px;
+  padding: 8px 12px;
+  margin: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.options button:hover {
+  background: #9ccc65;
+}
+
+/* Result */
+.result {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+/* Score */
+.score {
+  text-align: center;
+  font-size: 20px;
+  margin-top: 10px;
+  color: #1b5e20;
+}
+
+/* Button */
+.controls {
+  text-align: center;
+  margin-top: 15px;
+}
+
+button.main {
+  padding: 10px 20px;
+  background: #2e7d32;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+</style>
+</head>
+
+<body>
+
+<div class="board">
+  <h1>🌿 Nature Counting Activity (20 Questions)</h1>
+
+  <div id="game"></div>
+
+  <div class="score">Score: <span id="score">0</span> / 20</div>
+
+  <div class="controls">
+    <button class="main" onclick="resetGame()">🔄 New Nature Set</button>
+  </div>
+</div>
+
+<script>
+const natureEmojis = [
+  "🌳","🌲","🌴","🌿","🍀","🍃",
+  "🌸","🌼","🌻","🌺",
+  "🦋","🐝","🐞",
+  "🍄","🌾","🌷","🌱"
+];
+
+let data = [];
+let score = 0;
+
+/* Generate 20 Questions */
+function generateQuestions() {
+  data = [];
+
+  for (let i = 0; i < 20; i++) {
+    let count = Math.floor(Math.random() * 9) + 1;
+    let emoji = natureEmojis[Math.floor(Math.random() * natureEmojis.length)];
+
+    let items = "";
+    for (let j = 0; j < count; j++) {
+      items += emoji + " ";
+    }
+
+    data.push({ items, answer: count });
+  }
+}
+
+/* Load Game */
+function loadGame() {
+  const game = document.getElementById("game");
+  game.innerHTML = "";
+
+  data.forEach(q => {
+    const row = document.createElement("div");
+    row.className = "row";
+
+    const items = document.createElement("div");
+    items.className = "items";
+    items.textContent = q.items;
+
+    const options = document.createElement("div");
+    options.className = "options";
+
+    const result = document.createElement("div");
+    result.className = "result";
+
+    let nums = new Set([q.answer]);
+    while (nums.size < 3) {
+      nums.add(Math.floor(Math.random() * 10) + 1);
+    }
+
+    [...nums].sort(() => Math.random() - 0.5).forEach(n => {
+      const btn = document.createElement("button");
+      btn.textContent = n;
+
+      btn.onclick = () => {
+        if (n === q.answer) {
+          result.textContent = "✔";
+          result.style.color = "green";
+          score++;
+        } else {
+          result.textContent = "❌";
+          result.style.color = "red";
+        }
+
+        document.getElementById("score").textContent = score;
+      };
+
+      options.appendChild(btn);
+    });
+
+    row.appendChild(items);
+    row.appendChild(options);
+    row.appendChild(result);
+
+    game.appendChild(row);
+  });
+}
+
+/* Reset */
+function resetGame() {
+  score = 0;
+  document.getElementById("score").textContent = score;
+  generateQuestions();
+  loadGame();
+}
+
+/* Start */
+generateQuestions();
+loadGame();
+</script>
+
+</body>
+</html>
