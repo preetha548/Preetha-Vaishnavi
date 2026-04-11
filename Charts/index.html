@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>9 Charts Dashboard</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<style>
+body {
+  margin: 0;
+  font-family: Arial;
+  background: #f4f6f9;
+}
+
+.header {
+  text-align: center;
+  padding: 20px;
+  background: #2c3e50;
+  color: white;
+}
+
+.dashboard {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+.card {
+  background: white;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+canvas {
+  height: 250px !important;
+}
+</style>
+</head>
+
+<body>
+
+<div class="header">
+  <h1>📊  Charts Dashboard</h1>
+</div>
+
+<div class="dashboard">
+
+  <div class="card"><canvas id="bar"></canvas></div>
+  <div class="card"><canvas id="line"></canvas></div>
+  <div class="card"><canvas id="pie"></canvas></div>
+  <div class="card"><canvas id="doughnut"></canvas></div>
+  <div class="card"><canvas id="radar"></canvas></div>
+  <div class="card"><canvas id="polar"></canvas></div>
+  <div class="card"><canvas id="bubble"></canvas></div>
+  <div class="card"><canvas id="scatter"></canvas></div>
+  <div class="card"><canvas id="mixed"></canvas></div>
+
+</div>
+
+<script>
+
+const labels = ["Jan","Feb","Mar","Apr","May"];
+const values = [12, 19, 3, 5, 8];
+const colors = ["#3498db","#2ecc71","#f1c40f","#e74c3c","#9b59b6"];
+
+// 1 Bar
+new Chart(bar,{
+  type:"bar",
+  data:{labels,datasets:[{data:values,backgroundColor:colors}]}
+});
+
+// 2 Line
+new Chart(line,{
+  type:"line",
+  data:{labels,datasets:[{data:values,borderColor:"#2ecc71"}]}
+});
+
+// 3 Pie
+new Chart(pie,{
+  type:"pie",
+  data:{labels,datasets:[{data:values,backgroundColor:colors}]}
+});
+
+// 4 Doughnut
+new Chart(doughnut,{
+  type:"doughnut",
+  data:{labels,datasets:[{data:values,backgroundColor:colors}]}
+});
+
+// 5 Radar
+new Chart(radar,{
+  type:"radar",
+  data:{labels,datasets:[{data:values,backgroundColor:"rgba(52,152,219,0.3)"}]}
+});
+
+// 6 Polar Area
+new Chart(polar,{
+  type:"polarArea",
+  data:{labels,datasets:[{data:values,backgroundColor:colors}]}
+});
+
+// 7 Bubble
+new Chart(bubble,{
+  type:"bubble",
+  data:{
+    datasets:[{
+      data:[
+        {x:10,y:20,r:10},
+        {x:20,y:15,r:12},
+        {x:30,y:25,r:8}
+      ],
+      backgroundColor:"#9b59b6"
+    }]
+  }
+});
+
+// 8 Scatter
+new Chart(scatter,{
+  type:"scatter",
+  data:{
+    datasets:[{
+      data:[
+        {x:5,y:7},
+        {x:10,y:15},
+        {x:15,y:10}
+      ],
+      backgroundColor:"#e74c3c"
+    }]
+  }
+});
+
+// 9 Mixed (Bar + Line)
+new Chart(mixed,{
+  data:{
+    labels,
+    datasets:[
+      {
+        type:"bar",
+        label:"Sales",
+        data: values,
+        backgroundColor:"#3498db"
+      },
+      {
+        type:"line",
+        label:"Growth",
+        data: [2,3,1,5,4],
+        borderColor:"#e74c3c",
+        fill:false
+      }
+    ]
+  }
+});
+
+</script>
+
+</body>
+</html>
