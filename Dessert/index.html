@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Dessert World</title>
+
+<!-- Bootstrap -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<style>
+body {
+  background: #fff5f0;
+}
+
+/* HERO */
+.hero {
+  background: url('https://images.unsplash.com/photo-1605478371310-a9f1e96b4ff4?auto=format&fit=crop&w=1400&q=80') center/cover;
+  height: 70vh;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* CARD */
+.card:hover {
+  transform: scale(1.05);
+  transition: 0.3s;
+}
+
+/* RESPONSE BOX */
+#responseBox {
+  display: none;
+}
+
+/* FOOTER */
+footer {
+  background: #6b3e26;
+  color: white;
+  padding: 15px;
+}
+</style>
+
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="navbar navbar-dark bg-dark">
+  <div class="container">
+    <span class="navbar-brand">🍰 Dessert World</span>
+  </div>
+</nav>
+
+<!-- HERO -->
+<div class="hero text-center">
+  <div>
+    <h1>Sweet Desserts</h1>
+    <p>Made with love</p>
+  </div>
+</div>
+
+<!-- DESSERTS -->
+<div class="container py-5">
+  <h2 class="text-center mb-4">Popular Desserts</h2>
+  <div class="row g-4">
+
+    <div class="col-md-4">
+      <div class="card shadow">
+        <img src="https://images.unsplash.com/photo-1606313564200-e75d5e30476c?auto=format&fit=crop&w=800&q=80" class="card-img-top">
+        <div class="card-body text-center">
+          <h5>Chocolate Cake</h5>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4">
+      <div class="card shadow">
+        <img src="https://images.unsplash.com/photo-1589308078059-be1415eab4c3?auto=format&fit=crop&w=800&q=80" class="card-img-top">
+        <div class="card-body text-center">
+          <h5>Ice Cream</h5>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4">
+      <div class="card shadow">
+        <img src="https://images.unsplash.com/photo-1551024601-bec78aea704b?auto=format&fit=crop&w=800&q=80" class="card-img-top">
+        <div class="card-body text-center">
+          <h5>Strawberry Dessert</h5>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- CONTACT FORM -->
+<div class="container py-5">
+  <h2 class="text-center mb-4">Contact Us</h2>
+
+  <form onsubmit="handleSubmit(event)">
+    <div class="row">
+      <div class="col-md-6">
+        <input type="text" id="name" class="form-control" placeholder="Your Name" required>
+      </div>
+      <div class="col-md-6">
+        <input type="email" id="email" class="form-control" placeholder="Email" required>
+      </div>
+    </div>
+
+    <div class="mt-3">
+      <textarea id="message" class="form-control" rows="4" placeholder="Your Message" required></textarea>
+    </div>
+
+    <div class="text-center mt-3">
+      <button class="btn btn-dark">Send Message</button>
+    </div>
+  </form>
+
+  <!-- RESPONSE -->
+  <div id="responseBox" class="alert alert-success mt-4"></div>
+</div>
+
+<!-- FOOTER -->
+<footer class="text-center">
+  © 2026 Dessert World 🍩
+</footer>
+
+<script>
+function handleSubmit(e) {
+  e.preventDefault();
+
+  let name = document.getElementById("name").value;
+  let email = document.getElementById("email").value;
+  let message = document.getElementById("message").value;
+
+  let response = `
+    <strong>Thank you, ${name}!</strong><br>
+    We received your message:<br>
+    "${message}"<br><br>
+    We will contact you at: ${email}
+  `;
+
+  let box = document.getElementById("responseBox");
+  box.innerHTML = response;
+  box.style.display = "block";
+
+  document.querySelector("form").reset();
+}
+</script>
+
+</body>
+</html>
