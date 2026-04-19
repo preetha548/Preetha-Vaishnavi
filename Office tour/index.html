@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Office Tour Booking</title>
+
+<style>
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f4f7fb;
+}
+
+/* HEADER */
+header {
+  background: #1e3c72;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+/* TOUR SECTION */
+.container {
+  padding: 20px;
+}
+
+.tour-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: scale(1.03);
+}
+
+.card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.card-content {
+  padding: 15px;
+}
+
+button {
+  padding: 10px;
+  border: none;
+  background: #1e3c72;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #2a5298;
+}
+
+/* BOOKING FORM */
+.form-container {
+  background: white;
+  padding: 20px;
+  margin-top: 30px;
+  border-radius: 10px;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+}
+
+input, select {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+}
+
+.success {
+  color: green;
+  font-weight: bold;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <h1>🏢 Office Tour Booking</h1>
+  <p>Explore our workplace with guided audio tours</p>
+</header>
+
+<div class="container">
+
+  <!-- TOUR CARDS -->
+  <div class="tour-grid">
+
+    <!-- CARD 1 -->
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1497366216548-37526070297c" alt="">
+      <div class="card-content">
+        <h3>Reception Area</h3>
+        <audio id="audio1" src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3"></audio>
+        <button onclick="playAudio('audio1')">▶ Play Audio</button>
+      </div>
+    </div>
+
+    <!-- CARD 2 -->
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1492724441997-5dc865305da7" alt="">
+      <div class="card-content">
+        <h3>Workspace</h3>
+        <audio id="audio2" src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-2.mp3"></audio>
+        <button onclick="playAudio('audio2')">▶ Play Audio</button>
+      </div>
+    </div>
+
+    <!-- CARD 3 -->
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1556761175-4b46a572b786" alt="">
+      <div class="card-content">
+        <h3>Meeting Room</h3>
+        <audio id="audio3" src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-3.mp3"></audio>
+        <button onclick="playAudio('audio3')">▶ Play Audio</button>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- BOOKING FORM -->
+  <div class="form-container">
+    <h2>📅 Book Your Tour</h2>
+
+    <form id="bookingForm">
+      <input type="text" id="name" placeholder="Your Name" required>
+      <input type="email" id="email" placeholder="Email" required>
+
+      <select id="tour">
+        <option value="Reception">Reception Area</option>
+        <option value="Workspace">Workspace</option>
+        <option value="Meeting Room">Meeting Room</option>
+      </select>
+
+      <input type="date" id="date" required>
+
+      <button type="submit">Book Now</button>
+    </form>
+
+    <p class="success" id="message"></p>
+  </div>
+
+</div>
+
+<script>
+function playAudio(id) {
+  let audios = document.querySelectorAll("audio");
+
+  audios.forEach(audio => {
+    if (audio.id !== id) {
+      audio.pause();
+      audio.currentTime = 0;
+    }
+  });
+
+  let selected = document.getElementById(id);
+  if (selected.paused) {
+    selected.play();
+  } else {
+    selected.pause();
+  }
+}
+
+// FORM SUBMIT
+document.getElementById("bookingForm").addEventListener("submit", function(e) {
+  e.preventDefault();
+
+  let name = document.getElementById("name").value;
+  let tour = document.getElementById("tour").value;
+  let date = document.getElementById("date").value;
+
+  document.getElementById("message").innerText =
+    "✅ Booking confirmed for " + name + " (" + tour + ") on " + date;
+});
+</script>
+
+</body>
+</html>
