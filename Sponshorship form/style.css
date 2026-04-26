@@ -1,0 +1,58 @@
+body {
+  font-family: "Times New Roman", serif;
+  background: #f4f1ea;
+  margin: 0;
+  padding: 20px;
+}
+
+.container {
+  background: #fff;
+  padding: 20px;
+  border: 2px solid #000;
+  max-width: 900px;
+  margin: auto;
+}
+
+h1 {
+  text-align: center;
+  font-size: 40px;
+  margin-bottom: 20px;
+}
+
+.participant input {
+  border: none;
+  border-bottom: 1px dotted black;
+  width: 60%;
+}
+
+.gift {
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  border: 1px solid #000;
+  padding: 8px;
+  text-align: center;
+}
+
+th {
+  background: #ddd8c4;
+}
+
+button {
+  margin-top: 10px;
+  padding: 8px 15px;
+  cursor: pointer;
+}
+
+.thankyou {
+  text-align: center;
+  margin-top: 30px;
+  font-style: italic;
+}

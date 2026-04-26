@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Sponsorship Form</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+  <h1>Sponsorship Form</h1>
+
+  <p class="participant">
+    <strong>Name of participant:</strong>
+    <input type="text" placeholder="Enter name">
+  </p>
+
+  <p class="gift">
+    <strong>Gift Aid:</strong>
+    (Make your donation worth ______% more. Please note, you must be a taxpayer...)
+  </p>
+
+  <table id="sponsorTable">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Address</th>
+        <th>Postcode</th>
+        <th>Amount</th>
+        <th>Gift Aid</th>
+        <th>Paid</th>
+      </tr>
+    </thead>
+    <tbody id="tableBody">
+      <!-- Rows will be added -->
+    </tbody>
+  </table>
+
+  <button onclick="addRow()">Add Row</button>
+
+  <h3 class="thankyou">Thank You for Your Help and Contributions</h3>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
