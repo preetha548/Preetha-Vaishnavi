@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Advanced Smoothie Maker</title>
+
+  <!-- React CDN -->
+  <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+  <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+  <style>
+    body {
+      font-family: Arial;
+      text-align: center;
+      background: linear-gradient(to right, #89f7fe, #66a6ff);
+    }
+
+    .container {
+      margin-top: 50px;
+      background: white;
+      padding: 25px;
+      border-radius: 12px;
+      width: 350px;
+      margin-left: auto;
+      margin-right: auto;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.3);
+    }
+
+    h1 {
+      color: #333;
+    }
+
+    .fruits label {
+      display: block;
+      margin: 5px;
+      font-size: 16px;
+    }
+
+    button {
+      margin-top: 15px;
+      padding: 10px 20px;
+      font-size: 16px;
+      background: #ff6b81;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: #ff4757;
+    }
+
+    .blender {
+      margin-top: 20px;
+      font-size: 30px;
+      transition: transform 0.5s;
+    }
+
+    .spin {
+      animation: spin 1s linear infinite;
+    }
+
+    @keyframes spin {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
+    }
+
+    .result {
+      margin-top: 20px;
+      font-size: 18px;
+      font-weight: bold;
+    }
+
+    .glass {
+      margin-top: 15px;
+      width: 100px;
+      height: 150px;
+      margin-left: auto;
+      margin-right: auto;
+      border-radius: 10px;
+      border: 3px solid #333;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="root"></div>
+
+  <script type="text/babel">
+    function SmoothieApp() {
+      const [fruits, setFruits] = React.useState([]);
+      const [price, setPrice] = React.useState(0);
+      const [blending, setBlending] = React.useState(false);
+      const [color, setColor] = React.useState("white");
+
+      const fruitData = {
+        Strawberry: { price: 50, color: "#ff4d6d" },
+        Mango: { price: 40, color: "#ffa502" },
+        Banana: { price: 30, color: "#f1c40f" }
+      };
+
+      const toggleFruit = (fruit) => {
+        let updated = [...fruits];
+        if (updated.includes(fruit)) {
+          updated = updated.filter(f => f !== fruit);
+        } else {
+          updated.push(fruit);
+        }
+        setFruits(updated);
+      };
+
+      const makeSmoothie = () => {
+        if (fruits.length === 0) {
+          alert("Select at least one fruit!");
+          return;
+        }
+
+        setBlending(true);
+
+        setTimeout(() => {
+          let total = 0;
+          let mixedColor = "#ffffff";
+
+          fruits.forEach(fruit => {
+            total += fruitData[fruit].price;
+            mixedColor = fruitData[fruit].color;
+          });
+
+          setPrice(total);
+          setColor(mixedColor);
+          setBlending(false);
+        }, 2000);
+      };
+
+      return (
+        <div className="container">
+          <h1>🍹 Advanced Smoothie Maker</h1>
+
+          <div className="fruits">
+            {Object.keys(fruitData).map(fruit => (
+              <label key={fruit}>
+                <input
+                  type="checkbox"
+                  onChange={() => toggleFruit(fruit)}
+                />
+                {fruit} (₹{fruitData[fruit].price})
+              </label>
+            ))}
+          </div>
+
+          <button onClick={makeSmoothie}>Blend Smoothie</button>
+
+          <div className={"blender " + (blending ? "spin" : "")}>
+            🌀
+          </div>
+
+          <div
+            className="glass"
+            style={{ background: color }}
+          ></div>
+
+          <div className="result">
+            {price > 0 && `Total Price: ₹${price}`}
+          </div>
+        </div>
+      );
+    }
+
+    const root = ReactDOM.createRoot(document.getElementById("root"));
+    root.render(<SmoothieApp />);
+  </script>
+</body>
+</html>
