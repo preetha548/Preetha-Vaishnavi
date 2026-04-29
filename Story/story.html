@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Audio Story Book</title>
+
+  <!-- React CDN -->
+  <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+  <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+  <style>
+    body {
+      font-family: Arial;
+      background: linear-gradient(to right, #1e3c72, #2a5298);
+      color: white;
+      text-align: center;
+      padding: 30px;
+    }
+
+    .app {
+      width: 450px;
+      margin: auto;
+      background: rgba(0,0,0,0.6);
+      padding: 20px;
+      border-radius: 15px;
+    }
+
+    button {
+      margin: 6px;
+      padding: 10px 14px;
+      border: none;
+      border-radius: 10px;
+      background: #ff9800;
+      color: white;
+      cursor: pointer;
+    }
+
+    select {
+      padding: 8px;
+      border-radius: 8px;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+
+<body>
+<div id="root"></div>
+
+<script type="text/babel">
+
+function AudioStoryBook() {
+  const [chapter, setChapter] = React.useState(0);
+  const [isPlaying, setIsPlaying] = React.useState(false);
+  const [speed, setSpeed] = React.useState(1);
+
+  const synth = window.speechSynthesis;
+
+  const story = [
+    {
+      title: "Chapter 1: The Beginning",
+      text: "Once upon a time, in a peaceful village, there lived a curious girl named Anya. One day, she discovered a glowing path in the forest that no one had ever seen before."
+    },
+    {
+      title: "Chapter 2: The Forest",
+      text: "Anya followed the glowing path into the forest. The trees whispered softly, and strange lights danced around her. She felt both scared and excited."
+    },
+    {
+      title: "Chapter 3: The Secret",
+      text: "At the center of the forest, Anya found a magical crystal. It had the power to grant one wish. She closed her eyes and made a wish from her heart."
+    },
+    {
+      title: "Chapter 4: The Ending",
+      text: "The forest glowed brighter, and suddenly everything changed. Anya returned home safely, but she knew her life would never be the same again."
+    }
+  ];
+
+  function speak() {
+    synth.cancel(); // stop previous
+
+    const utter = new SpeechSynthesisUtterance(story[chapter].text);
+    utter.rate = speed;
+    synth.speak(utter);
+
+    setIsPlaying(true);
+
+    utter.onend = () => setIsPlaying(false);
+  }
+
+  function pause() {
+    synth.pause();
+    setIsPlaying(false);
+  }
+
+  function resume() {
+    synth.resume();
+    setIsPlaying(true);
+  }
+
+  function stop() {
+    synth.cancel();
+    setIsPlaying(false);
+  }
+
+  function next() {
+    stop();
+    if (chapter < story.length - 1) {
+      setChapter(chapter + 1);
+    }
+  }
+
+  function prev() {
+    stop();
+    if (chapter > 0) {
+      setChapter(chapter - 1);
+    }
+  }
+
+  function restart() {
+    stop();
+    setChapter(0);
+  }
+
+  return (
+    <div className="app">
+      <h2>🎧 Audio Story Book</h2>
+
+      <h3>{story[chapter].title}</h3>
+      <p>{story[chapter].text}</p>
+
+      <div>
+        <button onClick={prev}>⏮ Prev</button>
+
+        {!isPlaying ? (
+          <button onClick={speak}>▶ Play</button>
+        ) : (
+          <>
+            <button onClick={pause}>⏸ Pause</button>
+            <button onClick={resume}>▶ Resume</button>
+          </>
+        )}
+
+        <button onClick={next}>⏭ Next</button>
+      </div>
+
+      <div>
+        <button onClick={stop}>⏹ Stop</button>
+        <button onClick={restart}>🔁 Restart</button>
+      </div>
+
+      <div>
+        <p>Speed:</p>
+        <select onChange={(e) => setSpeed(e.target.value)}>
+          <option value="0.8">0.8x</option>
+          <option value="1" selected>1x</option>
+          <option value="1.5">1.5x</option>
+          <option value="2">2x</option>
+        </select>
+      </div>
+    </div>
+  );
+}
+
+ReactDOM.createRoot(document.getElementById("root")).render(<AudioStoryBook />);
+
+</script>
+</body>
+</html>
