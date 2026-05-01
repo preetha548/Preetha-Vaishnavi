@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Advanced Car Game</title>
+
+<script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+<script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+<style>
+  body {
+    margin: 0;
+    overflow: hidden;
+    background: linear-gradient(#87CEEB, #e0f7ff);
+    font-family: Arial;
+  }
+
+  .road {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 200px;
+    background: #333;
+  }
+
+  .lane {
+    position: absolute;
+    width: 100%;
+    height: 10px;
+    top: 50%;
+    background: repeating-linear-gradient(
+      to right,
+      white 0 40px,
+      transparent 40px 80px
+    );
+    animation: roadMove 1s linear infinite;
+  }
+
+  @keyframes roadMove {
+    from { transform: translateX(0); }
+    to { transform: translateX(-80px); }
+  }
+
+  .car, .enemy {
+    position: absolute;
+    width: 60px;
+    height: 80px;
+    border-radius: 10px;
+  }
+
+  .car {
+    background: red;
+    bottom: 120px;
+  }
+
+  .enemy {
+    background: blue;
+  }
+
+  .controls {
+    position: absolute;
+    bottom: 10px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  button {
+    padding: 12px;
+    font-size: 16px;
+    border-radius: 8px;
+    border: none;
+    background: black;
+    color: white;
+  }
+
+  .info {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background: white;
+    padding: 10px;
+    border-radius: 8px;
+  }
+
+  .gameover {
+    position: absolute;
+    top: 40%;
+    width: 100%;
+    text-align: center;
+    font-size: 30px;
+    color: red;
+  }
+</style>
+</head>
+
+<body>
+<div id="root"></div>
+
+<script type="text/babel">
+
+function App() {
+  const [carX, setCarX] = React.useState(150);
+  const [speed, setSpeed] = React.useState(5);
+  const [move, setMove] = React.useState({ left:false, right:false });
+  const [enemies, setEnemies] = React.useState([]);
+  const [score, setScore] = React.useState(0);
+  const [gameOver, setGameOver] = React.useState(false);
+
+  // Spawn enemies
+  React.useEffect(() => {
+    const interval = setInterval(() => {
+      if (!gameOver) {
+        setEnemies(e => [...e, {
+          x: Math.random() * (window.innerWidth - 60),
+          y: -100
+        }]);
+      }
+    }, 1500);
+    return () => clearInterval(interval);
+  }, [gameOver]);
+
+  // Game loop
+  React.useEffect(() => {
+    let anim;
+
+    const loop = () => {
+      if (!gameOver) {
+
+        // Move car
+        setCarX(x => {
+          let nx = x;
+          if (move.left) nx -= speed;
+          if (move.right) nx += speed;
+          return Math.max(0, Math.min(window.innerWidth - 60, nx));
+        });
+
+        // Move enemies
+        setEnemies(enemies => 
+          enemies.map(e => ({ ...e, y: e.y + speed }))
+                 .filter(e => e.y < window.innerHeight)
+        );
+
+        // Collision detection
+        setEnemies(enemies => {
+          for (let e of enemies) {
+            if (
+              e.y > window.innerHeight - 200 &&
+              e.x < carX + 60 &&
+              e.x + 60 > carX
+            ) {
+              setGameOver(true);
+            }
+          }
+          return enemies;
+        });
+
+        setScore(s => s + 1);
+      }
+
+      anim = requestAnimationFrame(loop);
+    };
+
+    loop();
+    return () => cancelAnimationFrame(anim);
+  }, [move, speed, carX, gameOver]);
+
+  const restart = () => {
+    setEnemies([]);
+    setScore(0);
+    setGameOver(false);
+    setCarX(150);
+  };
+
+  return (
+    <>
+      <div className="road">
+        <div className="lane"></div>
+      </div>
+
+      {/* Player Car */}
+      <div className="car" style={{ left: carX }}></div>
+
+      {/* Enemy Cars */}
+      {enemies.map((e, i) => (
+        <div key={i} className="enemy" style={{ left: e.x, top: e.y }}></div>
+      ))}
+
+      <div className="info">
+        Score: {score} <br/>
+        Speed: {speed}
+      </div>
+
+      {gameOver && (
+        <div className="gameover">
+          Game Over<br/>
+          <button onClick={restart}>Restart</button>
+        </div>
+      )}
+
+      <div className="controls">
+        <button
+          onMouseDown={()=>setMove(m=>({...m,left:true}))}
+          onMouseUp={()=>setMove(m=>({...m,left:false}))}
+          onTouchStart={()=>setMove(m=>({...m,left:true}))}
+          onTouchEnd={()=>setMove(m=>({...m,left:false}))}
+        >⬅️</button>
+
+        <button onClick={()=>setSpeed(s=>s+2)}>⚡ Nitro</button>
+
+        <button
+          onMouseDown={()=>setMove(m=>({...m,right:true}))}
+          onMouseUp={()=>setMove(m=>({...m,right:false}))}
+          onTouchStart={()=>setMove(m=>({...m,right:true}))}
+          onTouchEnd={()=>setMove(m=>({...m,right:false}))}
+        >➡️</button>
+      </div>
+    </>
+  );
+}
+
+ReactDOM.createRoot(document.getElementById("root")).render(<App />);
+
+</script>
+</body>
+</html>
