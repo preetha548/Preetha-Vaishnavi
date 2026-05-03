@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Testbook Coupon System</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:Arial, sans-serif;
+}
+
+body{
+  height:100vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  background:linear-gradient(135deg,#0f2027,#2c5364);
+  color:white;
+}
+
+.card{
+  width:350px;
+  padding:30px;
+  background:rgba(255,255,255,0.08);
+  backdrop-filter:blur(10px);
+  border-radius:15px;
+  text-align:center;
+  box-shadow:0 10px 30px rgba(0,0,0,0.5);
+}
+
+h2{
+  margin-bottom:15px;
+}
+
+.price{
+  font-size:22px;
+  margin-bottom:10px;
+}
+
+input{
+  width:100%;
+  padding:10px;
+  border:none;
+  border-radius:5px;
+  margin:10px 0;
+}
+
+button{
+  width:100%;
+  padding:10px;
+  border:none;
+  border-radius:25px;
+  background:#00c6ff;
+  color:black;
+  font-weight:bold;
+  cursor:pointer;
+  margin-top:10px;
+}
+
+button:hover{
+  background:#00aaff;
+}
+
+.msg{
+  margin-top:15px;
+  font-size:14px;
+}
+
+.coupons{
+  margin-top:20px;
+}
+
+.coupon{
+  background:#1e293b;
+  padding:8px;
+  margin:5px;
+  border-radius:5px;
+  cursor:pointer;
+  font-size:14px;
+}
+
+.coupon:hover{
+  background:#334155;
+}
+</style>
+</head>
+
+<body>
+
+<div class="card">
+
+  <h2>Testbook Coupon</h2>
+
+  <div class="price">
+    Price: ₹<span id="price">999</span>
+  </div>
+
+  <input type="text" id="couponInput" placeholder="Enter Coupon Code">
+
+  <button onclick="applyCoupon()">Apply Coupon</button>
+
+  <div class="msg" id="message"></div>
+
+  <div class="coupons">
+    <p>Available Coupons:</p>
+    <div class="coupon" onclick="fillCoupon('SBT100')">SBT100</div>
+    <div class="coupon" onclick="fillCoupon('SAFAR')">SAFAR</div>
+    <div class="coupon" onclick="fillCoupon('TB10')">TB10</div>
+  </div>
+
+</div>
+
+<script>
+let originalPrice = 999;
+
+const coupons = {
+  "SBT100": 70,
+  "SAFAR": 30,
+  "TB10": 10
+};
+
+function fillCoupon(code){
+  document.getElementById("couponInput").value = code;
+}
+
+function applyCoupon(){
+  let code = document.getElementById("couponInput").value.toUpperCase();
+  let message = document.getElementById("message");
+  let priceDisplay = document.getElementById("price");
+
+  if(coupons[code]){
+    let discount = coupons[code];
+    let newPrice = originalPrice - (originalPrice * discount / 100);
+
+    priceDisplay.innerText = newPrice.toFixed(0);
+    message.innerText = "✅ Coupon Applied! " + discount + "% OFF";
+    message.style.color = "#00ffcc";
+  } else {
+    message.innerText = "❌ Invalid Coupon Code";
+    message.style.color = "red";
+  }
+}
+</script>
+
+</body>
+</html>
