@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Thank You Letter</title>
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        background: #e9e7df;
+        font-family: 'Georgia', serif;
+    }
+
+    .container {
+        width: 700px;
+        margin: 50px auto;
+        background: #f7f6f2;
+        padding: 50px;
+        box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+        position: relative;
+        overflow: hidden;
+    }
+
+    h1 {
+        text-align: center;
+        font-size: 60px;
+        color: #7a7f63;
+        margin-bottom: 10px;
+        opacity: 0;
+        transform: translateY(-20px);
+        animation: fadeIn 1s forwards;
+    }
+
+    .line {
+        width: 80%;
+        margin: 10px auto 30px;
+        border-bottom: 2px dotted #999;
+    }
+
+    .content {
+        color: #6b6f5a;
+        font-size: 18px;
+        line-height: 1.8;
+        opacity: 0;
+        animation: fadeIn 1.5s forwards;
+        animation-delay: 0.5s;
+    }
+
+    .signature {
+        margin-top: 40px;
+        opacity: 0;
+        animation: fadeIn 2s forwards;
+        animation-delay: 1s;
+    }
+
+    .signature h2 {
+        font-family: cursive;
+        font-size: 40px;
+        color: #7a7f63;
+        margin: 5px 0;
+    }
+
+    .signature p {
+        margin: 0;
+        color: #6b6f5a;
+    }
+
+    /* Decorative leaves */
+    .leaf {
+        position: absolute;
+        width: 150px;
+        opacity: 0.4;
+    }
+
+    .leaf.top {
+        top: -20px;
+        left: -20px;
+        transform: rotate(-20deg);
+    }
+
+    .leaf.bottom {
+        bottom: -20px;
+        right: -20px;
+        transform: rotate(20deg);
+    }
+
+    @keyframes fadeIn {
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+</style>
+</head>
+<body>
+
+<div class="container">
+    
+    <img src="https://cdn-icons-png.flaticon.com/512/2909/2909767.png" class="leaf top">
+    
+    <h1>Thank You</h1>
+    
+    <div class="line"></div>
+
+    <div class="content">
+        <p><strong>Dear Samira Hadid,</strong></p>
+
+        <p>
+        A letter is a message written for a variety of purposes, from friendly to formal.
+        They can help maintain bonds between friends, especially if they’re far apart.
+        Letters are also used by professionals to communicate their concerns.
+        In some schools, kids are encouraged to write letters to Santa for Christmas.
+        </p>
+
+        <p>
+        If you’re thinking of writing a letter yourself, make your intentions clear from the start.
+        You can be fun and creative or straightforward, depending on your needs.
+        Most letters are divided into sections, including the date, recipient’s name, and salutations.
+        </p>
+
+        <p>Sincerely,</p>
+    </div>
+
+    <div class="signature">
+        <h2>Estelle</h2>
+        <p>Estelle Darcy</p>
+    </div>
+
+    <img src="https://cdn-icons-png.flaticon.com/512/2909/2909767.png" class="leaf bottom">
+
+</div>
+
+<script>
+    // Simple JS enhancement (hover glow effect)
+    const container = document.querySelector('.container');
+
+    container.addEventListener('mouseenter', () => {
+        container.style.boxShadow = "0 10px 30px rgba(0,0,0,0.2)";
+    });
+
+    container.addEventListener('mouseleave', () => {
+        container.style.boxShadow = "0 5px 20px rgba(0,0,0,0.1)";
+    });
+</script>
+
+</body>
+</html>
