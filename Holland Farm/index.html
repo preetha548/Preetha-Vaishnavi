@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Deli Delights Menu</title>
+<style>
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background: #f4f4f4;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+    padding: 20px;
+}
+
+/* Section Styles */
+.section {
+    background: #fff;
+    padding: 15px;
+    border-radius: 10px;
+    border: 2px solid #ddd;
+}
+
+h2 {
+    text-align: center;
+    color: red;
+    border-bottom: 3px solid red;
+    padding-bottom: 5px;
+}
+
+.menu-item {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px dotted #999;
+    padding: 5px 0;
+    font-size: 15px;
+}
+
+/* Right section styling */
+.right h2 {
+    color: darkorange;
+}
+
+.sub-title {
+    color: red;
+    font-weight: bold;
+    margin-top: 15px;
+    text-align: center;
+}
+
+/* Footer note */
+.note {
+    font-size: 12px;
+    margin-top: 10px;
+    color: #444;
+}
+
+/* Responsive */
+@media(max-width: 900px){
+    .container {
+        grid-template-columns: 1fr;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- LEFT SECTION -->
+    <div class="section">
+        <h2>Deli Delights</h2>
+
+        <div class="menu-item"><span>Potato Salad</span><span>5.49 LB</span></div>
+        <div class="menu-item"><span>Macaroni Salad</span><span>5.49 LB</span></div>
+        <div class="menu-item"><span>Coleslaw</span><span>4.99 LB</span></div>
+        <div class="menu-item"><span>Chicken Salad</span><span>11.49 LB</span></div>
+        <div class="menu-item"><span>Ham Salad</span><span>7.49 LB</span></div>
+        <div class="menu-item"><span>Seafood Salad</span><span>8.99 LB</span></div>
+        <div class="menu-item"><span>Chili</span><span>7.49 LB</span></div>
+        <div class="menu-item"><span>Rice Pudding</span><span>6.99 LB</span></div>
+        <div class="menu-item"><span>Tuna Salad</span><span>12.79 LB</span></div>
+        <div class="menu-item"><span>Fruit Salad</span><span>Market</span></div>
+
+        <div class="note">
+            Also Available: Whole Ham or Turkey, Stuffing & Gravy
+        </div>
+    </div>
+
+    <!-- CENTER SECTION -->
+    <div class="section">
+        <h2>Hot Foods</h2>
+
+        <div class="menu-item"><span>German Potato Salad</span><span>5.99 LB</span></div>
+        <div class="menu-item"><span>Golabki</span><span>9.49 LB</span></div>
+        <div class="menu-item"><span>Baked Beans</span><span>4.99 LB</span></div>
+        <div class="menu-item"><span>Barbecue Pork</span><span>10.49 LB</span></div>
+        <div class="menu-item"><span>Meatballs</span><span>10.49 LB</span></div>
+        <div class="menu-item"><span>Chicken Riggies</span><span>10.49 LB</span></div>
+        <div class="menu-item"><span>Baked Ziti</span><span>31.99 (5 LB)</span></div>
+        <div class="menu-item"><span>Lasagna</span><span>50.95 (5 LB)</span></div>
+
+        <h2>Hot Soups</h2>
+        <div class="menu-item"><span>Beef Vegetable</span><span>4.99 / 6.49 / 11.49</span></div>
+        <div class="menu-item"><span>Chicken & Rice</span><span>4.99 / 6.49 / 11.49</span></div>
+
+        <div class="note">
+            Ask about Soup of the Day!
+        </div>
+    </div>
+
+    <!-- RIGHT SECTION -->
+    <div class="section right">
+        <h2>Dutch Treats</h2>
+
+        <p>Fresh baked goods made daily. Perfect desserts to complement your meal.</p>
+
+        <div class="sub-title">DONUTS</div>
+        <p>Old Fashioned, Bavarian Cream, Apple Fritters, Muffins</p>
+
+        <div class="sub-title">HALFMOONS</div>
+        <p>Chocolate, Vanilla, Red Velvet, Peanut Butter</p>
+
+        <div class="sub-title">CUPCAKES</div>
+        <p>Small & Large - Custom Cakes Available</p>
+
+        <div class="sub-title">BREADS & ROLLS</div>
+        <p>Italian Bread, Wheat Bread, Raisin Bread, Biscuits</p>
+
+        <div class="sub-title">COOKIES</div>
+        <p>Chocolate Chip, Oatmeal, Peanut Butter, Macaroons</p>
+
+        <div class="note">
+            *Prices subject to change
+        </div>
+    </div>
+
+</div>
+
+</body>
+</html>
