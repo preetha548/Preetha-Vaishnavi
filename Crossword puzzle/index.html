@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Crossword Puzzle with Answers</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background: linear-gradient(135deg, #74d3f5, #4eb5e2);
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 1100px;
+      background: white;
+      border-radius: 20px;
+      padding: 30px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 25px;
+      color: #0f172a;
+      font-size: 3rem;
+    }
+
+    .game-area {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 40px;
+      justify-content: center;
+      align-items: flex-start;
+    }
+
+    .crossword {
+      display: grid;
+      grid-template-columns: repeat(10, 45px);
+      grid-template-rows: repeat(10, 45px);
+      gap: 2px;
+    }
+
+    .cell {
+      width: 45px;
+      height: 45px;
+      border: 2px solid #1e293b;
+      background: white;
+      position: relative;
+    }
+
+    .empty {
+      background: transparent;
+      border: none;
+    }
+
+    input {
+      width: 100%;
+      height: 100%;
+      border: none;
+      text-align: center;
+      font-size: 1.2rem;
+      font-weight: bold;
+      text-transform: uppercase;
+      outline: none;
+    }
+
+    .number {
+      position: absolute;
+      top: 1px;
+      left: 3px;
+      font-size: 0.65rem;
+      color: #475569;
+      font-weight: bold;
+    }
+
+    .clues {
+      max-width: 350px;
+    }
+
+    .clues h2 {
+      margin-bottom: 10px;
+      color: #0f172a;
+    }
+
+    .clues ul {
+      margin-bottom: 25px;
+      padding-left: 20px;
+    }
+
+    .clues li {
+      margin-bottom: 10px;
+      color: #334155;
+      line-height: 1.4;
+    }
+
+    .buttons {
+      margin-top: 25px;
+      display: flex;
+      gap: 15px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    button {
+      padding: 12px 22px;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      font-size: 1rem;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    .check {
+      background: #22c55e;
+      color: white;
+    }
+
+    .answer {
+      background: #3b82f6;
+      color: white;
+    }
+
+    .reset {
+      background: #ef4444;
+      color: white;
+    }
+
+    button:hover {
+      transform: scale(1.05);
+    }
+
+    .message {
+      text-align: center;
+      margin-top: 20px;
+      font-size: 1.2rem;
+      font-weight: bold;
+      color: #0f172a;
+    }
+
+    @media(max-width: 768px) {
+      .crossword {
+        transform: scale(0.8);
+      }
+
+      h1 {
+        font-size: 2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1>Crossword Puzzle</h1>
+
+    <div class="game-area">
+
+      <div class="crossword" id="crossword"></div>
+
+      <div class="clues">
+
+        <h2>Across</h2>
+        <ul>
+          <li><strong>1.</strong> Organ that pumps blood</li>
+          <li><strong>3.</strong> Organ used for thinking</li>
+          <li><strong>5.</strong> Helps you breathe</li>
+        </ul>
+
+        <h2>Down</h2>
+        <ul>
+          <li><strong>2.</strong> Organ that digests food</li>
+          <li><strong>4.</strong> Largest internal organ</li>
+        </ul>
+
+      </div>
+    </div>
+
+    <div class="buttons">
+      <button class="check" onclick="checkAnswers()">Check Answers</button>
+      <button class="answer" onclick="showAnswers()">Show Answers</button>
+      <button class="reset" onclick="resetPuzzle()">Reset</button>
+    </div>
+
+    <div class="message" id="message"></div>
+  </div>
+
+  <script>
+    const grid = [
+      ['', '', '', '', 'H', '', '', '', '', ''],
+      ['', '', '', '', 'E', '', '', '', '', ''],
+      ['', '', 'B', 'R', 'A', 'I', 'N', '', '', ''],
+      ['', '', '', '', 'R', '', '', '', '', ''],
+      ['', 'L', 'U', 'N', 'G', 'S', '', '', '', ''],
+      ['', '', '', '', 'T', '', '', '', '', ''],
+      ['', '', '', '', '', '', '', '', '', ''],
+      ['', '', 'S', 'T', 'O', 'M', 'A', 'C', 'H', ''],
+      ['', '', '', '', '', '', '', '', '', ''],
+      ['', '', '', 'L', 'I', 'V', 'E', 'R', '', '']
+    ];
+
+    const crossword = document.getElementById('crossword');
+
+    function createGrid() {
+      crossword.innerHTML = '';
+
+      for (let row = 0; row < grid.length; row++) {
+        for (let col = 0; col < grid[row].length; col++) {
+
+          const cell = document.createElement('div');
+
+          if (grid[row][col] === '') {
+            cell.classList.add('cell', 'empty');
+          } else {
+            cell.classList.add('cell');
+
+            const input = document.createElement('input');
+            input.dataset.answer = grid[row][col];
+            input.maxLength = 1;
+
+            input.addEventListener('input', () => {
+              input.value = input.value.toUpperCase();
+            });
+
+            cell.appendChild(input);
+
+            if (
+              row === 0 ||
+              col === 0 ||
+              grid[row][col - 1] === '' ||
+              grid[row - 1][col] === ''
+            ) {
+              const number = document.createElement('div');
+              number.classList.add('number');
+              number.innerText = getQuestionNumber(row, col);
+              cell.appendChild(number);
+            }
+          }
+
+          crossword.appendChild(cell);
+        }
+      }
+    }
+
+    function getQuestionNumber(row, col) {
+      const positions = {
+        '0-4': 1,
+        '2-2': 3,
+        '4-1': 5,
+        '7-2': 2,
+        '9-3': 4
+      };
+
+      return positions[`${row}-${col}`] || '';
+    }
+
+    function checkAnswers() {
+      const inputs = document.querySelectorAll('input');
+      let correct = 0;
+
+      inputs.forEach(input => {
+        if (input.value.toUpperCase() === input.dataset.answer) {
+          input.style.background = '#bbf7d0';
+          correct++;
+        } else {
+          input.style.background = '#fecaca';
+        }
+      });
+
+      const message = document.getElementById('message');
+
+      if (correct === inputs.length) {
+        message.innerHTML = '🎉 Congratulations! You solved the crossword!';
+      } else {
+        message.innerHTML = `✅ ${correct} / ${inputs.length} letters are correct.`;
+      }
+    }
+
+    function showAnswers() {
+      const inputs = document.querySelectorAll('input');
+
+      inputs.forEach(input => {
+        input.value = input.dataset.answer;
+        input.style.background = '#dbeafe';
+      });
+
+      document.getElementById('message').innerHTML = '📘 Answers revealed!';
+    }
+
+    function resetPuzzle() {
+      const inputs = document.querySelectorAll('input');
+
+      inputs.forEach(input => {
+        input.value = '';
+        input.style.background = 'white';
+      });
+
+      document.getElementById('message').innerHTML = '';
+    }
+
+    createGrid();
+  </script>
+
+</body>
+</html>
