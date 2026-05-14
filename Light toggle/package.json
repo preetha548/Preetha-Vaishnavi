@@ -1,0 +1,12 @@
+{
+  "name": "light-toggle-project",
+  "version": "1.0.0",
+  "description": "Simple light toggle using HTML CSS and JavaScript",
+  "main": "index.html",
+  "scripts": {
+    "start": "live-server"
+  },
+  "dependencies": {
+    "live-server": "^1.2.2"
+  }
+}
