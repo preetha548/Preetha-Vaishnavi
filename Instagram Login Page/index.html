@@ -1,0 +1,744 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+  <title>Advanced Instagram Clone</title>
+
+  <!-- Bootstrap 5 -->
+
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+    rel="stylesheet">
+
+  <!-- Bootstrap Icons -->
+
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+  <!-- Google Font -->
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet">
+
+  <style>
+
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family:'Poppins',sans-serif;
+    }
+
+    body{
+      background:#fafafa;
+      overflow-x:hidden;
+    }
+
+    /* Navbar */
+
+    .navbar{
+      background:#fff;
+      border-bottom:1px solid #ddd;
+      position:sticky;
+      top:0;
+      z-index:1000;
+    }
+
+    .logo{
+      font-size:30px;
+      font-weight:700;
+      font-family:cursive;
+    }
+
+    .search-box{
+      width:320px;
+      background:#efefef;
+      border:none;
+      padding:10px 15px;
+      border-radius:10px;
+      outline:none;
+    }
+
+    .nav-icons i{
+      font-size:24px;
+      margin-left:20px;
+      cursor:pointer;
+      transition:0.3s;
+    }
+
+    .nav-icons i:hover{
+      transform:scale(1.2);
+      color:#ff0069;
+    }
+
+    /* Stories */
+
+    .stories{
+      background:#fff;
+      border:1px solid #ddd;
+      border-radius:15px;
+      padding:15px;
+      display:flex;
+      gap:15px;
+      overflow-x:auto;
+      margin-bottom:25px;
+      scrollbar-width:none;
+    }
+
+    .stories::-webkit-scrollbar{
+      display:none;
+    }
+
+    .story{
+      text-align:center;
+      min-width:85px;
+      cursor:pointer;
+    }
+
+    .story img{
+      width:75px;
+      height:75px;
+      border-radius:50%;
+      border:3px solid #ff0069;
+      padding:2px;
+      object-fit:cover;
+      transition:0.3s;
+    }
+
+    .story img:hover{
+      transform:scale(1.08);
+    }
+
+    .story p{
+      margin-top:6px;
+      font-size:13px;
+    }
+
+    /* Posts */
+
+    .post{
+      background:#fff;
+      border:1px solid #ddd;
+      border-radius:15px;
+      overflow:hidden;
+      margin-bottom:30px;
+      animation:fadeIn 0.5s ease;
+    }
+
+    @keyframes fadeIn{
+
+      from{
+        opacity:0;
+        transform:translateY(20px);
+      }
+
+      to{
+        opacity:1;
+        transform:translateY(0);
+      }
+    }
+
+    .post-header{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      padding:15px;
+    }
+
+    .user{
+      display:flex;
+      align-items:center;
+      gap:10px;
+    }
+
+    .user img{
+      width:45px;
+      height:45px;
+      border-radius:50%;
+      object-fit:cover;
+    }
+
+    .post-img{
+      width:100%;
+      max-height:600px;
+      object-fit:cover;
+    }
+
+    .post-actions{
+      display:flex;
+      justify-content:space-between;
+      padding:15px;
+      font-size:24px;
+    }
+
+    .left-icons i{
+      margin-right:18px;
+      cursor:pointer;
+      transition:0.3s;
+    }
+
+    .left-icons i:hover{
+      transform:scale(1.2);
+      color:red;
+    }
+
+    .likes{
+      font-weight:600;
+      padding:0 15px;
+    }
+
+    .caption{
+      padding:10px 15px;
+    }
+
+    .comments{
+      padding:0 15px 15px;
+      color:gray;
+      font-size:14px;
+    }
+
+    .comment-box{
+      border-top:1px solid #eee;
+      padding:12px 15px;
+      display:flex;
+      gap:10px;
+    }
+
+    .comment-box input{
+      flex:1;
+      border:none;
+      outline:none;
+    }
+
+    .comment-box button{
+      border:none;
+      background:none;
+      color:#0095f6;
+      font-weight:600;
+    }
+
+    /* Sidebar */
+
+    .sidebar{
+      background:#fff;
+      border:1px solid #ddd;
+      border-radius:15px;
+      padding:20px;
+      position:sticky;
+      top:100px;
+    }
+
+    .profile{
+      display:flex;
+      align-items:center;
+      gap:10px;
+      margin-bottom:25px;
+    }
+
+    .profile img{
+      width:60px;
+      height:60px;
+      border-radius:50%;
+      object-fit:cover;
+    }
+
+    .suggestion{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      margin-bottom:15px;
+    }
+
+    .suggestion-user{
+      display:flex;
+      align-items:center;
+      gap:10px;
+    }
+
+    .suggestion img{
+      width:42px;
+      height:42px;
+      border-radius:50%;
+      object-fit:cover;
+    }
+
+    .follow-btn{
+      border:none;
+      background:none;
+      color:#0095f6;
+      font-weight:600;
+      cursor:pointer;
+    }
+
+    /* Reels */
+
+    .reel video{
+      width:100%;
+      max-height:600px;
+      object-fit:cover;
+    }
+
+    /* Music Card */
+
+    .music-player{
+      padding:15px;
+    }
+
+    audio{
+      width:100%;
+    }
+
+    /* Dark Mode */
+
+    .dark-mode{
+      background:#121212;
+      color:#fff;
+    }
+
+    .dark-mode .navbar,
+    .dark-mode .stories,
+    .dark-mode .post,
+    .dark-mode .sidebar{
+      background:#1e1e1e;
+      color:#fff;
+      border-color:#333;
+    }
+
+    .dark-mode .search-box{
+      background:#333;
+      color:#fff;
+    }
+
+    /* Mobile Bottom Nav */
+
+    .mobile-nav{
+      position:fixed;
+      bottom:0;
+      left:0;
+      width:100%;
+      background:#fff;
+      border-top:1px solid #ddd;
+      display:flex;
+      justify-content:space-around;
+      padding:14px 0;
+      font-size:24px;
+      z-index:1000;
+    }
+
+    .mobile-nav i{
+      cursor:pointer;
+    }
+
+    /* Notification */
+
+    .notification{
+      position:fixed;
+      top:90px;
+      right:20px;
+      background:#fff;
+      padding:15px 20px;
+      border-radius:10px;
+      box-shadow:0 5px 15px rgba(0,0,0,0.2);
+      display:none;
+      z-index:9999;
+    }
+
+    /* Responsive */
+
+    @media(max-width:992px){
+
+      .sidebar{
+        display:none;
+      }
+
+      .search-box{
+        display:none;
+      }
+    }
+
+  </style>
+
+</head>
+
+<body id="body">
+
+  <!-- Navbar -->
+
+  <nav class="navbar navbar-expand-lg py-3">
+
+    <div class="container">
+
+      <a class="navbar-brand logo">
+        Instagram
+      </a>
+
+      <input
+        type="text"
+        class="search-box"
+        placeholder="Search">
+
+      <div class="nav-icons">
+
+        <i class="bi bi-house-door-fill"></i>
+
+        <i class="bi bi-search"></i>
+
+        <i class="bi bi-chat"></i>
+
+        <i class="bi bi-plus-square"></i>
+
+        <i class="bi bi-heart"
+           onclick="showNotification()"></i>
+
+        <i class="bi bi-camera-video"></i>
+
+        <i class="bi bi-moon"
+           onclick="toggleDarkMode()"></i>
+
+      </div>
+
+    </div>
+
+  </nav>
+
+  <!-- Notification -->
+
+  <div class="notification"
+       id="notification">
+
+    ❤️ New Likes & Followers
+
+  </div>
+
+  <!-- Main -->
+
+  <div class="container mt-4">
+
+    <div class="row">
+
+      <!-- Feed -->
+
+      <div class="col-lg-8">
+
+        <!-- Stories -->
+
+        <div class="stories">
+
+          <div class="story">
+            <img src="https://i.pravatar.cc/150?img=1">
+            <p>john</p>
+          </div>
+
+          <div class="story">
+            <img src="https://i.pravatar.cc/150?img=2">
+            <p>emma</p>
+          </div>
+
+          <div class="story">
+            <img src="https://i.pravatar.cc/150?img=3">
+            <p>alex</p>
+          </div>
+
+          <div class="story">
+            <img src="https://i.pravatar.cc/150?img=4">
+            <p>lisa</p>
+          </div>
+
+          <div class="story">
+            <img src="https://i.pravatar.cc/150?img=5">
+            <p>mike</p>
+          </div>
+
+        </div>
+
+        <!-- Image Post -->
+
+        <div class="post">
+
+          <div class="post-header">
+
+            <div class="user">
+
+              <img src="https://i.pravatar.cc/150?img=12">
+
+              <div>
+
+                <b>nature_world</b><br>
+
+                <small>Switzerland</small>
+
+              </div>
+
+            </div>
+
+            <i class="bi bi-three-dots"></i>
+
+          </div>
+
+          <img
+            src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=1200"
+            class="post-img">
+
+          <div class="post-actions">
+
+            <div class="left-icons">
+
+              <i class="bi bi-heart"></i>
+
+              <i class="bi bi-chat"></i>
+
+              <i class="bi bi-send"></i>
+
+            </div>
+
+            <i class="bi bi-bookmark"></i>
+
+          </div>
+
+          <div class="likes">
+            24,890 likes
+          </div>
+
+          <div class="caption">
+
+            <b>nature_world</b>
+
+            Beautiful mountain view 🌄
+
+          </div>
+
+          <div class="comments">
+            View all 650 comments
+          </div>
+
+          <div class="comment-box">
+
+            <input
+              type="text"
+              placeholder="Add a comment...">
+
+            <button>
+              Post
+            </button>
+
+          </div>
+
+        </div>
+
+        <!-- Reel Video -->
+
+        <div class="post reel">
+
+          <video controls autoplay muted loop>
+
+            <source
+              src="https://www.w3schools.com/html/mov_bbb.mp4"
+              type="video/mp4">
+
+          </video>
+
+          <div class="caption p-3">
+
+            <b>travel_reels</b>
+
+            Amazing travel reel 🎥
+
+          </div>
+
+        </div>
+
+        <!-- Music Post -->
+
+        <div class="post">
+
+          <div class="post-header">
+
+            <div class="user">
+
+              <img src="https://i.pravatar.cc/150?img=20">
+
+              <div>
+
+                <b>music_world</b><br>
+
+                <small>Audio Post</small>
+
+              </div>
+
+            </div>
+
+            <i class="bi bi-music-note-beamed"></i>
+
+          </div>
+
+          <img
+            src="https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=1200"
+            class="post-img">
+
+          <div class="music-player">
+
+            <audio controls>
+
+              <source
+                src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3"
+                type="audio/mp3">
+
+            </audio>
+
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- Sidebar -->
+
+      <div class="col-lg-4">
+
+        <div class="sidebar">
+
+          <div class="profile">
+
+            <img src="https://i.pravatar.cc/150?img=25">
+
+            <div>
+
+              <b>your_profile</b><br>
+
+              <small class="text-muted">
+                Frontend Developer
+              </small>
+
+            </div>
+
+          </div>
+
+          <h6 class="text-muted mb-3">
+            Suggestions For You
+          </h6>
+
+          <!-- Suggestion -->
+
+          <div class="suggestion">
+
+            <div class="suggestion-user">
+
+              <img src="https://i.pravatar.cc/150?img=30">
+
+              <span>sophia</span>
+
+            </div>
+
+            <button class="follow-btn">
+              Follow
+            </button>
+
+          </div>
+
+          <div class="suggestion">
+
+            <div class="suggestion-user">
+
+              <img src="https://i.pravatar.cc/150?img=31">
+
+              <span>daniel</span>
+
+            </div>
+
+            <button class="follow-btn">
+              Follow
+            </button>
+
+          </div>
+
+          <div class="suggestion">
+
+            <div class="suggestion-user">
+
+              <img src="https://i.pravatar.cc/150?img=32">
+
+              <span>olivia</span>
+
+            </div>
+
+            <button class="follow-btn">
+              Follow
+            </button>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- Mobile Bottom Navigation -->
+
+  <div class="mobile-nav d-lg-none">
+
+    <i class="bi bi-house-door-fill"></i>
+
+    <i class="bi bi-search"></i>
+
+    <i class="bi bi-plus-square"></i>
+
+    <i class="bi bi-play-circle"></i>
+
+    <i class="bi bi-person-circle"></i>
+
+  </div>
+
+  <!-- Bootstrap JS -->
+
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
+  </script>
+
+  <!-- JavaScript -->
+
+  <script>
+
+    // Dark Mode
+
+    function toggleDarkMode(){
+
+      document
+      .getElementById("body")
+      .classList.toggle("dark-mode");
+    }
+
+    // Notification
+
+    function showNotification(){
+
+      let notify =
+      document.getElementById(
+        "notification"
+      );
+
+      notify.style.display =
+      "block";
+
+      setTimeout(() => {
+
+        notify.style.display =
+        "none";
+
+      },3000);
+    }
+
+  </script>
+
+</body>
+
+</html>
