@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Christmas Letter</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Patrick+Hand&display=swap" rel="stylesheet">
+
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+body{
+  min-height:100vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  padding:30px;
+  background:#0d6b36;
+  font-family:'Patrick Hand',cursive;
+
+  background-image:
+  repeating-linear-gradient(
+    45deg,
+    rgba(255,255,255,0.15) 0,
+    rgba(255,255,255,0.15) 2px,
+    transparent 2px,
+    transparent 35px
+  ),
+  repeating-linear-gradient(
+    -45deg,
+    rgba(255,255,255,0.15) 0,
+    rgba(255,255,255,0.15) 2px,
+    transparent 2px,
+    transparent 35px
+  );
+}
+
+.card{
+  width:900px;
+  background:#f5f5f5;
+  border:15px solid red;
+  border-radius:12px;
+  padding:35px;
+  box-shadow:0 10px 30px rgba(0,0,0,0.3);
+}
+
+.top{
+  display:flex;
+  justify-content:space-between;
+  align-items:flex-start;
+  gap:20px;
+}
+
+.hoho{
+  font-family:'Great Vibes',cursive;
+  font-size:90px;
+  color:black;
+}
+
+.title{
+  font-size:50px;
+  line-height:1;
+  margin-top:10px;
+}
+
+.trees{
+  display:flex;
+  gap:18px;
+  align-items:flex-end;
+  margin-top:20px;
+}
+
+.tree{
+  width:70px;
+  height:120px;
+  clip-path:polygon(50% 0%,0% 100%,100% 100%);
+  position:relative;
+}
+
+.gold{
+  background:goldenrod;
+}
+
+.green{
+  background:#466b5d;
+}
+
+.pink{
+  background:pink;
+}
+
+.tree::after{
+  content:"";
+  width:12px;
+  height:35px;
+  background:brown;
+  position:absolute;
+  bottom:-35px;
+  left:50%;
+  transform:translateX(-50%);
+}
+
+.stamp-box{
+  width:140px;
+  height:140px;
+  background:#6ba56b;
+  transform:rotate(-8deg);
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  border-radius:5px;
+}
+
+.stamp{
+  border:4px solid #123;
+  border-radius:50%;
+  width:110px;
+  height:110px;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  font-weight:bold;
+  text-align:center;
+  color:#123;
+  padding:10px;
+}
+
+.content{
+  margin-top:25px;
+  font-size:30px;
+  line-height:1.5;
+}
+
+.content p{
+  margin-bottom:18px;
+}
+
+.santa{
+  font-family:'Great Vibes',cursive;
+  color:#b33;
+  font-size:65px;
+  margin-top:15px;
+}
+
+.bottom{
+  margin-top:20px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+
+.reindeer{
+  font-size:50px;
+}
+
+.seal{
+  width:90px;
+  height:90px;
+  background:#c62828;
+  color:white;
+  border-radius:50%;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  font-size:45px;
+  box-shadow:0 0 0 8px rgba(198,40,40,0.3);
+}
+
+@media(max-width:768px){
+
+  .card{
+    width:100%;
+    padding:20px;
+  }
+
+  .top{
+    flex-direction:column;
+    align-items:center;
+    text-align:center;
+  }
+
+  .content{
+    font-size:22px;
+  }
+
+  .hoho{
+    font-size:60px;
+  }
+
+  .title{
+    font-size:38px;
+  }
+
+}
+</style>
+</head>
+
+<body>
+
+<div class="card">
+
+  <div class="top">
+
+    <div>
+      <h1 class="hoho">ho ho ho</h1>
+
+      <h2 class="title">
+        ✶ MERRY <br>
+        CHRISTMAS ✶
+      </h2>
+    </div>
+
+    <div class="trees">
+      <div class="tree gold"></div>
+      <div class="tree green"></div>
+      <div class="tree pink"></div>
+    </div>
+
+    <div class="stamp-box">
+      <div class="stamp">
+        CLAUS EXPRESS
+      </div>
+    </div>
+
+  </div>
+
+  <div class="content">
+
+    <p>
+      I hope this letter finds you with a big smile on your face.
+      Last night, while you were nestled all snug in bed,
+      I made a special trip to your home with something just for you!
+    </p>
+
+    <p>
+      You've been very good this year, and I want you to know that
+      your kindness and cheer have not gone unnoticed at the North Pole.
+      Keep helping at home, being a good friend, and trying your best at school.
+    </p>
+
+    <p>
+      Enjoy the magic of this wonderful day. And remember,
+      the joy of Christmas doesn’t just come from what’s under the tree,
+      but from the love we share with our family and friends.
+    </p>
+
+    <p>
+      Have a fantastic Christmas filled with laughter and joy.
+      Keep being the amazing person you are, and always believe
+      in the magic of Christmas.
+    </p>
+
+    <p>With lots of love,</p>
+
+    <h3 class="santa">Santa Claus</h3>
+
+  </div>
+
+  <div class="bottom">
+    <div class="reindeer">🦌 🦌 🦌</div>
+    <div class="seal">🎅</div>
+  </div>
+
+</div>
+
+<script>
+console.log("Christmas Letter Loaded Successfully!");
+</script>
+
+</body>
+</html>
