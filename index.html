@@ -1,307 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Dot Nice Solutions</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>College Schedule</title>
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
-<style>
-*{
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
-  font-family:Arial, sans-serif;
-}
-
-body{
-  background:linear-gradient(135deg,#050816,#0a0f2c);
-  color:white;
-}
-
-/* NAV */
-nav{
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  padding:15px 40px;
-  background:rgba(255,255,255,0.05);
-  backdrop-filter:blur(10px);
-  position:sticky;
-  top:0;
-  z-index:1000;
-}
-
-.logo{
-  display:flex;
-  align-items:center;
-  gap:10px;
-  color:#00e5ff;
-  font-weight:bold;
-  font-size:20px;
-}
-
-nav ul{
-  display:flex;
-  list-style:none;
-  gap:20px;
-}
-
-nav ul li{
-  cursor:pointer;
-  transition:0.3s;
-}
-
-nav ul li:hover{
-  color:#00e5ff;
-}
-
-/* SECTIONS */
-section{
-  padding:80px 60px;
-  text-align:center;
-}
-
-/* HOME */
-.home{
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  min-height:90vh;
-}
-
-.home-text{
-  max-width:550px;
-}
-
-.home-text h1{
-  font-size:48px;
-}
-
-.home-text span{
-  color:#00e5ff;
-}
-
-.home-img{
-  width:420px;
-  height:300px;
-  background:url('https://images.unsplash.com/photo-1550751827-4bd374c3f58b') center/cover;
-  border-radius:15px;
-}
-
-/* FEATURES */
-.cards{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-  gap:20px;
-  margin-top:30px;
-}
-
-.card{
-  background:rgba(255,255,255,0.05);
-  padding:25px;
-  border-radius:12px;
-}
-
-.card i{
-  font-size:28px;
-  color:#00e5ff;
-  margin-bottom:10px;
-}
-
-/* SERVICES */
-.service-box{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-  gap:20px;
-  margin-top:30px;
-}
-
-.service{
-  background:rgba(255,255,255,0.05);
-  padding:25px;
-  border-radius:12px;
-}
-
-/* IMAGES */
-.gallery{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-  gap:15px;
-  margin-top:30px;
-}
-
-.gallery img{
-  width:100%;
-  border-radius:12px;
-}
-
-/* VIDEOS */
-.video-box{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
-  gap:20px;
-  margin-top:30px;
-}
-
-iframe{
-  width:100%;
-  height:200px;
-  border-radius:12px;
-}
-
-/* CONTACT */
-form{
-  width:320px;
-  margin:auto;
-  display:flex;
-  flex-direction:column;
-  gap:10px;
-}
-
-input,textarea{
-  padding:10px;
-  border:none;
-  border-radius:6px;
-}
-
-/* BUTTON */
-.btn{
-  margin-top:15px;
-  padding:12px 25px;
-  background:#00e5ff;
-  color:black;
-  border:none;
-  border-radius:8px;
-  cursor:pointer;
-  font-weight:bold;
-}
-
-/* FOOTER */
-footer{
-  text-align:center;
-  padding:20px;
-  background:rgba(255,255,255,0.05);
-  color:#aaa;
-}
-
-/* RESPONSIVE */
-@media(max-width:768px){
-  .home{
-    flex-direction:column;
-    text-align:center;
-  }
-
-  nav{
-    flex-direction:column;
-    gap:10px;
-  }
-
-  .home-img{
-    width:100%;
-    margin-top:20px;
-  }
-}
-</style>
+  <link rel="stylesheet" href="style.css"/>
 </head>
-
 <body>
 
-<!-- NAV -->
-<nav>
-  <div class="logo">
-    <i class="fa-solid fa-shield-halved"></i>
-    Dot Nice Solutions
+<div class="container">
+
+  <h1>COLLEGE SCHEDULE</h1>
+
+  <div class="details">
+    <div>Year <span></span></div>
+    <div>Semester <span></span></div>
   </div>
 
-  <ul>
-    <li onclick="go('home')">Home</li>
-    <li onclick="go('features')">Features</li>
-    <li onclick="go('services')">Services</li>
-    <li onclick="go('images')">Images</li>
-    <li onclick="go('videos')">Videos</li>
-    <li onclick="go('contact')">Contact</li>
-  </ul>
-</nav>
+  <table>
+    <thead>
+      <tr>
+        <th class="time-head">TIME</th>
+        <th class="mon">MON.</th>
+        <th class="tue">TUES.</th>
+        <th class="wed">WED.</th>
+        <th class="thu">THUR.</th>
+        <th class="fri">FRI.</th>
+      </tr>
+    </thead>
 
-<!-- HOME -->
-<section id="home" class="home">
-  <div class="home-text">
-    <h1>Digital <span>Brand Protection</span></h1>
-    <p>Protect your brand using AI-powered threat detection and monitoring system.</p>
-    <button class="btn">Get Started</button>
+    <tbody id="scheduleBody">
+    </tbody>
+  </table>
+
+  <div class="quote">
+    Believe it,<br>
+    and you are halfway there.
   </div>
 
-  <div class="home-img"></div>
-</section>
+</div>
 
-<!-- FEATURES -->
-<section id="features">
-  <h2>Features</h2>
-
-  <div class="cards">
-    <div class="card"><i class="fa-solid fa-shield"></i><p>Security Protection</p></div>
-    <div class="card"><i class="fa-solid fa-eye"></i><p>Monitoring System</p></div>
-    <div class="card"><i class="fa-solid fa-bug"></i><p>Threat Detection</p></div>
-    <div class="card"><i class="fa-solid fa-chart-line"></i><p>Analytics</p></div>
-  </div>
-</section>
-
-<!-- SERVICES -->
-<section id="services">
-  <h2>Services</h2>
-
-  <div class="service-box">
-    <div class="service">Brand Monitoring</div>
-    <div class="service">AI Threat Scanner</div>
-    <div class="service">Domain Protection</div>
-  </div>
-</section>
-
-<!-- IMAGES -->
-<section id="images">
-  <h2>Image Gallery</h2>
-
-  <div class="gallery">
-    <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b">
-    <img src="https://images.unsplash.com/photo-1555949963-ff9fe0c870eb">
-    <img src="https://images.unsplash.com/photo-1563986768494-4dee2763ff3f">
-    <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa">
-  </div>
-</section>
-
-<!-- VIDEOS -->
-<section id="videos">
-  <h2>Videos</h2>
-
-  <div class="video-box">
-    <iframe src="https://www.youtube.com/embed/3JZ_D3ELwOQ"></iframe>
-    <iframe src="https://www.youtube.com/embed/tgbNymZ7vqY"></iframe>
-  </div>
-</section>
-
-<!-- CONTACT -->
-<section id="contact">
-  <h2>Contact Us</h2>
-
-  <form>
-    <input type="text" placeholder="Name">
-    <input type="email" placeholder="Email">
-    <textarea rows="4" placeholder="Message"></textarea>
-    <button class="btn">Send</button>
-  </form>
-</section>
-
-<footer>
-  © 2026 Dot Nice Solutions | All Rights Reserved
-</footer>
-
-<script>
-function go(id){
-  document.getElementById(id).scrollIntoView({behavior:"smooth"});
-}
-</script>
-
+<script src="script.js"></script>
 </body>
 </html>

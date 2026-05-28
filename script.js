@@ -1,11 +1,27 @@
-function showMessage() {
-  alert("Welcome to Vetri Builders! Let's build your dream.");
-}
+const times = [
+  "7:00 AM",
+  "9:00 AM",
+  "11:00 AM",
+  "1:00 PM",
+  "3:00 PM",
+  "5:00 PM",
+  "7:00 PM"
+];
 
-function submitForm() {
-  let name = document.getElementById("name").value;
-  let response = document.getElementById("response");
+const tbody = document.getElementById("scheduleBody");
 
-  response.innerText = "Thank you " + name + "! We will contact you soon.";
-  return false; // prevent page reload
-}
+times.forEach(time => {
+
+  const row = document.createElement("tr");
+
+  row.innerHTML = `
+    <td class="time">${time}</td>
+    <td contenteditable="true"></td>
+    <td contenteditable="true"></td>
+    <td contenteditable="true"></td>
+    <td contenteditable="true"></td>
+    <td contenteditable="true"></td>
+  `;
+
+  tbody.appendChild(row);
+});
