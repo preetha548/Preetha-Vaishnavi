@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>React Time Bomb</title>
+
+  <!-- React CDN -->
+  <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+  <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+
+  <!-- Babel CDN -->
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+  <style>
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family:Arial, sans-serif;
+    }
+
+    body{
+      background:#111;
+      height:100vh;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      overflow:hidden;
+    }
+
+    .container{
+      text-align:center;
+      color:white;
+    }
+
+    .bomb{
+      width:220px;
+      height:220px;
+      background:#222;
+      border-radius:50%;
+      margin:auto;
+      position:relative;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      box-shadow:0 0 35px red;
+      animation:pulse 1s infinite;
+    }
+
+    .timer{
+      font-size:55px;
+      color:#ff4444;
+      font-weight:bold;
+    }
+
+    .fuse{
+      position:absolute;
+      width:12px;
+      height:70px;
+      background:orange;
+      top:-55px;
+      border-radius:10px;
+    }
+
+    .spark{
+      position:absolute;
+      top:-65px;
+      width:22px;
+      height:22px;
+      background:yellow;
+      border-radius:50%;
+      box-shadow:0 0 25px yellow;
+      animation:spark 0.5s infinite alternate;
+    }
+
+    button{
+      margin-top:35px;
+      padding:15px 35px;
+      border:none;
+      border-radius:40px;
+      background:#ff4444;
+      color:white;
+      font-size:20px;
+      cursor:pointer;
+      transition:0.3s;
+    }
+
+    button:hover{
+      transform:scale(1.1);
+      background:#ff2222;
+    }
+
+    .boom{
+      font-size:80px;
+      margin-top:25px;
+      animation:shake 0.5s infinite;
+    }
+
+    @keyframes pulse{
+      0%{ transform:scale(1); }
+      50%{ transform:scale(1.05); }
+      100%{ transform:scale(1); }
+    }
+
+    @keyframes spark{
+      from{
+        transform:scale(1);
+        opacity:1;
+      }
+      to{
+        transform:scale(1.5);
+        opacity:0.5;
+      }
+    }
+
+    @keyframes shake{
+      0%{ transform:translateX(0); }
+      25%{ transform:translateX(-5px); }
+      50%{ transform:translateX(5px); }
+      75%{ transform:translateX(-5px); }
+      100%{ transform:translateX(0); }
+    }
+
+    .explosion{
+      position:absolute;
+      width:30px;
+      height:30px;
+      background:orange;
+      border-radius:50%;
+      left:50%;
+      top:50%;
+      transform:translate(-50%, -50%);
+      animation:explode 1s forwards;
+    }
+
+    @keyframes explode{
+      0%{
+        transform:translate(-50%, -50%) scale(1);
+        opacity:1;
+      }
+      100%{
+        transform:translate(-50%, -50%) scale(25);
+        opacity:0;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div id="root"></div>
+
+  <script type="text/babel">
+
+    function TimeBomb(){
+
+      const [time, setTime] = React.useState(10);
+      const [started, setStarted] = React.useState(false);
+      const [boom, setBoom] = React.useState(false);
+
+      React.useEffect(() => {
+
+        let timer;
+
+        if(started && time > 0){
+
+          timer = setInterval(() => {
+            setTime(prev => prev - 1);
+          },1000);
+
+        }
+
+        if(time === 0){
+          setBoom(true);
+        }
+
+        return () => clearInterval(timer);
+
+      }, [started, time]);
+
+      return(
+        <div className="container">
+
+          {!boom && (
+            <div className="bomb">
+              <div className="fuse"></div>
+              <div className="spark"></div>
+              <div className="timer">{time}</div>
+            </div>
+          )}
+
+          {!started && (
+            <button onClick={() => setStarted(true)}>
+              Start Bomb
+            </button>
+          )}
+
+          {boom && (
+            <>
+              <div className="explosion"></div>
+              <div className="boom">💥 BOOM 💥</div>
+            </>
+          )}
+
+        </div>
+      );
+    }
+
+    ReactDOM.createRoot(document.getElementById("root")).render(<TimeBomb />);
+
+  </script>
+
+</body>
+</html>
