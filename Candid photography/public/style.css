@@ -1,0 +1,95 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial,sans-serif;
+}
+
+body{
+    min-height:100vh;
+    background:linear-gradient(
+        135deg,
+        #ff6b6b,
+        #feca57,
+        #48dbfb,
+        #1dd1a1
+    );
+    background-size:400% 400%;
+    animation:bgMove 8s infinite alternate;
+}
+
+@keyframes bgMove{
+    from{
+        background-position:left;
+    }
+    to{
+        background-position:right;
+    }
+}
+
+header{
+    text-align:center;
+    padding:40px;
+    color:white;
+}
+
+header h1{
+    font-size:3rem;
+}
+
+header p{
+    font-size:1.2rem;
+    margin-top:10px;
+}
+
+.gallery{
+    width:90%;
+    margin:auto;
+    padding:20px;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:25px;
+}
+
+.card{
+    background:white;
+    border-radius:20px;
+    overflow:hidden;
+    box-shadow:0 10px 25px rgba(0,0,0,.25);
+    transition:.4s;
+}
+
+.card:hover{
+    transform:translateY(-10px);
+}
+
+.card img{
+    width:100%;
+    height:250px;
+    object-fit:cover;
+    transition:.5s;
+}
+
+.card:hover img{
+    transform:scale(1.1);
+}
+
+.card h3{
+    text-align:center;
+    padding:15px;
+    color:#333;
+}
+
+.card:nth-child(1){border-top:8px solid #ff6b6b;}
+.card:nth-child(2){border-top:8px solid #48dbfb;}
+.card:nth-child(3){border-top:8px solid #1dd1a1;}
+.card:nth-child(4){border-top:8px solid #feca57;}
+.card:nth-child(5){border-top:8px solid #9b59b6;}
+.card:nth-child(6){border-top:8px solid #e84393;}
+
+footer{
+    text-align:center;
+    color:white;
+    padding:20px;
+    font-size:18px;
+}
