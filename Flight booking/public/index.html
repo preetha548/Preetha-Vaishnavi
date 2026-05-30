@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Flight Booking UI</title>
+
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:Arial,sans-serif;
+}
+
+body{
+  background:#f4f4f4;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  min-height:100vh;
+  gap:30px;
+}
+
+.phone{
+  width:260px;
+  height:520px;
+  background:#fff;
+  border:8px solid #111;
+  border-radius:35px;
+  overflow:hidden;
+  box-shadow:0 10px 25px rgba(0,0,0,.2);
+}
+
+.header{
+  background:linear-gradient(135deg,#8f6bff,#b39cff);
+  color:#fff;
+  padding:20px;
+  text-align:center;
+}
+
+.search{
+  margin:15px;
+  background:#f7f7f7;
+  border-radius:15px;
+  padding:15px;
+}
+
+.field{
+  margin-bottom:10px;
+}
+
+.field label{
+  display:block;
+  color:#777;
+  font-size:12px;
+}
+
+.field input{
+  width:100%;
+  padding:10px;
+  border:none;
+  background:#fff;
+  border-radius:10px;
+}
+
+.btn{
+  width:100%;
+  padding:12px;
+  border:none;
+  border-radius:20px;
+  background:#7d5cff;
+  color:#fff;
+  cursor:pointer;
+}
+
+.flight{
+  background:#fff;
+  margin:10px;
+  padding:12px;
+  border-radius:12px;
+  box-shadow:0 2px 8px rgba(0,0,0,.08);
+  display:flex;
+  justify-content:space-between;
+}
+
+.price{
+  color:#7d5cff;
+  font-weight:bold;
+}
+</style>
+</head>
+<body>
+
+<div class="phone">
+  <div class="header">
+    <h3>Search Flights</h3>
+  </div>
+
+  <div class="search">
+    <div class="field">
+      <label>From</label>
+      <input value="DEL">
+    </div>
+
+    <div class="field">
+      <label>To</label>
+      <input value="NYC">
+    </div>
+
+    <div class="field">
+      <label>Date</label>
+      <input value="10 Oct 2026">
+    </div>
+
+    <button class="btn">Search Flight</button>
+  </div>
+</div>
+
+<div class="phone">
+  <div class="header">
+    <h3>Available Flights</h3>
+  </div>
+
+  <div class="flight">
+    <span>IndiGo</span>
+    <span class="price">$120</span>
+  </div>
+
+  <div class="flight">
+    <span>Air India</span>
+    <span class="price">$145</span>
+  </div>
+
+  <div class="flight">
+    <span>Emirates</span>
+    <span class="price">$220</span>
+  </div>
+
+  <div class="flight">
+    <span>Qatar</span>
+    <span class="price">$260</span>
+  </div>
+</div>
+
+</body>
+</html>
