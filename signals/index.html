@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <title>Signal Clone Enhanced</title>
+
+  <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+  <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+  <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial;
+      background: linear-gradient(135deg, #0f0f0f, #1b1b2a);
+      color: white;
+    }
+
+    .app {
+      display: flex;
+      height: 100vh;
+    }
+
+    /* SIDEBAR */
+    .sidebar {
+      width: 240px;
+      background: #121212;
+      padding: 12px;
+      border-right: 1px solid #2a2a2a;
+    }
+
+    .user {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 10px;
+      margin: 6px 0;
+      background: #1f1f1f;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: 0.2s;
+    }
+
+    .user:hover {
+      background: #2a2a2a;
+    }
+
+    .avatar {
+      width: 35px;
+      height: 35px;
+      border-radius: 50%;
+    }
+
+    /* CHAT */
+    .chat {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .header {
+      padding: 15px;
+      background: #151515;
+      border-bottom: 1px solid #2a2a2a;
+      font-weight: bold;
+    }
+
+    .messages {
+      flex: 1;
+      padding: 15px;
+      overflow-y: auto;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .msg {
+      padding: 10px;
+      margin: 6px;
+      border-radius: 12px;
+      max-width: 65%;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .me {
+      background: linear-gradient(135deg, #00c896, #00a884);
+      margin-left: auto;
+      color: black;
+    }
+
+    .other {
+      background: #2a2a2a;
+      margin-right: auto;
+    }
+
+    .msg img {
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+    }
+
+    /* INPUT */
+    .input-box {
+      display: flex;
+      padding: 10px;
+      background: #121212;
+      border-top: 1px solid #2a2a2a;
+    }
+
+    input {
+      flex: 1;
+      padding: 10px;
+      border: none;
+      outline: none;
+      background: #1f1f1f;
+      color: white;
+      border-radius: 8px;
+    }
+
+    button {
+      margin-left: 10px;
+      padding: 10px 15px;
+      background: #00c896;
+      border: none;
+      color: black;
+      cursor: pointer;
+      border-radius: 8px;
+      font-weight: bold;
+    }
+
+  </style>
+</head>
+
+<body>
+<div id="root"></div>
+
+<script type="text/babel">
+
+function App() {
+
+  const users = [
+    { name: "Alice", img: "https://i.pravatar.cc/150?img=1" },
+    { name: "Bob", img: "https://i.pravatar.cc/150?img=2" },
+    { name: "Charlie", img: "https://i.pravatar.cc/150?img=3" },
+    { name: "David", img: "https://i.pravatar.cc/150?img=4" }
+  ];
+
+  const [activeUser, setActiveUser] = React.useState("Alice");
+  const [text, setText] = React.useState("");
+
+  const [chats, setChats] = React.useState({
+    Alice: [],
+    Bob: [],
+    Charlie: [],
+    David: []
+  });
+
+  function sendMessage() {
+    if (!text) return;
+
+    const updated = { ...chats };
+
+    updated[activeUser].push({
+      sender: "me",
+      text,
+      img: "https://i.pravatar.cc/150?img=5"
+    });
+
+    setChats(updated);
+    setText("");
+
+    setTimeout(() => generateReplies(text, updated), 600);
+  }
+
+  function generateReplies(msg, updated) {
+
+    const botPool = users.map(u => u.name);
+
+    const replyCount = Math.floor(Math.random() * 3) + 1;
+
+    for (let i = 0; i < replyCount; i++) {
+      setTimeout(() => {
+
+        const randomUser = botPool[Math.floor(Math.random() * botPool.length)];
+
+        updated[activeUser].push({
+          sender: "other",
+          text: smartReply(msg, randomUser),
+          img: users.find(u => u.name === randomUser).img
+        });
+
+        setChats({ ...updated });
+
+      }, i * 700);
+    }
+  }
+
+  function smartReply(msg, user) {
+    msg = msg.toLowerCase();
+
+    const replies = [
+      "Nice 👍",
+      "Interesting 🤔",
+      "Cool 😎",
+      "I agree 💯",
+      "Tell me more",
+      "😂 lol",
+      "Wow!"
+    ];
+
+    if (msg.includes("hello")) return `${user}: Hey 👋`;
+    if (msg.includes("?")) return `${user}: Good question 🤔`;
+    if (msg.includes("love")) return `${user}: ❤️ that's sweet`;
+
+    return `${user}: ${replies[Math.floor(Math.random() * replies.length)]}`;
+  }
+
+  return (
+    <div className="app">
+
+      {/* SIDEBAR */}
+      <div className="sidebar">
+        <h3>Chats</h3>
+
+        {users.map(u => (
+          <div
+            key={u.name}
+            className="user"
+            onClick={() => setActiveUser(u.name)}
+          >
+            <img className="avatar" src={u.img} />
+            {u.name}
+          </div>
+        ))}
+      </div>
+
+      {/* CHAT */}
+      <div className="chat">
+
+        <div className="header">
+          💬 Chat with {activeUser}
+        </div>
+
+        <div className="messages">
+
+          {chats[activeUser].map((m, i) => (
+            <div key={i} className={"msg " + (m.sender === "me" ? "me" : "other")}>
+
+              <img src={m.img} />
+
+              <div>{m.text}</div>
+
+            </div>
+          ))}
+
+        </div>
+
+        <div className="input-box">
+          <input
+            value={text}
+            onChange={(e) => setText(e.target.value)}
+            placeholder="Type message..."
+          />
+          <button onClick={sendMessage}>Send</button>
+        </div>
+
+      </div>
+
+    </div>
+  );
+}
+
+ReactDOM.createRoot(document.getElementById("root")).render(<App />);
+
+</script>
+</body>
+</html>
