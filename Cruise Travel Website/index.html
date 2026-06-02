@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cruise Paradise</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        .hero {
+            background: url('https://images.unsplash.com/photo-1566073771259-6a8506099945') center/cover;
+            height: 90vh;
+            color: white;
+            display: flex;
+            align-items: center;
+            text-align: center;
+        }
+
+        .hero-overlay {
+            background: rgba(0,0,0,0.5);
+            width: 100%;
+            padding: 100px 0;
+        }
+
+        .package-card:hover {
+            transform: translateY(-8px);
+            transition: 0.3s;
+        }
+
+        footer {
+            background: #0d6efd;
+            color: white;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <div class="container">
+        <a class="navbar-brand fw-bold" href="#">🚢 Cruise Paradise</a>
+
+        <button class="navbar-toggler" data-bs-toggle="collapse"
+                data-bs-target="#menu">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="menu">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="#packages">Packages</a></li>
+                <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- Hero Section -->
+<section id="home" class="hero">
+    <div class="hero-overlay">
+        <div class="container">
+            <h1 class="display-3 fw-bold">Luxury Cruise Adventures</h1>
+            <p class="lead">Explore the world's most beautiful oceans and destinations.</p>
+            <a href="#packages" class="btn btn-warning btn-lg">
+                View Packages
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- Packages -->
+<section id="packages" class="py-5">
+    <div class="container">
+        <h2 class="text-center mb-5">Popular Cruise Packages</h2>
+
+        <div class="row g-4">
+
+            <div class="col-md-4">
+                <div class="card package-card shadow">
+                    <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e"
+                         class="card-img-top" height="250">
+                    <div class="card-body">
+                        <h4>Caribbean Cruise</h4>
+                        <p>7 Days luxury cruise with tropical island visits.</p>
+                        <h5 class="text-primary">$999</h5>
+                        <button class="btn btn-primary">Book Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card package-card shadow">
+                    <img src="https://images.unsplash.com/photo-1500375592092-40eb2168fd21"
+                         class="card-img-top" height="250">
+                    <div class="card-body">
+                        <h4>Mediterranean Cruise</h4>
+                        <p>Visit Greece, Italy and Spain in one amazing trip.</p>
+                        <h5 class="text-primary">$1299</h5>
+                        <button class="btn btn-primary">Book Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card package-card shadow">
+                    <img src="https://images.unsplash.com/photo-1519046904884-53103b34b206"
+                         class="card-img-top" height="250">
+                    <div class="card-body">
+                        <h4>Alaska Cruise</h4>
+                        <p>Discover glaciers, wildlife and stunning landscapes.</p>
+                        <h5 class="text-primary">$1499</h5>
+                        <button class="btn btn-primary">Book Now</button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- About -->
+<section id="about" class="bg-light py-5">
+    <div class="container text-center">
+        <h2>About Us</h2>
+        <p class="mt-3">
+            Cruise Paradise offers unforgettable cruise experiences with
+            luxury accommodations, world-class dining, and exciting excursions.
+        </p>
+    </div>
+</section>
+
+<!-- Contact -->
+<section id="contact" class="py-5">
+    <div class="container">
+        <h2 class="text-center mb-4">Contact Us</h2>
+
+        <form class="w-75 mx-auto">
+            <input type="text" class="form-control mb-3" placeholder="Your Name">
+            <input type="email" class="form-control mb-3" placeholder="Email Address">
+            <textarea class="form-control mb-3" rows="5"
+                      placeholder="Your Message"></textarea>
+
+            <button class="btn btn-success w-100">
+                Send Message
+            </button>
+        </form>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="text-center">
+    <p>© 2026 Cruise Paradise. All Rights Reserved.</p>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
