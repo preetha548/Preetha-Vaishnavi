@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Wooden Gift Box</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+body{
+    background:linear-gradient(to right,#f7f3ee,#ffffff);
+}
+
+header{
+    background:#5D4037;
+    color:white;
+    text-align:center;
+    padding:20px;
+}
+
+.container{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-wrap:wrap;
+    gap:50px;
+    padding:50px;
+}
+
+.image-box{
+    background:white;
+    padding:15px;
+    border-radius:15px;
+    box-shadow:0 5px 20px rgba(0,0,0,0.2);
+}
+
+.image-box img{
+    width:350px;
+    border-radius:10px;
+    transition:0.3s;
+}
+
+.image-box img:hover{
+    transform:scale(1.05);
+}
+
+.content{
+    max-width:500px;
+}
+
+.content h2{
+    color:#5D4037;
+    margin-bottom:15px;
+}
+
+.content p{
+    line-height:1.8;
+    color:#555;
+    margin-bottom:20px;
+}
+
+.price{
+    font-size:32px;
+    color:#D32F2F;
+    font-weight:bold;
+    margin-bottom:20px;
+}
+
+button{
+    background:#5D4037;
+    color:white;
+    border:none;
+    padding:12px 25px;
+    border-radius:8px;
+    cursor:pointer;
+    font-size:16px;
+}
+
+button:hover{
+    background:#795548;
+}
+
+.features{
+    padding:40px;
+    text-align:center;
+}
+
+.features h2{
+    color:#5D4037;
+    margin-bottom:20px;
+}
+
+.cards{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:20px;
+}
+
+.card{
+    width:250px;
+    background:white;
+    padding:20px;
+    border-radius:15px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.1);
+}
+
+.card h3{
+    color:#5D4037;
+    margin-bottom:10px;
+}
+
+.popup{
+    display:none;
+    position:fixed;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    background:white;
+    padding:30px;
+    border-radius:15px;
+    box-shadow:0 0 25px rgba(0,0,0,0.3);
+    text-align:center;
+}
+
+.popup button{
+    margin-top:15px;
+}
+
+footer{
+    background:#5D4037;
+    color:white;
+    text-align:center;
+    padding:15px;
+    margin-top:30px;
+}
+</style>
+</head>
+<body>
+
+<header>
+    <h1>🎁 Premium Wooden Gift Box</h1>
+</header>
+
+<div class="container">
+
+    <div class="image-box">
+        <img src="C:\Users\SAI\Pictures\Images\Gift.jpg" alt="Wooden Gift Box">
+    </div>
+
+    <div class="content">
+        <h2>Decorative Wooden Storage Box</h2>
+
+        <p>
+            Elegant handcrafted wooden gift box with laser-cut patterns.
+            Perfect for storing jewelry, pens, accessories, chocolates,
+            wedding return gifts, and special keepsakes.
+        </p>
+
+        <div class="price">₹899</div>
+
+        <button onclick="buyNow()">Buy Now</button>
+    </div>
+
+</div>
+
+<section class="features">
+
+    <h2>Product Features</h2>
+
+    <div class="cards">
+
+        <div class="card">
+            <h3>🌳 Premium Wood</h3>
+            <p>Made from high-quality durable wood.</p>
+        </div>
+
+        <div class="card">
+            <h3>✨ Laser Design</h3>
+            <p>Beautiful decorative laser-cut pattern.</p>
+        </div>
+
+        <div class="card">
+            <h3>🎁 Ideal Gift</h3>
+            <p>Perfect for weddings and special occasions.</p>
+        </div>
+
+    </div>
+
+</section>
+
+<div class="popup" id="popup">
+    <h2>Order Confirmed!</h2>
+    <p>Thank you for choosing our Wooden Gift Box.</p>
+    <button onclick="closePopup()">Close</button>
+</div>
+
+<footer>
+    © 2026 Wooden Gift Collection
+</footer>
+
+<script>
+function buyNow(){
+    document.getElementById("popup").style.display = "block";
+}
+
+function closePopup(){
+    document.getElementById("popup").style.display = "none";
+}
+</script>
+
+</body>
+</html>
