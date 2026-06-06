@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MindCare Psychology</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+body{
+    background:#f5f9fc;
+    color:#333;
+}
+
+header{
+    background:linear-gradient(135deg,#4a90e2,#6fb1fc);
+    color:white;
+    text-align:center;
+    padding:25px;
+}
+
+header h1{
+    font-size:40px;
+}
+
+nav{
+    background:#2c3e50;
+    padding:15px;
+    text-align:center;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    margin:0 15px;
+    font-weight:bold;
+}
+
+nav a:hover{
+    color:#6fb1fc;
+}
+
+.hero{
+    padding:60px 20px;
+}
+
+.hero-content{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:40px;
+    flex-wrap:wrap;
+}
+
+.text-content{
+    max-width:500px;
+}
+
+.text-content h2{
+    font-size:36px;
+    margin-bottom:15px;
+}
+
+.text-content p{
+    font-size:18px;
+    margin-bottom:20px;
+}
+
+.hero button{
+    background:#4a90e2;
+    color:white;
+    border:none;
+    padding:12px 25px;
+    border-radius:5px;
+    cursor:pointer;
+}
+
+.hero button:hover{
+    background:#357abd;
+}
+
+.image-content img{
+    width:450px;
+    max-width:100%;
+    border-radius:15px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.2);
+}
+
+section{
+    padding:50px 20px;
+}
+
+section h2{
+    text-align:center;
+    margin-bottom:30px;
+    color:#2c3e50;
+}
+
+.cards{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:25px;
+}
+
+.card{
+    width:300px;
+    background:white;
+    border-radius:15px;
+    padding:15px;
+    box-shadow:0 4px 10px rgba(0,0,0,0.1);
+    transition:0.3s;
+}
+
+.card:hover{
+    transform:translateY(-8px);
+}
+
+.card img{
+    width:100%;
+    height:200px;
+    object-fit:cover;
+    border-radius:10px;
+}
+
+.card h3{
+    margin:15px 0;
+}
+
+.tips{
+    max-width:800px;
+    margin:auto;
+}
+
+.tips ul{
+    list-style:none;
+}
+
+.tips li{
+    background:white;
+    margin:10px 0;
+    padding:15px;
+    border-left:5px solid #4a90e2;
+    box-shadow:0 2px 5px rgba(0,0,0,0.1);
+}
+
+.contact-form{
+    max-width:600px;
+    margin:auto;
+}
+
+input, textarea{
+    width:100%;
+    padding:12px;
+    margin:10px 0;
+    border:1px solid #ccc;
+    border-radius:5px;
+}
+
+textarea{
+    height:120px;
+}
+
+.submit-btn{
+    width:100%;
+    background:#27ae60;
+    color:white;
+    border:none;
+    padding:12px;
+    cursor:pointer;
+    border-radius:5px;
+}
+
+.submit-btn:hover{
+    background:#1e8449;
+}
+
+#response{
+    text-align:center;
+    color:green;
+    margin-top:15px;
+}
+
+footer{
+    background:#2c3e50;
+    color:white;
+    text-align:center;
+    padding:20px;
+    margin-top:30px;
+}
+
+@media(max-width:768px){
+    .hero-content{
+        flex-direction:column;
+    }
+
+    header h1{
+        font-size:30px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>MindCare Psychology</h1>
+    <p>Your Partner in Mental Wellness</p>
+</header>
+
+<nav>
+    <a href="#home">Home</a>
+    <a href="#services">Services</a>
+    <a href="#tips">Tips</a>
+    <a href="#contact">Contact</a>
+</nav>
+
+<section class="hero" id="home">
+    <div class="hero-content">
+
+        <div class="text-content">
+            <h2>Welcome to MindCare</h2>
+            <p>
+                We help individuals improve emotional well-being,
+                overcome stress, and achieve a healthier lifestyle.
+            </p>
+
+            <button onclick="showMessage()">
+                Get Motivation
+            </button>
+        </div>
+
+        <div class="image-content">
+            <img src="https://images.unsplash.com/photo-1516302752625-fcc3c50ae61f?auto=format&fit=crop&w=800&q=80"
+            alt="Psychology Therapy">
+        </div>
+
+    </div>
+</section>
+
+<section id="services">
+    <h2>Our Services</h2>
+
+    <div class="cards">
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&w=800&q=80">
+            <h3>Counseling</h3>
+            <p>Professional counseling to improve emotional and mental health.</p>
+        </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1506126613408-eca07ce68773?auto=format&fit=crop&w=800&q=80">
+            <h3>Stress Management</h3>
+            <p>Effective strategies for reducing stress and anxiety.</p>
+        </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1516627145497-ae6968895b74?auto=format&fit=crop&w=800&q=80">
+            <h3>Child Psychology</h3>
+            <p>Supporting children's emotional and social development.</p>
+        </div>
+
+    </div>
+</section>
+
+<section id="tips">
+    <h2>Mental Health Tips</h2>
+
+    <div class="tips">
+        <ul>
+            <li>Practice gratitude every day.</li>
+            <li>Get at least 7–8 hours of sleep.</li>
+            <li>Exercise regularly to improve mood.</li>
+            <li>Talk openly with trusted friends and family.</li>
+            <li>Seek professional help when needed.</li>
+        </ul>
+    </div>
+</section>
+
+<section id="contact">
+    <h2>Contact Us</h2>
+
+    <form class="contact-form" id="contactForm">
+        <input type="text" id="name" placeholder="Your Name" required>
+
+        <input type="email" id="email" placeholder="Your Email" required>
+
+        <textarea id="message"
+        placeholder="Write your message here..."
+        required></textarea>
+
+        <button class="submit-btn" type="submit">
+            Send Message
+        </button>
+    </form>
+
+    <p id="response"></p>
+</section>
+
+<footer>
+    <p>© 2026 MindCare Psychology | Mental Wellness & Counseling</p>
+</footer>
+
+<script>
+function showMessage() {
+
+    const messages = [
+        "Believe in yourself and your abilities.",
+        "Every day is a new opportunity to grow.",
+        "Your mental health is just as important as physical health.",
+        "Small steps can lead to big changes.",
+        "You are stronger than you think."
+    ];
+
+    const randomMessage =
+        messages[Math.floor(Math.random() * messages.length)];
+
+    alert(randomMessage);
+}
+
+document.getElementById("contactForm")
+.addEventListener("submit", function(e){
+
+    e.preventDefault();
+
+    const name =
+    document.getElementById("name").value;
+
+    document.getElementById("response").innerHTML =
+    "Thank you, " + name +
+    "! Your message has been received.";
+
+    this.reset();
+});
+</script>
+
+</body>
+</html>
