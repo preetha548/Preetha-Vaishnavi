@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;500;700&family=Inter:wght@300;400;500&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    background:#a89f96;
+    min-height:100vh;
+    padding:40px;
+    font-family:'Inter',sans-serif;
+}
+
+.portfolio-showcase{
+    display:grid;
+    grid-template-columns:380px 1fr;
+    gap:24px;
+    align-items:start;
+}
+
+/* Cover */
+
+.cover-card{
+    background:#f7f3ee;
+    padding:18px;
+    border-radius:8px;
+}
+
+.cover-image{
+    height:520px;
+    border-radius:6px;
+    background:url("https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?w=1000")
+    center/cover;
+}
+
+.cover-content{
+    padding-top:20px;
+}
+
+.cover-content span{
+    font-size:12px;
+    letter-spacing:3px;
+    color:#999;
+}
+
+.cover-content h1{
+    font-family:'Cormorant Garamond',serif;
+    font-size:70px;
+    font-weight:500;
+    color:#2e2e2e;
+    line-height:1;
+    margin:12px 0;
+}
+
+.cover-content p{
+    color:#777;
+}
+
+/* Right Grid */
+
+.preview-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:16px;
+}
+
+.preview-card{
+    background:#f7f3ee;
+    min-height:210px;
+    border-radius:8px;
+    padding:20px;
+    transition:.3s;
+}
+
+.preview-card:hover{
+    transform:translateY(-6px);
+}
+
+.preview-card h3{
+    font-family:'Cormorant Garamond',serif;
+    font-size:28px;
+    margin-bottom:10px;
+}
+
+.preview-card p{
+    color:#666;
+    line-height:1.6;
+    font-size:14px;
+}
+
+.image-card{
+    padding:0;
+    background:url("https://images.unsplash.com/photo-1484154218962-a197022b5858?w=800")
+    center/cover;
+}
+
+.small{
+    background:url("https://images.unsplash.com/photo-1494526585095-c41746248156?w=800")
+    center/cover;
+}
+
+.large{
+    grid-column:span 2;
+}
+
+@media(max-width:992px){
+
+    .portfolio-showcase{
+        grid-template-columns:1fr;
+    }
+
+    .preview-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .cover-content h1{
+        font-size:55px;
+    }
+}
+
+@media(max-width:600px){
+
+    .preview-grid{
+        grid-template-columns:1fr;
+    }
+}
