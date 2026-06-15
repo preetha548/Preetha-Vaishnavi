@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sports Team Sponsorship Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+    <h1>Sports Team Sponsorship<br>Application Form</h1>
+
+    <form action="/submit" method="POST">
+
+        <label>Sponsorship Level</label>
+        <select name="level">
+            <option>Please Select</option>
+            <option>Gold</option>
+            <option>Silver</option>
+            <option>Bronze</option>
+        </select>
+
+        <label>Company/Organization Name</label>
+        <input type="text" name="company">
+
+        <label>Contact Person</label>
+        <div class="row">
+            <input type="text" name="firstName" placeholder="First">
+            <input type="text" name="lastName" placeholder="Last">
+        </div>
+
+        <label>Email Address</label>
+        <input type="email" name="email">
+
+        <label>Why are you interested in sponsoring our sports team?</label>
+        <textarea name="reason"></textarea>
+
+        <div class="row">
+            <div>
+                <label>Start Date</label>
+                <input type="date" name="startDate">
+            </div>
+
+            <div>
+                <label>End Date</label>
+                <input type="date" name="endDate">
+            </div>
+        </div>
+
+        <label>Additional Message</label>
+        <textarea name="message"></textarea>
+
+        <button type="submit">Submit</button>
+
+    </form>
+</div>
+
+</body>
+</html>
