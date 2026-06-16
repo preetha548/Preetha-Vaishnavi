@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Application for Employment</title>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="/style.css">
+
+</head>
+<body>
+
+<div class="container my-4">
+
+<h1 class="text-center mb-4">Application for Employment</h1>
+
+<form action="/submit" method="POST">
+
+<div class="row mb-3">
+<div class="col-md-6">
+<label>Position You Are Applying For</label>
+<input type="text" class="form-control" name="position">
+</div>
+
+<div class="col-md-3">
+<label>Desired Salary</label>
+<input type="text" class="form-control" name="salary">
+</div>
+
+<div class="col-md-3">
+<label>Date Available</label>
+<input type="date" class="form-control" name="date">
+</div>
+</div>
+
+<div class="section-title">
+PERSONAL INFORMATION
+</div>
+
+<div class="row">
+<div class="col-md-4">
+<label>Last Name</label>
+<input type="text" class="form-control" name="lastname">
+</div>
+
+<div class="col-md-4">
+<label>First Name</label>
+<input type="text" class="form-control" name="firstname">
+</div>
+
+<div class="col-md-4">
+<label>Middle Name</label>
+<input type="text" class="form-control" name="middlename">
+</div>
+</div>
+
+<div class="mt-3">
+<label>Address</label>
+<input type="text" class="form-control" name="address">
+</div>
+
+<div class="row mt-3">
+<div class="col-md-4">
+<label>City</label>
+<input type="text" class="form-control" name="city">
+</div>
+
+<div class="col-md-4">
+<label>Province</label>
+<input type="text" class="form-control" name="province">
+</div>
+
+<div class="col-md-4">
+<label>Postal Code</label>
+<input type="text" class="form-control" name="postal">
+</div>
+</div>
+
+<div class="row mt-3">
+<div class="col-md-4">
+<label>Home Phone</label>
+<input type="text" class="form-control" name="homephone">
+</div>
+
+<div class="col-md-4">
+<label>Cell Phone</label>
+<input type="text" class="form-control" name="cellphone">
+</div>
+
+<div class="col-md-4">
+<label>Email</label>
+<input type="email" class="form-control" name="email">
+</div>
+</div>
+
+<div class="mt-3">
+<label>Are you a Citizen?</label>
+<input type="radio" name="citizen" value="Yes"> Yes
+<input type="radio" name="citizen" value="No"> No
+</div>
+
+<div class="mt-2">
+<label>Have you ever been convicted of a felony?</label>
+<input type="radio" name="felony" value="Yes"> Yes
+<input type="radio" name="felony" value="No"> No
+</div>
+
+<div class="section-title mt-4">
+EDUCATION
+</div>
+
+<table class="table table-bordered">
+<thead>
+<tr>
+<th>School Name</th>
+<th>Location</th>
+<th>Years Attended</th>
+<th>Degree Received</th>
+<th>Major</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td><input type="text" class="form-control"></td>
+<td><input type="text" class="form-control"></td>
+<td><input type="text" class="form-control"></td>
+<td><input type="text" class="form-control"></td>
+<td><input type="text" class="form-control"></td>
+</tr>
+</tbody>
+</table>
+
+<div class="section-title mt-4">
+EMPLOYMENT
+</div>
+
+<div class="mb-3">
+<label>Employer</label>
+<input type="text" class="form-control" name="employer">
+</div>
+
+<div class="row">
+<div class="col-md-6">
+<label>Work Phone</label>
+<input type="text" class="form-control" name="workphone">
+</div>
+
+<div class="col-md-6">
+<label>Pay Rate</label>
+<input type="text" class="form-control" name="payrate">
+</div>
+</div>
+
+<div class="mt-3">
+<label>Duties Performed</label>
+<textarea class="form-control" rows="3"></textarea>
+</div>
+
+<div class="mt-3">
+<label>Reason for Leaving</label>
+<textarea class="form-control" rows="3"></textarea>
+</div>
+
+<div class="section-title mt-4">
+REFERENCES
+</div>
+
+<table class="table table-bordered">
+<thead>
+<tr>
+<th>Name</th>
+<th>Title</th>
+<th>Company</th>
+<th>Phone</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td><input type="text" class="form-control"></td>
+<td><input type="text" class="form-control"></td>
+<td><input type="text" class="form-control"></td>
+<td><input type="text" class="form-control"></td>
+</tr>
+</tbody>
+</table>
+
+<div class="section-title mt-4">
+Acknowledgement and Authorization
+</div>
+
+<div class="form-check">
+<input class="form-check-input" type="checkbox">
+<label class="form-check-label">
+I certify that all answers are true.
+</label>
+</div>
+
+<div class="form-check">
+<input class="form-check-input" type="checkbox">
+<label class="form-check-label">
+I authorize verification of information.
+</label>
+</div>
+
+<div class="form-check">
+<input class="form-check-input" type="checkbox">
+<label class="form-check-label">
+I understand false information may result in discharge.
+</label>
+</div>
+
+<div class="text-center mt-4">
+<button class="btn btn-dark btn-lg">
+Submit Application
+</button>
+</div>
+
+</form>
+
+</div>
+
+</body>
+</html>
