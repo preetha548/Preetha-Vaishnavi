@@ -1,0 +1,83 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    background:#f3f3f3;
+    font-family:Georgia, serif;
+}
+
+.container{
+    width:95%;
+    margin:30px auto;
+    background:#fff;
+    padding:25px;
+    border:2px solid #bbb;
+}
+
+h1{
+    text-align:center;
+    font-size:60px;
+    letter-spacing:8px;
+    color:#666;
+    margin-bottom:25px;
+    font-weight:300;
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+}
+
+th,td{
+    border:2px solid #999;
+    text-align:center;
+    height:80px;
+}
+
+.subject{
+    width:32%;
+    font-size:28px;
+}
+
+th{
+    background:#fff;
+    color:#666;
+    font-size:18px;
+}
+
+td:first-child{
+    background:#fff;
+}
+
+input[type="checkbox"]{
+    width:28px;
+    height:28px;
+    cursor:pointer;
+}
+
+.blue td:not(:first-child){
+    background:#dff5fb;
+}
+
+.orange td:not(:first-child){
+    background:#fde8bf;
+}
+
+.green td:not(:first-child){
+    background:#f4f8cc;
+}
+
+.purple td:not(:first-child){
+    background:#e7e0f0;
+}
+
+.yellow td:not(:first-child){
+    background:#fff4d4;
+}
+
+.pink td:not(:first-child){
+    background:#fde3e3;
+}
