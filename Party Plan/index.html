@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Party Planner</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="planner">
+
+    <h1 class="title">
+        <span class="orange">OUR</span>
+        <span class="green">PARTY</span>
+        <span class="pink">PLAN</span>
+    </h1>
+
+    <div class="top-grid">
+        <div class="top-box">
+            <div class="label red">OCCASION</div>
+            <input type="text" id="occasion">
+        </div>
+
+        <div class="top-box">
+            <div class="label magenta">TIME & DATE OF PARTY</div>
+            <input type="text" id="datetime">
+        </div>
+
+        <div class="top-box">
+            <div class="label yellow">PARTY THEME</div>
+            <input type="text" id="theme">
+        </div>
+    </div>
+
+    <div class="grid">
+
+        <div class="card yellow-border large">
+            <h3>PARTY FOOD & BEVERAGES</h3>
+            <textarea id="food"></textarea>
+        </div>
+
+        <div class="card yellow-border large">
+            <h3>DECORATION PLANS</h3>
+            <textarea id="decor"></textarea>
+        </div>
+
+        <div class="card cyan-border">
+            <h3>CAKE</h3>
+            <textarea id="cake"></textarea>
+        </div>
+
+        <div class="card cyan-border">
+            <h3>INVITATION</h3>
+            <textarea id="invite"></textarea>
+        </div>
+
+        <div class="card gold-border">
+            <h3>MUSIC</h3>
+            <textarea id="music"></textarea>
+        </div>
+
+        <div class="card gold-border">
+            <h3>LOOT BAGS</h3>
+            <textarea id="loot"></textarea>
+        </div>
+
+        <div class="card orange-border">
+            <h3>GAMES & PRIZES</h3>
+            <textarea id="games"></textarea>
+        </div>
+
+        <div class="card orange-border">
+            <h3>REMINDERS!</h3>
+            <textarea id="reminders"></textarea>
+        </div>
+
+    </div>
+
+    <div class="buttons">
+        <button onclick="saveData()">Save</button>
+        <button onclick="clearData()">Clear</button>
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
