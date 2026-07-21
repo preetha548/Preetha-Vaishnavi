@@ -1,0 +1,38 @@
+body {
+    background: linear-gradient(120deg,#dff6ff,#ffffff);
+    font-family: Arial;
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.container {
+    background:white;
+    padding:30px;
+    width:350px;
+    text-align:center;
+    border-radius:15px;
+    box-shadow:0 0 20px #aaa;
+}
+
+input,select {
+    width:90%;
+    padding:12px;
+    margin:8px;
+}
+
+button {
+    background:#2196f3;
+    color:white;
+    border:none;
+    padding:12px 25px;
+    border-radius:8px;
+    cursor:pointer;
+}
+
+#result {
+    margin-top:20px;
+    font-size:20px;
+    font-weight:bold;
+}

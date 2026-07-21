@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AI Milk Adulteration Detector</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>🥛 AI Milk Adulteration Detector</h1>
+
+<input id="ph" type="number" placeholder="Milk pH Value">
+
+<input id="fat" type="number" placeholder="Fat Percentage">
+
+<input id="water" type="number" placeholder="Water Content %">
+
+<input id="urea" type="number" placeholder="Urea Level">
+
+<select id="starch">
+    <option value="0">No Starch</option>
+    <option value="1">Starch Detected</option>
+</select>
+
+<button onclick="detectMilk()">Analyze Milk</button>
+
+<div id="result"></div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
