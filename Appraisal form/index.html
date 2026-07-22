@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>General Performance Evaluation Form</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+    background:#f5f5f5;
+    padding:30px;
+}
+
+.container{
+    width:900px;
+    margin:auto;
+    background:#fff;
+    padding:40px;
+    border:1px solid #ccc;
+}
+
+h2{
+    text-align:center;
+    font-size:18px;
+    margin-bottom:35px;
+    text-transform:uppercase;
+}
+
+.info{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:15px;
+    margin-bottom:25px;
+}
+
+.field{
+    display:flex;
+    align-items:center;
+}
+
+.field label{
+    font-weight:bold;
+    width:130px;
+}
+
+.field input{
+    flex:1;
+    border:none;
+    border-bottom:1px solid #000;
+    outline:none;
+    padding:4px;
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+}
+
+table,th,td{
+    border:1px solid #000;
+}
+
+th,td{
+    padding:6px;
+    font-size:14px;
+}
+
+th{
+    text-align:center;
+    background:#eee;
+}
+
+.category{
+    width:130px;
+    font-weight:bold;
+    text-align:center;
+    vertical-align:top;
+}
+
+.factor{
+    width:500px;
+}
+
+.radioCell{
+    width:60px;
+    text-align:center;
+}
+
+input[type=radio]{
+    transform:scale(1.2);
+}
+
+button{
+    margin-top:20px;
+    padding:10px 20px;
+    background:#007bff;
+    color:#fff;
+    border:none;
+    cursor:pointer;
+}
+
+button:hover{
+    background:#0056b3;
+}
+
+#result{
+    margin-top:20px;
+    font-size:18px;
+    font-weight:bold;
+}
+
+</style>
+
+</head>
+<body>
+
+<div class="container">
+
+<h2>General Performance Evaluation Form</h2>
+
+<div class="info">
+
+<div class="field">
+<label>Employee:</label>
+<input type="text">
+</div>
+
+<div class="field">
+<label>Driver Number:</label>
+<input type="text">
+</div>
+
+<div class="field">
+<label>Job Title:</label>
+<input type="text">
+</div>
+
+<div class="field">
+<label>Date:</label>
+<input type="date">
+</div>
+
+</div>
+
+<table>
+
+<tr>
+<th colspan="2">EVALUATION FACTORS</th>
+<th>S</th>
+<th>A</th>
+<th>NI</th>
+</tr>
+
+<tbody id="tbody"></tbody>
+
+</table>
+
+<button onclick="calculate()">Calculate Score</button>
+
+<div id="result"></div>
+
+</div>
+
+<script>
+
+const data=[
+
+{
+category:"Dedication",
+items:[
+"Reports to work on time.",
+"Uses time constructively."
+]
+},
+
+{
+category:"Performance",
+items:[
+"Good working knowledge of job assignment.",
+"Organizes and performs work professionally."
+]
+},
+
+{
+category:"Cooperation",
+items:[
+"Willingly accepts work assignments.",
+"Willingly accepts changes in assignments."
+]
+},
+
+{
+category:"Initiative",
+items:[
+"Performs duties with little supervision.",
+"Works well under pressure.",
+"Strives to meet deadlines."
+]
+},
+
+{
+category:"Communication",
+items:[
+"Communicates clearly with customers."
+]
+},
+
+{
+category:"Teamwork",
+items:[
+"Works well with fellow employees."
+]
+},
+
+{
+category:"Character",
+items:[
+"Accepts constructive criticism."
+]
+},
+
+{
+category:"Responsiveness",
+items:[
+"Handles stressful situations."
+]
+},
+
+{
+category:"Personality",
+items:[
+"Pleasant and calm personality."
+]
+},
+
+{
+category:"Appearance",
+items:[
+"Well groomed.",
+"Dresses appropriately for work."
+]
+}
+
+];
+
+const tbody=document.getElementById("tbody");
+
+let id=0;
+
+data.forEach(section=>{
+
+section.items.forEach((item,index)=>{
+
+let tr=document.createElement("tr");
+
+if(index==0){
+
+let td=document.createElement("td");
+
+td.className="category";
+
+td.rowSpan=section.items.length;
+
+td.innerHTML=section.category;
+
+tr.appendChild(td);
+
+}
+
+tr.innerHTML+=`
+<td class="factor">${item}</td>
+
+<td class="radioCell">
+<input type="radio" name="q${id}" value="2">
+</td>
+
+<td class="radioCell">
+<input type="radio" name="q${id}" value="1">
+</td>
+
+<td class="radioCell">
+<input type="radio" name="q${id}" value="0">
+</td>
+`;
+
+tbody.appendChild(tr);
+
+id++;
+
+});
+
+});
+
+function calculate(){
+
+let total=0;
+
+let max=id*2;
+
+for(let i=0;i<id;i++){
+
+let checked=document.querySelector(`input[name="q${i}"]:checked`);
+
+if(checked){
+
+total+=Number(checked.value);
+
+}
+
+}
+
+let percent=((total/max)*100).toFixed(1);
+
+document.getElementById("result").innerHTML=
+`Overall Score : ${percent}%`;
+
+}
+
+</script>
+
+</body>
+</html>
