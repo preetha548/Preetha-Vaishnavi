@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Diabetes Prediction System</title>
+
+<link rel="stylesheet" href="style.css">
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>🩺 Diabetes Prediction System</h1>
+
+<input id="name" placeholder="Patient Name">
+
+<input id="age" type="number" placeholder="Age">
+
+<input id="glucose" type="number" placeholder="Glucose Level">
+
+<input id="bp" type="number" placeholder="Blood Pressure">
+
+<input id="bmi" type="number" placeholder="BMI">
+
+<input id="insulin" type="number" placeholder="Insulin">
+
+<input id="preg" type="number" placeholder="Pregnancies">
+
+<input id="dpf" type="number" step="0.01" 
+placeholder="Diabetes Pedigree Function">
+
+
+<button onclick="predict()">Predict</button>
+
+<button onclick="generatePDF()">
+Generate Report PDF
+</button>
+
+
+<div id="result"></div>
+
+</div>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
