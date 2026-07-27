@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oil & Gas Leakage Prediction</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+    <h1>Oil & Gas Leakage Prediction</h1>
+
+    <label>Gas Level (ppm)</label>
+    <input type="number" id="gas" placeholder="Enter Gas Level">
+
+    <label>Temperature (°C)</label>
+    <input type="number" id="temp" placeholder="Enter Temperature">
+
+    <label>Pressure (kPa)</label>
+    <input type="number" id="pressure" placeholder="Enter Pressure">
+
+    <button onclick="predictLeak()">Predict</button>
+
+    <div id="result"></div>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
