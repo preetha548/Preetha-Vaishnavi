@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Bus Booking System</title>
+    <style>
+      table tbody tr td {
+        padding: 10px;
+        border: 2px solid;
+        margin: 3px;
+      }
+    </style>
+  </head>
+  <body>
+    <select name="seatCode" id="seatCode">
+      <option value="Seat Code">Seat Code</option>
+      <option value="A">A</option>
+      <option value="B">B</option>
+    </select>
+
+    <select name="seatNumber" id="seatNumber">
+      <option value="Seat Number">Seat Number</option>
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5</option>
+    </select>
+
+    <select name="noOfTickets" id="noOfTickets">
+      <option value="No of Tickets">No of Tickets</option>
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5</option>
+    </select>
+
+    <table>
+      <tbody>
+        <tr>
+          <td></td>
+          <td id="A1">A1</td>
+          <td id="A2">A2</td>
+          <td id="A3">A3</td>
+          <td id="A4">A4</td>
+          <td id="A5">A5</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td id="B1">B1</td>
+          <td id="B2">B2</td>
+          <td id="B3">B3</td>
+          <td id="B4">B4</td>
+          <td id="B5">B5</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <input type="button" value="BOOK" />
+
+    <div id="result"></div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="index.js"></script>
+  </body>
+</html>
