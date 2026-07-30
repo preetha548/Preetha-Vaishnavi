@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>Friends Social Network</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+
+
+<header>
+
+<h1>❤️ Friends Hub</h1>
+
+<p id="clock"></p>
+
+<button onclick="themeChange()">
+🌙 Theme
+</button>
+
+</header>
+
+
+
+<section class="banner">
+
+<h1>
+Welcome To My Friends World
+</h1>
+
+<p>
+Connect • Share • Celebrate Memories
+</p>
+
+
+<button onclick="openForm()">
++ Add Friend
+</button>
+
+
+</section>
+
+
+
+<div class="container">
+
+
+<input 
+type="text"
+id="search"
+placeholder="Search Friend..."
+onkeyup="searchFriend()">
+
+
+
+<div id="friendList">
+
+
+<div class="friend-card">
+
+
+<img src="https://i.pravatar.cc/200?img=1">
+
+
+<h2>Arun</h2>
+
+<p>
+💻 Developer
+</p>
+
+
+<p>
+⭐ Friendship Level : 95%
+</p>
+
+
+<button onclick="like(this)">
+❤️ <span>0</span>
+</button>
+
+
+<div>
+
+<input placeholder="Write comment"
+class="commentInput">
+
+<button onclick="comment(this)">
+Comment
+</button>
+
+
+</div>
+
+
+<div class="comments"></div>
+
+
+</div>
+
+
+
+
+
+<div class="friend-card">
+
+
+<img src="https://i.pravatar.cc/200?img=2">
+
+
+<h2>Priya</h2>
+
+<p>
+🎨 Designer
+</p>
+
+
+<p>
+⭐ Friendship Level : 90%
+</p>
+
+
+<button onclick="like(this)">
+❤️ <span>0</span>
+</button>
+
+
+
+<div>
+
+<input placeholder="Write comment"
+class="commentInput">
+
+<button onclick="comment(this)">
+Comment
+</button>
+
+
+</div>
+
+
+<div class="comments"></div>
+
+
+
+</div>
+
+
+</div>
+
+
+</div>
+
+
+
+
+<!-- Add Friend Popup -->
+
+
+<div id="popup">
+
+
+<h2>Add New Friend</h2>
+
+
+<input id="name"
+placeholder="Friend Name">
+
+
+<input id="job"
+placeholder="Profession">
+
+
+<input id="image"
+placeholder="Image URL">
+
+
+<button onclick="addFriend()">
+Add
+</button>
+
+
+<button onclick="closeForm()">
+Close
+</button>
+
+
+</div>
+
+
+
+<script src="script.js"></script>
+
+
+</body>
+</html>
