@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Golden Trophy Animation</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial,Helvetica,sans-serif;
+}
+
+body{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+    overflow:hidden;
+    background:linear-gradient(135deg,#00172d,#003566,#001d3d);
+}
+
+.container{
+    text-align:center;
+}
+
+.trophy{
+    position:relative;
+    width:220px;
+    margin:auto;
+    animation:float 3s infinite ease-in-out;
+}
+
+.cup{
+    width:140px;
+    height:130px;
+    background:linear-gradient(#ffe600,#ffb700,#ffdf00);
+    margin:auto;
+    border-radius:0 0 40px 40px;
+    position:relative;
+    box-shadow:0 0 40px gold;
+}
+
+.cup:before,
+.cup:after{
+    content:"";
+    position:absolute;
+    width:45px;
+    height:70px;
+    border:10px solid gold;
+    border-radius:50%;
+    top:15px;
+}
+
+.cup:before{
+    left:-48px;
+    border-right:none;
+}
+
+.cup:after{
+    right:-48px;
+    border-left:none;
+}
+
+.stem{
+    width:40px;
+    height:60px;
+    background:gold;
+    margin:auto;
+}
+
+.base{
+    width:130px;
+    height:25px;
+    background:#8B4513;
+    margin:auto;
+    border-radius:5px;
+}
+
+.bottom{
+    width:170px;
+    height:20px;
+    background:#5d2906;
+    margin:auto;
+    border-radius:10px;
+}
+
+.medal{
+    position:absolute;
+    top:45px;
+    left:50%;
+    transform:translateX(-50%);
+    width:50px;
+    height:50px;
+    background:#ff9800;
+    border-radius:50%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:28px;
+    color:white;
+    font-weight:bold;
+}
+
+.title{
+    margin-top:25px;
+    font-size:42px;
+    color:white;
+    text-shadow:0 0 15px gold;
+}
+
+.subtitle{
+    margin-top:10px;
+    color:#ddd;
+    font-size:18px;
+}
+
+button{
+    margin-top:30px;
+    padding:15px 35px;
+    border:none;
+    background:gold;
+    color:black;
+    font-size:18px;
+    border-radius:30px;
+    cursor:pointer;
+    transition:.4s;
+}
+
+button:hover{
+    background:#ff9800;
+    transform:scale(1.1);
+}
+
+.sparkle{
+    position:absolute;
+    width:8px;
+    height:8px;
+    background:white;
+    border-radius:50%;
+    animation:blink 1s infinite alternate;
+}
+
+@keyframes blink{
+    from{
+        opacity:.2;
+        transform:scale(.5);
+    }
+    to{
+        opacity:1;
+        transform:scale(2);
+    }
+}
+
+@keyframes float{
+    0%,100%{
+        transform:translateY(0);
+    }
+    50%{
+        transform:translateY(-15px);
+    }
+}
+
+.confetti{
+    position:absolute;
+    width:10px;
+    height:18px;
+    top:-20px;
+    animation:fall linear forwards;
+}
+
+@keyframes fall{
+    to{
+        transform:translateY(110vh) rotate(720deg);
+        opacity:0;
+    }
+}
+
+.glow{
+    animation:glow 1s infinite alternate;
+}
+
+@keyframes glow{
+    from{
+        box-shadow:0 0 20px gold;
+    }
+    to{
+        box-shadow:0 0 70px yellow;
+    }
+}
+
+</style>
+
+</head>
+<body>
+
+<div class="container">
+
+<div class="trophy">
+
+<div class="cup glow">
+<div class="medal">★</div>
+</div>
+
+<div class="stem"></div>
+
+<div class="base"></div>
+
+<div class="bottom"></div>
+
+</div>
+
+<h1 class="title">🏆 CONGRATULATIONS!</h1>
+<p class="subtitle">You are the Champion!</p>
+
+<button onclick="celebrate()">Celebrate 🎉</button>
+
+</div>
+
+<script>
+
+// Sparkles
+for(let i=0;i<35;i++){
+
+let s=document.createElement("div");
+
+s.className="sparkle";
+
+s.style.left=Math.random()*window.innerWidth+"px";
+
+s.style.top=Math.random()*window.innerHeight+"px";
+
+s.style.animationDuration=(Math.random()*2+1)+"s";
+
+document.body.appendChild(s);
+
+}
+
+// Confetti Function
+function celebrate(){
+
+for(let i=0;i<180;i++){
+
+let conf=document.createElement("div");
+
+conf.className="confetti";
+
+conf.style.left=Math.random()*100+"vw";
+
+conf.style.background=
+`hsl(${Math.random()*360},100%,50%)`;
+
+conf.style.animationDuration=(Math.random()*3+2)+"s";
+
+document.body.appendChild(conf);
+
+setTimeout(()=>{
+conf.remove();
+},5000);
+
+}
+
+alert("🏆 Congratulations! You Won the Trophy!");
+
+}
+
+</script>
+
+</body>
+</html>
