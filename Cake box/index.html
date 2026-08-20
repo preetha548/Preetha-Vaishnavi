@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D Cake</title>
+
+<style>
+
+body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #dff6ff;
+    perspective: 800px;
+}
+
+.cake {
+    position: relative;
+    height: 200px;
+    width: 120px;
+    background: #6b2e1f;
+    border-radius: 20px;
+    box-shadow: 0 15px 0 #421a12;
+    transform: rotateX(15deg) rotateY(-20deg);
+}
+
+.cream {
+    position: absolute;
+    top: -20px;
+    left: 0;
+    width: 120px;
+    height: 35px;
+    background: #fff5e1;
+    border-radius: 50%;
+}
+
+.candle {
+    position: absolute;
+    top: -75px;
+    left: 52px;
+    width: 15px;
+    height: 55px;
+    background: #e63946;
+    border-radius: 5px;
+}
+
+.fire {
+    width: 15px;
+    height: 20px;
+    background: #ffcc00;
+    border-radius: 50%;
+    position: absolute;
+    top: -20px;
+    left: 0;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="cake">
+    <div class="cream"></div>
+
+    <div class="candle">
+        <div class="fire"></div>
+    </div>
+</div>
+
+</body>
+</html>
