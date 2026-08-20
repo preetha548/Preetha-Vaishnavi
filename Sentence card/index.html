@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Sentence Card</title>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f3f4f6;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    .card {
+      width: 380px;
+      background: white;
+      padding: 25px;
+      border-radius: 15px;
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+    }
+
+    .card h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #1f2937;
+    }
+
+    .sentence {
+      padding: 15px;
+      margin: 12px 0;
+      border-radius: 10px;
+      font-size: 17px;
+    }
+
+    .label {
+      display: block;
+      font-weight: bold;
+      margin-bottom: 6px;
+    }
+
+    /* Positive */
+    .positive {
+      background: #dcfce7;
+      color: #166534;
+      border-left: 5px solid #22c55e;
+    }
+
+    /* Negative */
+    .negative {
+      background: #fee2e2;
+      color: #991b1b;
+      border-left: 5px solid #ef4444;
+    }
+
+    /* Neutral */
+    .neutral {
+      background: #e0f2fe;
+      color: #075985;
+      border-left: 5px solid #0ea5e9;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="card">
+
+    <h2>Sentence Card</h2>
+
+    <div class="sentence positive">
+      <span class="label">Positive Sentence</span>
+      She likes coffee.
+    </div>
+
+    <div class="sentence negative">
+      <span class="label">Negative Sentence</span>
+      She does not like coffee.
+    </div>
+
+    <div class="sentence neutral">
+      <span class="label">Neutral Sentence</span>
+      She drinks coffee.
+    </div>
+
+  </div>
+
+</body>
+</html>
