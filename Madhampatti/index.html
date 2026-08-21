@@ -1,0 +1,2199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Madhampatty Pakashala</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:Arial,sans-serif;
+    background:#fff8ef;
+    color:#2d180d;
+}
+
+button,
+input{
+    font:inherit;
+}
+
+/* ================= HEADER ================= */
+
+header{
+    background:#7c160d;
+    color:#fff;
+    padding:18px 6%;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    position:sticky;
+    top:0;
+    z-index:1000;
+    box-shadow:0 3px 12px rgba(0,0,0,.2);
+}
+
+.logo{
+    font-size:25px;
+    font-weight:700;
+}
+
+.logo span{
+    color:#ffc107;
+}
+
+nav{
+    display:flex;
+    gap:25px;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    font-weight:600;
+}
+
+nav a:hover{
+    color:#ffc107;
+}
+
+/* ================= HERO ================= */
+
+.hero{
+    min-height:500px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    color:white;
+    padding:30px;
+
+    background:
+    linear-gradient(
+        rgba(60,10,5,.65),
+        rgba(60,10,5,.65)
+    ),
+    url("https://images.unsplash.com/photo-1601050690597-df0568f70950?auto=format&fit=crop&w=1600&q=80");
+
+    background-size:cover;
+    background-position:center;
+}
+
+.hero-content{
+    max-width:800px;
+}
+
+.hero h1{
+    font-size:clamp(40px,7vw,75px);
+    margin-bottom:15px;
+}
+
+.hero p{
+    font-size:20px;
+    margin-bottom:25px;
+}
+
+.hero-btn{
+    border:0;
+    background:#ffb300;
+    color:#241508;
+    padding:14px 28px;
+    border-radius:30px;
+    font-weight:700;
+    cursor:pointer;
+}
+
+.hero-btn:hover{
+    background:#ffd45c;
+}
+
+/* ================= SECTION ================= */
+
+section{
+    padding:60px 6%;
+}
+
+.section-title{
+    text-align:center;
+    margin-bottom:35px;
+}
+
+.section-title h2{
+    color:#7c160d;
+    font-size:38px;
+    margin-bottom:8px;
+}
+
+.section-title p{
+    color:#777;
+}
+
+/* ================= SEARCH ================= */
+
+.search-box{
+    max-width:650px;
+    margin:0 auto 25px;
+}
+
+.search-box input{
+    width:100%;
+    border:2px solid #e5cdb0;
+    outline:none;
+    padding:15px 20px;
+    border-radius:30px;
+    background:white;
+}
+
+.search-box input:focus{
+    border-color:#9d2114;
+}
+
+/* ================= FILTERS ================= */
+
+.filters{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:10px;
+    margin-bottom:35px;
+}
+
+.filter-btn{
+    border:0;
+    background:#ead9c3;
+    padding:10px 18px;
+    border-radius:25px;
+    cursor:pointer;
+    font-weight:600;
+}
+
+.filter-btn.active,
+.filter-btn:hover{
+    background:#9d2114;
+    color:white;
+}
+
+/* ================= MENU ================= */
+
+.menu-grid{
+    display:grid;
+    grid-template-columns:
+        repeat(auto-fit,minmax(240px,1fr));
+    gap:25px;
+}
+
+.menu-card{
+    background:white;
+    border-radius:16px;
+    overflow:hidden;
+    box-shadow:0 5px 18px rgba(0,0,0,.1);
+    transition:.25s;
+}
+
+.menu-card:hover{
+    transform:translateY(-6px);
+    box-shadow:0 10px 25px rgba(0,0,0,.18);
+}
+
+.menu-card img{
+    display:block;
+    width:100%;
+    height:210px;
+    object-fit:cover;
+}
+
+.menu-info{
+    padding:18px;
+}
+
+.category{
+    color:#999;
+    font-size:12px;
+    text-transform:uppercase;
+    font-weight:700;
+}
+
+.menu-info h3{
+    color:#59150c;
+    font-size:20px;
+    margin:8px 0;
+}
+
+.description{
+    color:#777;
+    font-size:14px;
+    line-height:1.5;
+    min-height:42px;
+}
+
+.price{
+    color:#c0391d;
+    font-size:21px;
+    font-weight:700;
+    margin:12px 0;
+}
+
+.add-btn{
+    width:100%;
+    border:0;
+    background:#7c160d;
+    color:white;
+    padding:12px;
+    border-radius:8px;
+    cursor:pointer;
+    font-weight:700;
+}
+
+.add-btn:hover{
+    background:#c0391d;
+}
+
+/* ================= CART FLOAT ================= */
+
+.cart-floating{
+    position:fixed;
+    right:20px;
+    bottom:20px;
+    z-index:2000;
+    border:0;
+    background:#ffb300;
+    color:#251507;
+    padding:14px 20px;
+    border-radius:35px;
+    font-weight:700;
+    cursor:pointer;
+    box-shadow:0 5px 20px rgba(0,0,0,.25);
+}
+
+.cart-count{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    min-width:24px;
+    height:24px;
+    padding:0 6px;
+    margin-left:5px;
+    background:#e53935;
+    color:white;
+    border-radius:20px;
+    font-size:13px;
+}
+
+/* ================= CART MODAL ================= */
+
+.cart-overlay{
+    display:none;
+    position:fixed;
+    inset:0;
+    z-index:3000;
+    background:rgba(0,0,0,.65);
+    padding:20px;
+    align-items:center;
+    justify-content:center;
+}
+
+.cart-overlay.show{
+    display:flex;
+}
+
+.cart-modal{
+    width:100%;
+    max-width:700px;
+    max-height:90vh;
+    overflow-y:auto;
+    background:white;
+    border-radius:18px;
+    padding:25px;
+}
+
+.cart-top{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    border-bottom:1px solid #ddd;
+    padding-bottom:15px;
+    margin-bottom:15px;
+}
+
+.cart-top h2{
+    color:#7c160d;
+}
+
+.close-cart{
+    border:0;
+    background:transparent;
+    font-size:30px;
+    color:#777;
+    cursor:pointer;
+}
+
+/* ================= CART ITEM ================= */
+
+.cart-item{
+    display:grid;
+    grid-template-columns:80px 1fr auto;
+    gap:15px;
+    align-items:center;
+    padding:15px 0;
+    border-bottom:1px solid #eee;
+}
+
+.cart-item img{
+    width:80px;
+    height:70px;
+    object-fit:cover;
+    border-radius:8px;
+}
+
+.cart-item-name{
+    color:#59150c;
+    font-weight:700;
+    margin-bottom:5px;
+}
+
+.cart-item-price{
+    color:#c0391d;
+    font-weight:700;
+}
+
+/* ================= QUANTITY ================= */
+
+.quantity-box{
+    display:flex;
+    align-items:center;
+    gap:7px;
+    margin-top:8px;
+}
+
+.quantity-btn{
+    width:30px;
+    height:30px;
+    border:0;
+    background:#7c160d;
+    color:white;
+    border-radius:5px;
+    cursor:pointer;
+}
+
+.quantity-btn:hover{
+    background:#c0391d;
+}
+
+.quantity-input{
+    width:50px;
+    text-align:center;
+    padding:6px;
+    border:1px solid #ccc;
+    border-radius:5px;
+}
+
+.delete-btn{
+    border:0;
+    background:#e53935;
+    color:white;
+    padding:7px 10px;
+    border-radius:5px;
+    cursor:pointer;
+}
+
+.delete-btn:hover{
+    background:#b71c1c;
+}
+
+/* ================= SUMMARY ================= */
+
+.cart-summary{
+    margin-top:20px;
+    background:#fff5e5;
+    padding:18px;
+    border-radius:10px;
+}
+
+.summary-row{
+    display:flex;
+    justify-content:space-between;
+    margin-bottom:10px;
+}
+
+.summary-total{
+    display:flex;
+    justify-content:space-between;
+    border-top:2px solid #ddd;
+    padding-top:15px;
+    font-size:22px;
+    font-weight:700;
+    color:#7c160d;
+}
+
+/* ================= CART BUTTONS ================= */
+
+.cart-actions{
+    display:flex;
+    gap:10px;
+    margin-top:20px;
+}
+
+.clear-cart-btn,
+.checkout-btn{
+    flex:1;
+    border:0;
+    padding:13px;
+    border-radius:8px;
+    cursor:pointer;
+    font-weight:700;
+}
+
+.clear-cart-btn{
+    background:#555;
+    color:white;
+}
+
+.checkout-btn{
+    background:#25d366;
+    color:white;
+}
+
+.checkout-btn:hover{
+    background:#1da851;
+}
+
+/* ================= EMPTY CART ================= */
+
+.empty-cart{
+    text-align:center;
+    padding:45px 10px;
+    color:#777;
+}
+
+.empty-cart .icon{
+    font-size:55px;
+    margin-bottom:10px;
+}
+
+/* ================= YOUTUBE ================= */
+
+.youtube{
+    background:#1d0e08;
+    color:white;
+}
+
+.youtube .section-title h2{
+    color:#ff3d3d;
+}
+
+.youtube .section-title p{
+    color:#ccc;
+}
+
+.videos{
+    display:grid;
+    grid-template-columns:
+        repeat(auto-fit,minmax(280px,1fr));
+    gap:25px;
+}
+
+.video-card{
+    background:#2d1810;
+    border-radius:15px;
+    overflow:hidden;
+    text-align:center;
+}
+
+.video-card iframe{
+    width:100%;
+    height:250px;
+    border:0;
+    display:block;
+}
+
+.video-card h3{
+    margin:15px 10px 5px;
+}
+
+.video-card p{
+    color:#bbb;
+    margin-bottom:15px;
+}
+
+.youtube-btn{
+    display:inline-block;
+    margin-bottom:20px;
+    padding:10px 18px;
+    border-radius:25px;
+    background:#ff0000;
+    color:white;
+    text-decoration:none;
+}
+
+/* ================= FOOTER ================= */
+
+footer{
+    background:#150a06;
+    color:white;
+    text-align:center;
+    padding:30px;
+}
+
+footer span{
+    color:#ffc107;
+}
+
+/* ================= MOBILE ================= */
+
+@media(max-width:700px){
+
+    header{
+        padding:16px 5%;
+    }
+
+    nav{
+        display:none;
+    }
+
+    .logo{
+        font-size:20px;
+    }
+
+    section{
+        padding:50px 5%;
+    }
+
+    .hero{
+        min-height:430px;
+    }
+
+    .hero h1{
+        font-size:42px;
+    }
+
+    .menu-grid{
+        grid-template-columns:1fr;
+    }
+
+    .cart-item{
+        grid-template-columns:65px 1fr;
+    }
+
+    .cart-item > div:last-child{
+        grid-column:2;
+    }
+
+    .cart-actions{
+        flex-direction:column;
+    }
+
+    .videos{
+        grid-template-columns:1fr;
+    }
+
+    .video-card iframe{
+        height:220px;
+    }
+
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- ================= HEADER ================= -->
+
+<header>
+
+    <div class="logo">
+        Madhampatty <span>Pakashala</span>
+    </div>
+
+    <nav>
+
+        <a href="#menu">
+            Menu
+        </a>
+
+        <a href="#youtube">
+            YouTube
+        </a>
+
+        <a href="#about">
+            About
+        </a>
+
+    </nav>
+
+</header>
+
+
+<!-- ================= HERO ================= -->
+
+<section class="hero">
+
+    <div class="hero-content">
+
+        <h1>
+            Madhampatty Pakashala
+        </h1>
+
+        <p>
+            Traditional Taste • Authentic Flavours
+        </p>
+
+        <button
+            class="hero-btn"
+            onclick="
+                document
+                .getElementById('menu')
+                .scrollIntoView({
+                    behavior:'smooth'
+                })
+            ">
+
+            Explore Menu
+
+        </button>
+
+    </div>
+
+</section>
+
+
+<!-- ================= MENU ================= -->
+
+<section id="menu">
+
+    <div class="section-title">
+
+        <h2>
+            Our Menu
+        </h2>
+
+        <p>
+            Choose your favourite food
+        </p>
+
+    </div>
+
+
+    <!-- SEARCH -->
+
+    <div class="search-box">
+
+        <input
+            type="search"
+            id="searchInput"
+            placeholder="🔍 Search food..."
+        >
+
+    </div>
+
+
+    <!-- FILTERS -->
+
+    <div class="filters">
+
+        <button
+            class="filter-btn active"
+            data-category="All">
+
+            All
+
+        </button>
+
+        <button
+            class="filter-btn"
+            data-category="Biryani">
+
+            Biryani
+
+        </button>
+
+        <button
+            class="filter-btn"
+            data-category="Chicken">
+
+            Chicken
+
+        </button>
+
+        <button
+            class="filter-btn"
+            data-category="Rice">
+
+            Rice
+
+        </button>
+
+        <button
+            class="filter-btn"
+            data-category="Chinese">
+
+            Chinese
+
+        </button>
+
+        <button
+            class="filter-btn"
+            data-category="South Indian">
+
+            South Indian
+
+        </button>
+
+        <button
+            class="filter-btn"
+            data-category="Beverages">
+
+            Beverages
+
+        </button>
+
+    </div>
+
+
+    <!-- MENU GRID -->
+
+    <div
+        class="menu-grid"
+        id="menuGrid">
+    </div>
+
+</section>
+
+
+<!-- ================= YOUTUBE ================= -->
+
+<section
+    class="youtube"
+    id="youtube">
+
+    <div class="section-title">
+
+        <h2>
+            YouTube Food Videos
+        </h2>
+
+        <p>
+            Watch delicious food videos
+        </p>
+
+    </div>
+
+
+    <div class="videos">
+
+
+        <!-- VIDEO 1 -->
+
+        <div class="video-card">
+
+            <iframe
+                src="https://www.youtube.com/embed/VIDEO_ID_1"
+                title="Chicken Biryani"
+                allowfullscreen>
+            </iframe>
+
+            <h3>
+                Chicken Biryani
+            </h3>
+
+            <p>
+                Biryani Special
+            </p>
+
+            <a
+                class="youtube-btn"
+                href="https://www.youtube.com/"
+                target="_blank">
+
+                ▶ Watch on YouTube
+
+            </a>
+
+        </div>
+
+
+        <!-- VIDEO 2 -->
+
+        <div class="video-card">
+
+            <iframe
+                src="https://www.youtube.com/embed/VIDEO_ID_2"
+                title="Chicken 65"
+                allowfullscreen>
+            </iframe>
+
+            <h3>
+                Chicken 65
+            </h3>
+
+            <p>
+                Crispy Chicken Special
+            </p>
+
+            <a
+                class="youtube-btn"
+                href="https://www.youtube.com/"
+                target="_blank">
+
+                ▶ Watch on YouTube
+
+            </a>
+
+        </div>
+
+
+        <!-- VIDEO 3 -->
+
+        <div class="video-card">
+
+            <iframe
+                src="https://www.youtube.com/embed/VIDEO_ID_3"
+                title="Traditional Food"
+                allowfullscreen>
+            </iframe>
+
+            <h3>
+                Traditional Food
+            </h3>
+
+            <p>
+                Authentic South Indian Flavours
+            </p>
+
+            <a
+                class="youtube-btn"
+                href="https://www.youtube.com/"
+                target="_blank">
+
+                ▶ Watch on YouTube
+
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= ABOUT ================= -->
+
+<section id="about">
+
+    <div class="section-title">
+
+        <h2>
+            About Us
+        </h2>
+
+        <p>
+            Traditional food and authentic flavours.
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- ================= FLOATING CART ================= -->
+
+<button
+    class="cart-floating"
+    id="openCartButton">
+
+    🛒 View Cart
+
+    <span
+        class="cart-count"
+        id="cartCount">
+
+        0
+
+    </span>
+
+</button>
+
+
+<!-- ================= CART ================= -->
+
+<div
+    class="cart-overlay"
+    id="cartOverlay">
+
+    <div class="cart-modal">
+
+
+        <!-- CART HEADER -->
+
+        <div class="cart-top">
+
+            <h2>
+                Your Cart
+            </h2>
+
+            <button
+                class="close-cart"
+                id="closeCartButton">
+
+                &times;
+
+            </button>
+
+        </div>
+
+
+        <!-- CART ITEMS -->
+
+        <div id="cartItems"></div>
+
+
+        <!-- CART SUMMARY -->
+
+        <div
+            class="cart-summary"
+            id="cartSummary"
+            style="display:none;">
+
+            <div class="summary-row">
+
+                <span>
+                    Total Items
+                </span>
+
+                <strong id="totalItems">
+                    0
+                </strong>
+
+            </div>
+
+
+            <div class="summary-row">
+
+                <span>
+                    Subtotal
+                </span>
+
+                <strong id="subtotal">
+                    ₹0
+                </strong>
+
+            </div>
+
+
+            <div class="summary-total">
+
+                <span>
+                    Total
+                </span>
+
+                <span id="grandTotal">
+                    ₹0
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <!-- CART ACTIONS -->
+
+        <div
+            class="cart-actions"
+            id="cartActions"
+            style="display:none;">
+
+            <button
+                class="clear-cart-btn"
+                id="clearCartButton">
+
+                Clear Cart
+
+            </button>
+
+
+            <button
+                class="checkout-btn"
+                id="checkoutButton">
+
+                Order on WhatsApp
+
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+    <p>
+
+        © 2026
+
+        <span>
+            Madhampatty Pakashala
+        </span>
+
+    </p>
+
+    <p>
+        Traditional Taste • Happy Moments
+    </p>
+
+</footer>
+
+
+<script>
+
+/* =====================================================
+   MENU DATA
+
+   REMOVED:
+   - Chicken 65 Biryani
+   - Mushroom Biryani
+   - Chicken Pallipalayam
+   - Paneer Manchurian
+   - Veg Fried Rice
+   - Egg Fried Rice
+===================================================== */
+
+const menu = [
+
+    /* ================= BIRYANI ================= */
+
+    {
+        id:1,
+        name:"Chicken Biryani",
+        price:99,
+        category:"Biryani",
+        image:"https://images.unsplash.com/photo-1631515242808-497c3fbd3972?auto=format&fit=crop&w=800&q=80",
+        description:"Aromatic chicken biryani."
+    },
+
+    {
+        id:3,
+        name:"Egg Biryani",
+        price:89,
+        category:"Biryani",
+        image:"https://images.unsplash.com/photo-1596797038530-2c107229654b?auto=format&fit=crop&w=800&q=80",
+        description:"Flavourful egg biryani."
+    },
+
+
+    /* ================= CHICKEN ================= */
+
+    {
+        id:5,
+        name:"Chicken 65",
+        price:80,
+        category:"Chicken",
+        image:"https://b.zmtcdn.com/data/pictures/chains/6/22088696/a430f2d8dc22a0ae6ed3af5d2aeeb78d.jpeg",
+        description:"Crispy and spicy Chicken 65."
+    },
+
+    {
+        id:6,
+        name:"Chicken Sukka",
+        price:90,
+        category:"Chicken",
+        image:"https://images.unsplash.com/photo-1603894584373-5ac82b2ae398?auto=format&fit=crop&w=800&q=80",
+        description:"Traditional chicken sukka."
+    },
+
+
+    /* ================= RICE ================= */
+
+    {
+        id:7,
+        name:"Chicken Fried Rice",
+        price:90,
+        category:"Rice",
+        image:"https://images.unsplash.com/photo-1512058564366-18510be2db19?auto=format&fit=crop&w=800&q=80",
+        description:"Delicious chicken fried rice with egg and vegetables."
+    },
+
+    {
+        id:8,
+        name:"Chicken Noodles",
+        price:90,
+        category:"Rice",
+        image:"https://images.unsplash.com/photo-1569718212165-3a8278d5f624?auto=format&fit=crop&w=800&q=80",
+        description:"Delicious chicken noodles with vegetables."
+    },
+
+
+    /* ================= CHINESE ================= */
+
+    {
+        id:9,
+        name:"Chilli Chicken",
+        price:90,
+        category:"Chinese",
+        image:"https://images.unsplash.com/photo-1525755662778-989d0524087e?auto=format&fit=crop&w=800&q=80",
+        description:"Spicy chilli chicken."
+    },
+
+    {
+        id:10,
+        name:"Dragon Chicken",
+        price:100,
+        category:"Chinese",
+        image:"https://venudindigulbiriyani.sg/wp-content/uploads/2024/03/Dragon-Chicken-1.jpg",
+        description:"Crispy Dragon Chicken with capsicum, onion and cashews."
+    },
+
+
+    /* ================= SOUTH INDIAN ================= */
+
+    {
+        id:11,
+        name:"Chicken Kothu Parotta",
+        price:90,
+        category:"South Indian",
+        image:"https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy%2Cf_auto%2Cq_auto/FOOD_CATALOG/IMAGES/CMS/2024/9/3/320bbd16-5d0a-4751-b97e-f8b1a6f74084_2c81e58e-e8e5-4766-a9d8-ba5ecff1414c.jpg",
+        description:"Spicy chicken Kothu Parotta with traditional South Indian flavours."
+    },
+
+    {
+        id:12,
+        name:"Egg Kothu Parotta",
+        price:80,
+        category:"South Indian",
+        image:"https://images.unsplash.com/photo-1512058564366-18510be2db19?auto=format&fit=crop&w=800&q=80",
+        description:"Egg Kothu Parotta."
+    },
+
+    {
+        id:13,
+        name:"Gobi 65",
+        price:70,
+        category:"South Indian",
+        image:"https://images.unsplash.com/photo-1626132647523-66f5bf380027?auto=format&fit=crop&w=800&q=80",
+        description:"Crispy Gobi 65."
+    },
+
+
+    /* ================= BEVERAGES ================= */
+
+    {
+        id:14,
+        name:"Cold Coffee",
+        price:50,
+        category:"Beverages",
+        image:"https://images.unsplash.com/photo-1461023058943-07fcbe16d735?auto=format&fit=crop&w=800&q=80",
+        description:"Refreshing cold coffee."
+    },
+
+    {
+        id:15,
+        name:"Chocolate Milkshake",
+        price:70,
+        category:"Beverages",
+        image:"https://images.unsplash.com/photo-1572490122747-3968b75cc699?auto=format&fit=crop&w=800&q=80",
+        description:"Chocolate milkshake."
+    }
+
+];
+
+
+/* =====================================================
+   CART
+===================================================== */
+
+let cart =
+    JSON.parse(
+        localStorage.getItem("madhampattyCart")
+    ) || [];
+
+
+/* =====================================================
+   ELEMENTS
+===================================================== */
+
+const menuGrid =
+    document.getElementById("menuGrid");
+
+const searchInput =
+    document.getElementById("searchInput");
+
+const cartCount =
+    document.getElementById("cartCount");
+
+const cartOverlay =
+    document.getElementById("cartOverlay");
+
+const cartItems =
+    document.getElementById("cartItems");
+
+const cartSummary =
+    document.getElementById("cartSummary");
+
+const cartActions =
+    document.getElementById("cartActions");
+
+const totalItems =
+    document.getElementById("totalItems");
+
+const subtotal =
+    document.getElementById("subtotal");
+
+const grandTotal =
+    document.getElementById("grandTotal");
+
+let currentCategory = "All";
+
+
+/* =====================================================
+   SAVE CART
+===================================================== */
+
+function saveCart(){
+
+    localStorage.setItem(
+        "madhampattyCart",
+        JSON.stringify(cart)
+    );
+
+}
+
+
+/* =====================================================
+   REMOVE DELETED ITEMS FROM OLD CART
+===================================================== */
+
+cart = cart.filter(item =>
+    menu.some(product =>
+        product.id === item.id
+    )
+);
+
+saveCart();
+
+
+/* =====================================================
+   RENDER MENU
+===================================================== */
+
+function renderMenu(){
+
+    const search =
+        searchInput.value
+        .trim()
+        .toLowerCase();
+
+
+    const filtered =
+        menu.filter(item => {
+
+            const categoryOK =
+                currentCategory === "All" ||
+                item.category === currentCategory;
+
+
+            const searchOK =
+                item.name
+                .toLowerCase()
+                .includes(search);
+
+
+            return categoryOK && searchOK;
+
+        });
+
+
+    menuGrid.innerHTML = "";
+
+
+    if(filtered.length === 0){
+
+        menuGrid.innerHTML = `
+
+            <p style="
+                grid-column:1/-1;
+                text-align:center;
+                padding:40px;
+                color:#777;
+            ">
+
+                No food items found.
+
+            </p>
+
+        `;
+
+        return;
+
+    }
+
+
+    filtered.forEach(item => {
+
+        const card =
+            document.createElement("div");
+
+
+        card.className =
+            "menu-card";
+
+
+        card.innerHTML = `
+
+            <img
+                src="${item.image}"
+                alt="${item.name}"
+                loading="lazy"
+                onerror="
+                    this.src=
+                    'https://via.placeholder.com/600x400?text=Food+Image'
+                "
+            >
+
+            <div class="menu-info">
+
+                <div class="category">
+                    ${item.category}
+                </div>
+
+                <h3>
+                    ${item.name}
+                </h3>
+
+                <p class="description">
+                    ${item.description}
+                </p>
+
+                <div class="price">
+                    ₹${item.price}
+                </div>
+
+                <button
+                    class="add-btn"
+                    data-id="${item.id}"
+                >
+
+                    🛒 Add to Cart
+
+                </button>
+
+            </div>
+
+        `;
+
+
+        menuGrid.appendChild(card);
+
+    });
+
+}
+
+
+/* =====================================================
+   ADD TO CART
+===================================================== */
+
+function addToCart(id){
+
+    const product =
+        menu.find(item =>
+            item.id === id
+        );
+
+
+    if(!product){
+        return;
+    }
+
+
+    const existing =
+        cart.find(item =>
+            item.id === id
+        );
+
+
+    if(existing){
+
+        existing.quantity++;
+
+    }
+    else{
+
+        cart.push({
+
+            id:product.id,
+
+            name:product.name,
+
+            price:product.price,
+
+            image:product.image,
+
+            quantity:1
+
+        });
+
+    }
+
+
+    saveCart();
+
+    updateCartCount();
+
+    showCart();
+
+}
+
+
+/* =====================================================
+   CART COUNT
+===================================================== */
+
+function updateCartCount(){
+
+    const count =
+        cart.reduce(
+            (sum,item) =>
+                sum + item.quantity,
+            0
+        );
+
+
+    cartCount.textContent =
+        count;
+
+}
+
+
+/* =====================================================
+   RENDER CART
+===================================================== */
+
+function renderCart(){
+
+    cartItems.innerHTML = "";
+
+
+    if(cart.length === 0){
+
+        cartItems.innerHTML = `
+
+            <div class="empty-cart">
+
+                <div class="icon">
+                    🛒
+                </div>
+
+                <h3>
+                    Your cart is empty
+                </h3>
+
+                <p>
+                    Add some delicious food!
+                </p>
+
+            </div>
+
+        `;
+
+
+        cartSummary.style.display =
+            "none";
+
+        cartActions.style.display =
+            "none";
+
+
+        return;
+
+    }
+
+
+    cartSummary.style.display =
+        "block";
+
+    cartActions.style.display =
+        "flex";
+
+
+    let itemCount = 0;
+
+    let total = 0;
+
+
+    cart.forEach(
+        (item,index) => {
+
+            itemCount +=
+                item.quantity;
+
+
+            total +=
+                item.price *
+                item.quantity;
+
+
+            const row =
+                document.createElement(
+                    "div"
+                );
+
+
+            row.className =
+                "cart-item";
+
+
+            row.innerHTML = `
+
+                <img
+                    src="${item.image}"
+                    alt="${item.name}"
+                    loading="lazy"
+                    onerror="
+                        this.src=
+                        'https://via.placeholder.com/300x200?text=Food'
+                    "
+                >
+
+                <div>
+
+                    <div class="cart-item-name">
+                        ${item.name}
+                    </div>
+
+                    <div class="cart-item-price">
+                        ₹${item.price} each
+                    </div>
+
+                    <div class="quantity-box">
+
+                        <button
+                            class="quantity-btn decrease"
+                            data-index="${index}"
+                        >
+                            −
+                        </button>
+
+                        <input
+                            class="quantity-input"
+                            type="number"
+                            min="1"
+                            value="${item.quantity}"
+                            data-index="${index}"
+                        >
+
+                        <button
+                            class="quantity-btn increase"
+                            data-index="${index}"
+                        >
+                            +
+                        </button>
+
+                    </div>
+
+                </div>
+
+                <div>
+
+                    <strong>
+                        ₹${item.price * item.quantity}
+                    </strong>
+
+                    <br>
+                    <br>
+
+                    <button
+                        class="delete-btn"
+                        data-index="${index}"
+                    >
+                        Delete
+                    </button>
+
+                </div>
+
+            `;
+
+
+            cartItems.appendChild(row);
+
+        }
+    );
+
+
+    totalItems.textContent =
+        itemCount;
+
+    subtotal.textContent =
+        `₹${total}`;
+
+    grandTotal.textContent =
+        `₹${total}`;
+
+}
+
+
+/* =====================================================
+   INCREASE
+===================================================== */
+
+function increaseQuantity(index){
+
+    if(!cart[index]){
+        return;
+    }
+
+
+    cart[index].quantity++;
+
+
+    saveCart();
+
+    updateCartCount();
+
+    renderCart();
+
+}
+
+
+/* =====================================================
+   DECREASE
+===================================================== */
+
+function decreaseQuantity(index){
+
+    if(!cart[index]){
+        return;
+    }
+
+
+    if(cart[index].quantity > 1){
+
+        cart[index].quantity--;
+
+    }
+    else{
+
+        cart.splice(index,1);
+
+    }
+
+
+    saveCart();
+
+    updateCartCount();
+
+    renderCart();
+
+}
+
+
+/* =====================================================
+   UPDATE QUANTITY
+===================================================== */
+
+function updateQuantity(
+    index,
+    value
+){
+
+    if(!cart[index]){
+        return;
+    }
+
+
+    let quantity =
+        parseInt(
+            value,
+            10
+        );
+
+
+    if(
+        Number.isNaN(quantity) ||
+        quantity < 1
+    ){
+
+        quantity = 1;
+
+    }
+
+
+    cart[index].quantity =
+        quantity;
+
+
+    saveCart();
+
+    updateCartCount();
+
+    renderCart();
+
+}
+
+
+/* =====================================================
+   DELETE ITEM
+===================================================== */
+
+function deleteItem(index){
+
+    if(!cart[index]){
+        return;
+    }
+
+
+    cart.splice(
+        index,
+        1
+    );
+
+
+    saveCart();
+
+    updateCartCount();
+
+    renderCart();
+
+}
+
+
+/* =====================================================
+   CLEAR CART
+===================================================== */
+
+function clearCart(){
+
+    if(cart.length === 0){
+        return;
+    }
+
+
+    const confirmed =
+        confirm(
+            "Are you sure you want to clear the cart?"
+        );
+
+
+    if(!confirmed){
+        return;
+    }
+
+
+    cart = [];
+
+
+    saveCart();
+
+    updateCartCount();
+
+    renderCart();
+
+}
+
+
+/* =====================================================
+   SHOW CART
+===================================================== */
+
+function showCart(){
+
+    cartOverlay.classList.add(
+        "show"
+    );
+
+
+    renderCart();
+
+}
+
+
+/* =====================================================
+   HIDE CART
+===================================================== */
+
+function hideCart(){
+
+    cartOverlay.classList.remove(
+        "show"
+    );
+
+}
+
+
+/* =====================================================
+   WHATSAPP CHECKOUT
+===================================================== */
+
+function checkoutWhatsApp(){
+
+    if(cart.length === 0){
+
+        alert(
+            "Your cart is empty."
+        );
+
+        return;
+
+    }
+
+
+    /*
+       CHANGE THIS NUMBER
+       TO YOUR BUSINESS
+       WHATSAPP NUMBER.
+
+       Example:
+       919876543210
+    */
+
+    const phone =
+        "919876543210";
+
+
+    let message =
+        "Hello Madhampatty Pakashala,%0A%0A";
+
+
+    message +=
+        "I would like to order:%0A%0A";
+
+
+    let total = 0;
+
+
+    cart.forEach(
+        (item,index) => {
+
+            const itemTotal =
+                item.price *
+                item.quantity;
+
+
+            total +=
+                itemTotal;
+
+
+            message +=
+                `${index + 1}. ${item.name}%0A`;
+
+
+            message +=
+                `Quantity: ${item.quantity}%0A`;
+
+
+            message +=
+                `Price: ₹${itemTotal}%0A%0A`;
+
+        }
+    );
+
+
+    message +=
+        `Total: ₹${total}`;
+
+
+    const url =
+        `https://wa.me/${phone}?text=${message}`;
+
+
+    window.open(
+        url,
+        "_blank"
+    );
+
+}
+
+
+/* =====================================================
+   MENU EVENT
+===================================================== */
+
+menuGrid.addEventListener(
+    "click",
+    function(event){
+
+        const button =
+            event.target.closest(
+                ".add-btn"
+            );
+
+
+        if(!button){
+            return;
+        }
+
+
+        const id =
+            Number(
+                button.dataset.id
+            );
+
+
+        addToCart(id);
+
+    }
+);
+
+
+/* =====================================================
+   CART BUTTONS
+===================================================== */
+
+document
+    .getElementById(
+        "openCartButton"
+    )
+    .addEventListener(
+        "click",
+        showCart
+    );
+
+
+document
+    .getElementById(
+        "closeCartButton"
+    )
+    .addEventListener(
+        "click",
+        hideCart
+    );
+
+
+document
+    .getElementById(
+        "clearCartButton"
+    )
+    .addEventListener(
+        "click",
+        clearCart
+    );
+
+
+document
+    .getElementById(
+        "checkoutButton"
+    )
+    .addEventListener(
+        "click",
+        checkoutWhatsApp
+    );
+
+
+/* =====================================================
+   CART ITEM EVENTS
+===================================================== */
+
+cartItems.addEventListener(
+    "click",
+    function(event){
+
+        const increase =
+            event.target.closest(
+                ".increase"
+            );
+
+
+        const decrease =
+            event.target.closest(
+                ".decrease"
+            );
+
+
+        const deleteButton =
+            event.target.closest(
+                ".delete-btn"
+            );
+
+
+        if(increase){
+
+            increaseQuantity(
+                Number(
+                    increase.dataset.index
+                )
+            );
+
+            return;
+
+        }
+
+
+        if(decrease){
+
+            decreaseQuantity(
+                Number(
+                    decrease.dataset.index
+                )
+            );
+
+            return;
+
+        }
+
+
+        if(deleteButton){
+
+            deleteItem(
+                Number(
+                    deleteButton.dataset.index
+                )
+            );
+
+        }
+
+    }
+);
+
+
+/* =====================================================
+   QUANTITY INPUT
+===================================================== */
+
+cartItems.addEventListener(
+    "change",
+    function(event){
+
+        if(
+            !event.target.classList.contains(
+                "quantity-input"
+            )
+        ){
+
+            return;
+
+        }
+
+
+        const index =
+            Number(
+                event.target.dataset.index
+            );
+
+
+        updateQuantity(
+            index,
+            event.target.value
+        );
+
+    }
+);
+
+
+/* =====================================================
+   SEARCH
+===================================================== */
+
+searchInput.addEventListener(
+    "input",
+    renderMenu
+);
+
+
+/* =====================================================
+   FILTER
+===================================================== */
+
+document
+    .querySelectorAll(
+        ".filter-btn"
+    )
+    .forEach(
+        button => {
+
+            button.addEventListener(
+                "click",
+                function(){
+
+                    document
+                        .querySelectorAll(
+                            ".filter-btn"
+                        )
+                        .forEach(
+                            btn =>
+                                btn.classList.remove(
+                                    "active"
+                                )
+                        );
+
+
+                    this.classList.add(
+                        "active"
+                    );
+
+
+                    currentCategory =
+                        this.dataset.category;
+
+
+                    renderMenu();
+
+                }
+            );
+
+        }
+    );
+
+
+/* =====================================================
+   CLOSE CART OUTSIDE
+===================================================== */
+
+cartOverlay.addEventListener(
+    "click",
+    function(event){
+
+        if(
+            event.target ===
+            cartOverlay
+        ){
+
+            hideCart();
+
+        }
+
+    }
+);
+
+
+/* =====================================================
+   ESCAPE KEY
+===================================================== */
+
+document.addEventListener(
+    "keydown",
+    function(event){
+
+        if(
+            event.key ===
+            "Escape"
+        ){
+
+            hideCart();
+
+        }
+
+    }
+);
+
+
+/* =====================================================
+   INITIAL LOAD
+===================================================== */
+
+renderMenu();
+
+updateCartCount();
+
+</script>
+
+</body>
+</html>
