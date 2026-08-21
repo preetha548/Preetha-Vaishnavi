@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Multiplication Chart</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            text-align: center;
+        }
+
+        h1 {
+            background: lightgray;
+            padding: 20px;
+        }
+
+        table {
+            border-collapse: collapse;
+            margin: 20px auto;
+        }
+
+        th, td {
+            border: 1px solid black;
+            width: 60px;
+            height: 50px;
+            text-align: center;
+            font-size: 20px;
+        }
+
+        th {
+            background: lightgray;
+        }
+
+        button {
+            padding: 10px 20px;
+            margin: 5px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Multiplication Chart </h1>
+
+    <button onclick="showAnswers()">With Answers</button>
+    <button onclick="hideAnswers()">Without Answers</button>
+
+    <table id="chart"></table>
+
+    <script>
+
+        let table = document.getElementById("chart");
+
+        // Header
+        let row = "<tr><th>×</th>";
+
+        for (let i = 1; i <= 9; i++) {
+            row += "<th>" + i + "</th>";
+        }
+
+        row += "</tr>";
+
+        table.innerHTML += row;
+
+
+        // Rows
+        for (let i = 1; i <= 9; i++) {
+
+            row = "<tr><th>" + i + "</th>";
+
+            for (let j = 1; j <= 9; j++) {
+                row += "<td id='" + i + "-" + j + "'></td>";
+            }
+
+            row += "</tr>";
+
+            table.innerHTML += row;
+        }
+
+
+        // Show answers
+        function showAnswers() {
+
+            for (let i = 1; i <= 9; i++) {
+
+                for (let j = 1; j <= 9; j++) {
+
+                    document.getElementById(i + "-" + j).innerHTML = i * j;
+
+                }
+            }
+        }
+
+
+        // Hide answers
+        function hideAnswers() {
+
+            for (let i = 1; i <= 9; i++) {
+
+                for (let j = 1; j <= 9; j++) {
+
+                    document.getElementById(i + "-" + j).innerHTML = "";
+
+                }
+            }
+        }
+
+    </script>
+
+</body>
+</html>
