@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>🌾 Farm Game</title>
+
+<style>
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+
+    body {
+        font-family: Arial, sans-serif;
+        background: #87ceeb;
+        overflow: hidden;
+    }
+
+    /* Game Header */
+    .header {
+        height: 80px;
+        background: #4caf50;
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 30px;
+        box-shadow: 0 3px 10px rgba(0,0,0,0.3);
+    }
+
+    .header h1 {
+        font-size: 28px;
+    }
+
+    .stats {
+        display: flex;
+        gap: 20px;
+    }
+
+    .stat {
+        background: white;
+        color: #333;
+        padding: 10px 18px;
+        border-radius: 20px;
+        font-weight: bold;
+    }
+
+    /* Farm */
+    .farm {
+        height: calc(100vh - 80px);
+        position: relative;
+        background:
+            linear-gradient(
+                #8ed36d 0 25%,
+                #6fbd52 25% 100%
+            );
+    }
+
+    /* Sun */
+    .sun {
+        position: absolute;
+        top: 30px;
+        right: 80px;
+        font-size: 65px;
+    }
+
+    /* Clouds */
+    .cloud {
+        position: absolute;
+        font-size: 55px;
+        opacity: 0.9;
+    }
+
+    .cloud1 {
+        top: 30px;
+        left: 100px;
+    }
+
+    .cloud2 {
+        top: 100px;
+        left: 350px;
+    }
+
+    /* Barn */
+    .barn {
+        position: absolute;
+        left: 40px;
+        top: 130px;
+        width: 180px;
+        height: 140px;
+        background: #d9534f;
+        border: 5px solid #8b2e2b;
+        text-align: center;
+        padding-top: 65px;
+        color: white;
+        font-size: 22px;
+        font-weight: bold;
+    }
+
+    .barn::before {
+        content: "";
+        position: absolute;
+        top: -75px;
+        left: 5px;
+        border-left: 80px solid transparent;
+        border-right: 80px solid transparent;
+        border-bottom: 75px solid #8b2e2b;
+    }
+
+    .barn-door {
+        position: absolute;
+        bottom: 0;
+        left: 55px;
+        width: 65px;
+        height: 75px;
+        background: #6b2422;
+    }
+
+    /* Field */
+    .field {
+        position: absolute;
+        left: 280px;
+        top: 180px;
+        width: 600px;
+        height: 330px;
+        background: #8b5a2b;
+        border: 8px solid #70451f;
+        border-radius: 10px;
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        gap: 8px;
+        padding: 12px;
+    }
+
+    .plot {
+        background: #a96f37;
+        border: 2px solid #70451f;
+        border-radius: 8px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 35px;
+        cursor: pointer;
+        transition: 0.2s;
+    }
+
+    .plot:hover {
+        background: #c18445;
+        transform: scale(1.04);
+    }
+
+    /* Farmer */
+    .farmer {
+        position: absolute;
+        bottom: 55px;
+        left: 120px;
+        font-size: 65px;
+    }
+
+    /* Animals */
+    .cow {
+        position: absolute;
+        right: 100px;
+        bottom: 80px;
+        font-size: 70px;
+    }
+
+    .chicken {
+        position: absolute;
+        right: 250px;
+        bottom: 50px;
+        font-size: 45px;
+    }
+
+    .pig {
+        position: absolute;
+        right: 350px;
+        bottom: 80px;
+        font-size: 60px;
+    }
+
+    /* Controls */
+    .controls {
+        position: absolute;
+        bottom: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        gap: 12px;
+    }
+
+    button {
+        border: none;
+        padding: 12px 20px;
+        border-radius: 10px;
+        background: #ff9800;
+        color: white;
+        font-size: 16px;
+        font-weight: bold;
+        cursor: pointer;
+        box-shadow: 0 3px 6px rgba(0,0,0,0.3);
+    }
+
+    button:hover {
+        background: #e68900;
+        transform: translateY(-2px);
+    }
+
+    /* Message */
+    #message {
+        position: absolute;
+        top: 100px;
+        left: 50%;
+        transform: translateX(-50%);
+        background: white;
+        padding: 12px 25px;
+        border-radius: 20px;
+        font-weight: bold;
+        color: #333;
+    }
+
+    /* Responsive */
+    @media(max-width: 900px) {
+        .field {
+            left: 220px;
+            width: 450px;
+        }
+
+        .barn {
+            transform: scale(.8);
+            transform-origin: left top;
+        }
+    }
+</style>
+</head>
+
+<body>
+
+<div class="header">
+    <h1>🌾 Happy Farm</h1>
+
+    <div class="stats">
+        <div class="stat">💰 Coins: <span id="coins">100</span></div>
+        <div class="stat">🌽 Crops: <span id="crops">0</span></div>
+        <div class="stat">⭐ Level: <span id="level">1</span></div>
+    </div>
+</div>
+
+<div class="farm">
+
+    <div class="sun">☀️</div>
+
+    <div class="cloud cloud1">☁️</div>
+    <div class="cloud cloud2">☁️</div>
+
+    <!-- Barn -->
+    <div class="barn">
+        BARN
+        <div class="barn-door"></div>
+    </div>
+
+    <!-- Field -->
+    <div class="field">
+
+        <div class="plot" onclick="plant(this)">🌱</div>
+        <div class="plot" onclick="plant(this)">🌱</div>
+        <div class="plot" onclick="plant(this)">🌱</div>
+        <div class="plot" onclick="plant(this)">🌱</div>
+        <div class="plot" onclick="plant(this)">🌱</div>
+        <div class="plot" onclick="plant(this)">🌱</div>
+
+        <div class="plot" onclick="plant(this)">🌱</div>
+        <div class="plot" onclick="plant(this)">🌱</div>
+        <div class="plot" onclick="plant(this)">🌱</div>
+        <div class="plot" onclick="plant(this)">🌱</div>
+        <div class="plot" onclick="plant(this)">🌱</div>
+        <div class="plot" onclick="plant(this)">🌱</div>
+
+        <div class="plot" onclick="plant(this)">🌱</div>
+        <div class="plot" onclick="plant(this)">🌱</div>
+        <div class="plot" onclick="plant(this)">🌱</div>
+        <div class="plot" onclick="plant(this)">🌱</div>
+        <div class="plot" onclick="plant(this)">🌱</div>
+        <div class="plot" onclick="plant(this)">🌱</div>
+
+    </div>
+
+    <!-- Animals -->
+    <div class="cow">🐄</div>
+    <div class="pig">🐖</div>
+    <div class="chicken">🐔</div>
+
+    <!-- Farmer -->
+    <div class="farmer">👨‍🌾</div>
+
+    <div id="message">Click a field to plant 🌽</div>
+
+    <div class="controls">
+        <button onclick="waterFarm()">💧 Water</button>
+        <button onclick="harvest()">🌾 Harvest</button>
+        <button onclick="sellCrops()">💰 Sell Crops</button>
+        <button onclick="buySeeds()">🌱 Buy Seeds</button>
+    </div>
+
+</div>
+
+<script>
+
+let coins = 100;
+let crops = 0;
+let seeds = 10;
+let level = 1;
+
+function updateStats() {
+    document.getElementById("coins").textContent = coins;
+    document.getElementById("crops").textContent = crops;
+    document.getElementById("level").textContent = level;
+}
+
+function plant(plot) {
+
+    if (seeds <= 0) {
+        document.getElementById("message").textContent =
+            "❌ No seeds! Buy more seeds.";
+        return;
+    }
+
+    if (plot.dataset.planted === "true") {
+        document.getElementById("message").textContent =
+            "🌽 This crop is already growing!";
+        return;
+    }
+
+    plot.textContent = "🌱";
+    plot.dataset.planted = "true";
+    plot.dataset.grown = "false";
+
+    seeds--;
+
+    document.getElementById("message").textContent =
+        "🌱 Crop planted! Water it to grow.";
+
+    updateStats();
+}
+
+function waterFarm() {
+
+    let plots = document.querySelectorAll(".plot");
+    let watered = false;
+
+    plots.forEach(plot => {
+
+        if (
+            plot.dataset.planted === "true" &&
+            plot.dataset.grown === "false"
+        ) {
+
+            plot.textContent = "🌽";
+            plot.dataset.grown = "true";
+            watered = true;
+        }
+    });
+
+    if (watered) {
+        document.getElementById("message").textContent =
+            "💧 Your crops have grown!";
+    } else {
+        document.getElementById("message").textContent =
+            "🌱 Plant some crops first.";
+    }
+}
+
+function harvest() {
+
+    let plots = document.querySelectorAll(".plot");
+    let harvested = 0;
+
+    plots.forEach(plot => {
+
+        if (plot.dataset.grown === "true") {
+
+            plot.textContent = "🌱";
+            plot.dataset.planted = "false";
+            plot.dataset.grown = "false";
+
+            crops++;
+            harvested++;
+        }
+    });
+
+    if (harvested > 0) {
+
+        document.getElementById("message").textContent =
+            "🌾 Harvested " + harvested + " crops!";
+
+        if (crops >= 10) {
+            level++;
+            crops = 0;
+
+            document.getElementById("message").textContent =
+                "🎉 Level Up! You reached Level " + level;
+        }
+
+    } else {
+
+        document.getElementById("message").textContent =
+            "❌ No crops ready to harvest.";
+    }
+
+    updateStats();
+}
+
+function sellCrops() {
+
+    if (crops <= 0) {
+
+        document.getElementById("message").textContent =
+            "❌ You don't have crops to sell.";
+
+        return;
+    }
+
+    let money = crops * 10;
+
+    coins += money;
+    crops = 0;
+
+    document.getElementById("message").textContent =
+        "💰 Sold crops for $" + money + "!";
+
+    updateStats();
+}
+
+function buySeeds() {
+
+    if (coins >= 20) {
+
+        coins -= 20;
+        seeds += 10;
+
+        document.getElementById("message").textContent =
+            "🌱 Bought 10 seeds!";
+
+        updateStats();
+
+    } else {
+
+        document.getElementById("message").textContent =
+            "❌ Not enough coins!";
+    }
+}
+
+updateStats();
+
+</script>
+
+</body>
+</html>
