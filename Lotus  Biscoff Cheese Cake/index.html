@@ -1,0 +1,1615 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Lotus Biscoff Cheesecake Recipe</title>
+
+
+    <style>
+
+        /* =========================================
+           RESET
+        ========================================= */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+
+        body {
+            font-family: Georgia, "Times New Roman", serif;
+
+            background: #fffff0;
+
+            color: #533a25;
+
+            line-height: 1.6;
+        }
+
+
+        /* =========================================
+           NAVIGATION
+        ========================================= */
+
+        nav {
+            width: 100%;
+
+            padding: 20px 7%;
+
+            display: flex;
+
+            justify-content: space-between;
+
+            align-items: center;
+
+            background: #fffff0;
+
+            border-bottom: 1px solid #dfd1b5;
+
+            position: sticky;
+
+            top: 0;
+
+            z-index: 1000;
+        }
+
+
+        .logo {
+            font-size: 25px;
+
+            font-weight: bold;
+
+            color: #704b2c;
+        }
+
+
+        nav ul {
+            display: flex;
+
+            gap: 30px;
+
+            list-style: none;
+        }
+
+
+        nav ul li a {
+            text-decoration: none;
+
+            color: #70583f;
+
+            font-family: Arial, sans-serif;
+
+            font-size: 15px;
+
+            transition: 0.3s;
+        }
+
+
+        nav ul li a:hover {
+            color: #a86e34;
+        }
+
+
+        /* =========================================
+           HERO SECTION
+        ========================================= */
+
+        .hero {
+            min-height: 90vh;
+
+            padding: 70px 7%;
+
+            display: flex;
+
+            justify-content: center;
+
+            align-items: center;
+
+            background: #fffff0;
+        }
+
+
+        .hero-container {
+            width: 100%;
+
+            max-width: 1200px;
+
+            display: grid;
+
+            grid-template-columns: 1fr 1fr;
+
+            gap: 60px;
+
+            align-items: center;
+        }
+
+
+        /* =========================================
+           HERO TEXT
+        ========================================= */
+
+        .hero-text {
+            padding: 20px;
+        }
+
+
+        .small-text {
+            color: #a56d34;
+
+            font-family: Arial, sans-serif;
+
+            font-size: 14px;
+
+            letter-spacing: 4px;
+
+            text-transform: uppercase;
+
+            margin-bottom: 20px;
+        }
+
+
+        .hero-text h1 {
+            font-size: 65px;
+
+            line-height: 1.05;
+
+            color: #604128;
+
+            margin-bottom: 25px;
+        }
+
+
+        .hero-text h1 span {
+            display: block;
+
+            color: #a76d35;
+        }
+
+
+        .hero-text p {
+            font-family: Arial, sans-serif;
+
+            color: #806b53;
+
+            font-size: 18px;
+
+            line-height: 1.8;
+
+            margin-bottom: 30px;
+        }
+
+
+        /* =========================================
+           VIEW RECIPE BUTTON
+        ========================================= */
+
+        .recipe-button {
+            display: inline-block;
+
+            background: #704b2c;
+
+            color: #fffff0;
+
+            text-decoration: none;
+
+            padding: 15px 30px;
+
+            border-radius: 30px;
+
+            font-family: Arial, sans-serif;
+
+            font-size: 15px;
+
+            transition: 0.3s;
+
+            border: none;
+        }
+
+
+        .recipe-button:hover {
+            background: #a36d3b;
+
+            transform: translateY(-3px);
+        }
+
+
+        /* =========================================
+           PRINT BUTTON
+        ========================================= */
+
+        .print-button {
+            display: inline-block;
+
+            margin-left: 10px;
+
+            padding: 14px 25px;
+
+            background: transparent;
+
+            color: #704b2c;
+
+            border: 2px solid #704b2c;
+
+            border-radius: 30px;
+
+            font-family: Arial, sans-serif;
+
+            font-size: 15px;
+
+            cursor: pointer;
+
+            transition: 0.3s;
+        }
+
+
+        .print-button:hover {
+            background: #704b2c;
+
+            color: #fffff0;
+        }
+
+
+        /* =========================================
+           CAKE IMAGE
+        ========================================= */
+
+        .cake-container {
+            background: #fffdf5;
+
+            padding: 12px;
+
+            border-radius: 25px;
+
+            border: 1px solid #dfd1b5;
+
+            box-shadow:
+                0 20px 50px
+                rgba(80, 55, 30, 0.18);
+        }
+
+
+        .cake-container img {
+            width: 100%;
+
+            height: 570px;
+
+            object-fit: cover;
+
+            display: block;
+
+            border-radius: 18px;
+        }
+
+
+        .image-caption {
+            text-align: center;
+
+            padding: 13px 5px 5px;
+
+            font-family: Arial, sans-serif;
+
+            font-size: 13px;
+
+            color: #8b755b;
+        }
+
+
+        /* =========================================
+           RECIPE SECTION
+        ========================================= */
+
+        .recipe-section {
+            background: #f7efdd;
+
+            padding: 90px 7%;
+        }
+
+
+        .section-title {
+            text-align: center;
+
+            max-width: 800px;
+
+            margin: auto;
+        }
+
+
+        .subtitle {
+            color: #a56d34;
+
+            font-family: Arial, sans-serif;
+
+            font-size: 14px;
+
+            letter-spacing: 3px;
+
+            text-transform: uppercase;
+        }
+
+
+        .section-title h2 {
+            color: #604128;
+
+            font-size: 46px;
+
+            margin: 15px 0;
+        }
+
+
+        .section-title p {
+            color: #806b53;
+
+            font-family: Arial, sans-serif;
+
+            font-size: 17px;
+
+            line-height: 1.7;
+        }
+
+
+        /* =========================================
+           INFORMATION CARDS
+        ========================================= */
+
+        .info-container {
+            max-width: 1000px;
+
+            margin: 45px auto;
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(3, 1fr);
+
+            gap: 20px;
+        }
+
+
+        .info-card {
+            background: #fffff5;
+
+            border: 1px solid #ded0b4;
+
+            border-radius: 18px;
+
+            padding: 25px;
+
+            text-align: center;
+
+            transition: 0.3s;
+        }
+
+
+        .info-card:hover {
+            transform: translateY(-5px);
+
+            box-shadow:
+                0 10px 25px
+                rgba(90, 65, 35, 0.12);
+        }
+
+
+        .info-icon {
+            font-size: 32px;
+
+            margin-bottom: 10px;
+        }
+
+
+        .info-card h3 {
+            color: #65462c;
+
+            font-size: 18px;
+        }
+
+
+        .info-card p {
+            color: #8b7459;
+
+            font-family: Arial, sans-serif;
+
+            font-size: 14px;
+
+            margin-top: 5px;
+        }
+
+
+        /* =========================================
+           RECIPE CONTENT
+        ========================================= */
+
+        .content-grid {
+            max-width: 1100px;
+
+            margin: 50px auto 0;
+
+            display: grid;
+
+            grid-template-columns:
+                0.9fr 1.3fr;
+
+            gap: 35px;
+        }
+
+
+        .content-box {
+            background: #fffff7;
+
+            border: 1px solid #dfd1b5;
+
+            border-radius: 22px;
+
+            padding: 35px;
+        }
+
+
+        .content-box h2 {
+            color: #67472d;
+
+            font-size: 29px;
+
+            margin-bottom: 25px;
+
+            padding-bottom: 12px;
+
+            border-bottom:
+                2px solid #d8c6a5;
+        }
+
+
+        /* =========================================
+           INGREDIENTS
+        ========================================= */
+
+        .ingredient {
+            display: flex;
+
+            justify-content: space-between;
+
+            gap: 15px;
+
+            padding: 14px 0;
+
+            border-bottom:
+                1px solid #eee4d1;
+
+            font-family: Arial, sans-serif;
+
+            color: #68523a;
+        }
+
+
+        .ingredient:last-child {
+            border-bottom: none;
+        }
+
+
+        .ingredient strong {
+            color: #89582e;
+
+            white-space: nowrap;
+        }
+
+
+        /* =========================================
+           METHOD STEPS
+        ========================================= */
+
+        .step {
+            position: relative;
+
+            padding-left: 52px;
+
+            margin-bottom: 25px;
+        }
+
+
+        .step:last-child {
+            margin-bottom: 0;
+        }
+
+
+        .step-number {
+            position: absolute;
+
+            left: 0;
+
+            top: 0;
+
+            width: 35px;
+
+            height: 35px;
+
+            background: #795333;
+
+            color: white;
+
+            border-radius: 50%;
+
+            display: flex;
+
+            justify-content: center;
+
+            align-items: center;
+
+            font-family: Arial, sans-serif;
+
+            font-weight: bold;
+        }
+
+
+        .step h3 {
+            color: #69482e;
+
+            font-size: 19px;
+
+            margin-bottom: 6px;
+        }
+
+
+        .step p {
+            font-family: Arial, sans-serif;
+
+            color: #79644b;
+
+            line-height: 1.7;
+        }
+
+
+        /* =========================================
+           SPECIAL MESSAGE
+        ========================================= */
+
+        .special {
+            max-width: 850px;
+
+            margin: 60px auto 0;
+
+            padding: 40px;
+
+            text-align: center;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #fffdf2,
+                    #eee2c8
+                );
+
+            border: 1px solid #dccbaa;
+
+            border-radius: 22px;
+        }
+
+
+        .special h2 {
+            color: #67472d;
+
+            font-size: 31px;
+
+            margin-bottom: 12px;
+        }
+
+
+        .special p {
+            color: #806b53;
+
+            font-family: Arial, sans-serif;
+
+            font-size: 17px;
+
+            line-height: 1.7;
+        }
+
+
+        /* =========================================
+           FOOTER
+        ========================================= */
+
+        footer {
+            background: #604128;
+
+            color: #fff9e9;
+
+            text-align: center;
+
+            padding: 35px 20px;
+        }
+
+
+        footer h3 {
+            font-size: 25px;
+
+            margin-bottom: 8px;
+        }
+
+
+        footer p {
+            color: #e7d9be;
+
+            font-family: Arial, sans-serif;
+
+            font-size: 14px;
+        }
+
+
+        /* =========================================
+           RESPONSIVE
+        ========================================= */
+
+        @media (max-width: 950px) {
+
+            .hero-container {
+                grid-template-columns: 1fr;
+
+                gap: 35px;
+            }
+
+
+            .hero-text {
+                text-align: center;
+            }
+
+
+            .hero-text p {
+                margin-left: auto;
+
+                margin-right: auto;
+            }
+
+
+            .hero-text h1 {
+                font-size: 52px;
+            }
+
+
+            .cake-container img {
+                height: 500px;
+            }
+
+
+            .content-grid {
+                grid-template-columns: 1fr;
+            }
+
+        }
+
+
+        @media (max-width: 650px) {
+
+            nav {
+                flex-direction: column;
+
+                gap: 12px;
+
+                padding: 18px;
+            }
+
+
+            nav ul {
+                gap: 15px;
+
+                flex-wrap: wrap;
+
+                justify-content: center;
+            }
+
+
+            .hero {
+                padding: 45px 5%;
+            }
+
+
+            .hero-text h1 {
+                font-size: 40px;
+            }
+
+
+            .hero-text p {
+                font-size: 16px;
+            }
+
+
+            .cake-container img {
+                height: 350px;
+            }
+
+
+            .recipe-section {
+                padding: 65px 5%;
+            }
+
+
+            .section-title h2 {
+                font-size: 35px;
+            }
+
+
+            .info-container {
+                grid-template-columns: 1fr;
+            }
+
+
+            .content-box {
+                padding: 25px;
+            }
+
+
+            .content-box h2 {
+                font-size: 25px;
+            }
+
+
+            .ingredient {
+                flex-direction: column;
+
+                gap: 4px;
+            }
+
+
+            .special {
+                padding: 30px 20px;
+            }
+
+
+            .print-button {
+                margin-left: 0;
+
+                margin-top: 12px;
+            }
+
+        }
+
+
+        /* =========================================
+           PRINT STYLES
+        ========================================= */
+
+        @media print {
+
+            @page {
+                size: A4;
+
+                margin: 15mm;
+            }
+
+
+            * {
+                box-shadow: none !important;
+            }
+
+
+            body {
+                background: white !important;
+
+                color: #000 !important;
+
+                font-size: 12px;
+            }
+
+
+            /* Hide website-only sections */
+
+            nav,
+            .hero,
+            footer,
+            .special,
+            .print-button {
+                display: none !important;
+            }
+
+
+            /* Recipe becomes the printable page */
+
+            .recipe-section {
+                display: block !important;
+
+                padding: 0 !important;
+
+                margin: 0 !important;
+
+                background: white !important;
+            }
+
+
+            .section-title {
+                max-width: 100%;
+
+                margin-bottom: 20px;
+            }
+
+
+            .subtitle {
+                color: #555 !important;
+
+                font-size: 11px;
+            }
+
+
+            .section-title h2 {
+                color: #000 !important;
+
+                font-size: 28px;
+
+                margin: 5px 0 10px;
+            }
+
+
+            .section-title p {
+                color: #333 !important;
+
+                font-size: 12px;
+            }
+
+
+            /* Info cards */
+
+            .info-container {
+                display: grid !important;
+
+                grid-template-columns:
+                    repeat(3, 1fr);
+
+                gap: 10px;
+
+                margin: 15px 0 20px;
+            }
+
+
+            .info-card {
+                background: white !important;
+
+                border: 1px solid #999;
+
+                border-radius: 5px;
+
+                padding: 10px;
+
+                transform: none !important;
+            }
+
+
+            .info-icon {
+                display: none;
+            }
+
+
+            .info-card h3 {
+                color: #000 !important;
+
+                font-size: 13px;
+            }
+
+
+            .info-card p {
+                color: #333 !important;
+
+                font-size: 10px;
+            }
+
+
+            /* Recipe content */
+
+            .content-grid {
+                display: grid !important;
+
+                grid-template-columns:
+                    0.9fr 1.3fr;
+
+                gap: 15px;
+
+                margin: 0 !important;
+            }
+
+
+            .content-box {
+                background: white !important;
+
+                border: 1px solid #999;
+
+                border-radius: 5px;
+
+                padding: 18px;
+
+                break-inside: avoid;
+            }
+
+
+            .content-box h2 {
+                color: #000 !important;
+
+                font-size: 18px;
+
+                margin-bottom: 12px;
+
+                padding-bottom: 6px;
+
+                border-bottom:
+                    1px solid #777;
+            }
+
+
+            /* Ingredients */
+
+            .ingredient {
+                color: #222 !important;
+
+                padding: 7px 0;
+
+                font-size: 10px;
+
+                border-bottom:
+                    1px solid #ddd;
+            }
+
+
+            .ingredient strong {
+                color: #000 !important;
+            }
+
+
+            /* Method */
+
+            .step {
+                padding-left: 35px;
+
+                margin-bottom: 14px;
+
+                break-inside: avoid;
+            }
+
+
+            .step-number {
+                width: 25px;
+
+                height: 25px;
+
+                background: #555 !important;
+
+                color: white !important;
+
+                font-size: 11px;
+            }
+
+
+            .step h3 {
+                color: #000 !important;
+
+                font-size: 13px;
+
+                margin-bottom: 2px;
+            }
+
+
+            .step p {
+                color: #222 !important;
+
+                font-size: 10px;
+
+                line-height: 1.5;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- =========================================
+         NAVIGATION
+    ========================================= -->
+
+    <nav>
+
+        <div class="logo">
+            🍪 Lotus Biscoff
+        </div>
+
+
+        <ul>
+
+            <li>
+                <a href="#home">
+                    Home
+                </a>
+            </li>
+
+            <li>
+                <a href="#recipe">
+                    Recipe
+                </a>
+            </li>
+
+            <li>
+                <a href="#ingredients">
+                    Ingredients
+                </a>
+            </li>
+
+            <li>
+                <a href="#method">
+                    Method
+                </a>
+            </li>
+
+        </ul>
+
+    </nav>
+
+
+    <!-- =========================================
+         HERO SECTION
+    ========================================= -->
+
+    <section
+        class="hero"
+        id="home"
+    >
+
+        <div class="hero-container">
+
+
+            <!-- TEXT -->
+
+            <div class="hero-text">
+
+                <div class="small-text">
+                    Homemade Dessert
+                </div>
+
+
+                <h1>
+
+                    Lotus Biscoff
+
+                    <span>
+                        Cheese Cake
+                    </span>
+
+                </h1>
+
+
+                <p>
+
+                    A deliciously creamy Lotus Biscoff
+                    cheesecake with a crunchy biscuit
+                    base, smooth cheesecake filling and
+                    rich Biscoff topping.
+
+                </p>
+
+
+                <a
+                    href="#recipe"
+                    class="recipe-button"
+                >
+                    View Recipe →
+                </a>
+
+
+                <!-- PRINT BUTTON -->
+
+                <button
+                    class="print-button"
+                    onclick="window.print()"
+                >
+                    🖨️ Print Recipe
+                </button>
+
+            </div>
+
+
+            <!-- CAKE IMAGE -->
+
+            <div class="cake-container">
+
+                <img
+                    src="https://scottishscran.com/wp-content/uploads/2023/05/Biscoff-cheesecake-final6-1200x800-1-720x720.png"
+                    alt="Lotus Biscoff Cheesecake"
+                >
+
+
+                <div class="image-caption">
+
+                    Delicious Lotus Biscoff Cheesecake
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================================
+         RECIPE SECTION
+    ========================================= -->
+
+    <section
+        class="recipe-section"
+        id="recipe"
+    >
+
+
+        <div class="section-title">
+
+            <div class="subtitle">
+                Delicious & Creamy
+            </div>
+
+
+            <h2>
+                Lotus Biscoff Cheesecake
+            </h2>
+
+
+            <p>
+
+                Enjoy the perfect combination of creamy
+                cheesecake, caramelized Biscoff biscuits
+                and smooth Biscoff spread.
+
+            </p>
+
+        </div>
+
+
+        <!-- =========================================
+             INFORMATION
+        ========================================= -->
+
+        <div class="info-container">
+
+
+            <div class="info-card">
+
+                <div class="info-icon">
+                    ⏱️
+                </div>
+
+                <h3>
+                    30 Minutes
+                </h3>
+
+                <p>
+                    Preparation Time
+                </p>
+
+            </div>
+
+
+            <div class="info-card">
+
+                <div class="info-icon">
+                    ❄️
+                </div>
+
+                <h3>
+                    6 Hours
+                </h3>
+
+                <p>
+                    Chilling Time
+                </p>
+
+            </div>
+
+
+            <div class="info-card">
+
+                <div class="info-icon">
+                    🍰
+                </div>
+
+                <h3>
+                    8 Servings
+                </h3>
+
+                <p>
+                    Serves
+                </p>
+
+            </div>
+
+
+        </div>
+
+
+        <!-- =========================================
+             INGREDIENTS + METHOD
+        ========================================= -->
+
+        <div class="content-grid">
+
+
+            <!-- INGREDIENTS -->
+
+            <div
+                class="content-box"
+                id="ingredients"
+            >
+
+                <h2>
+                    🛒 Ingredients
+                </h2>
+
+
+                <div class="ingredient">
+
+                    <strong>
+                        250 g
+                    </strong>
+
+                    <span>
+                        Lotus Biscoff biscuits
+                    </span>
+
+                </div>
+
+
+                <div class="ingredient">
+
+                    <strong>
+                        100 g
+                    </strong>
+
+                    <span>
+                        Melted butter
+                    </span>
+
+                </div>
+
+
+                <div class="ingredient">
+
+                    <strong>
+                        500 g
+                    </strong>
+
+                    <span>
+                        Cream cheese
+                    </span>
+
+                </div>
+
+
+                <div class="ingredient">
+
+                    <strong>
+                        200 ml
+                    </strong>
+
+                    <span>
+                        Whipping cream
+                    </span>
+
+                </div>
+
+
+                <div class="ingredient">
+
+                    <strong>
+                        200 g
+                    </strong>
+
+                    <span>
+                        Lotus Biscoff spread
+                    </span>
+
+                </div>
+
+
+                <div class="ingredient">
+
+                    <strong>
+                        80 g
+                    </strong>
+
+                    <span>
+                        Powdered sugar
+                    </span>
+
+                </div>
+
+
+                <div class="ingredient">
+
+                    <strong>
+                        1 tsp
+                    </strong>
+
+                    <span>
+                        Vanilla essence
+                    </span>
+
+                </div>
+
+
+                <div class="ingredient">
+
+                    <strong>
+                        Extra
+                    </strong>
+
+                    <span>
+                        Biscoff biscuits for decoration
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <!-- =========================================
+                 METHOD
+            ========================================= -->
+
+            <div
+                class="content-box"
+                id="method"
+            >
+
+                <h2>
+                    👩‍🍳 How to Make
+                </h2>
+
+
+                <!-- STEP 1 -->
+
+                <div class="step">
+
+                    <div class="step-number">
+                        1
+                    </div>
+
+
+                    <h3>
+                        Prepare the Biscuit Base
+                    </h3>
+
+
+                    <p>
+
+                        Crush the Lotus Biscoff biscuits
+                        into fine crumbs. Mix them with
+                        melted butter until well combined.
+
+                    </p>
+
+                </div>
+
+
+                <!-- STEP 2 -->
+
+                <div class="step">
+
+                    <div class="step-number">
+                        2
+                    </div>
+
+
+                    <h3>
+                        Set the Base
+                    </h3>
+
+
+                    <p>
+
+                        Press the biscuit mixture firmly
+                        into the bottom of a cheesecake tin.
+                        Refrigerate for 20–30 minutes.
+
+                    </p>
+
+                </div>
+
+
+                <!-- STEP 3 -->
+
+                <div class="step">
+
+                    <div class="step-number">
+                        3
+                    </div>
+
+
+                    <h3>
+                        Make the Filling
+                    </h3>
+
+
+                    <p>
+
+                        Beat the cream cheese and powdered
+                        sugar until smooth. Add vanilla
+                        essence and Biscoff spread.
+
+                    </p>
+
+                </div>
+
+
+                <!-- STEP 4 -->
+
+                <div class="step">
+
+                    <div class="step-number">
+                        4
+                    </div>
+
+
+                    <h3>
+                        Add Whipping Cream
+                    </h3>
+
+
+                    <p>
+
+                        Whip the cream until fluffy and
+                        gently fold it into the cheesecake
+                        mixture.
+
+                    </p>
+
+                </div>
+
+
+                <!-- STEP 5 -->
+
+                <div class="step">
+
+                    <div class="step-number">
+                        5
+                    </div>
+
+
+                    <h3>
+                        Assemble the Cheesecake
+                    </h3>
+
+
+                    <p>
+
+                        Pour the cheesecake filling over
+                        the chilled Biscoff base and smooth
+                        the top.
+
+                    </p>
+
+                </div>
+
+
+                <!-- STEP 6 -->
+
+                <div class="step">
+
+                    <div class="step-number">
+                        6
+                    </div>
+
+
+                    <h3>
+                        Chill
+                    </h3>
+
+
+                    <p>
+
+                        Refrigerate for at least 6 hours.
+                        For the best results, chill overnight.
+
+                    </p>
+
+                </div>
+
+
+                <!-- STEP 7 -->
+
+                <div class="step">
+
+                    <div class="step-number">
+                        7
+                    </div>
+
+
+                    <h3>
+                        Decorate and Serve
+                    </h3>
+
+
+                    <p>
+
+                        Add Biscoff spread and decorate
+                        with crushed or whole Biscoff
+                        biscuits before serving.
+
+                    </p>
+
+                </div>
+
+
+            </div>
+
+
+        </div>
+
+
+        <!-- =========================================
+             SPECIAL MESSAGE
+        ========================================= -->
+
+        <div class="special">
+
+            <h2>
+                🤎 A Slice of Happiness 🤎
+            </h2>
+
+
+            <p>
+
+                Creamy cheesecake + crunchy Biscoff base +
+                silky Biscoff topping = the perfect dessert!
+
+            </p>
+
+        </div>
+
+
+    </section>
+
+
+    <!-- =========================================
+         FOOTER
+    ========================================= -->
+
+    <footer>
+
+        <h3>
+            🍪 Lotus Biscoff Cheese Cake
+        </h3>
+
+
+        <p>
+            Made with Love & Biscoff 🤎
+        </p>
+
+    </footer>
+
+
+    <!-- =========================================
+         JAVASCRIPT
+    ========================================= -->
+
+    <script>
+
+        function printRecipe() {
+
+            window.print();
+
+        }
+
+    </script>
+
+
+</body>
+
+</html>
