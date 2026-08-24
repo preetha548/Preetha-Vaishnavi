@@ -1,0 +1,3128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Madhampatty Foods</title>
+
+<style>
+
+/* ================================
+   GENERAL
+================================ */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+body{
+    background:#fffaf3;
+    color:#222;
+}
+
+header{
+    background:#111;
+    color:white;
+    padding:14px 6%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    position:sticky;
+    top:0;
+    z-index:1000;
+}
+
+/* ================================
+   LOGO
+================================ */
+
+.logo-container{
+    display:flex;
+    align-items:center;
+    gap:12px;
+}
+
+.logo-circle{
+    width:55px;
+    height:55px;
+    border:3px solid #d99a28;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:27px;
+    background:#1c1c1c;
+}
+
+.logo-text{
+    line-height:1.1;
+}
+
+.logo-text h1{
+    font-family:Georgia,serif;
+    font-size:23px;
+    color:#fff;
+}
+
+.logo-text span{
+    color:#d99a28;
+    font-size:13px;
+    letter-spacing:3px;
+    text-transform:uppercase;
+}
+
+/* ================================
+   NAVIGATION
+================================ */
+
+nav{
+    display:flex;
+    align-items:center;
+    gap:8px;
+    flex-wrap:wrap;
+}
+
+nav button{
+    background:none;
+    border:none;
+    color:white;
+    cursor:pointer;
+    padding:9px;
+    font-size:14px;
+}
+
+nav button:hover{
+    color:#d99a28;
+}
+
+.cart-btn{
+    background:#d99a28 !important;
+    color:white !important;
+    border-radius:25px;
+    padding:10px 17px !important;
+}
+
+.user-info{
+    color:#d99a28;
+    font-size:13px;
+}
+
+/* ================================
+   HERO
+================================ */
+
+.hero{
+    min-height:480px;
+    display:flex;
+    align-items:center;
+    padding:60px 8%;
+    color:white;
+
+    background:
+    linear-gradient(
+        rgba(0,0,0,.65),
+        rgba(0,0,0,.65)
+    ),
+    url("https://images.unsplash.com/photo-1601050690597-df0568f70950?auto=format&fit=crop&w=1600&q=80");
+
+    background-size:cover;
+    background-position:center;
+}
+
+.hero-content{
+    max-width:650px;
+}
+
+.hero h1{
+    font-family:Georgia,serif;
+    font-size:55px;
+    margin-bottom:18px;
+}
+
+.hero p{
+    font-size:19px;
+    line-height:1.7;
+    margin-bottom:25px;
+}
+
+.main-btn{
+    background:#d99a28;
+    color:white;
+    border:none;
+    padding:14px 25px;
+    border-radius:5px;
+    cursor:pointer;
+    font-size:16px;
+    font-weight:bold;
+}
+
+/* ================================
+   SECTIONS
+================================ */
+
+section{
+    padding:55px 7%;
+}
+
+.section-title{
+    text-align:center;
+    margin-bottom:35px;
+}
+
+.section-title h2{
+    font-family:Georgia,serif;
+    font-size:35px;
+    margin-bottom:10px;
+}
+
+/* ================================
+   CATEGORIES
+================================ */
+
+.categories{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:12px;
+    margin-bottom:30px;
+}
+
+.categories button{
+    border:1px solid #d99a28;
+    background:white;
+    color:#8a5b0b;
+    padding:10px 18px;
+    border-radius:25px;
+    cursor:pointer;
+}
+
+.categories button:hover{
+    background:#d99a28;
+    color:white;
+}
+
+/* ================================
+   FOOD CARDS
+================================ */
+
+.menu-grid{
+    display:grid;
+    grid-template-columns:
+    repeat(auto-fit,minmax(240px,1fr));
+    gap:25px;
+}
+
+.food-card{
+    background:white;
+    border-radius:12px;
+    overflow:hidden;
+    box-shadow:0 5px 20px rgba(0,0,0,.1);
+    transition:.3s;
+}
+
+.food-card:hover{
+    transform:translateY(-5px);
+}
+
+.food-card img{
+    width:100%;
+    height:190px;
+    object-fit:cover;
+}
+
+.food-info{
+    padding:18px;
+}
+
+.food-info h3{
+    margin-bottom:8px;
+}
+
+.food-info p{
+    color:#777;
+    font-size:14px;
+    line-height:1.5;
+    min-height:42px;
+}
+
+.price{
+    color:#b47710;
+    font-size:20px;
+    font-weight:bold;
+    margin:12px 0;
+}
+
+.add-btn{
+    width:100%;
+    padding:11px;
+    border:none;
+    background:#171717;
+    color:white;
+    border-radius:5px;
+    cursor:pointer;
+}
+
+.add-btn:hover{
+    background:#d99a28;
+}
+
+/* ================================
+   MODAL
+================================ */
+
+.modal{
+    display:none;
+    position:fixed;
+    inset:0;
+    background:rgba(0,0,0,.7);
+    z-index:2000;
+    overflow:auto;
+}
+
+.modal-box{
+    background:white;
+    width:95%;
+    max-width:700px;
+    margin:40px auto;
+    padding:30px;
+    border-radius:12px;
+    position:relative;
+}
+
+.close{
+    position:absolute;
+    right:20px;
+    top:10px;
+    font-size:30px;
+    cursor:pointer;
+}
+
+/* ================================
+   FORM
+================================ */
+
+.form-group{
+    margin-bottom:15px;
+}
+
+.form-group label{
+    display:block;
+    margin-bottom:6px;
+    font-weight:bold;
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select{
+    width:100%;
+    padding:12px;
+    border:1px solid #ccc;
+    border-radius:5px;
+}
+
+.form-btn{
+    width:100%;
+    padding:13px;
+    background:#d99a28;
+    color:white;
+    border:none;
+    border-radius:5px;
+    cursor:pointer;
+    font-size:16px;
+}
+
+.switch{
+    text-align:center;
+    margin-top:15px;
+}
+
+.switch span{
+    color:#b47710;
+    cursor:pointer;
+    font-weight:bold;
+}
+
+/* ================================
+   CART
+================================ */
+
+.cart-item{
+    display:flex;
+    align-items:center;
+    gap:15px;
+    padding:15px 0;
+    border-bottom:1px solid #ddd;
+}
+
+.cart-item-info{
+    flex:1;
+}
+
+.quantity{
+    display:flex;
+    align-items:center;
+    gap:8px;
+}
+
+.quantity button{
+    width:30px;
+    height:30px;
+    border:none;
+    background:#171717;
+    color:white;
+    cursor:pointer;
+    border-radius:4px;
+}
+
+.remove{
+    background:#d9534f;
+    border:none;
+    color:white;
+    padding:7px 10px;
+    border-radius:4px;
+    cursor:pointer;
+}
+
+.total-box{
+    margin-top:20px;
+    padding:20px;
+    background:#fff5df;
+    border-radius:8px;
+}
+
+.total-line{
+    display:flex;
+    justify-content:space-between;
+    margin:8px 0;
+}
+
+.grand-total{
+    font-size:22px;
+    font-weight:bold;
+    color:#9c6506;
+    border-top:1px solid #ddd;
+    padding-top:10px;
+}
+
+/* ================================
+   ORDERS
+================================ */
+
+.order-card{
+    background:white;
+    border-radius:10px;
+    padding:20px;
+    margin-bottom:20px;
+    box-shadow:0 3px 12px rgba(0,0,0,.1);
+}
+
+.order-header{
+    display:flex;
+    justify-content:space-between;
+    gap:15px;
+    flex-wrap:wrap;
+    border-bottom:1px solid #ddd;
+    padding-bottom:12px;
+    margin-bottom:12px;
+}
+
+.order-status{
+    display:inline-block;
+    padding:7px 12px;
+    border-radius:20px;
+    background:#fff0c9;
+    color:#8a5b0b;
+    font-size:13px;
+    font-weight:bold;
+}
+
+.order-item-line{
+    display:flex;
+    justify-content:space-between;
+    padding:6px 0;
+}
+
+.order-actions{
+    display:flex;
+    gap:10px;
+    flex-wrap:wrap;
+    margin-top:15px;
+}
+
+.small-btn{
+    padding:9px 14px;
+    border:none;
+    border-radius:5px;
+    cursor:pointer;
+    background:#171717;
+    color:white;
+}
+
+.small-btn.gold{
+    background:#d99a28;
+}
+
+.small-btn.red{
+    background:#d9534f;
+}
+
+/* ================================
+   BILL
+================================ */
+
+.bill{
+    background:white;
+    padding:30px;
+    border:1px solid #ddd;
+}
+
+.bill-header{
+    text-align:center;
+    border-bottom:2px solid #222;
+    padding-bottom:15px;
+    margin-bottom:20px;
+}
+
+.bill-logo{
+    width:65px;
+    height:65px;
+    border:3px solid #d99a28;
+    border-radius:50%;
+    margin:auto;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:30px;
+}
+
+.bill-header h1{
+    color:#d99a28;
+    margin-top:10px;
+    font-family:Georgia,serif;
+}
+
+.bill-details{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:15px;
+    margin-bottom:20px;
+}
+
+.bill-table{
+    width:100%;
+    border-collapse:collapse;
+    margin-top:20px;
+}
+
+.bill-table th,
+.bill-table td{
+    border:1px solid #ddd;
+    padding:10px;
+}
+
+.bill-table th{
+    background:#fff3d5;
+}
+
+.bill-total{
+    margin-top:20px;
+    margin-left:auto;
+    max-width:350px;
+}
+
+.bill-total div{
+    display:flex;
+    justify-content:space-between;
+    padding:6px;
+}
+
+.bill-grand{
+    border-top:2px solid #222;
+    font-size:20px;
+    font-weight:bold;
+}
+
+/* ================================
+   SUCCESS
+================================ */
+
+.success{
+    text-align:center;
+}
+
+.success-icon{
+    font-size:65px;
+    color:green;
+}
+
+.empty{
+    text-align:center;
+    padding:30px;
+    color:#777;
+}
+
+/* ================================
+   FOOTER
+================================ */
+
+footer{
+    background:#171717;
+    color:white;
+    text-align:center;
+    padding:35px;
+}
+
+footer h2{
+    color:#d99a28;
+    font-family:Georgia,serif;
+    margin-bottom:10px;
+}
+
+/* ================================
+   PRINT BILL
+================================ */
+
+@media print{
+
+    body *{
+        visibility:hidden;
+    }
+
+    #billModal,
+    #billModal *{
+        visibility:visible;
+    }
+
+    #billModal{
+        position:absolute;
+        left:0;
+        top:0;
+        width:100%;
+        background:white;
+    }
+
+    #billModal .close,
+    #billModal .print-button{
+        display:none;
+    }
+
+    .modal-box{
+        width:100%;
+        max-width:none;
+        margin:0;
+        box-shadow:none;
+    }
+}
+
+/* ================================
+   MOBILE
+================================ */
+
+@media(max-width:700px){
+
+    header{
+        flex-direction:column;
+        gap:15px;
+    }
+
+    nav{
+        justify-content:center;
+    }
+
+    .hero h1{
+        font-size:38px;
+    }
+
+    .cart-item{
+        flex-direction:column;
+        align-items:flex-start;
+    }
+
+    .bill-details{
+        grid-template-columns:1fr;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+
+<!-- ================================
+     HEADER / LOGO
+================================ -->
+
+<header>
+
+    <div class="logo-container">
+
+        <div class="logo-circle">
+            🍽️
+        </div>
+
+        <div class="logo-text">
+
+            <h1>
+                Madhampatty Foods
+            </h1>
+
+            <span>
+                Taste • Tradition • Love
+            </span>
+
+        </div>
+
+    </div>
+
+
+    <nav>
+
+        <button onclick="goHome()">
+            Home
+        </button>
+
+        <button onclick="showMenu()">
+            Menu
+        </button>
+
+        <button onclick="openOrders()">
+            View Orders
+        </button>
+
+        <button
+            onclick="openLogin()"
+            id="loginNav">
+
+            Login
+
+        </button>
+
+        <button
+            onclick="openRegister()"
+            id="registerNav">
+
+            Register
+
+        </button>
+
+        <span
+            class="user-info"
+            id="userDisplay">
+        </span>
+
+        <button
+            onclick="logout()"
+            id="logoutNav"
+            style="display:none;">
+
+            Logout
+
+        </button>
+
+        <button
+            class="cart-btn"
+            onclick="openCart()">
+
+            🛒 Cart
+            (<span id="cartCount">0</span>)
+
+        </button>
+
+    </nav>
+
+</header>
+
+
+<!-- ================================
+     HERO
+================================ -->
+
+<div class="hero">
+
+    <div class="hero-content">
+
+        <h1>
+            Welcome to Madhampatty Foods
+        </h1>
+
+        <p>
+            Enjoy delicious traditional food,
+            freshly prepared with quality ingredients
+            and delivered to your doorstep.
+        </p>
+
+        <button
+            class="main-btn"
+            onclick="showMenu()">
+
+            Order Now
+
+        </button>
+
+    </div>
+
+</div>
+
+
+<!-- ================================
+     MENU
+================================ -->
+
+<section id="menuSection">
+
+    <div class="section-title">
+
+        <h2>
+            Our Menu
+        </h2>
+
+        <p>
+            Choose your favourite dishes.
+        </p>
+
+    </div>
+
+
+    <div class="categories">
+
+        <button onclick="filterFood('All')">
+            All
+        </button>
+
+        <button onclick="filterFood('South Indian')">
+            South Indian
+        </button>
+
+        <button onclick="filterFood('North Indian')">
+            North Indian
+        </button>
+
+        <button onclick="filterFood('Biryani')">
+            Biryani
+        </button>
+
+        <button onclick="filterFood('Chinese')">
+            Chinese
+        </button>
+
+        <button onclick="filterFood('Snacks')">
+            Snacks
+        </button>
+
+    </div>
+
+
+    <div
+        class="menu-grid"
+        id="menuGrid">
+    </div>
+
+</section>
+
+
+<!-- ================================
+     REGISTER
+================================ -->
+
+<div
+    class="modal"
+    id="registerModal">
+
+    <div class="modal-box">
+
+        <span
+            class="close"
+            onclick="closeModal('registerModal')">
+            &times;
+        </span>
+
+        <h2>
+            Create Account
+        </h2>
+
+        <br>
+
+        <form onsubmit="registerUser(event)">
+
+            <div class="form-group">
+
+                <label>
+                    Full Name
+                </label>
+
+                <input
+                    type="text"
+                    id="regName"
+                    required>
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label>
+                    Email
+                </label>
+
+                <input
+                    type="email"
+                    id="regEmail"
+                    required>
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label>
+                    Mobile Number
+                </label>
+
+                <input
+                    type="tel"
+                    id="regPhone"
+                    pattern="[0-9]{10}"
+                    required>
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label>
+                    Password
+                </label>
+
+                <input
+                    type="password"
+                    id="regPassword"
+                    minlength="6"
+                    required>
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label>
+                    Confirm Password
+                </label>
+
+                <input
+                    type="password"
+                    id="regConfirm"
+                    minlength="6"
+                    required>
+
+            </div>
+
+
+            <button class="form-btn">
+                Register
+            </button>
+
+        </form>
+
+
+        <div class="switch">
+
+            Already have an account?
+
+            <span onclick="switchToLogin()">
+                Login
+            </span>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- ================================
+     LOGIN
+================================ -->
+
+<div
+    class="modal"
+    id="loginModal">
+
+    <div class="modal-box">
+
+        <span
+            class="close"
+            onclick="closeModal('loginModal')">
+            &times;
+        </span>
+
+        <h2>
+            Login
+        </h2>
+
+        <br>
+
+        <form onsubmit="loginUser(event)">
+
+            <div class="form-group">
+
+                <label>
+                    Email
+                </label>
+
+                <input
+                    type="email"
+                    id="loginEmail"
+                    required>
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label>
+                    Password
+                </label>
+
+                <input
+                    type="password"
+                    id="loginPassword"
+                    required>
+
+            </div>
+
+
+            <button class="form-btn">
+                Login
+            </button>
+
+        </form>
+
+
+        <div class="switch">
+
+            Don't have an account?
+
+            <span onclick="switchToRegister()">
+                Register
+            </span>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- ================================
+     CART
+================================ -->
+
+<div
+    class="modal"
+    id="cartModal">
+
+    <div class="modal-box">
+
+        <span
+            class="close"
+            onclick="closeModal('cartModal')">
+            &times;
+        </span>
+
+        <h2>
+            Your Cart
+        </h2>
+
+        <br>
+
+        <div id="cartItems"></div>
+
+
+        <div class="total-box">
+
+            <div class="total-line">
+
+                <span>
+                    Subtotal
+                </span>
+
+                <span>
+                    ₹<span id="subtotal">0</span>
+                </span>
+
+            </div>
+
+
+            <div class="total-line">
+
+                <span>
+                    Delivery
+                </span>
+
+                <span>
+                    ₹<span id="delivery">0</span>
+                </span>
+
+            </div>
+
+
+            <div class="total-line grand-total">
+
+                <span>
+                    Total
+                </span>
+
+                <span>
+                    ₹<span id="grandTotal">0</span>
+                </span>
+
+            </div>
+
+            <br>
+
+            <button
+                class="form-btn"
+                onclick="goCheckout()">
+
+                Proceed to Checkout
+
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- ================================
+     CHECKOUT
+================================ -->
+
+<div
+    class="modal"
+    id="checkoutModal">
+
+    <div class="modal-box">
+
+        <span
+            class="close"
+            onclick="closeModal('checkoutModal')">
+            &times;
+        </span>
+
+        <h2>
+            Checkout
+        </h2>
+
+        <br>
+
+        <form onsubmit="placeOrder(event)">
+
+            <div class="form-group">
+
+                <label>
+                    Customer Name
+                </label>
+
+                <input
+                    type="text"
+                    id="customerName"
+                    required>
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label>
+                    Mobile Number
+                </label>
+
+                <input
+                    type="tel"
+                    id="customerPhone"
+                    pattern="[0-9]{10}"
+                    required>
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label>
+                    Delivery Address
+                </label>
+
+                <textarea
+                    id="customerAddress"
+                    rows="4"
+                    required>
+                </textarea>
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label>
+                    City
+                </label>
+
+                <input
+                    type="text"
+                    id="customerCity"
+                    required>
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label>
+                    Payment Method
+                </label>
+
+                <select
+                    id="paymentMethod"
+                    required>
+
+                    <option value="">
+                        Select Payment
+                    </option>
+
+                    <option value="Cash on Delivery">
+                        Cash on Delivery
+                    </option>
+
+                    <option value="UPI">
+                        UPI
+                    </option>
+
+                    <option value="Credit / Debit Card">
+                        Credit / Debit Card
+                    </option>
+
+                </select>
+
+            </div>
+
+
+            <div class="total-box">
+
+                <div class="total-line grand-total">
+
+                    <span>
+                        Order Total
+                    </span>
+
+                    <span>
+                        ₹<span id="checkoutTotal">
+                            0
+                        </span>
+                    </span>
+
+                </div>
+
+            </div>
+
+            <br>
+
+            <button class="form-btn">
+
+                🛍 Place Order
+
+            </button>
+
+        </form>
+
+    </div>
+
+</div>
+
+
+<!-- ================================
+     SUCCESS
+================================ -->
+
+<div
+    class="modal"
+    id="successModal">
+
+    <div class="modal-box success">
+
+        <span
+            class="close"
+            onclick="closeModal('successModal')">
+            &times;
+        </span>
+
+        <div class="success-icon">
+            ✓
+        </div>
+
+        <h2>
+            Order Placed Successfully!
+        </h2>
+
+        <br>
+
+        <p>
+            Your order has been received.
+        </p>
+
+        <div class="total-box">
+
+            <strong>
+                Order ID
+            </strong>
+
+            <h3 id="orderId"></h3>
+
+        </div>
+
+        <br>
+
+        <button
+            class="form-btn"
+            onclick="closeModal('successModal');openOrders();">
+
+            View Order
+
+        </button>
+
+    </div>
+
+</div>
+
+
+<!-- ================================
+     VIEW ORDERS
+================================ -->
+
+<div
+    class="modal"
+    id="ordersModal">
+
+    <div class="modal-box">
+
+        <span
+            class="close"
+            onclick="closeModal('ordersModal')">
+            &times;
+        </span>
+
+        <h2>
+            My Orders
+        </h2>
+
+        <br>
+
+        <div id="ordersList"></div>
+
+    </div>
+
+</div>
+
+
+<!-- ================================
+     UPDATE ORDER
+================================ -->
+
+<div
+    class="modal"
+    id="updateOrderModal">
+
+    <div class="modal-box">
+
+        <span
+            class="close"
+            onclick="closeModal('updateOrderModal')">
+            &times;
+        </span>
+
+        <h2>
+            Update Order
+        </h2>
+
+        <br>
+
+        <form onsubmit="updateOrder(event)">
+
+            <input
+                type="hidden"
+                id="updateOrderId">
+
+
+            <div class="form-group">
+
+                <label>
+                    Order Status
+                </label>
+
+                <select
+                    id="updateStatus"
+                    required>
+
+                    <option>
+                        Order Received
+                    </option>
+
+                    <option>
+                        Preparing
+                    </option>
+
+                    <option>
+                        Out for Delivery
+                    </option>
+
+                    <option>
+                        Delivered
+                    </option>
+
+                    <option>
+                        Cancelled
+                    </option>
+
+                </select>
+
+            </div>
+
+
+            <button class="form-btn">
+                Update Order
+            </button>
+
+        </form>
+
+    </div>
+
+</div>
+
+
+<!-- ================================
+     BILL
+================================ -->
+
+<div
+    class="modal"
+    id="billModal">
+
+    <div class="modal-box">
+
+        <span
+            class="close"
+            onclick="closeModal('billModal')">
+            &times;
+        </span>
+
+        <div id="billContent"></div>
+
+        <br>
+
+        <button
+            class="form-btn print-button"
+            onclick="window.print()">
+
+            🖨 Print Bill
+
+        </button>
+
+    </div>
+
+</div>
+
+
+<!-- ================================
+     FOOTER
+================================ -->
+
+<footer>
+
+    <h2>
+        Madhampatty Foods
+    </h2>
+
+    <p>
+        Taste • Tradition • Love
+    </p>
+
+    <br>
+
+    <p>
+        © 2026 Madhampatty Foods
+    </p>
+
+</footer>
+
+
+<script>
+
+/* =====================================
+   FOOD DATA
+===================================== */
+
+const foods = [
+
+{
+    id:1,
+
+    name:"Masala Dosa",
+
+    category:"South Indian",
+
+    price:80,
+
+    image:
+    "https://images.unsplash.com/photo-1668236543090-82eba5ee5976?auto=format&fit=crop&w=800&q=80",
+
+    description:
+    "Crispy dosa served with potato masala, sambar and chutney."
+},
+
+{
+    id:2,
+
+    name:"Idli Sambar",
+
+    category:"South Indian",
+
+    price:60,
+
+    image:
+    "https://images.unsplash.com/photo-1589301760014-d929f3979dbc?auto=format&fit=crop&w=800&q=80",
+
+    description:
+    "Soft steamed idlis served with hot sambar and chutney."
+},
+
+{
+    id:3,
+
+    name:"Mutton Biryani",
+
+    category:"Biryani",
+
+    price:280,
+
+    image:
+    "https://images.unsplash.com/photo-1633945274405-b6c8069047b0?auto=format&fit=crop&w=800&q=80",
+
+    description:
+    "Traditional mutton biryani cooked with aromatic spices."
+},
+
+{
+    id:4,
+
+    name:"Chicken 65",
+
+    category:"Snacks",
+
+    price:180,
+
+    image:
+    "https://images.unsplash.com/photo-1604908176997-125f25cc6f3d?auto=format&fit=crop&w=800&q=80",
+
+    description:
+    "Crispy spicy boneless chicken pieces."
+},
+
+/* NEW SAMOSA IMAGE */
+
+{
+    id:5,
+
+    name:"Samosa",
+
+    category:"Snacks",
+
+    price:50,
+
+    image:
+    "https://images.unsplash.com/photo-1601050690597-df0568f70950?auto=format&fit=crop&w=800&q=80",
+
+    description:
+    "Crispy golden samosa filled with spiced potato and peas."
+},
+
+{
+    id:6,
+
+    name:"Paneer Butter Masala",
+
+    category:"North Indian",
+
+    price:190,
+
+    image:
+    "https://images.unsplash.com/photo-1631452180519-c014fe946bc7?auto=format&fit=crop&w=800&q=80",
+
+    description:
+    "Creamy paneer curry prepared with Indian spices."
+},
+
+{
+    id:7,
+
+    name:"Veg Fried Rice",
+
+    category:"Chinese",
+
+    price:150,
+
+    image:
+    "https://images.unsplash.com/photo-1603133872878-684f208fb84b?auto=format&fit=crop&w=800&q=80",
+
+    description:
+    "Chinese-style fried rice with fresh vegetables."
+},
+
+{
+    id:8,
+
+    name:"Chicken Noodles",
+
+    category:"Chinese",
+
+    price:170,
+
+    image:
+    "https://images.unsplash.com/photo-1612929633738-8fe44f7ec841?auto=format&fit=crop&w=800&q=80",
+
+    description:
+    "Stir-fried noodles with chicken and vegetables."
+},
+
+{
+    id:9,
+
+    name:"South Indian Meals",
+
+    category:"South Indian",
+
+    price:160,
+
+    image:
+    "https://images.unsplash.com/photo-1546833999-b9f581a1996d?auto=format&fit=crop&w=800&q=80",
+
+    description:
+    "Traditional South Indian meals with rice and side dishes."
+},
+
+{
+    id:10,
+
+    name:"Gobi 65",
+
+    category:"Snacks",
+
+    price:120,
+
+    image:
+    "https://images.unsplash.com/photo-1626132647523-66f5bf380027?auto=format&fit=crop&w=800&q=80",
+
+    description:
+    "Crispy cauliflower snack with Indian spices."
+},
+
+{
+    id:11,
+
+    name:"Paneer Fried Rice",
+
+    category:"Chinese",
+
+    price:170,
+
+    image:
+    "https://images.unsplash.com/photo-1512058564366-18510be2db19?auto=format&fit=crop&w=800&q=80",
+
+    description:
+    "Fried rice prepared with paneer and vegetables."
+}
+
+];
+
+
+/* =====================================
+   STORAGE
+===================================== */
+
+let cart =
+JSON.parse(
+    localStorage.getItem("cart")
+) || [];
+
+let currentUser =
+JSON.parse(
+    localStorage.getItem("currentUser")
+) || null;
+
+
+/* =====================================
+   MENU
+===================================== */
+
+function displayMenu(list=foods){
+
+    const grid =
+    document.getElementById("menuGrid");
+
+    grid.innerHTML="";
+
+    list.forEach(food=>{
+
+        grid.innerHTML+=`
+
+        <div class="food-card">
+
+            <img
+                src="${food.image}"
+                alt="${food.name}">
+
+            <div class="food-info">
+
+                <h3>
+                    ${food.name}
+                </h3>
+
+                <p>
+                    ${food.description}
+                </p>
+
+                <div class="price">
+                    ₹${food.price}
+                </div>
+
+                <button
+                    class="add-btn"
+                    onclick="addToCart(${food.id})">
+
+                    Add to Cart
+
+                </button>
+
+            </div>
+
+        </div>
+
+        `;
+
+    });
+
+}
+
+
+/* =====================================
+   FILTER
+===================================== */
+
+function filterFood(category){
+
+    if(category==="All"){
+
+        displayMenu(foods);
+
+    }
+    else{
+
+        displayMenu(
+            foods.filter(
+                food =>
+                food.category===category
+            )
+        );
+
+    }
+
+}
+
+
+/* =====================================
+   ADD TO CART
+===================================== */
+
+function addToCart(id){
+
+    if(!currentUser){
+
+        alert(
+            "Please register or login before ordering."
+        );
+
+        openLogin();
+
+        return;
+    }
+
+
+    const food =
+    foods.find(
+        item=>item.id===id
+    );
+
+
+    const existing =
+    cart.find(
+        item=>item.id===id
+    );
+
+
+    if(existing){
+
+        existing.quantity++;
+
+    }
+    else{
+
+        cart.push({
+
+            ...food,
+
+            quantity:1
+
+        });
+
+    }
+
+
+    saveCart();
+
+    alert(
+        food.name+" added to cart!"
+    );
+
+}
+
+
+/* =====================================
+   SAVE CART
+===================================== */
+
+function saveCart(){
+
+    localStorage.setItem(
+        "cart",
+        JSON.stringify(cart)
+    );
+
+    updateCartCount();
+
+}
+
+
+function updateCartCount(){
+
+    const count =
+    cart.reduce(
+        (sum,item)=>
+        sum+item.quantity,
+        0
+    );
+
+    document.getElementById(
+        "cartCount"
+    ).innerText=count;
+
+}
+
+
+/* =====================================
+   CART
+===================================== */
+
+function openCart(){
+
+    renderCart();
+
+    document.getElementById(
+        "cartModal"
+    ).style.display="block";
+
+}
+
+
+function renderCart(){
+
+    const container =
+    document.getElementById(
+        "cartItems"
+    );
+
+
+    if(cart.length===0){
+
+        container.innerHTML=`
+
+        <div class="empty">
+
+            <h3>
+                Your cart is empty.
+            </h3>
+
+            <p>
+                Add some delicious food!
+            </p>
+
+        </div>
+
+        `;
+
+        document.getElementById(
+            "subtotal"
+        ).innerText="0";
+
+        document.getElementById(
+            "delivery"
+        ).innerText="0";
+
+        document.getElementById(
+            "grandTotal"
+        ).innerText="0";
+
+        return;
+
+    }
+
+
+    container.innerHTML="";
+
+    let subtotal=0;
+
+
+    cart.forEach(item=>{
+
+        subtotal +=
+        item.price*item.quantity;
+
+
+        container.innerHTML+=`
+
+        <div class="cart-item">
+
+            <div class="cart-item-info">
+
+                <h3>
+                    ${item.name}
+                </h3>
+
+                <p>
+                    ₹${item.price}
+                </p>
+
+            </div>
+
+
+            <div class="quantity">
+
+                <button
+                    onclick="changeQuantity(${item.id},-1)">
+                    -
+                </button>
+
+                <span>
+                    ${item.quantity}
+                </span>
+
+                <button
+                    onclick="changeQuantity(${item.id},1)">
+                    +
+                </button>
+
+            </div>
+
+
+            <strong>
+                ₹${item.price*item.quantity}
+            </strong>
+
+
+            <button
+                class="remove"
+                onclick="removeItem(${item.id})">
+
+                Remove
+
+            </button>
+
+        </div>
+
+        `;
+
+    });
+
+
+    const delivery =
+    subtotal>=500 ? 0 : 40;
+
+
+    const total =
+    subtotal+delivery;
+
+
+    document.getElementById(
+        "subtotal"
+    ).innerText=subtotal;
+
+    document.getElementById(
+        "delivery"
+    ).innerText=delivery;
+
+    document.getElementById(
+        "grandTotal"
+    ).innerText=total;
+
+}
+
+
+function changeQuantity(id,change){
+
+    const item =
+    cart.find(
+        item=>item.id===id
+    );
+
+
+    if(!item)return;
+
+
+    item.quantity += change;
+
+
+    if(item.quantity<=0){
+
+        cart =
+        cart.filter(
+            item=>item.id!==id
+        );
+
+    }
+
+
+    saveCart();
+
+    renderCart();
+
+}
+
+
+function removeItem(id){
+
+    cart =
+    cart.filter(
+        item=>item.id!==id
+    );
+
+    saveCart();
+
+    renderCart();
+
+}
+
+
+/* =====================================
+   REGISTER
+===================================== */
+
+function openRegister(){
+
+    closeModal("loginModal");
+
+    document.getElementById(
+        "registerModal"
+    ).style.display="block";
+
+}
+
+
+function registerUser(event){
+
+    event.preventDefault();
+
+
+    const name =
+    document.getElementById(
+        "regName"
+    ).value;
+
+    const email =
+    document.getElementById(
+        "regEmail"
+    ).value;
+
+    const phone =
+    document.getElementById(
+        "regPhone"
+    ).value;
+
+    const password =
+    document.getElementById(
+        "regPassword"
+    ).value;
+
+    const confirm =
+    document.getElementById(
+        "regConfirm"
+    ).value;
+
+
+    if(password!==confirm){
+
+        alert(
+            "Passwords do not match."
+        );
+
+        return;
+
+    }
+
+
+    let users =
+    JSON.parse(
+        localStorage.getItem("users")
+    ) || [];
+
+
+    if(
+        users.some(
+            user=>user.email===email
+        )
+    ){
+
+        alert(
+            "Email already registered."
+        );
+
+        return;
+
+    }
+
+
+    const user={
+        name,
+        email,
+        phone,
+        password
+    };
+
+
+    users.push(user);
+
+
+    localStorage.setItem(
+        "users",
+        JSON.stringify(users)
+    );
+
+
+    currentUser=user;
+
+
+    localStorage.setItem(
+        "currentUser",
+        JSON.stringify(user)
+    );
+
+
+    closeModal("registerModal");
+
+    updateUserDisplay();
+
+
+    alert(
+        "Registration successful!"
+    );
+
+}
+
+
+/* =====================================
+   LOGIN
+===================================== */
+
+function openLogin(){
+
+    closeModal("registerModal");
+
+    document.getElementById(
+        "loginModal"
+    ).style.display="block";
+
+}
+
+
+function loginUser(event){
+
+    event.preventDefault();
+
+
+    const email =
+    document.getElementById(
+        "loginEmail"
+    ).value;
+
+    const password =
+    document.getElementById(
+        "loginPassword"
+    ).value;
+
+
+    let users =
+    JSON.parse(
+        localStorage.getItem("users")
+    ) || [];
+
+
+    const user =
+    users.find(
+        u =>
+        u.email===email &&
+        u.password===password
+    );
+
+
+    if(!user){
+
+        alert(
+            "Invalid email or password."
+        );
+
+        return;
+
+    }
+
+
+    currentUser=user;
+
+
+    localStorage.setItem(
+        "currentUser",
+        JSON.stringify(user)
+    );
+
+
+    closeModal("loginModal");
+
+    updateUserDisplay();
+
+
+    alert(
+        "Login successful!"
+    );
+
+}
+
+
+/* =====================================
+   LOGOUT
+===================================== */
+
+function logout(){
+
+    currentUser=null;
+
+    localStorage.removeItem(
+        "currentUser"
+    );
+
+    updateUserDisplay();
+
+    alert(
+        "Logged out successfully."
+    );
+
+}
+
+
+/* =====================================
+   USER DISPLAY
+===================================== */
+
+function updateUserDisplay(){
+
+    const display =
+    document.getElementById(
+        "userDisplay"
+    );
+
+    const login =
+    document.getElementById(
+        "loginNav"
+    );
+
+    const register =
+    document.getElementById(
+        "registerNav"
+    );
+
+    const logout =
+    document.getElementById(
+        "logoutNav"
+    );
+
+
+    if(currentUser){
+
+        display.innerText =
+        "Hi, "+currentUser.name;
+
+        login.style.display="none";
+
+        register.style.display="none";
+
+        logout.style.display="inline-block";
+
+    }
+    else{
+
+        display.innerText="";
+
+        login.style.display="inline-block";
+
+        register.style.display="inline-block";
+
+        logout.style.display="none";
+
+    }
+
+}
+
+
+/* =====================================
+   CHECKOUT
+===================================== */
+
+function goCheckout(){
+
+    if(cart.length===0){
+
+        alert(
+            "Your cart is empty."
+        );
+
+        return;
+
+    }
+
+
+    if(!currentUser){
+
+        closeModal("cartModal");
+
+        openLogin();
+
+        return;
+
+    }
+
+
+    closeModal("cartModal");
+
+
+    document.getElementById(
+        "customerName"
+    ).value=currentUser.name;
+
+
+    document.getElementById(
+        "customerPhone"
+    ).value=currentUser.phone;
+
+
+    const subtotal =
+    cart.reduce(
+        (sum,item)=>
+        sum+
+        item.price*
+        item.quantity,
+        0
+    );
+
+
+    const delivery =
+    subtotal>=500 ? 0 : 40;
+
+
+    document.getElementById(
+        "checkoutTotal"
+    ).innerText=
+    subtotal+delivery;
+
+
+    document.getElementById(
+        "checkoutModal"
+    ).style.display="block";
+
+}
+
+
+/* =====================================
+   PLACE ORDER
+===================================== */
+
+function placeOrder(event){
+
+    event.preventDefault();
+
+
+    const name =
+    document.getElementById(
+        "customerName"
+    ).value;
+
+    const phone =
+    document.getElementById(
+        "customerPhone"
+    ).value;
+
+    const address =
+    document.getElementById(
+        "customerAddress"
+    ).value;
+
+    const city =
+    document.getElementById(
+        "customerCity"
+    ).value;
+
+    const payment =
+    document.getElementById(
+        "paymentMethod"
+    ).value;
+
+
+    const subtotal =
+    cart.reduce(
+        (sum,item)=>
+        sum+
+        item.price*
+        item.quantity,
+        0
+    );
+
+
+    const delivery =
+    subtotal>=500 ? 0 : 40;
+
+
+    const total =
+    subtotal+delivery;
+
+
+    const orderId =
+    "MFG"+
+    Date.now()
+    .toString()
+    .slice(-8);
+
+
+    const order={
+
+        orderId:orderId,
+
+        customer:{
+            name:name,
+            phone:phone,
+            address:address,
+            city:city
+        },
+
+        items:[...cart],
+
+        subtotal:subtotal,
+
+        delivery:delivery,
+
+        total:total,
+
+        payment:payment,
+
+        status:"Order Received",
+
+        date:
+        new Date()
+        .toLocaleString()
+
+    };
+
+
+    let orders =
+    JSON.parse(
+        localStorage.getItem("orders")
+    ) || [];
+
+
+    orders.push(order);
+
+
+    localStorage.setItem(
+        "orders",
+        JSON.stringify(orders)
+    );
+
+
+    document.getElementById(
+        "orderId"
+    ).innerText=orderId;
+
+
+    cart=[];
+
+    saveCart();
+
+
+    closeModal("checkoutModal");
+
+
+    document.getElementById(
+        "successModal"
+    ).style.display="block";
+
+}
+
+
+/* =====================================
+   VIEW ORDERS
+===================================== */
+
+function openOrders(){
+
+    if(!currentUser){
+
+        alert(
+            "Please login to view orders."
+        );
+
+        openLogin();
+
+        return;
+
+    }
+
+
+    renderOrders();
+
+
+    document.getElementById(
+        "ordersModal"
+    ).style.display="block";
+
+}
+
+
+function renderOrders(){
+
+    const container =
+    document.getElementById(
+        "ordersList"
+    );
+
+
+    let orders =
+    JSON.parse(
+        localStorage.getItem("orders")
+    ) || [];
+
+
+    const myOrders =
+    orders.filter(
+        order =>
+        order.customer.phone===
+        currentUser.phone
+    );
+
+
+    if(myOrders.length===0){
+
+        container.innerHTML=`
+
+        <div class="empty">
+
+            <h3>
+                No orders found.
+            </h3>
+
+            <p>
+                Your orders will appear here.
+            </p>
+
+        </div>
+
+        `;
+
+        return;
+
+    }
+
+
+    container.innerHTML="";
+
+
+    myOrders
+    .slice()
+    .reverse()
+    .forEach(order=>{
+
+        let itemsHTML="";
+
+
+        order.items.forEach(item=>{
+
+            itemsHTML+=`
+
+            <div class="order-item-line">
+
+                <span>
+                    ${item.name}
+                    × ${item.quantity}
+                </span>
+
+                <strong>
+                    ₹${item.price*item.quantity}
+                </strong>
+
+            </div>
+
+            `;
+
+        });
+
+
+        container.innerHTML+=`
+
+        <div class="order-card">
+
+            <div class="order-header">
+
+                <div>
+
+                    <strong>
+                        Order ID:
+                    </strong>
+
+                    ${order.orderId}
+
+                    <br>
+
+                    <small>
+                        ${order.date}
+                    </small>
+
+                </div>
+
+
+                <span class="order-status">
+
+                    ${order.status}
+
+                </span>
+
+            </div>
+
+
+            ${itemsHTML}
+
+
+            <br>
+
+
+            <div class="total-line">
+
+                <strong>
+                    Total
+                </strong>
+
+                <strong>
+                    ₹${order.total}
+                </strong>
+
+            </div>
+
+
+            <div class="order-actions">
+
+                <button
+                    class="small-btn gold"
+                    onclick="viewBill('${order.orderId}')">
+
+                    View Bill
+
+                </button>
+
+
+                <button
+                    class="small-btn"
+                    onclick="openUpdateOrder('${order.orderId}')">
+
+                    Update Order
+
+                </button>
+
+            </div>
+
+        </div>
+
+        `;
+
+    });
+
+}
+
+
+/* =====================================
+   UPDATE ORDER
+===================================== */
+
+function openUpdateOrder(orderId){
+
+    let orders =
+    JSON.parse(
+        localStorage.getItem("orders")
+    ) || [];
+
+
+    const order =
+    orders.find(
+        o=>o.orderId===orderId
+    );
+
+
+    if(!order)return;
+
+
+    document.getElementById(
+        "updateOrderId"
+    ).value=orderId;
+
+
+    document.getElementById(
+        "updateStatus"
+    ).value=order.status;
+
+
+    document.getElementById(
+        "updateOrderModal"
+    ).style.display="block";
+
+}
+
+
+function updateOrder(event){
+
+    event.preventDefault();
+
+
+    const orderId =
+    document.getElementById(
+        "updateOrderId"
+    ).value;
+
+
+    const status =
+    document.getElementById(
+        "updateStatus"
+    ).value;
+
+
+    let orders =
+    JSON.parse(
+        localStorage.getItem("orders")
+    ) || [];
+
+
+    const index =
+    orders.findIndex(
+        o=>o.orderId===orderId
+    );
+
+
+    if(index===-1){
+
+        alert(
+            "Order not found."
+        );
+
+        return;
+
+    }
+
+
+    orders[index].status=status;
+
+
+    localStorage.setItem(
+        "orders",
+        JSON.stringify(orders)
+    );
+
+
+    closeModal(
+        "updateOrderModal"
+    );
+
+
+    renderOrders();
+
+
+    alert(
+        "Order status updated!"
+    );
+
+}
+
+
+/* =====================================
+   BILL
+===================================== */
+
+function viewBill(orderId){
+
+    let orders =
+    JSON.parse(
+        localStorage.getItem("orders")
+    ) || [];
+
+
+    const order =
+    orders.find(
+        o=>o.orderId===orderId
+    );
+
+
+    if(!order)return;
+
+
+    let rows="";
+
+
+    order.items.forEach(
+        (item,index)=>{
+
+        rows+=`
+
+        <tr>
+
+            <td>
+                ${index+1}
+            </td>
+
+            <td>
+                ${item.name}
+            </td>
+
+            <td>
+                ${item.quantity}
+            </td>
+
+            <td>
+                ₹${item.price}
+            </td>
+
+            <td>
+                ₹${item.price*item.quantity}
+            </td>
+
+        </tr>
+
+        `;
+
+    });
+
+
+    document.getElementById(
+        "billContent"
+    ).innerHTML=`
+
+    <div class="bill">
+
+        <div class="bill-header">
+
+            <div class="bill-logo">
+                🍽️
+            </div>
+
+            <h1>
+                MADHAMPATTY FOODS
+            </h1>
+
+            <p>
+                FOOD ORDER INVOICE
+            </p>
+
+        </div>
+
+
+        <div class="bill-details">
+
+            <div>
+
+                <strong>
+                    Order ID:
+                </strong>
+
+                ${order.orderId}
+
+                <br><br>
+
+                <strong>
+                    Date:
+                </strong>
+
+                ${order.date}
+
+                <br><br>
+
+                <strong>
+                    Status:
+                </strong>
+
+                ${order.status}
+
+            </div>
+
+
+            <div>
+
+                <strong>
+                    Customer:
+                </strong>
+
+                ${order.customer.name}
+
+                <br><br>
+
+                <strong>
+                    Mobile:
+                </strong>
+
+                ${order.customer.phone}
+
+                <br><br>
+
+                <strong>
+                    Payment:
+                </strong>
+
+                ${order.payment}
+
+            </div>
+
+        </div>
+
+
+        <strong>
+            Delivery Address:
+        </strong>
+
+        <p>
+            ${order.customer.address},
+            ${order.customer.city}
+        </p>
+
+
+        <table class="bill-table">
+
+            <thead>
+
+                <tr>
+
+                    <th>
+                        #
+                    </th>
+
+                    <th>
+                        Food Item
+                    </th>
+
+                    <th>
+                        Qty
+                    </th>
+
+                    <th>
+                        Price
+                    </th>
+
+                    <th>
+                        Amount
+                    </th>
+
+                </tr>
+
+            </thead>
+
+
+            <tbody>
+
+                ${rows}
+
+            </tbody>
+
+        </table>
+
+
+        <div class="bill-total">
+
+            <div>
+
+                <span>
+                    Subtotal
+                </span>
+
+                <strong>
+                    ₹${order.subtotal}
+                </strong>
+
+            </div>
+
+
+            <div>
+
+                <span>
+                    Delivery
+                </span>
+
+                <strong>
+                    ₹${order.delivery}
+                </strong>
+
+            </div>
+
+
+            <div class="bill-grand">
+
+                <span>
+                    Grand Total
+                </span>
+
+                <strong>
+                    ₹${order.total}
+                </strong>
+
+            </div>
+
+        </div>
+
+
+        <br><br>
+
+        <div style="text-align:center">
+
+            <strong>
+                Thank you for ordering with
+                Madhampatty Foods!
+            </strong>
+
+            <br>
+
+            <small>
+                Taste • Tradition • Love
+            </small>
+
+        </div>
+
+    </div>
+
+    `;
+
+
+    document.getElementById(
+        "billModal"
+    ).style.display="block";
+
+}
+
+
+/* =====================================
+   MODALS
+===================================== */
+
+function closeModal(id){
+
+    document.getElementById(
+        id
+    ).style.display="none";
+
+}
+
+
+window.onclick=function(event){
+
+    if(
+        event.target.classList
+        .contains("modal")
+    ){
+
+        event.target.style.display="none";
+
+    }
+
+};
+
+
+/* =====================================
+   LOGIN / REGISTER SWITCH
+===================================== */
+
+function switchToLogin(){
+
+    closeModal("registerModal");
+
+    openLogin();
+
+}
+
+
+function switchToRegister(){
+
+    closeModal("loginModal");
+
+    openRegister();
+
+}
+
+
+/* =====================================
+   NAVIGATION
+===================================== */
+
+function showMenu(){
+
+    document
+    .getElementById("menuSection")
+    .scrollIntoView({
+        behavior:"smooth"
+    });
+
+}
+
+
+function goHome(){
+
+    window.scrollTo({
+        top:0,
+        behavior:"smooth"
+    });
+
+}
+
+
+/* =====================================
+   START
+===================================== */
+
+displayMenu();
+
+updateCartCount();
+
+updateUserDisplay();
+
+</script>
+
+</body>
+</html>
