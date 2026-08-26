@@ -1,0 +1,706 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Onasadya 2026</title>
+
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        font-family: Georgia, "Times New Roman", serif;
+        background: #efe3c5;
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 25px;
+    }
+
+    .poster {
+        position: relative;
+        width: 430px;
+        min-height: 700px;
+        overflow: hidden;
+        background:
+            radial-gradient(circle at 50% 45%, rgba(255,255,255,.6), transparent 45%),
+            #f8efd9;
+        border: 8px solid #e6d5aa;
+        box-shadow: 0 15px 40px rgba(70, 45, 15, .3);
+        text-align: center;
+    }
+
+    /* Decorative inner border */
+    .poster::before {
+        content: "";
+        position: absolute;
+        inset: 12px;
+        border: 1px solid #b79a61;
+        pointer-events: none;
+    }
+
+    .top-decoration {
+        position: absolute;
+        top: -20px;
+        left: -30px;
+        width: 170px;
+        height: 180px;
+        transform: rotate(-20deg);
+    }
+
+    .leaf {
+        position: absolute;
+        background: linear-gradient(90deg, #174d25, #5f9b43, #2b6c31);
+        border-radius: 100% 0 100% 0;
+        transform: rotate(25deg);
+        box-shadow: inset -4px -5px 10px rgba(0,0,0,.2);
+    }
+
+    .leaf::after {
+        content: "";
+        position: absolute;
+        width: 4px;
+        height: 100%;
+        background: #c4d49b;
+        left: 48%;
+        top: 0;
+        transform: rotate(-5deg);
+    }
+
+    .leaf1 {
+        width: 125px;
+        height: 48px;
+        top: 15px;
+        left: 20px;
+    }
+
+    .leaf2 {
+        width: 105px;
+        height: 42px;
+        top: 65px;
+        left: -5px;
+        transform: rotate(50deg);
+    }
+
+    .leaf3 {
+        width: 110px;
+        height: 43px;
+        top: 100px;
+        left: 45px;
+        transform: rotate(20deg);
+    }
+
+    .right-leaves {
+        position: absolute;
+        right: -45px;
+        top: 30px;
+        width: 150px;
+        height: 180px;
+        transform: rotate(25deg);
+    }
+
+    .right-leaves .leaf {
+        right: 0;
+    }
+
+    .right-leaves .leaf1 {
+        top: 0;
+        transform: rotate(-35deg);
+    }
+
+    .right-leaves .leaf2 {
+        top: 55px;
+        transform: rotate(-65deg);
+    }
+
+    .right-leaves .leaf3 {
+        top: 105px;
+        transform: rotate(-30deg);
+    }
+
+    .content {
+        position: relative;
+        z-index: 5;
+        padding: 38px 35px 30px;
+    }
+
+    .logo {
+        font-size: 22px;
+        font-weight: bold;
+        color: #d14b22;
+        letter-spacing: 2px;
+        margin-bottom: 5px;
+    }
+
+    .logo span {
+        color: #286b39;
+    }
+
+    .subtitle {
+        font-size: 10px;
+        letter-spacing: 1.5px;
+        color: #77705d;
+        margin-bottom: 22px;
+    }
+
+    .title {
+        color: #d54a21;
+        font-size: 39px;
+        line-height: 1;
+        font-weight: bold;
+        letter-spacing: 2px;
+        text-shadow: 1px 1px #f1c89e;
+    }
+
+    .year {
+        color: #e05227;
+        font-size: 36px;
+        font-weight: bold;
+        margin-top: 3px;
+        letter-spacing: 2px;
+    }
+
+    .description {
+        margin: 12px auto 20px;
+        width: 82%;
+        color: #5c5a4c;
+        font-size: 12px;
+        line-height: 1.5;
+    }
+
+    /* Central illustration */
+    .illustration {
+        position: relative;
+        height: 250px;
+        margin-top: 5px;
+    }
+
+    .temple {
+        position: absolute;
+        top: 15px;
+        left: 50%;
+        transform: translateX(-50%);
+        color: #777b71;
+        opacity: .65;
+    }
+
+    .temple-roof {
+        width: 115px;
+        height: 30px;
+        border-radius: 50%;
+        background: #a8a99c;
+        margin: auto;
+        position: relative;
+    }
+
+    .temple-roof::before {
+        content: "";
+        position: absolute;
+        width: 85px;
+        height: 65px;
+        background: #b6b6a9;
+        left: 15px;
+        top: 15px;
+        clip-path: polygon(50% 0, 100% 100%, 0 100%);
+    }
+
+    .temple-body {
+        width: 70px;
+        height: 65px;
+        background: #b1b2a6;
+        margin: 12px auto;
+        position: relative;
+        opacity: .75;
+    }
+
+    .temple-body::after {
+        content: "ॐ";
+        position: absolute;
+        font-size: 35px;
+        color: #777a70;
+        left: 18px;
+        top: 10px;
+    }
+
+    /* People */
+    .person {
+        position: absolute;
+        bottom: 80px;
+        width: 65px;
+        height: 110px;
+        opacity: .55;
+    }
+
+    .person .head {
+        width: 28px;
+        height: 28px;
+        background: #85877e;
+        border-radius: 50%;
+        margin: auto;
+    }
+
+    .person .body {
+        width: 50px;
+        height: 65px;
+        background: #96978d;
+        margin: 4px auto;
+        border-radius: 50% 50% 15% 15%;
+    }
+
+    .person.left {
+        left: 32px;
+        transform: rotate(-12deg);
+    }
+
+    .person.right {
+        right: 32px;
+        transform: rotate(12deg);
+    }
+
+    /* Banana leaf plate */
+    .banana-plate {
+        position: absolute;
+        bottom: 30px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 315px;
+        height: 105px;
+        background: linear-gradient(140deg, #497d35, #8fb74c);
+        border-radius: 50% 50% 48% 48%;
+        box-shadow: 0 10px 12px rgba(65, 70, 30, .25);
+        border: 3px solid #376b31;
+    }
+
+    .banana-plate::after {
+        content: "";
+        position: absolute;
+        height: 5px;
+        width: 280px;
+        background: #c7d88c;
+        top: 49%;
+        left: 15px;
+        transform: rotate(-3deg);
+        border-radius: 50%;
+    }
+
+    /* Food items */
+    .food {
+        position: absolute;
+        border-radius: 50%;
+        box-shadow: 1px 2px 5px rgba(0,0,0,.25);
+    }
+
+    .rice {
+        width: 105px;
+        height: 55px;
+        background: #fff8df;
+        left: 105px;
+        top: 25px;
+        border-radius: 50%;
+    }
+
+    .rice::before,
+    .rice::after {
+        content: "";
+        position: absolute;
+        background: #fffdf0;
+        border-radius: 50%;
+    }
+
+    .rice::before {
+        width: 45px;
+        height: 28px;
+        left: 15px;
+        top: 12px;
+    }
+
+    .rice::after {
+        width: 35px;
+        height: 25px;
+        right: 12px;
+        top: 8px;
+    }
+
+    .curry {
+        width: 42px;
+        height: 42px;
+        background: #d87924;
+        top: 12px;
+        left: 55px;
+    }
+
+    .curry2 {
+        width: 40px;
+        height: 40px;
+        background: #e2a52e;
+        top: 45px;
+        right: 65px;
+    }
+
+    .vegetable {
+        width: 38px;
+        height: 38px;
+        background: #5b923c;
+        top: 55px;
+        left: 85px;
+    }
+
+    .papad {
+        width: 55px;
+        height: 15px;
+        background: #e4bb67;
+        right: 75px;
+        top: 78px;
+        transform: rotate(-15deg);
+    }
+
+    .banana {
+        width: 65px;
+        height: 24px;
+        border: 8px solid #e7bf3d;
+        border-top-color: transparent;
+        border-left-color: transparent;
+        border-radius: 50%;
+        right: 35px;
+        top: 18px;
+        transform: rotate(-20deg);
+    }
+
+    .dessert {
+        width: 36px;
+        height: 30px;
+        background: #c68b3d;
+        left: 145px;
+        top: 62px;
+        border-radius: 8px;
+    }
+
+    .dessert::after {
+        content: "";
+        position: absolute;
+        width: 30px;
+        height: 6px;
+        background: #f5d88a;
+        top: -3px;
+        left: 3px;
+        border-radius: 50%;
+    }
+
+    .lamp {
+        position: absolute;
+        bottom: 0;
+        width: 28px;
+        height: 32px;
+        background: #b97924;
+        border-radius: 50% 50% 20% 20%;
+    }
+
+    .lamp::before {
+        content: "🔥";
+        position: absolute;
+        font-size: 15px;
+        top: -18px;
+        left: 5px;
+    }
+
+    .lamp.left {
+        left: 25px;
+    }
+
+    .lamp.right {
+        right: 25px;
+    }
+
+    .bottom-text {
+        margin-top: 4px;
+        color: #df4b25;
+        font-size: 17px;
+        line-height: 1.3;
+        font-weight: bold;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
+
+    .bottom-text span {
+        font-size: 12px;
+        color: #6b674f;
+        display: block;
+        margin-top: 5px;
+        letter-spacing: 2px;
+    }
+
+    .button {
+        margin-top: 18px;
+        border: none;
+        padding: 11px 25px;
+        border-radius: 25px;
+        background: #d94c23;
+        color: white;
+        font-size: 13px;
+        font-weight: bold;
+        cursor: pointer;
+        transition: .3s;
+        box-shadow: 0 5px 10px rgba(150,60,20,.25);
+    }
+
+    .button:hover {
+        background: #a93518;
+        transform: translateY(-2px);
+    }
+
+    /* Side decorations */
+    .side-pattern {
+        position: absolute;
+        top: 50%;
+        width: 12px;
+        height: 170px;
+        background: repeating-linear-gradient(
+            45deg,
+            #b79a61 0px,
+            #b79a61 2px,
+            transparent 2px,
+            transparent 8px
+        );
+        opacity: .55;
+    }
+
+    .side-pattern.left {
+        left: 16px;
+    }
+
+    .side-pattern.right {
+        right: 16px;
+    }
+
+    /* Popup */
+    .popup {
+        display: none;
+        position: fixed;
+        inset: 0;
+        background: rgba(0,0,0,.6);
+        justify-content: center;
+        align-items: center;
+        z-index: 100;
+    }
+
+    .popup-box {
+        background: #fff8e7;
+        padding: 30px;
+        width: 320px;
+        text-align: center;
+        border-radius: 15px;
+        box-shadow: 0 15px 40px rgba(0,0,0,.3);
+        border: 3px solid #d5ad65;
+    }
+
+    .popup-box h2 {
+        color: #d64c24;
+        margin-bottom: 10px;
+    }
+
+    .popup-box p {
+        color: #555;
+        line-height: 1.6;
+    }
+
+    .close {
+        margin-top: 20px;
+        padding: 9px 20px;
+        background: #286b39;
+        color: white;
+        border: none;
+        border-radius: 20px;
+        cursor: pointer;
+    }
+
+    @media(max-width:500px) {
+        body {
+            padding: 10px;
+        }
+
+        .poster {
+            width: 100%;
+            max-width: 430px;
+        }
+
+        .title {
+            font-size: 32px;
+        }
+
+        .year {
+            font-size: 30px;
+        }
+    }
+</style>
+</head>
+
+<body>
+
+<div class="poster">
+
+    <!-- Decorative leaves -->
+    <div class="top-decoration">
+        <div class="leaf leaf1"></div>
+        <div class="leaf leaf2"></div>
+        <div class="leaf leaf3"></div>
+    </div>
+
+    <div class="right-leaves">
+        <div class="leaf leaf1"></div>
+        <div class="leaf leaf2"></div>
+        <div class="leaf leaf3"></div>
+    </div>
+
+    <div class="side-pattern left"></div>
+    <div class="side-pattern right"></div>
+
+    <div class="content">
+
+        <div class="logo">
+            <span>🌿</span> MADHAMPATTY
+        </div>
+
+        <div class="subtitle">
+            TRADITION • CULTURE • TASTE
+        </div>
+
+        <div class="title">
+            ONASADHYA
+        </div>
+
+        <div class="year">
+            2026
+        </div>
+
+        <p class="description">
+            Experience the authentic taste of Kerala
+            with traditional flavours and festive
+            celebrations.
+        </p>
+
+        <div class="illustration">
+
+            <!-- Temple -->
+            <div class="temple">
+                <div class="temple-roof"></div>
+                <div class="temple-body"></div>
+            </div>
+
+            <!-- People -->
+            <div class="person left">
+                <div class="head"></div>
+                <div class="body"></div>
+            </div>
+
+            <div class="person right">
+                <div class="head"></div>
+                <div class="body"></div>
+            </div>
+
+            <!-- Banana leaf -->
+            <div class="banana-plate">
+
+                <div class="rice"></div>
+
+                <div class="food curry"></div>
+
+                <div class="food curry2"></div>
+
+                <div class="food vegetable"></div>
+
+                <div class="food papad"></div>
+
+                <div class="banana"></div>
+
+                <div class="food dessert"></div>
+
+            </div>
+
+            <!-- Lamps -->
+            <div class="lamp left"></div>
+            <div class="lamp right"></div>
+
+        </div>
+
+        <div class="bottom-text">
+            26 TRADITIONAL DELICACIES
+            <span>SERVED ON A BANANA LEAF</span>
+        </div>
+
+        <button class="button" onclick="showDetails()">
+            EXPLORE ONASADHYA
+        </button>
+
+    </div>
+</div>
+
+
+<!-- Popup -->
+<div class="popup" id="popup">
+
+    <div class="popup-box">
+
+        <h2>🌿 Onasadya 2026</h2>
+
+        <p>
+            Celebrate the flavours of Kerala with
+            an authentic traditional Onasadya,
+            served beautifully on a banana leaf.
+        </p>
+
+        <button class="close" onclick="closeDetails()">
+            CLOSE
+        </button>
+
+    </div>
+
+</div>
+
+
+<script>
+
+function showDetails() {
+    document.getElementById("popup").style.display = "flex";
+}
+
+function closeDetails() {
+    document.getElementById("popup").style.display = "none";
+}
+
+/* Close popup when clicking outside */
+document.getElementById("popup").addEventListener("click", function(event) {
+    if (event.target === this) {
+        closeDetails();
+    }
+});
+
+/* Simple leaf animation */
+const leaves = document.querySelectorAll(".leaf");
+
+leaves.forEach((leaf, index) => {
+
+    leaf.animate(
+        [
+            { transform: getComputedStyle(leaf).transform + " rotate(0deg)" },
+            { transform: getComputedStyle(leaf).transform + " rotate(3deg)" },
+            { transform: getComputedStyle(leaf).transform + " rotate(0deg)" }
+        ],
+        {
+            duration: 2500 + index * 300,
+            iterations: Infinity,
+            direction: "alternate"
+        }
+    );
+
+});
+
+</script>
+
+</body>
+</html>
