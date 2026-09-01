@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kheer Recipe</title>
+
+    <style>
+        body {
+            margin: 0;
+            padding: 40px;
+            font-family: Arial, sans-serif;
+            background-color: #fff8ef;
+        }
+
+        .recipe-container {
+            max-width: 1100px;
+            margin: auto;
+            background: white;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 5px 25px rgba(0, 0, 0, 0.15);
+        }
+
+        .main-title {
+            text-align: center;
+            font-size: 50px;
+            color: #8b4513;
+            margin-bottom: 40px;
+        }
+
+        .recipe-content {
+            display: flex;
+            gap: 50px;
+            align-items: flex-start;
+        }
+
+        .left-col {
+            flex: 1;
+        }
+
+        .right-col {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+        }
+
+        h2 {
+            color: #a0522d;
+            font-size: 28px;
+        }
+
+        ul, ol {
+            font-size: 18px;
+            line-height: 1.8;
+        }
+
+        ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .image-wrapper {
+            width: 100%;
+            max-width: 450px;
+        }
+
+        .recipe-image {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            border-radius: 20px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+        }
+
+        @media (max-width: 768px) {
+            body {
+                padding: 15px;
+            }
+
+            .recipe-container {
+                padding: 20px;
+            }
+
+            .recipe-content {
+                flex-direction: column;
+            }
+
+            .right-col {
+                width: 100%;
+            }
+
+            .recipe-image {
+                height: 300px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="recipe-container">
+
+        <h1 class="main-title">Kheer</h1>
+
+        <div class="recipe-content">
+
+            <!-- Left Column -->
+            <div class="left-col">
+
+                <div class="ingredients-section">
+                    <h2>Ingredients:</h2>
+
+                    <ul>
+                        <li>• 2 Ltrs. Milk</li>
+                        <li>• Crushed almonds for garnishing</li>
+                        <li>• 1 1/2 cups Sugar</li>
+                        <li>• 1/2 cup Rice</li>
+                        <li>• 3-5 Cardamom (Ilaychi)</li>
+                        <li>• 2 Tbsp Corn Flour</li>
+                    </ul>
+                </div>
+
+                <div class="directions-section">
+                    <h2>Directions:</h2>
+
+                    <ol>
+                        <li>Take milk in the boiling pan.</li>
+                        <li>Soak rice in water for about 15 minutes.</li>
+                        <li>Add rice to the milk.</li>
+                        <li>Cook for 15 minutes on low heat, till rice gets tender and becomes one with milk.</li>
+                        <li>Take corn flour in another bowl and add 4 Tbsps of milk to it.</li>
+                        <li>Prepare a paste and add it to the boiling kheer.</li>
+                        <li>Stir well and keep cooking for another minute, till it becomes thicker.</li>
+                        <li>Add sugar and cardamoms to it and let the mixture boil once.</li>
+                        <li>Kheer is ready. Dish it out and garnish with crushed almonds.</li>
+                    </ol>
+                </div>
+
+            </div>
+
+            <!-- Right Column -->
+            <div class="right-col">
+
+                <div class="image-wrapper">
+
+                    <img
+                        src="https://www.whiskaffair.com/wp-content/uploads/2016/01/Chikoo-Kheer-2-1-1200x1800.jpg"
+                        alt="Bowl of Kheer"
+                        class="recipe-image"
+                    >
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+</html>
