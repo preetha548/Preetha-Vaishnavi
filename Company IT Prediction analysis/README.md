@@ -41,6 +41,10 @@ MPLBACKEND=Agg python app.py
 
 This executes the analysis without opening windows; it does not save a new report or establish model quality. See [validation results](../CHANGES_SUMMARY.md#validation).
 
+## Verified environment
+
+The headless script completed with Python 3.14.7, NumPy 2.5.3, pandas 3.0.5, Matplotlib 3.11.2, Seaborn 0.13.2 and scikit-learn 1.9.1. Other versions allowed by the dependency ranges have not all been tested.
+
 ## Existing screenshots
 
 These are original committed chart images, not newly benchmarked outputs:
