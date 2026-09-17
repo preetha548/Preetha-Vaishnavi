@@ -1,82 +1,25 @@
-import cv2
-from keras.models import load_model
-from PIL import Image
-import numpy as np
-import matplotlib.pyplot as plt
-import pickle
+"""Single-image prediction only; no data unpickling or retraining."""
+import argparse
+from pathlib import Path
 
-# Load the trained model
-model = load_model('BrainTumor10EpochsCategorical.h5')
-
-with open('x_train.pkl', 'rb') as f:
-    x_train = pickle.load(f)
-with open('y_train.pkl', 'rb') as f:
-    y_train = pickle.load(f)
+from brain_tumor import CLI_THRESHOLD, DEFAULT_MODEL, predict_file
 
 
-
-with open('x_test.pkl', 'rb') as f:
-    x_test = pickle.load(f)
-with open('y_test.pkl', 'rb') as f:
-    y_test = pickle.load(f)
-
-# Read and preprocess the image
-image_path = 'C:\\Users\\omtri\\Downloads\\BrainTumor Classification DL-11\\pred\\pred2.jpg'
-image = cv2.imread(image_path)
-img = Image.fromarray(image)
-img = img.resize((64, 64))
-img = np.array(img)
-
-# Preprocess the image - assuming normalization to [0, 1] during training
-input_img = img.astype('float32') / 255.0
-input_img = np.expand_dims(input_img, axis=0)
-
-# Make predictions
-predictions = model.predict(input_img)
-tumor_probability = predictions[0][1] * 100  # Probability of tumor presence
-
-# Determine the binary classification based on a threshold
-threshold = 50  # Adjust the threshold as needed
-if tumor_probability >= threshold:
-    binary_result = "Yes"
-else:
-    binary_result = "No"
+def main():
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("image", type=Path, help="Path to a trusted local sample image")
+    parser.add_argument("--model", type=Path, default=DEFAULT_MODEL)
+    args = parser.parse_args()
+    if not args.image.is_file():
+        parser.error("The image path does not exist.")
+    try:
+        score, result = predict_file(args.image, args.model, CLI_THRESHOLD)
+    except (RuntimeError, ValueError) as exc:
+        parser.exit(1, f"Prediction unavailable: {exc}\n")
+    print("Educational / research prototype. Not intended for medical diagnosis.")
+    print(f"Class-1 score: {score:.2f}% (not a calibrated disease probability)")
+    print(f"Legacy threshold output: {result}; manual threshold: {CLI_THRESHOLD:g}%")
 
 
-
-
-
-
-
-
-# Extract the training loss and epochs
-history = model.fit(x_train, y_train,
-                   batch_size=16,
-                   verbose=1,
-                   epochs=9,
-                   validation_data=(x_test, y_test),
-                   shuffle=False)
-
-# Print the training loss and number of epochs
-print("Training Loss:")
-for epoch in range(9):
-    print(f"Epoch {epoch+1}: {history.history['loss'][epoch]:.4f}")
-
-print("\nNumber of Epochs: 9")
-
-
-
-
-
-
-
-
-
-
-
-
-
-# Print the percentage of efficiency and binary classification
-print(f"The probability of tumor presence is: {tumor_probability:.2f}%")
-print(f"Tumor presence: {binary_result}")
-
+if __name__ == "__main__":
+    main()
