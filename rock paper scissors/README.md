@@ -21,6 +21,16 @@ python3 -m http.server 8000 --bind 127.0.0.1
 
 Open `http://127.0.0.1:8000`. The legacy package manifest also provides a static `serve` command, but it is optional for this page; it does not provide an application backend.
 
+## Verify the game rules
+
+From this directory, with Node.js 20 or newer:
+
+```sh
+node --test tests/game.test.cjs
+```
+
+The checks execute the original inline script in isolated contexts, cover all nine move combinations, verify reload persistence and reset, and use mocked storage/alerts.
+
 ## Screenshots
 
 No project-local screenshot is committed. The current UI is a deliberately small set of buttons with result alerts.
