@@ -1,0 +1,12 @@
+
+Age,Gender,BMI,Calcium_Intake,Vitamin_D,Physical_Activity,Smoking,Family_History,Osteoporosis
+45,Female,22,Low,Low,Low,No,Yes,Yes
+30,Male,25,High,High,High,No,No,No
+55,Female,20,Low,Low,Low,Yes,Yes,Yes
+35,Female,24,High,High,Medium,No,No,No
+65,Female,19,Low,Low,Low,Yes,Yes,Yes
+40,Male,26,High,High,High,No,No,No
+50,Female,21,Low,Medium,Low,No,Yes,Yes
+28,Male,27,High,High,High,No,No,No
+60,Female,20,Low,Low,Low,Yes,Yes,Yes
+32,Female,25,High,High,Medium,No,No,No
