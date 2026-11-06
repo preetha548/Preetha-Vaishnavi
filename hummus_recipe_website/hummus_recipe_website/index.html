@@ -1,0 +1,409 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="A creamy homemade hummus recipe with chickpeas, tahini, garlic, lemon and olive oil.">
+
+    <title>Best Homemade Hummus | Weekend Kitchen</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <header class="topbar">
+        <a class="brand" href="#">🥙 Weekend Kitchen</a>
+        <a class="top-link" href="#recipe">Jump to recipe ↓</a>
+    </header>
+
+    <main class="page">
+
+        <!-- Hero Section -->
+        <section class="hero">
+
+            <div class="hero-copy">
+
+                <p class="eyebrow">EASY • HOMEMADE • DELICIOUS</p>
+
+                <h1>Best Homemade Hummus</h1>
+
+                <p class="intro">
+                    A creamy, delicious hummus made from scratch with chickpeas,
+                    garlic, lemon, tahini and olive oil. Serve it as a spread
+                    for wraps and sandwiches or as a dip with crunchy vegetables
+                    and crackers.
+                </p>
+
+                <div class="rating">
+                    ★★★★★ <span>5 from 4 votes</span>
+                </div>
+
+            </div>
+
+            <img
+                class="hero-image"
+                src="images/hummus.jpg"
+                alt="Homemade hummus served with vegetables and crunchy snacks"
+            >
+
+        </section>
+
+        <!-- Quick Facts -->
+        <section class="quick-facts">
+
+            <div>
+                <span>Prep time</span>
+                <strong>10 mins</strong>
+            </div>
+
+            <div>
+                <span>Cook time</span>
+                <strong>20 mins</strong>
+            </div>
+
+            <div>
+                <span>Soaking time</span>
+                <strong>3 hrs</strong>
+            </div>
+
+            <div>
+                <span>Total time</span>
+                <strong>30 mins</strong>
+            </div>
+
+        </section>
+
+        <!-- Tags -->
+        <div class="tags">
+
+            <span>Course: <b>Dips</b></span>
+
+            <span>
+                Cuisine:
+                <b>Gluten-free, Middle Eastern, Vegan, Vegetarian</b>
+            </span>
+
+            <span>Keyword: <b>Chickpea recipe</b></span>
+
+            <span>Calories: <b>173 kcal</b></span>
+
+        </div>
+
+        <!-- Recipe Card -->
+        <section class="recipe-card" id="recipe">
+
+            <div class="section-heading">
+
+                <div>
+                    <p class="eyebrow">LET'S GET COOKING</p>
+                    <h2>Ingredients</h2>
+                    <p class="muted">
+                        Tick each ingredient as you prepare it.
+                    </p>
+                </div>
+
+                <label class="servings">
+                    Servings
+
+                    <select id="servings">
+                        <option value="5">5 people</option>
+                        <option value="10" selected>10 people</option>
+                        <option value="15">15 people</option>
+                        <option value="20">20 people</option>
+                    </select>
+                </label>
+
+            </div>
+
+            <!-- Ingredients -->
+            <ul class="ingredient-list" id="ingredientList">
+
+                <li>
+                    <label>
+                        <input type="checkbox">
+                        <span>
+                            <strong data-ingredient="chickpeas">2 cups</strong>
+                            dry chickpeas, soaked for at least 2–3 hours or overnight
+                        </span>
+                    </label>
+                </li>
+
+                <li>
+                    <label>
+                        <input type="checkbox">
+                        <span>
+                            <strong data-ingredient="tahini">3 tbsp</strong>
+                            tahini
+                        </span>
+                    </label>
+                </li>
+
+                <li>
+                    <label>
+                        <input type="checkbox">
+                        <span>
+                            <strong data-ingredient="lemon">½ tbsp</strong>
+                            fresh squeezed lemon juice
+                        </span>
+                    </label>
+                </li>
+
+                <li>
+                    <label>
+                        <input type="checkbox">
+                        <span>
+                            <strong data-ingredient="garlic">1 clove</strong>
+                            garlic
+                        </span>
+                    </label>
+                </li>
+
+                <li>
+                    <label>
+                        <input type="checkbox">
+                        <span>
+                            <strong>As needed</strong>
+                            salt, to taste
+                        </span>
+                    </label>
+                </li>
+
+                <li>
+                    <label>
+                        <input type="checkbox">
+                        <span>
+                            <strong>As needed</strong>
+                            paprika powder, to taste
+                        </span>
+                    </label>
+                </li>
+
+                <li>
+                    <label>
+                        <input type="checkbox">
+                        <span>
+                            <strong data-ingredient="oil">2 tbsp</strong>
+                            olive oil for spreading on top
+                        </span>
+                    </label>
+                </li>
+
+            </ul>
+
+            <!-- Ingredient Progress -->
+            <p class="progress-label">
+                <span id="ingredientProgress">
+                    0 of 7 ingredients ready
+                </span>
+
+                <span id="ingredientPercent">0%</span>
+            </p>
+
+            <div class="progress-track">
+                <div id="ingredientBar"></div>
+            </div>
+
+            <!-- Instructions -->
+            <div class="instructions">
+
+                <div class="section-heading">
+
+                    <div>
+                        <p class="eyebrow">STEP BY STEP</p>
+                        <h2>Instructions</h2>
+                    </div>
+
+                    <span class="step-count" id="stepCount">
+                        0 / 5 completed
+                    </span>
+
+                </div>
+
+                <ol class="steps">
+
+                    <li>
+                        <label>
+                            <input type="checkbox" class="step-check">
+
+                            <span>
+                                <b>Soak the chickpeas.</b>
+                                Soak the chickpeas overnight in a large bowl
+                                of room-temperature water. Alternatively,
+                                quick-soak in hot water for 2–3 hours.
+                            </span>
+                        </label>
+                    </li>
+
+                    <li>
+                        <label>
+                            <input type="checkbox" class="step-check">
+
+                            <span>
+                                <b>Cook the chickpeas.</b>
+                                Drain and rinse the chickpeas. Add them to
+                                a pressure cooker and fill with water until
+                                it is an inch above the chickpeas. Add salt
+                                and pressure cook for 3 whistles. Remove
+                                from heat and open the cooker only after
+                                the steam has escaped on its own.
+                            </span>
+                        </label>
+                    </li>
+
+                    <li>
+                        <label>
+                            <input type="checkbox" class="step-check">
+
+                            <span>
+                                <b>Reserve some chickpeas.</b>
+                                Drain and reserve some of the cooking liquid
+                                as well as some boiled chickpeas aside.
+                            </span>
+                        </label>
+                    </li>
+
+                    <li>
+                        <label>
+                            <input type="checkbox" class="step-check">
+
+                            <span>
+                                <b>Blend until smooth.</b>
+                                In a large processor, combine the boiled
+                                chickpeas, tahini and garlic until almost
+                                smooth. Add a little cooking liquid if
+                                the paste is very thick. Season with salt
+                                and lemon juice. Taste and adjust.
+                            </span>
+                        </label>
+                    </li>
+
+                    <li>
+                        <label>
+                            <input type="checkbox" class="step-check">
+
+                            <span>
+                                <b>Garnish and serve.</b>
+                                Remove the hummus into a serving bowl,
+                                make a little depression in the center
+                                and add the reserved chickpeas. Sprinkle
+                                some paprika and drizzle olive oil.
+                            </span>
+                        </label>
+                    </li>
+
+                </ol>
+
+            </div>
+
+        </section>
+
+        <!-- Notes -->
+        <section class="notes-grid">
+
+            <article class="note">
+                <h3>Make-ahead tip</h3>
+
+                <p>
+                    Soak and cook the chickpeas, then freeze them in a
+                    small container with some cooking liquid. When ready
+                    to make, defrost and simply follow step 4.
+                </p>
+            </article>
+
+            <article class="note">
+                <h3>Hummus variations</h3>
+
+                <p>
+                    Add roasted capsicum for roasted capsicum hummus,
+                    beetroot chutney or roasted beetroot purée for
+                    beetroot hummus, or turmeric for golden turmeric hummus.
+                </p>
+            </article>
+
+            <article class="note">
+                <h3>How to store</h3>
+
+                <p>
+                    Store extra hummus in an airtight box in the fridge
+                    for 2–3 days or freeze for up to 2 months.
+                </p>
+            </article>
+
+        </section>
+
+        <!-- Nutrition -->
+        <section class="nutrition">
+
+            <h2>Nutrition Information</h2>
+
+            <p class="muted">
+                Approximate values for 1 serving
+            </p>
+
+            <div class="nutrition-grid">
+
+                <div>
+                    <strong>173</strong>
+                    <span>Calories (kcal)</span>
+                </div>
+
+                <div>
+                    <strong>25.3 g</strong>
+                    <span>Carbohydrates</span>
+                </div>
+
+                <div>
+                    <strong>8.5 g</strong>
+                    <span>Protein</span>
+                </div>
+
+                <div>
+                    <strong>4.9 g</strong>
+                    <span>Fat</span>
+                </div>
+
+                <div>
+                    <strong>0.6 g</strong>
+                    <span>Saturated fat</span>
+                </div>
+
+                <div>
+                    <strong>7.4 g</strong>
+                    <span>Fibre</span>
+                </div>
+
+                <div>
+                    <strong>4.3 g</strong>
+                    <span>Sugar</span>
+                </div>
+
+            </div>
+
+            <p class="nutrition-note">
+                Nutrition values are approximate and are reproduced
+                from the supplied recipe.
+            </p>
+
+        </section>
+
+        <!-- Footer -->
+        <footer>
+
+            <p>Made with care in your kitchen ♥</p>
+
+            <p class="source">
+                Weekend Kitchen | Homemade Recipes
+            </p>
+
+        </footer>
+
+    </main>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
