@@ -1,0 +1,798 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pistachio Delight | Sweet Kitchen</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    min-height: 100vh;
+    padding: 22px;
+    color: #394b27;
+    background: linear-gradient(135deg, #dce9c4, #fff4dc, #d9e8bd);
+    overflow-x: hidden;
+}
+
+/* Background decoration */
+
+body::before,
+body::after {
+    content: "";
+    position: fixed;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    filter: blur(70px);
+    z-index: -1;
+    opacity: .6;
+}
+
+body::before {
+    background: #a6c77b;
+    top: -100px;
+    left: -100px;
+}
+
+body::after {
+    background: #e9bb83;
+    bottom: -100px;
+    right: -100px;
+}
+
+/* Glass effect */
+
+.glass {
+    background: rgba(255,255,255,.42);
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+    border: 1px solid rgba(255,255,255,.8);
+    border-radius: 22px;
+    box-shadow: 0 8px 30px rgba(65,85,38,.12);
+}
+
+/* Navigation */
+
+nav {
+    max-width: 1200px;
+    margin: auto;
+    padding: 18px 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.logo {
+    font-size: 25px;
+    font-weight: bold;
+    color: #49662c;
+}
+
+nav a {
+    text-decoration: none;
+    color: #536a35;
+    margin: 8px;
+    font-weight: 600;
+    transition: .3s;
+}
+
+nav a:hover {
+    color: #91a94e;
+}
+
+/* Main container */
+
+.container {
+    max-width: 1200px;
+    margin: 30px auto;
+}
+
+/* Hero */
+
+.hero {
+    display: grid;
+    grid-template-columns: 1.1fr 1fr;
+    gap: 30px;
+    padding: 25px;
+    align-items: center;
+}
+
+.hero img {
+    width: 100%;
+    height: 390px;
+    object-fit: cover;
+    border-radius: 20px;
+    box-shadow: 0 8px 22px #596c3730;
+}
+
+.hero h1 {
+    font-size: 43px;
+    color: #3c6125;
+    margin-bottom: 15px;
+}
+
+.hero p {
+    line-height: 1.8;
+    font-size: 16px;
+    color: #5c614c;
+}
+
+.details {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin: 25px 0;
+}
+
+.detail {
+    flex: 1;
+    min-width: 90px;
+    padding: 13px 8px;
+    text-align: center;
+    background: rgba(255,255,255,.6);
+    border-radius: 15px;
+    font-weight: 600;
+}
+
+/* Buttons */
+
+button {
+    border: none;
+    padding: 13px 22px;
+    margin: 5px;
+    border-radius: 13px;
+    cursor: pointer;
+    background: linear-gradient(135deg,#769c43,#476b29);
+    color: white;
+    font-weight: bold;
+    font-size: 14px;
+    transition: .3s;
+}
+
+button:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 18px #607d4250;
+}
+
+button.secondary {
+    background: linear-gradient(135deg,#e3d5a7,#b6a66c);
+    color: #394b27;
+}
+
+/* Titles */
+
+.section-title {
+    text-align: center;
+    font-size: 31px;
+    color: #48652c;
+    margin: 45px 0 25px;
+}
+
+/* Ingredient cards */
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 22px;
+}
+
+.card {
+    padding: 25px;
+    transition: .3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    background: rgba(255,255,255,.6);
+}
+
+.card h3 {
+    font-size: 23px;
+    color: #688c3d;
+    margin-bottom: 20px;
+}
+
+.ingredient-content {
+    display: grid;
+    grid-template-columns: 125px 1fr;
+    align-items: center;
+    gap: 15px;
+}
+
+.ingredient-content img {
+    width: 125px;
+    height: 150px;
+    border-radius: 15px;
+    object-fit: cover;
+}
+
+ul {
+    list-style: none;
+}
+
+li {
+    padding: 9px 0;
+    border-bottom: 1px solid #ffffff90;
+    font-size: 15px;
+}
+
+input[type="checkbox"] {
+    accent-color: #648b37;
+    margin-right: 8px;
+    cursor: pointer;
+}
+
+.ingredient {
+    transition: .3s;
+}
+
+.ingredient.done {
+    text-decoration: line-through;
+    opacity: .45;
+}
+
+/* Preparation steps */
+
+.steps-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.step {
+    padding: 17px;
+    transition: .3s;
+}
+
+.step:hover {
+    transform: translateY(-5px);
+}
+
+.step img {
+    width: 100%;
+    height: 175px;
+    object-fit: cover;
+    border-radius: 15px;
+    margin: 12px 0;
+}
+
+.step h3 {
+    color: #5e8036;
+    font-size: 19px;
+}
+
+.step p {
+    line-height: 1.7;
+    font-size: 14px;
+    color: #555d49;
+}
+
+.number {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    background: #658a3b;
+    color: white;
+    font-weight: bold;
+    margin-right: 7px;
+}
+
+/* Tips and timer */
+
+.bottom-grid {
+    display: grid;
+    grid-template-columns: 1.3fr 1fr;
+    gap: 22px;
+    margin-top: 25px;
+}
+
+.tips, .timer {
+    padding: 25px;
+}
+
+.tips h2, .timer h2 {
+    color: #527536;
+    margin-bottom: 18px;
+}
+
+.timer-display {
+    font-size: 43px;
+    font-weight: bold;
+    text-align: center;
+    color: #e0f6a0;
+    background: #263e16;
+    border: 3px solid #9dbd61;
+    border-radius: 15px;
+    padding: 15px;
+    margin: 15px 0;
+    text-shadow: 0 0 12px #b6e64e;
+}
+
+.timer-buttons {
+    text-align: center;
+}
+
+.timer-buttons button {
+    min-width: 65px;
+}
+
+/* Progress */
+
+.progress-area {
+    margin-top: 25px;
+    padding: 20px;
+}
+
+.progress-bar {
+    width: 100%;
+    height: 13px;
+    background: #dce6ce;
+    border-radius: 20px;
+    overflow: hidden;
+    margin-top: 12px;
+}
+
+.progress-fill {
+    width: 0%;
+    height: 100%;
+    background: linear-gradient(90deg,#86aa51,#3d6827);
+    transition: .3s;
+}
+
+/* Footer */
+
+footer {
+    max-width: 1200px;
+    margin: 35px auto 0;
+    text-align: center;
+    padding: 28px;
+    color: white;
+    background: linear-gradient(135deg,#789c48,#3e6329);
+    border-radius: 20px;
+    line-height: 2;
+}
+
+/* Responsive */
+
+@media(max-width:850px) {
+    .hero {
+        grid-template-columns: 1fr;
+    }
+
+    .grid, .bottom-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .steps-grid {
+        grid-template-columns: repeat(2,1fr);
+    }
+
+    .hero img {
+        height: 300px;
+    }
+}
+
+@media(max-width:550px) {
+    body {
+        padding: 10px;
+    }
+
+    nav {
+        justify-content: center;
+        text-align: center;
+    }
+
+    nav a {
+        display: inline-block;
+        margin: 5px;
+        font-size: 13px;
+    }
+
+    .hero h1 {
+        font-size: 32px;
+    }
+
+    .section-title {
+        font-size: 25px;
+    }
+
+    .steps-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .ingredient-content {
+        grid-template-columns: 95px 1fr;
+    }
+
+    .ingredient-content img {
+        width: 95px;
+        height: 130px;
+    }
+
+    .timer-display {
+        font-size: 35px;
+    }
+}
+
+/* Print */
+
+@media print {
+    body {
+        background: white;
+        padding: 0;
+    }
+
+    nav, button, .timer, .progress-area {
+        display: none;
+    }
+
+    .glass {
+        box-shadow: none;
+        background: white;
+        border: 1px solid #ddd;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- Navigation -->
+
+<nav class="glass">
+    <div class="logo">🍪 Sweet Kitchen</div>
+
+    <div>
+        <a href="#home">Home</a>
+        <a href="#ingredients">Ingredients</a>
+        <a href="#steps">Recipe</a>
+        <a href="#tips">Tips</a>
+    </div>
+</nav>
+
+<div class="container">
+
+<!-- Hero section -->
+
+<section class="hero glass" id="home">
+
+    <img
+    src="https://images.unsplash.com/photo-1499636136210-6f4ee915583e?w=900"
+    alt="Delicious homemade cookies">
+
+    <div>
+        <h1>💚 Pistachio Delight</h1>
+
+        <p>
+        Experience the delicious taste of homemade
+        pistachio stuffed cookies. These golden,
+        buttery treats have a soft outer layer and
+        a rich nutty filling. Perfect for celebrations
+        and special occasions!
+        </p>
+
+        <div class="details">
+            <div class="detail">⏱️<br>25 Min<br>Prep Time</div>
+            <div class="detail">🔥<br>20 Min<br>Cook Time</div>
+            <div class="detail">🍪<br>15<br>Pieces</div>
+        </div>
+
+        <button onclick="window.print()">🖨 Print Recipe</button>
+
+        <button class="secondary" onclick="startCooking()">
+            👩‍🍳 Start Cooking
+        </button>
+    </div>
+
+</section>
+
+<!-- Ingredients -->
+
+<h2 class="section-title" id="ingredients">
+    ✨ Ingredients
+</h2>
+
+<div class="grid">
+
+    <div class="card glass">
+        <h3>🥣 Outer Dough</h3>
+
+        <div class="ingredient-content">
+
+            <img
+            src="https://images.unsplash.com/photo-1627485937980-221c88ac04f9?w=400"
+            alt="Baking ingredients">
+
+            <ul>
+                <li><label class="ingredient"><input type="checkbox">1 cup semolina</label></li>
+                <li><label class="ingredient"><input type="checkbox">1 cup maida</label></li>
+                <li><label class="ingredient"><input type="checkbox">½ cup butter</label></li>
+                <li><label class="ingredient"><input type="checkbox">¼ cup powdered sugar</label></li>
+                <li><label class="ingredient"><input type="checkbox">¼ cup milk</label></li>
+                <li><label class="ingredient"><input type="checkbox">½ tsp baking powder</label></li>
+                <li><label class="ingredient"><input type="checkbox">Cardamom powder</label></li>
+                <li><label class="ingredient"><input type="checkbox">A pinch of salt</label></li>
+            </ul>
+
+        </div>
+    </div>
+
+    <div class="card glass">
+        <h3>🥜 Pistachio Filling</h3>
+
+        <div class="ingredient-content">
+
+            <img
+            src="https://images.unsplash.com/photo-1508061253366-f7da158b6d46?w=400"
+            alt="Pistachios">
+
+            <ul>
+                <li><label class="ingredient"><input type="checkbox">1 cup chopped pistachios</label></li>
+                <li><label class="ingredient"><input type="checkbox">3 tbsp powdered sugar</label></li>
+                <li><label class="ingredient"><input type="checkbox">1 tbsp melted butter</label></li>
+                <li><label class="ingredient"><input type="checkbox">½ tsp cardamom</label></li>
+                <li><label class="ingredient"><input type="checkbox">1 tbsp milk if needed</label></li>
+            </ul>
+
+        </div>
+    </div>
+
+</div>
+
+<!-- Progress bar -->
+
+<div class="progress-area glass">
+    <h3>🛒 Ingredient Preparation Progress</h3>
+    <p id="progressText">0 of 13 ingredients completed</p>
+
+    <div class="progress-bar">
+        <div class="progress-fill" id="progressFill"></div>
+    </div>
+</div>
+
+<!-- Preparation steps -->
+
+<h2 class="section-title" id="steps">
+    👩‍🍳 Preparation Method
+</h2>
+
+<div class="steps-grid">
+
+    <div class="step glass">
+        <h3><span class="number">01</span>Prepare Filling</h3>
+
+        <img
+        src="https://images.unsplash.com/photo-1599599810694-b5b37304c041?w=500"
+        alt="Nut filling">
+
+        <p>
+        Mix chopped pistachios, powdered sugar,
+        cardamom and melted butter. Make small
+        filling balls and keep aside.
+        </p>
+    </div>
+
+    <div class="step glass">
+        <h3><span class="number">02</span>Prepare Dough</h3>
+
+        <img
+        src="https://images.unsplash.com/photo-1555507036-ab1f4038808a?w=500"
+        alt="Cookie dough">
+
+        <p>
+        Mix semolina, flour, sugar, baking powder
+        and salt. Add butter and milk gradually.
+        Knead into soft dough and rest for 20 minutes.
+        </p>
+    </div>
+
+    <div class="step glass">
+        <h3><span class="number">03</span>Shape Cookies</h3>
+
+        <img
+        src="https://images.unsplash.com/photo-1606313564200-e75d5e30476c?w=500"
+        alt="Cookie preparation">
+
+        <p>
+        Divide dough into equal portions.
+        Flatten each portion and place the pistachio
+        filling in the centre. Seal carefully.
+        </p>
+    </div>
+
+    <div class="step glass">
+        <h3><span class="number">04</span>Bake Cookies</h3>
+
+        <img
+        src="https://images.unsplash.com/photo-1499636136210-6f4ee915583e?w=500"
+        alt="Baked cookies">
+
+        <p>
+        Preheat the oven to 180°C.
+        Place cookies on a baking tray.
+        Bake for 15–20 minutes until lightly golden.
+        </p>
+    </div>
+
+    <div class="step glass">
+        <h3><span class="number">05</span>Decorate & Serve</h3>
+
+        <img
+        src="https://images.unsplash.com/photo-1558961363-fa8fdf82db35?w=500"
+        alt="Decorated cookies">
+
+        <p>
+        Cool cookies completely. Decorate with
+        powdered sugar and chopped pistachios.
+        Serve with tea or coffee.
+        </p>
+    </div>
+
+</div>
+
+<!-- Tips and timer -->
+
+<div class="bottom-grid" id="tips">
+
+    <div class="tips glass">
+        <h2>💚 Special Cooking Tips</h2>
+
+        <ul>
+            <li>✔ Use fresh pistachios.</li>
+            <li>✔ Do not make the dough too sticky.</li>
+            <li>✔ Seal the filling properly.</li>
+            <li>✔ Avoid overbaking.</li>
+            <li>✔ Cool completely before serving.</li>
+            <li>✔ Store cookies in an airtight container.</li>
+        </ul>
+    </div>
+
+    <div class="timer glass">
+        <h2>⏱ Cooking Timer</h2>
+
+        <div class="timer-display" id="timer">20:00</div>
+
+        <div class="timer-buttons">
+            <button onclick="startTimer()">▶ Start</button>
+            <button class="secondary" onclick="pauseTimer()">⏸ Pause</button>
+            <button onclick="resetTimer()">↻ Reset</button>
+        </div>
+    </div>
+
+</div>
+
+</div>
+
+<!-- Footer -->
+
+<footer>
+    <h2>🍪 Sweet Kitchen</h2>
+    <p>Delicious Homemade Recipes</p>
+    <p>Made with Love ❤️ | © 2026</p>
+</footer>
+
+<script>
+
+// Start Cooking button
+
+function startCooking() {
+    alert("Let's start cooking! First prepare all your ingredients.");
+
+    document.getElementById("ingredients")
+        .scrollIntoView({behavior:"smooth"});
+}
+
+// Ingredient checklist and progress
+
+const checkboxes = document.querySelectorAll(
+    'input[type="checkbox"]'
+);
+
+function updateProgress() {
+
+    let completed = 0;
+
+    checkboxes.forEach(function(box) {
+
+        const label = box.closest(".ingredient");
+
+        if(box.checked) {
+            completed++;
+            label.classList.add("done");
+        } else {
+            label.classList.remove("done");
+        }
+
+    });
+
+    let percentage = (completed / checkboxes.length) * 100;
+
+    document.getElementById("progressFill").style.width =
+        percentage + "%";
+
+    document.getElementById("progressText").innerText =
+        completed + " of " + checkboxes.length +
+        " ingredients completed";
+}
+
+checkboxes.forEach(function(box) {
+    box.addEventListener("change", updateProgress);
+});
+
+// Cooking timer
+
+let totalSeconds = 20 * 60;
+let timerInterval = null;
+
+function displayTimer() {
+
+    let minutes = Math.floor(totalSeconds / 60);
+    let seconds = totalSeconds % 60;
+
+    document.getElementById("timer").innerText =
+        String(minutes).padStart(2,"0") + ":" +
+        String(seconds).padStart(2,"0");
+}
+
+function startTimer() {
+
+    if(timerInterval !== null || totalSeconds <= 0) {
+        return;
+    }
+
+    timerInterval = setInterval(function() {
+
+        totalSeconds--;
+
+        displayTimer();
+
+        if(totalSeconds <= 0) {
+
+            clearInterval(timerInterval);
+            timerInterval = null;
+
+            alert("🍪 Your 20-minute timer is complete!");
+        }
+
+    },1000);
+}
+
+function pauseTimer() {
+
+    clearInterval(timerInterval);
+    timerInterval = null;
+}
+
+function resetTimer() {
+
+    clearInterval(timerInterval);
+    timerInterval = null;
+
+    totalSeconds = 20 * 60;
+
+    displayTimer();
+}
+
+displayTimer();
+
+</script>
+
+</body>
+</html>
