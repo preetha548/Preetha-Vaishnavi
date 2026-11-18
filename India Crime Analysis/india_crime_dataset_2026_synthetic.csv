@@ -1,0 +1,1001 @@
+Crime_ID,State,District,Crime_Type,Crime_Category,Year,Month,Time,Cases_Registered,Crime_Severity,Case_Status
+CR20260001,Sikkim,Gyalshing,Cybercrime,Cyber Crime,2026,5,06:22,19,Medium,Closed
+CR20260002,Andhra Pradesh,Nellore,Assault,Violent Crime,2026,8,02:52,22,High,Chargesheet Filed
+CR20260003,Manipur,Bishnupur,Kidnapping,Violent Crime,2026,2,20:11,1,High,Chargesheet Filed
+CR20260004,Goa,Ponda,Burglary,Property Crime,2026,1,09:14,16,Medium,Closed
+CR20260005,Karnataka,Belagavi,Assault,Violent Crime,2026,5,08:17,7,High,Pending Trial
+CR20260006,Meghalaya,Nongpoh,Assault,Violent Crime,2026,10,08:01,21,High,Pending Trial
+CR20260007,Mizoram,Serchhip,Theft,Property Crime,2026,8,14:13,3,Low,Under Investigation
+CR20260008,Kerala,Kochi,Burglary,Property Crime,2026,6,09:53,4,Medium,Unreported/Unknown
+CR20260009,Jharkhand,Jamshedpur,Burglary,Property Crime,2026,10,03:30,14,Medium,Pending Trial
+CR20260010,Uttarakhand,Roorkee,Robbery,Property Crime,2026,5,23:40,13,High,Unreported/Unknown
+CR20260011,Madhya Pradesh,Ujjain,Theft,Property Crime,2026,7,08:00,24,Low,Pending Trial
+CR20260012,Rajasthan,Alwar,Cybercrime,Cyber Crime,2026,1,07:34,3,Medium,Under Investigation
+CR20260013,Uttar Pradesh,Kanpur,Burglary,Property Crime,2026,9,06:07,9,Medium,Pending Trial
+CR20260014,Dadra and Nagar Haveli and Daman and Diu,Silvassa,Theft,Property Crime,2026,7,23:34,5,Low,Pending Trial
+CR20260015,Goa,Vasco da Gama,Assault,Violent Crime,2026,3,04:13,15,High,Closed
+CR20260016,Tamil Nadu,Salem,Assault,Violent Crime,2026,7,08:14,15,High,Chargesheet Filed
+CR20260017,Haryana,Panipat,Theft,Property Crime,2026,7,16:31,20,Low,Pending Trial
+CR20260018,Jammu and Kashmir,Udhampur,Robbery,Property Crime,2026,11,03:31,13,High,Closed
+CR20260019,Goa,Mapusa,Kidnapping,Violent Crime,2026,9,20:27,6,High,Pending Trial
+CR20260020,Himachal Pradesh,Kangra,Cybercrime,Cyber Crime,2026,10,22:32,7,Medium,Under Investigation
+CR20260021,Arunachal Pradesh,Itanagar,Cybercrime,Cyber Crime,2026,9,02:05,7,Medium,Closed
+CR20260022,West Bengal,Asansol,Theft,Property Crime,2026,3,09:23,12,Low,Closed
+CR20260023,Puducherry,Yanam,Assault,Violent Crime,2026,4,16:57,17,High,Pending Trial
+CR20260024,Punjab,Mohali,Fraud,Economic Crime,2026,3,16:48,5,Medium,Under Investigation
+CR20260025,Maharashtra,Pune,Burglary,Property Crime,2026,7,04:00,1,Medium,Closed
+CR20260026,Maharashtra,Thane,Assault,Violent Crime,2026,6,22:54,4,High,Closed
+CR20260027,Odisha,Berhampur,Cybercrime,Cyber Crime,2026,5,19:05,2,Medium,Closed
+CR20260028,Assam,Guwahati,Theft,Property Crime,2026,11,05:28,16,Low,Closed
+CR20260029,Himachal Pradesh,Kullu,Fraud,Economic Crime,2026,3,02:19,19,Medium,Pending Trial
+CR20260030,Andaman and Nicobar Islands,Havelock,Burglary,Property Crime,2026,2,07:10,1,Medium,Pending Trial
+CR20260031,Meghalaya,Tura,Kidnapping,Violent Crime,2026,10,02:59,7,High,Chargesheet Filed
+CR20260032,Maharashtra,Mumbai,Theft,Property Crime,2026,12,04:31,5,Low,Closed
+CR20260033,West Bengal,Kolkata,Burglary,Property Crime,2026,3,19:53,24,Medium,Under Investigation
+CR20260034,Manipur,Bishnupur,Theft,Property Crime,2026,8,03:39,6,Low,Pending Trial
+CR20260035,Lakshadweep,Agatti,Kidnapping,Violent Crime,2026,9,17:17,14,High,Chargesheet Filed
+CR20260036,Lakshadweep,Kavaratti,Theft,Property Crime,2026,1,03:13,1,Low,Unreported/Unknown
+CR20260037,Himachal Pradesh,Una,Fraud,Economic Crime,2026,1,15:58,12,Medium,Closed
+CR20260038,Goa,Ponda,Assault,Violent Crime,2026,8,01:29,21,High,Under Investigation
+CR20260039,Mizoram,Aizawl,Theft,Property Crime,2026,3,03:48,3,Low,Under Investigation
+CR20260040,Mizoram,Kolasib,Robbery,Property Crime,2026,6,02:36,9,High,Unreported/Unknown
+CR20260041,Ladakh,Leh,Murder,Violent Crime,2026,4,20:32,23,Critical,Closed
+CR20260042,Jharkhand,Ranchi,Burglary,Property Crime,2026,6,02:45,8,Medium,Chargesheet Filed
+CR20260043,Puducherry,Mahe,Murder,Violent Crime,2026,2,09:25,2,Critical,Under Investigation
+CR20260044,Andaman and Nicobar Islands,Port Blair,Fraud,Economic Crime,2026,7,09:25,23,Medium,Closed
+CR20260045,Meghalaya,Baghmara,Theft,Property Crime,2026,7,03:19,13,Low,Under Investigation
+CR20260046,Rajasthan,Bikaner,Cybercrime,Cyber Crime,2026,12,18:14,23,Medium,Pending Trial
+CR20260047,Dadra and Nagar Haveli and Daman and Diu,Daman,Burglary,Property Crime,2026,6,18:57,22,Medium,Chargesheet Filed
+CR20260048,Goa,Panaji,Theft,Property Crime,2026,6,14:42,22,Low,Pending Trial
+CR20260049,Andaman and Nicobar Islands,Havelock,Fraud,Economic Crime,2026,12,11:38,5,Medium,Pending Trial
+CR20260050,Delhi,West Delhi,Theft,Property Crime,2026,3,22:51,8,Low,Unreported/Unknown
+CR20260051,Jammu and Kashmir,Anantnag,Cybercrime,Cyber Crime,2026,3,22:25,5,Medium,Unreported/Unknown
+CR20260052,Tripura,Agartala,Fraud,Economic Crime,2026,1,00:33,15,Medium,Under Investigation
+CR20260053,Tamil Nadu,Thanjavur,Assault,Violent Crime,2026,5,21:02,23,High,Pending Trial
+CR20260054,Nagaland,Mokokchung,Fraud,Economic Crime,2026,9,13:46,5,Medium,Under Investigation
+CR20260055,Jammu and Kashmir,Baramulla,Theft,Property Crime,2026,10,15:38,21,Low,Pending Trial
+CR20260056,Andaman and Nicobar Islands,Car Nicobar,Burglary,Property Crime,2026,7,09:04,22,Medium,Pending Trial
+CR20260057,Dadra and Nagar Haveli and Daman and Diu,Diu,Theft,Property Crime,2026,3,00:04,24,Low,Unreported/Unknown
+CR20260058,Kerala,Palakkad,Theft,Property Crime,2026,7,01:27,17,Low,Closed
+CR20260059,Himachal Pradesh,Kullu,Burglary,Property Crime,2026,12,00:50,1,Medium,Closed
+CR20260060,Punjab,Jalandhar,Cybercrime,Cyber Crime,2026,8,09:43,11,Medium,Unreported/Unknown
+CR20260061,Haryana,Hisar,Theft,Property Crime,2026,2,18:34,18,Low,Under Investigation
+CR20260062,Nagaland,Tuensang,Cybercrime,Cyber Crime,2026,10,01:40,19,Medium,Pending Trial
+CR20260063,Andhra Pradesh,Nellore,Theft,Property Crime,2026,9,20:09,4,Low,Unreported/Unknown
+CR20260064,West Bengal,Darjeeling,Murder,Violent Crime,2026,4,17:38,17,Critical,Unreported/Unknown
+CR20260065,Punjab,Amritsar,Fraud,Economic Crime,2026,7,02:29,9,Medium,Under Investigation
+CR20260066,Himachal Pradesh,Shimla,Robbery,Property Crime,2026,11,18:35,17,High,Pending Trial
+CR20260067,Chhattisgarh,Korba,Burglary,Property Crime,2026,12,13:18,20,Medium,Chargesheet Filed
+CR20260068,Assam,Tezpur,Theft,Property Crime,2026,12,19:35,21,Low,Unreported/Unknown
+CR20260069,Tripura,Agartala,Theft,Property Crime,2026,5,09:13,7,Low,Chargesheet Filed
+CR20260070,Uttar Pradesh,Varanasi,Cybercrime,Cyber Crime,2026,11,10:46,18,Medium,Pending Trial
+CR20260071,West Bengal,Howrah,Cybercrime,Cyber Crime,2026,1,05:45,7,Medium,Unreported/Unknown
+CR20260072,West Bengal,Howrah,Kidnapping,Violent Crime,2026,2,04:37,5,High,Closed
+CR20260073,Rajasthan,Ajmer,Burglary,Property Crime,2026,4,16:24,7,Medium,Unreported/Unknown
+CR20260074,Kerala,Thrissur,Burglary,Property Crime,2026,3,11:38,22,Medium,Closed
+CR20260075,Telangana,Warangal,Robbery,Property Crime,2026,3,12:49,13,High,Pending Trial
+CR20260076,Himachal Pradesh,Kullu,Fraud,Economic Crime,2026,9,06:02,1,Medium,Unreported/Unknown
+CR20260077,Mizoram,Aizawl,Burglary,Property Crime,2026,1,23:37,1,Medium,Unreported/Unknown
+CR20260078,Delhi,North Delhi,Theft,Property Crime,2026,5,15:20,22,Low,Closed
+CR20260079,Lakshadweep,Minicoy,Murder,Violent Crime,2026,2,14:48,9,Critical,Under Investigation
+CR20260080,Karnataka,Ballari,Fraud,Economic Crime,2026,11,11:31,10,Medium,Pending Trial
+CR20260081,Manipur,Bishnupur,Robbery,Property Crime,2026,10,03:57,8,High,Pending Trial
+CR20260082,Mizoram,Serchhip,Burglary,Property Crime,2026,4,21:08,17,Medium,Under Investigation
+CR20260083,Himachal Pradesh,Solan,Fraud,Economic Crime,2026,3,05:50,18,Medium,Unreported/Unknown
+CR20260084,Meghalaya,Tura,Theft,Property Crime,2026,2,12:54,5,Low,Under Investigation
+CR20260085,Tamil Nadu,Madurai,Murder,Violent Crime,2026,1,10:25,21,Critical,Under Investigation
+CR20260086,Goa,Vasco da Gama,Cybercrime,Cyber Crime,2026,1,01:34,9,Medium,Under Investigation
+CR20260087,Uttarakhand,Almora,Cybercrime,Cyber Crime,2026,1,04:37,5,Medium,Closed
+CR20260088,Tripura,Belonia,Fraud,Economic Crime,2026,10,09:16,19,Medium,Unreported/Unknown
+CR20260089,Bihar,Patna,Theft,Property Crime,2026,3,12:03,13,Low,Under Investigation
+CR20260090,Puducherry,Karaikal,Burglary,Property Crime,2026,8,06:53,2,Medium,Closed
+CR20260091,Punjab,Amritsar,Assault,Violent Crime,2026,5,16:46,16,High,Unreported/Unknown
+CR20260092,Uttarakhand,Haldwani,Fraud,Economic Crime,2026,3,06:59,6,Medium,Chargesheet Filed
+CR20260093,Dadra and Nagar Haveli and Daman and Diu,Daman,Burglary,Property Crime,2026,11,18:51,2,Medium,Under Investigation
+CR20260094,Andaman and Nicobar Islands,Havelock,Kidnapping,Violent Crime,2026,7,09:16,19,High,Unreported/Unknown
+CR20260095,Sikkim,Mangan,Burglary,Property Crime,2026,1,09:59,17,Medium,Pending Trial
+CR20260096,Manipur,Ukhrul,Murder,Violent Crime,2026,5,01:42,13,Critical,Closed
+CR20260097,Andhra Pradesh,Guntur,Assault,Violent Crime,2026,7,22:30,16,High,Closed
+CR20260098,Assam,Jorhat,Theft,Property Crime,2026,8,02:26,3,Low,Unreported/Unknown
+CR20260099,Puducherry,Karaikal,Assault,Violent Crime,2026,3,18:04,21,High,Chargesheet Filed
+CR20260100,Mizoram,Lunglei,Theft,Property Crime,2026,5,05:04,1,Low,Under Investigation
+CR20260101,Punjab,Ludhiana,Kidnapping,Violent Crime,2026,1,13:26,13,High,Under Investigation
+CR20260102,Nagaland,Kohima,Assault,Violent Crime,2026,6,14:29,24,High,Closed
+CR20260103,Odisha,Cuttack,Cybercrime,Cyber Crime,2026,8,16:51,3,Medium,Chargesheet Filed
+CR20260104,Mizoram,Lunglei,Fraud,Economic Crime,2026,11,23:06,19,Medium,Closed
+CR20260105,Tripura,Dharmanagar,Assault,Violent Crime,2026,2,05:50,3,High,Under Investigation
+CR20260106,Mizoram,Lunglei,Assault,Violent Crime,2026,1,06:25,22,High,Pending Trial
+CR20260107,Meghalaya,Shillong,Burglary,Property Crime,2026,9,03:02,10,Medium,Under Investigation
+CR20260108,Jharkhand,Giridih,Assault,Violent Crime,2026,6,01:07,15,High,Under Investigation
+CR20260109,Chhattisgarh,Bilaspur,Robbery,Property Crime,2026,6,19:58,2,High,Closed
+CR20260110,Delhi,West Delhi,Kidnapping,Violent Crime,2026,5,21:05,21,High,Pending Trial
+CR20260111,Jammu and Kashmir,Anantnag,Theft,Property Crime,2026,8,22:54,9,Low,Closed
+CR20260112,Ladakh,Kargil,Fraud,Economic Crime,2026,8,05:19,2,Medium,Pending Trial
+CR20260113,Andhra Pradesh,Tirupati,Theft,Property Crime,2026,6,16:37,24,Low,Closed
+CR20260114,Maharashtra,Kolhapur,Assault,Violent Crime,2026,10,18:43,13,High,Unreported/Unknown
+CR20260115,Delhi,North Delhi,Robbery,Property Crime,2026,3,19:19,1,High,Under Investigation
+CR20260116,Punjab,Pathankot,Fraud,Economic Crime,2026,6,04:35,11,Medium,Unreported/Unknown
+CR20260117,Karnataka,Bengaluru,Burglary,Property Crime,2026,8,09:22,5,Medium,Chargesheet Filed
+CR20260118,Maharashtra,Thane,Fraud,Economic Crime,2026,4,00:08,5,Medium,Under Investigation
+CR20260119,West Bengal,Darjeeling,Assault,Violent Crime,2026,6,22:29,3,High,Under Investigation
+CR20260120,Uttar Pradesh,Meerut,Fraud,Economic Crime,2026,2,13:55,21,Medium,Closed
+CR20260121,West Bengal,Howrah,Theft,Property Crime,2026,3,00:21,8,Low,Pending Trial
+CR20260122,Sikkim,Gyalshing,Cybercrime,Cyber Crime,2026,12,02:36,21,Medium,Unreported/Unknown
+CR20260123,Chhattisgarh,Durg,Fraud,Economic Crime,2026,4,12:24,10,Medium,Chargesheet Filed
+CR20260124,Rajasthan,Alwar,Fraud,Economic Crime,2026,3,05:22,1,Medium,Under Investigation
+CR20260125,Meghalaya,Shillong,Kidnapping,Violent Crime,2026,7,01:52,14,High,Closed
+CR20260126,Delhi,Central Delhi,Robbery,Property Crime,2026,3,07:51,10,High,Unreported/Unknown
+CR20260127,Andaman and Nicobar Islands,Havelock,Fraud,Economic Crime,2026,11,03:56,6,Medium,Under Investigation
+CR20260128,Arunachal Pradesh,Itanagar,Theft,Property Crime,2026,6,01:04,10,Low,Closed
+CR20260129,Telangana,Hyderabad,Theft,Property Crime,2026,4,12:51,24,Low,Unreported/Unknown
+CR20260130,Rajasthan,Ajmer,Assault,Violent Crime,2026,4,11:01,13,High,Closed
+CR20260131,Ladakh,Leh,Fraud,Economic Crime,2026,4,10:19,5,Medium,Closed
+CR20260132,Telangana,Rangareddy,Theft,Property Crime,2026,7,14:42,14,Low,Pending Trial
+CR20260133,Nagaland,Tuensang,Theft,Property Crime,2026,2,00:39,15,Low,Pending Trial
+CR20260134,Punjab,Patiala,Assault,Violent Crime,2026,4,04:36,24,High,Chargesheet Filed
+CR20260135,Mizoram,Lunglei,Theft,Property Crime,2026,3,13:40,8,Low,Closed
+CR20260136,Tripura,Agartala,Theft,Property Crime,2026,5,13:53,4,Low,Under Investigation
+CR20260137,Tamil Nadu,Erode,Robbery,Property Crime,2026,3,07:20,15,High,Under Investigation
+CR20260138,West Bengal,Howrah,Cybercrime,Cyber Crime,2026,5,08:51,3,Medium,Under Investigation
+CR20260139,Nagaland,Mokokchung,Kidnapping,Violent Crime,2026,7,17:26,2,High,Under Investigation
+CR20260140,Manipur,Imphal,Assault,Violent Crime,2026,6,20:32,24,High,Under Investigation
+CR20260141,Sikkim,Gyalshing,Fraud,Economic Crime,2026,12,17:48,21,Medium,Under Investigation
+CR20260142,Himachal Pradesh,Shimla,Theft,Property Crime,2026,6,21:48,8,Low,Under Investigation
+CR20260143,Puducherry,Puducherry,Burglary,Property Crime,2026,3,23:31,19,Medium,Unreported/Unknown
+CR20260144,Sikkim,Gyalshing,Theft,Property Crime,2026,3,14:01,18,Low,Pending Trial
+CR20260145,Jammu and Kashmir,Anantnag,Theft,Property Crime,2026,1,07:38,23,Low,Closed
+CR20260146,Puducherry,Karaikal,Robbery,Property Crime,2026,2,00:54,23,High,Pending Trial
+CR20260147,Puducherry,Karaikal,Cybercrime,Cyber Crime,2026,8,00:02,23,Medium,Closed
+CR20260148,Rajasthan,Bikaner,Robbery,Property Crime,2026,5,02:32,19,High,Pending Trial
+CR20260149,Rajasthan,Jodhpur,Cybercrime,Cyber Crime,2026,8,13:45,24,Medium,Closed
+CR20260150,Assam,Jorhat,Kidnapping,Violent Crime,2026,6,20:30,14,High,Chargesheet Filed
+CR20260151,Gujarat,Surat,Theft,Property Crime,2026,7,20:47,19,Low,Unreported/Unknown
+CR20260152,Chhattisgarh,Korba,Fraud,Economic Crime,2026,2,01:46,1,Medium,Unreported/Unknown
+CR20260153,Himachal Pradesh,Mandi,Robbery,Property Crime,2026,2,02:54,23,High,Pending Trial
+CR20260154,Himachal Pradesh,Solan,Burglary,Property Crime,2026,9,01:43,21,Medium,Closed
+CR20260155,Goa,Mapusa,Theft,Property Crime,2026,10,23:22,14,Low,Under Investigation
+CR20260156,Odisha,Balasore,Fraud,Economic Crime,2026,2,12:08,7,Medium,Closed
+CR20260157,Kerala,Kochi,Assault,Violent Crime,2026,2,22:10,5,High,Chargesheet Filed
+CR20260158,Uttarakhand,Haridwar,Assault,Violent Crime,2026,6,01:36,17,High,Under Investigation
+CR20260159,Punjab,Pathankot,Theft,Property Crime,2026,6,20:26,6,Low,Chargesheet Filed
+CR20260160,Punjab,Bathinda,Fraud,Economic Crime,2026,7,09:16,13,Medium,Chargesheet Filed
+CR20260161,Uttarakhand,Nainital,Cybercrime,Cyber Crime,2026,2,21:00,11,Medium,Closed
+CR20260162,Nagaland,Tuensang,Burglary,Property Crime,2026,8,10:48,4,Medium,Closed
+CR20260163,Lakshadweep,Agatti,Assault,Violent Crime,2026,8,21:04,22,High,Under Investigation
+CR20260164,Himachal Pradesh,Mandi,Assault,Violent Crime,2026,11,16:42,13,High,Chargesheet Filed
+CR20260165,West Bengal,Howrah,Assault,Violent Crime,2026,9,08:16,8,High,Under Investigation
+CR20260166,Meghalaya,Baghmara,Fraud,Economic Crime,2026,10,06:02,3,Medium,Chargesheet Filed
+CR20260167,Jammu and Kashmir,Jammu,Theft,Property Crime,2026,5,11:16,17,Low,Chargesheet Filed
+CR20260168,Punjab,Mohali,Murder,Violent Crime,2026,3,07:16,21,Critical,Unreported/Unknown
+CR20260169,Assam,Nagaon,Murder,Violent Crime,2026,2,11:58,15,Critical,Chargesheet Filed
+CR20260170,Nagaland,Dimapur,Assault,Violent Crime,2026,1,22:21,21,High,Chargesheet Filed
+CR20260171,Gujarat,Jamnagar,Theft,Property Crime,2026,7,08:47,19,Low,Chargesheet Filed
+CR20260172,Tripura,Belonia,Assault,Violent Crime,2026,4,06:17,3,High,Closed
+CR20260173,Odisha,Balasore,Assault,Violent Crime,2026,3,11:33,13,High,Closed
+CR20260174,Nagaland,Wokha,Assault,Violent Crime,2026,8,16:28,4,High,Under Investigation
+CR20260175,Haryana,Faridabad,Assault,Violent Crime,2026,10,11:54,2,High,Closed
+CR20260176,Dadra and Nagar Haveli and Daman and Diu,Daman,Theft,Property Crime,2026,2,02:45,7,Low,Pending Trial
+CR20260177,Sikkim,Gangtok,Burglary,Property Crime,2026,5,11:55,16,Medium,Pending Trial
+CR20260178,Telangana,Rangareddy,Burglary,Property Crime,2026,7,19:00,5,Medium,Under Investigation
+CR20260179,Karnataka,Belagavi,Burglary,Property Crime,2026,2,03:36,18,Medium,Under Investigation
+CR20260180,Tamil Nadu,Salem,Murder,Violent Crime,2026,9,14:56,17,Critical,Pending Trial
+CR20260181,Punjab,Jalandhar,Kidnapping,Violent Crime,2026,5,10:38,6,High,Closed
+CR20260182,Haryana,Faridabad,Theft,Property Crime,2026,4,03:19,8,Low,Unreported/Unknown
+CR20260183,Telangana,Nizamabad,Theft,Property Crime,2026,10,08:57,17,Low,Closed
+CR20260184,Delhi,West Delhi,Theft,Property Crime,2026,7,16:34,9,Low,Pending Trial
+CR20260185,Lakshadweep,Agatti,Assault,Violent Crime,2026,1,23:31,3,High,Closed
+CR20260186,Haryana,Rohtak,Assault,Violent Crime,2026,9,03:36,14,High,Chargesheet Filed
+CR20260187,Andhra Pradesh,Visakhapatnam,Burglary,Property Crime,2026,11,08:24,3,Medium,Chargesheet Filed
+CR20260188,Punjab,Ludhiana,Cybercrime,Cyber Crime,2026,8,04:58,11,Medium,Chargesheet Filed
+CR20260189,Manipur,Bishnupur,Burglary,Property Crime,2026,8,04:25,16,Medium,Chargesheet Filed
+CR20260190,Delhi,West Delhi,Theft,Property Crime,2026,12,04:16,13,Low,Chargesheet Filed
+CR20260191,Puducherry,Karaikal,Assault,Violent Crime,2026,10,02:39,24,High,Chargesheet Filed
+CR20260192,Arunachal Pradesh,Bomdila,Robbery,Property Crime,2026,6,23:15,19,High,Pending Trial
+CR20260193,Andaman and Nicobar Islands,Diglipur,Cybercrime,Cyber Crime,2026,9,12:44,11,Medium,Under Investigation
+CR20260194,Arunachal Pradesh,Ziro,Theft,Property Crime,2026,11,12:30,19,Low,Chargesheet Filed
+CR20260195,Telangana,Nizamabad,Theft,Property Crime,2026,7,17:01,4,Low,Unreported/Unknown
+CR20260196,Sikkim,Mangan,Theft,Property Crime,2026,11,16:16,9,Low,Chargesheet Filed
+CR20260197,Manipur,Ukhrul,Cybercrime,Cyber Crime,2026,6,18:09,7,Medium,Under Investigation
+CR20260198,Puducherry,Karaikal,Burglary,Property Crime,2026,12,14:28,5,Medium,Pending Trial
+CR20260199,Himachal Pradesh,Kullu,Theft,Property Crime,2026,11,16:21,12,Low,Under Investigation
+CR20260200,Telangana,Rangareddy,Burglary,Property Crime,2026,10,23:49,18,Medium,Unreported/Unknown
+CR20260201,Punjab,Patiala,Fraud,Economic Crime,2026,4,11:28,7,Medium,Closed
+CR20260202,Andaman and Nicobar Islands,Car Nicobar,Burglary,Property Crime,2026,3,10:25,23,Medium,Chargesheet Filed
+CR20260203,Dadra and Nagar Haveli and Daman and Diu,Silvassa,Kidnapping,Violent Crime,2026,3,12:38,9,High,Unreported/Unknown
+CR20260204,Sikkim,Gyalshing,Theft,Property Crime,2026,2,14:19,14,Low,Closed
+CR20260205,Arunachal Pradesh,Pasighat,Murder,Violent Crime,2026,12,23:46,21,Critical,Unreported/Unknown
+CR20260206,Himachal Pradesh,Kangra,Fraud,Economic Crime,2026,5,02:57,1,Medium,Pending Trial
+CR20260207,Madhya Pradesh,Indore,Theft,Property Crime,2026,1,23:17,12,Low,Pending Trial
+CR20260208,Assam,Silchar,Murder,Violent Crime,2026,9,16:07,21,Critical,Closed
+CR20260209,Gujarat,Vadodara,Cybercrime,Cyber Crime,2026,12,20:59,24,Medium,Chargesheet Filed
+CR20260210,Karnataka,Hubballi,Cybercrime,Cyber Crime,2026,9,13:16,7,Medium,Pending Trial
+CR20260211,Himachal Pradesh,Kullu,Assault,Violent Crime,2026,9,21:52,22,High,Unreported/Unknown
+CR20260212,Maharashtra,Solapur,Burglary,Property Crime,2026,1,07:17,21,Medium,Chargesheet Filed
+CR20260213,Ladakh,Kargil,Robbery,Property Crime,2026,9,00:40,6,High,Closed
+CR20260214,Goa,Vasco da Gama,Theft,Property Crime,2026,1,11:31,14,Low,Pending Trial
+CR20260215,Himachal Pradesh,Shimla,Assault,Violent Crime,2026,2,00:32,2,High,Under Investigation
+CR20260216,Haryana,Ambala,Theft,Property Crime,2026,4,21:01,7,Low,Chargesheet Filed
+CR20260217,Madhya Pradesh,Indore,Theft,Property Crime,2026,12,16:10,8,Low,Unreported/Unknown
+CR20260218,Karnataka,Mangaluru,Theft,Property Crime,2026,6,08:30,7,Low,Under Investigation
+CR20260219,Punjab,Ludhiana,Assault,Violent Crime,2026,4,14:10,7,High,Pending Trial
+CR20260220,Assam,Jorhat,Assault,Violent Crime,2026,6,02:59,9,High,Chargesheet Filed
+CR20260221,Bihar,Muzaffarpur,Fraud,Economic Crime,2026,12,22:12,12,Medium,Under Investigation
+CR20260222,Chhattisgarh,Jagdalpur,Assault,Violent Crime,2026,8,22:54,21,High,Closed
+CR20260223,Jharkhand,Deoghar,Fraud,Economic Crime,2026,6,04:40,24,Medium,Closed
+CR20260224,Karnataka,Hubballi,Theft,Property Crime,2026,3,21:32,15,Low,Pending Trial
+CR20260225,Jammu and Kashmir,Udhampur,Fraud,Economic Crime,2026,8,19:03,5,Medium,Pending Trial
+CR20260226,Himachal Pradesh,Kullu,Theft,Property Crime,2026,1,18:35,9,Low,Chargesheet Filed
+CR20260227,Dadra and Nagar Haveli and Daman and Diu,Daman,Assault,Violent Crime,2026,4,05:41,7,High,Closed
+CR20260228,Punjab,Jalandhar,Assault,Violent Crime,2026,8,20:32,15,High,Closed
+CR20260229,Nagaland,Wokha,Kidnapping,Violent Crime,2026,7,09:13,12,High,Chargesheet Filed
+CR20260230,Uttar Pradesh,Meerut,Assault,Violent Crime,2026,6,14:55,14,High,Under Investigation
+CR20260231,Himachal Pradesh,Dharamshala,Theft,Property Crime,2026,1,01:36,3,Low,Unreported/Unknown
+CR20260232,Tamil Nadu,Thanjavur,Assault,Violent Crime,2026,4,12:46,23,High,Closed
+CR20260233,Telangana,Nizamabad,Burglary,Property Crime,2026,10,09:29,12,Medium,Under Investigation
+CR20260234,Tamil Nadu,Salem,Robbery,Property Crime,2026,11,11:56,1,High,Pending Trial
+CR20260235,Mizoram,Aizawl,Assault,Violent Crime,2026,5,11:48,5,High,Under Investigation
+CR20260236,Mizoram,Serchhip,Assault,Violent Crime,2026,4,17:01,14,High,Under Investigation
+CR20260237,Himachal Pradesh,Dharamshala,Theft,Property Crime,2026,7,02:36,6,Low,Unreported/Unknown
+CR20260238,Uttar Pradesh,Lucknow,Assault,Violent Crime,2026,12,09:52,20,High,Chargesheet Filed
+CR20260239,Manipur,Thoubal,Theft,Property Crime,2026,2,17:30,7,Low,Closed
+CR20260240,Tripura,Kailashahar,Assault,Violent Crime,2026,7,12:15,20,High,Chargesheet Filed
+CR20260241,Rajasthan,Jodhpur,Theft,Property Crime,2026,7,07:04,6,Low,Chargesheet Filed
+CR20260242,Tamil Nadu,Erode,Murder,Violent Crime,2026,11,09:17,18,Critical,Under Investigation
+CR20260243,Nagaland,Kohima,Theft,Property Crime,2026,8,13:32,4,Low,Under Investigation
+CR20260244,Chhattisgarh,Jagdalpur,Fraud,Economic Crime,2026,5,15:40,5,Medium,Chargesheet Filed
+CR20260245,Mizoram,Lunglei,Murder,Violent Crime,2026,6,08:40,1,Critical,Under Investigation
+CR20260246,Haryana,Gurugram,Theft,Property Crime,2026,9,10:33,4,Low,Unreported/Unknown
+CR20260247,Kerala,Kollam,Burglary,Property Crime,2026,2,17:40,13,Medium,Closed
+CR20260248,Andhra Pradesh,Visakhapatnam,Theft,Property Crime,2026,6,06:14,21,Low,Under Investigation
+CR20260249,Punjab,Ludhiana,Burglary,Property Crime,2026,5,18:48,1,Medium,Under Investigation
+CR20260250,Lakshadweep,Agatti,Theft,Property Crime,2026,3,07:13,14,Low,Chargesheet Filed
+CR20260251,Maharashtra,Aurangabad,Assault,Violent Crime,2026,5,07:01,16,High,Pending Trial
+CR20260252,Sikkim,Namchi,Theft,Property Crime,2026,5,01:36,16,Low,Pending Trial
+CR20260253,Madhya Pradesh,Gwalior,Fraud,Economic Crime,2026,6,13:43,18,Medium,Closed
+CR20260254,Uttarakhand,Almora,Burglary,Property Crime,2026,5,14:10,4,Medium,Closed
+CR20260255,Madhya Pradesh,Jabalpur,Kidnapping,Violent Crime,2026,6,18:13,2,High,Unreported/Unknown
+CR20260256,Kerala,Palakkad,Assault,Violent Crime,2026,11,14:07,3,High,Chargesheet Filed
+CR20260257,Jammu and Kashmir,Jammu,Burglary,Property Crime,2026,4,10:30,7,Medium,Pending Trial
+CR20260258,Telangana,Adilabad,Assault,Violent Crime,2026,7,23:41,17,High,Unreported/Unknown
+CR20260259,Himachal Pradesh,Kullu,Theft,Property Crime,2026,6,00:55,12,Low,Unreported/Unknown
+CR20260260,Haryana,Karnal,Fraud,Economic Crime,2026,5,21:25,9,Medium,Under Investigation
+CR20260261,Madhya Pradesh,Indore,Theft,Property Crime,2026,9,09:23,8,Low,Under Investigation
+CR20260262,Nagaland,Mokokchung,Cybercrime,Cyber Crime,2026,2,23:35,19,Medium,Pending Trial
+CR20260263,Telangana,Hyderabad,Theft,Property Crime,2026,4,09:54,1,Low,Chargesheet Filed
+CR20260264,Uttar Pradesh,Ghaziabad,Theft,Property Crime,2026,12,01:54,1,Low,Unreported/Unknown
+CR20260265,Odisha,Balasore,Theft,Property Crime,2026,3,06:09,11,Low,Under Investigation
+CR20260266,Bihar,Darbhanga,Assault,Violent Crime,2026,9,01:06,3,High,Unreported/Unknown
+CR20260267,Jharkhand,Dhanbad,Burglary,Property Crime,2026,7,08:10,17,Medium,Pending Trial
+CR20260268,Chhattisgarh,Korba,Fraud,Economic Crime,2026,10,06:45,13,Medium,Pending Trial
+CR20260269,Andaman and Nicobar Islands,Havelock,Theft,Property Crime,2026,8,00:40,6,Low,Pending Trial
+CR20260270,Haryana,Gurugram,Cybercrime,Cyber Crime,2026,12,04:26,12,Medium,Unreported/Unknown
+CR20260271,Rajasthan,Bikaner,Assault,Violent Crime,2026,3,21:57,12,High,Closed
+CR20260272,Goa,Margao,Murder,Violent Crime,2026,2,05:34,17,Critical,Chargesheet Filed
+CR20260273,Tripura,Kailashahar,Theft,Property Crime,2026,12,03:12,5,Low,Unreported/Unknown
+CR20260274,Ladakh,Leh,Theft,Property Crime,2026,10,22:11,16,Low,Under Investigation
+CR20260275,Assam,Jorhat,Murder,Violent Crime,2026,3,15:22,13,Critical,Pending Trial
+CR20260276,Uttar Pradesh,Agra,Kidnapping,Violent Crime,2026,12,00:19,21,High,Chargesheet Filed
+CR20260277,Rajasthan,Alwar,Cybercrime,Cyber Crime,2026,5,15:37,12,Medium,Pending Trial
+CR20260278,Dadra and Nagar Haveli and Daman and Diu,Silvassa,Theft,Property Crime,2026,1,22:44,18,Low,Chargesheet Filed
+CR20260279,Uttarakhand,Haridwar,Kidnapping,Violent Crime,2026,9,00:02,11,High,Pending Trial
+CR20260280,Tripura,Udaipur,Assault,Violent Crime,2026,7,05:21,3,High,Closed
+CR20260281,Madhya Pradesh,Rewa,Assault,Violent Crime,2026,4,09:46,12,High,Under Investigation
+CR20260282,Jharkhand,Hazaribagh,Burglary,Property Crime,2026,8,09:05,14,Medium,Closed
+CR20260283,Assam,Tinsukia,Robbery,Property Crime,2026,9,14:34,21,High,Chargesheet Filed
+CR20260284,Arunachal Pradesh,Tawang,Theft,Property Crime,2026,4,17:24,10,Low,Chargesheet Filed
+CR20260285,Meghalaya,Baghmara,Cybercrime,Cyber Crime,2026,4,13:45,1,Medium,Unreported/Unknown
+CR20260286,Karnataka,Mangaluru,Burglary,Property Crime,2026,9,12:33,21,Medium,Unreported/Unknown
+CR20260287,Dadra and Nagar Haveli and Daman and Diu,Silvassa,Theft,Property Crime,2026,12,11:30,13,Low,Pending Trial
+CR20260288,Jharkhand,Hazaribagh,Theft,Property Crime,2026,6,10:59,2,Low,Closed
+CR20260289,Ladakh,Leh,Assault,Violent Crime,2026,2,09:10,2,High,Chargesheet Filed
+CR20260290,Ladakh,Kargil,Robbery,Property Crime,2026,7,18:34,9,High,Unreported/Unknown
+CR20260291,West Bengal,Siliguri,Robbery,Property Crime,2026,3,06:15,16,High,Pending Trial
+CR20260292,Andaman and Nicobar Islands,Havelock,Fraud,Economic Crime,2026,8,16:38,5,Medium,Pending Trial
+CR20260293,Sikkim,Mangan,Fraud,Economic Crime,2026,6,06:36,18,Medium,Pending Trial
+CR20260294,Lakshadweep,Minicoy,Assault,Violent Crime,2026,6,13:36,7,High,Unreported/Unknown
+CR20260295,Goa,Ponda,Theft,Property Crime,2026,2,20:37,22,Low,Unreported/Unknown
+CR20260296,Telangana,Adilabad,Theft,Property Crime,2026,7,04:12,1,Low,Unreported/Unknown
+CR20260297,Nagaland,Dimapur,Assault,Violent Crime,2026,5,17:44,5,High,Pending Trial
+CR20260298,Odisha,Puri,Robbery,Property Crime,2026,11,20:54,20,High,Unreported/Unknown
+CR20260299,Nagaland,Wokha,Cybercrime,Cyber Crime,2026,12,17:34,8,Medium,Under Investigation
+CR20260300,Sikkim,Mangan,Cybercrime,Cyber Crime,2026,10,20:12,10,Medium,Under Investigation
+CR20260301,Odisha,Bhubaneswar,Kidnapping,Violent Crime,2026,2,15:09,1,High,Chargesheet Filed
+CR20260302,Uttarakhand,Nainital,Fraud,Economic Crime,2026,2,07:07,22,Medium,Under Investigation
+CR20260303,Madhya Pradesh,Bhopal,Theft,Property Crime,2026,8,12:04,19,Low,Pending Trial
+CR20260304,Tamil Nadu,Erode,Fraud,Economic Crime,2026,8,22:00,11,Medium,Unreported/Unknown
+CR20260305,Manipur,Thoubal,Theft,Property Crime,2026,5,19:39,21,Low,Chargesheet Filed
+CR20260306,Ladakh,Kargil,Murder,Violent Crime,2026,4,14:06,19,Critical,Closed
+CR20260307,Mizoram,Champhai,Theft,Property Crime,2026,5,04:31,22,Low,Chargesheet Filed
+CR20260308,Puducherry,Yanam,Murder,Violent Crime,2026,8,07:01,9,Critical,Chargesheet Filed
+CR20260309,Karnataka,Bengaluru,Robbery,Property Crime,2026,4,13:40,9,High,Under Investigation
+CR20260310,Telangana,Khammam,Theft,Property Crime,2026,11,07:53,2,Low,Unreported/Unknown
+CR20260311,Puducherry,Mahe,Assault,Violent Crime,2026,12,01:09,11,High,Under Investigation
+CR20260312,Jharkhand,Giridih,Theft,Property Crime,2026,8,13:21,18,Low,Pending Trial
+CR20260313,Jammu and Kashmir,Baramulla,Theft,Property Crime,2026,3,13:55,17,Low,Unreported/Unknown
+CR20260314,Lakshadweep,Agatti,Cybercrime,Cyber Crime,2026,7,06:11,17,Medium,Under Investigation
+CR20260315,Jharkhand,Hazaribagh,Fraud,Economic Crime,2026,5,07:39,14,Medium,Pending Trial
+CR20260316,Puducherry,Mahe,Robbery,Property Crime,2026,6,10:27,22,High,Unreported/Unknown
+CR20260317,Haryana,Faridabad,Theft,Property Crime,2026,5,14:26,20,Low,Chargesheet Filed
+CR20260318,Ladakh,Leh,Assault,Violent Crime,2026,8,11:21,13,High,Closed
+CR20260319,Andaman and Nicobar Islands,Havelock,Assault,Violent Crime,2026,6,18:28,23,High,Pending Trial
+CR20260320,Meghalaya,Baghmara,Theft,Property Crime,2026,10,15:00,8,Low,Pending Trial
+CR20260321,Uttar Pradesh,Varanasi,Murder,Violent Crime,2026,8,02:33,10,Critical,Closed
+CR20260322,Meghalaya,Tura,Fraud,Economic Crime,2026,7,01:47,9,Medium,Unreported/Unknown
+CR20260323,West Bengal,Siliguri,Assault,Violent Crime,2026,10,21:16,12,High,Under Investigation
+CR20260324,Dadra and Nagar Haveli and Daman and Diu,Silvassa,Burglary,Property Crime,2026,11,15:30,19,Medium,Closed
+CR20260325,Kerala,Alappuzha,Burglary,Property Crime,2026,4,09:53,24,Medium,Closed
+CR20260326,Nagaland,Tuensang,Fraud,Economic Crime,2026,6,07:20,7,Medium,Chargesheet Filed
+CR20260327,Kerala,Thrissur,Cybercrime,Cyber Crime,2026,4,16:06,23,Medium,Pending Trial
+CR20260328,Sikkim,Gyalshing,Theft,Property Crime,2026,10,22:03,20,Low,Chargesheet Filed
+CR20260329,Jammu and Kashmir,Jammu,Assault,Violent Crime,2026,12,18:45,17,High,Closed
+CR20260330,Goa,Ponda,Fraud,Economic Crime,2026,10,05:30,21,Medium,Pending Trial
+CR20260331,Chhattisgarh,Bastar,Theft,Property Crime,2026,7,16:32,23,Low,Chargesheet Filed
+CR20260332,Mizoram,Champhai,Fraud,Economic Crime,2026,9,21:32,13,Medium,Under Investigation
+CR20260333,Delhi,East Delhi,Assault,Violent Crime,2026,11,14:46,6,High,Pending Trial
+CR20260334,Andhra Pradesh,Rajahmundry,Assault,Violent Crime,2026,5,19:49,10,High,Closed
+CR20260335,Haryana,Panipat,Theft,Property Crime,2026,6,12:16,6,Low,Closed
+CR20260336,Chhattisgarh,Bilaspur,Cybercrime,Cyber Crime,2026,10,18:28,5,Medium,Unreported/Unknown
+CR20260337,Himachal Pradesh,Shimla,Burglary,Property Crime,2026,5,03:25,6,Medium,Pending Trial
+CR20260338,Lakshadweep,Kavaratti,Cybercrime,Cyber Crime,2026,4,05:53,9,Medium,Pending Trial
+CR20260339,Ladakh,Kargil,Fraud,Economic Crime,2026,4,20:43,24,Medium,Chargesheet Filed
+CR20260340,Jammu and Kashmir,Baramulla,Robbery,Property Crime,2026,7,13:09,24,High,Chargesheet Filed
+CR20260341,Meghalaya,Baghmara,Robbery,Property Crime,2026,9,12:55,4,High,Closed
+CR20260342,Himachal Pradesh,Dharamshala,Kidnapping,Violent Crime,2026,9,20:49,4,High,Under Investigation
+CR20260343,Arunachal Pradesh,Tawang,Fraud,Economic Crime,2026,11,19:14,24,Medium,Unreported/Unknown
+CR20260344,Nagaland,Wokha,Cybercrime,Cyber Crime,2026,9,04:17,21,Medium,Unreported/Unknown
+CR20260345,Karnataka,Shivamogga,Theft,Property Crime,2026,8,16:50,19,Low,Under Investigation
+CR20260346,Uttarakhand,Nainital,Burglary,Property Crime,2026,9,00:52,18,Medium,Pending Trial
+CR20260347,Gujarat,Jamnagar,Assault,Violent Crime,2026,1,23:27,2,High,Chargesheet Filed
+CR20260348,Goa,Panaji,Assault,Violent Crime,2026,6,13:33,6,High,Under Investigation
+CR20260349,Telangana,Khammam,Theft,Property Crime,2026,6,15:09,2,Low,Chargesheet Filed
+CR20260350,Assam,Silchar,Fraud,Economic Crime,2026,6,11:46,24,Medium,Pending Trial
+CR20260351,Telangana,Nizamabad,Theft,Property Crime,2026,1,06:19,21,Low,Chargesheet Filed
+CR20260352,Kerala,Kollam,Fraud,Economic Crime,2026,8,07:14,21,Medium,Pending Trial
+CR20260353,Mizoram,Champhai,Kidnapping,Violent Crime,2026,8,16:24,2,High,Closed
+CR20260354,Rajasthan,Kota,Assault,Violent Crime,2026,4,02:38,6,High,Pending Trial
+CR20260355,Tripura,Agartala,Burglary,Property Crime,2026,11,18:50,5,Medium,Closed
+CR20260356,Punjab,Ludhiana,Theft,Property Crime,2026,12,08:36,4,Low,Unreported/Unknown
+CR20260357,Rajasthan,Alwar,Fraud,Economic Crime,2026,8,17:59,10,Medium,Pending Trial
+CR20260358,Delhi,East Delhi,Theft,Property Crime,2026,3,12:26,3,Low,Chargesheet Filed
+CR20260359,Andaman and Nicobar Islands,Havelock,Theft,Property Crime,2026,8,04:42,16,Low,Unreported/Unknown
+CR20260360,Kerala,Kollam,Assault,Violent Crime,2026,6,18:11,9,High,Closed
+CR20260361,Assam,Guwahati,Burglary,Property Crime,2026,7,20:29,21,Medium,Unreported/Unknown
+CR20260362,Dadra and Nagar Haveli and Daman and Diu,Daman,Murder,Violent Crime,2026,11,22:24,5,Critical,Closed
+CR20260363,Andaman and Nicobar Islands,Havelock,Fraud,Economic Crime,2026,2,04:27,3,Medium,Unreported/Unknown
+CR20260364,West Bengal,Siliguri,Kidnapping,Violent Crime,2026,6,18:56,12,High,Closed
+CR20260365,Maharashtra,Kolhapur,Fraud,Economic Crime,2026,9,20:33,24,Medium,Closed
+CR20260366,Punjab,Patiala,Assault,Violent Crime,2026,5,23:20,1,High,Closed
+CR20260367,Dadra and Nagar Haveli and Daman and Diu,Silvassa,Fraud,Economic Crime,2026,2,10:47,23,Medium,Under Investigation
+CR20260368,Uttar Pradesh,Agra,Assault,Violent Crime,2026,11,02:19,1,High,Unreported/Unknown
+CR20260369,Assam,Dibrugarh,Robbery,Property Crime,2026,8,23:38,15,High,Under Investigation
+CR20260370,Himachal Pradesh,Kullu,Murder,Violent Crime,2026,7,22:03,3,Critical,Chargesheet Filed
+CR20260371,Meghalaya,Baghmara,Theft,Property Crime,2026,5,20:51,14,Low,Pending Trial
+CR20260372,Punjab,Amritsar,Fraud,Economic Crime,2026,3,12:17,15,Medium,Closed
+CR20260373,Andaman and Nicobar Islands,Car Nicobar,Fraud,Economic Crime,2026,7,01:45,24,Medium,Pending Trial
+CR20260374,Rajasthan,Bikaner,Burglary,Property Crime,2026,11,19:24,17,Medium,Chargesheet Filed
+CR20260375,Tripura,Agartala,Robbery,Property Crime,2026,3,02:18,10,High,Under Investigation
+CR20260376,Mizoram,Serchhip,Murder,Violent Crime,2026,9,22:46,19,Critical,Pending Trial
+CR20260377,Bihar,Purnia,Theft,Property Crime,2026,4,07:29,17,Low,Under Investigation
+CR20260378,Andaman and Nicobar Islands,Havelock,Robbery,Property Crime,2026,11,20:40,3,High,Closed
+CR20260379,Bihar,Purnia,Assault,Violent Crime,2026,11,03:01,8,High,Under Investigation
+CR20260380,Goa,Panaji,Murder,Violent Crime,2026,7,15:47,17,Critical,Pending Trial
+CR20260381,Lakshadweep,Minicoy,Murder,Violent Crime,2026,2,20:04,21,Critical,Pending Trial
+CR20260382,Karnataka,Hubballi,Theft,Property Crime,2026,9,08:34,4,Low,Under Investigation
+CR20260383,Dadra and Nagar Haveli and Daman and Diu,Silvassa,Theft,Property Crime,2026,7,14:11,8,Low,Pending Trial
+CR20260384,Madhya Pradesh,Bhopal,Burglary,Property Crime,2026,4,21:20,8,Medium,Closed
+CR20260385,Himachal Pradesh,Shimla,Fraud,Economic Crime,2026,4,22:27,7,Medium,Pending Trial
+CR20260386,Kerala,Kollam,Cybercrime,Cyber Crime,2026,3,21:01,12,Medium,Chargesheet Filed
+CR20260387,Arunachal Pradesh,Itanagar,Assault,Violent Crime,2026,7,05:21,6,High,Under Investigation
+CR20260388,Jharkhand,Ranchi,Theft,Property Crime,2026,6,07:59,19,Low,Chargesheet Filed
+CR20260389,Tamil Nadu,Chennai,Robbery,Property Crime,2026,1,02:13,8,High,Closed
+CR20260390,Himachal Pradesh,Shimla,Assault,Violent Crime,2026,6,16:48,14,High,Closed
+CR20260391,Himachal Pradesh,Kullu,Robbery,Property Crime,2026,7,20:48,21,High,Chargesheet Filed
+CR20260392,West Bengal,Durgapur,Robbery,Property Crime,2026,1,23:50,21,High,Closed
+CR20260393,Haryana,Panipat,Theft,Property Crime,2026,11,12:44,14,Low,Under Investigation
+CR20260394,Chhattisgarh,Korba,Cybercrime,Cyber Crime,2026,5,12:47,12,Medium,Under Investigation
+CR20260395,Nagaland,Wokha,Cybercrime,Cyber Crime,2026,8,13:29,23,Medium,Unreported/Unknown
+CR20260396,Tripura,Agartala,Assault,Violent Crime,2026,2,17:03,2,High,Under Investigation
+CR20260397,Jharkhand,Hazaribagh,Theft,Property Crime,2026,12,07:48,20,Low,Under Investigation
+CR20260398,Punjab,Ludhiana,Robbery,Property Crime,2026,9,06:28,2,High,Under Investigation
+CR20260399,Telangana,Warangal,Cybercrime,Cyber Crime,2026,10,13:50,18,Medium,Under Investigation
+CR20260400,Mizoram,Champhai,Fraud,Economic Crime,2026,11,20:28,2,Medium,Closed
+CR20260401,Assam,Nagaon,Theft,Property Crime,2026,1,08:34,12,Low,Closed
+CR20260402,Tamil Nadu,Erode,Assault,Violent Crime,2026,10,04:48,21,High,Under Investigation
+CR20260403,Tripura,Agartala,Theft,Property Crime,2026,5,21:17,11,Low,Pending Trial
+CR20260404,Lakshadweep,Kavaratti,Robbery,Property Crime,2026,5,05:33,12,High,Closed
+CR20260405,Karnataka,Hubballi,Assault,Violent Crime,2026,9,22:10,8,High,Chargesheet Filed
+CR20260406,Andaman and Nicobar Islands,Havelock,Burglary,Property Crime,2026,8,04:03,7,Medium,Unreported/Unknown
+CR20260407,Tamil Nadu,Chennai,Kidnapping,Violent Crime,2026,3,09:27,18,High,Closed
+CR20260408,Ladakh,Leh,Burglary,Property Crime,2026,1,16:04,6,Medium,Chargesheet Filed
+CR20260409,Punjab,Mohali,Burglary,Property Crime,2026,4,16:49,13,Medium,Unreported/Unknown
+CR20260410,Jammu and Kashmir,Anantnag,Assault,Violent Crime,2026,4,13:42,22,High,Closed
+CR20260411,Delhi,South Delhi,Theft,Property Crime,2026,5,09:57,5,Low,Unreported/Unknown
+CR20260412,Lakshadweep,Minicoy,Burglary,Property Crime,2026,2,08:28,17,Medium,Unreported/Unknown
+CR20260413,Odisha,Sambalpur,Murder,Violent Crime,2026,6,03:36,5,Critical,Under Investigation
+CR20260414,Haryana,Faridabad,Theft,Property Crime,2026,5,22:02,19,Low,Chargesheet Filed
+CR20260415,Dadra and Nagar Haveli and Daman and Diu,Silvassa,Theft,Property Crime,2026,1,20:43,14,Low,Unreported/Unknown
+CR20260416,Andhra Pradesh,Rajahmundry,Assault,Violent Crime,2026,1,23:12,3,High,Chargesheet Filed
+CR20260417,Andhra Pradesh,Tirupati,Burglary,Property Crime,2026,1,02:39,18,Medium,Under Investigation
+CR20260418,Manipur,Churachandpur,Burglary,Property Crime,2026,7,20:27,8,Medium,Unreported/Unknown
+CR20260419,Odisha,Sambalpur,Assault,Violent Crime,2026,3,20:10,2,High,Unreported/Unknown
+CR20260420,Punjab,Mohali,Theft,Property Crime,2026,11,06:16,5,Low,Pending Trial
+CR20260421,Punjab,Mohali,Theft,Property Crime,2026,3,15:43,12,Low,Pending Trial
+CR20260422,Puducherry,Karaikal,Assault,Violent Crime,2026,10,03:10,6,High,Under Investigation
+CR20260423,Manipur,Thoubal,Assault,Violent Crime,2026,9,18:16,18,High,Closed
+CR20260424,Bihar,Muzaffarpur,Burglary,Property Crime,2026,3,14:03,15,Medium,Unreported/Unknown
+CR20260425,Lakshadweep,Minicoy,Theft,Property Crime,2026,4,12:16,17,Low,Under Investigation
+CR20260426,Andaman and Nicobar Islands,Havelock,Robbery,Property Crime,2026,6,02:12,5,High,Unreported/Unknown
+CR20260427,Ladakh,Leh,Theft,Property Crime,2026,6,21:02,11,Low,Chargesheet Filed
+CR20260428,Uttarakhand,Nainital,Cybercrime,Cyber Crime,2026,8,02:29,24,Medium,Under Investigation
+CR20260429,Jammu and Kashmir,Anantnag,Murder,Violent Crime,2026,8,16:06,8,Critical,Closed
+CR20260430,Tamil Nadu,Tiruchirappalli,Cybercrime,Cyber Crime,2026,1,14:12,5,Medium,Unreported/Unknown
+CR20260431,West Bengal,Murshidabad,Cybercrime,Cyber Crime,2026,3,01:22,8,Medium,Under Investigation
+CR20260432,Dadra and Nagar Haveli and Daman and Diu,Daman,Robbery,Property Crime,2026,4,05:34,11,High,Closed
+CR20260433,Bihar,Bhagalpur,Assault,Violent Crime,2026,2,12:58,19,High,Chargesheet Filed
+CR20260434,Odisha,Berhampur,Cybercrime,Cyber Crime,2026,12,15:59,6,Medium,Chargesheet Filed
+CR20260435,Maharashtra,Pune,Burglary,Property Crime,2026,12,01:02,7,Medium,Closed
+CR20260436,Sikkim,Pakyong,Cybercrime,Cyber Crime,2026,1,08:12,21,Medium,Unreported/Unknown
+CR20260437,Chhattisgarh,Bastar,Burglary,Property Crime,2026,9,21:54,17,Medium,Chargesheet Filed
+CR20260438,Telangana,Karimnagar,Assault,Violent Crime,2026,4,19:13,18,High,Chargesheet Filed
+CR20260439,Mizoram,Serchhip,Robbery,Property Crime,2026,6,03:58,13,High,Chargesheet Filed
+CR20260440,Punjab,Pathankot,Theft,Property Crime,2026,2,17:33,24,Low,Closed
+CR20260441,Punjab,Amritsar,Robbery,Property Crime,2026,1,17:37,22,High,Under Investigation
+CR20260442,Tripura,Udaipur,Burglary,Property Crime,2026,6,04:56,12,Medium,Unreported/Unknown
+CR20260443,Mizoram,Champhai,Cybercrime,Cyber Crime,2026,11,18:26,9,Medium,Chargesheet Filed
+CR20260444,Kerala,Thrissur,Kidnapping,Violent Crime,2026,3,12:48,19,High,Pending Trial
+CR20260445,Odisha,Cuttack,Theft,Property Crime,2026,1,23:09,23,Low,Unreported/Unknown
+CR20260446,Uttarakhand,Rishikesh,Fraud,Economic Crime,2026,1,23:10,12,Medium,Under Investigation
+CR20260447,Kerala,Alappuzha,Kidnapping,Violent Crime,2026,9,20:18,20,High,Closed
+CR20260448,Punjab,Bathinda,Theft,Property Crime,2026,5,21:38,16,Low,Pending Trial
+CR20260449,Lakshadweep,Minicoy,Theft,Property Crime,2026,3,11:59,9,Low,Under Investigation
+CR20260450,Haryana,Faridabad,Assault,Violent Crime,2026,4,01:08,16,High,Under Investigation
+CR20260451,Andhra Pradesh,Kurnool,Cybercrime,Cyber Crime,2026,1,03:22,13,Medium,Unreported/Unknown
+CR20260452,Dadra and Nagar Haveli and Daman and Diu,Silvassa,Theft,Property Crime,2026,7,03:02,18,Low,Pending Trial
+CR20260453,Delhi,East Delhi,Theft,Property Crime,2026,12,07:53,22,Low,Under Investigation
+CR20260454,Uttarakhand,Nainital,Theft,Property Crime,2026,9,16:53,22,Low,Chargesheet Filed
+CR20260455,Telangana,Rangareddy,Robbery,Property Crime,2026,6,23:21,2,High,Under Investigation
+CR20260456,Bihar,Gaya,Theft,Property Crime,2026,3,14:16,6,Low,Pending Trial
+CR20260457,Manipur,Ukhrul,Burglary,Property Crime,2026,4,05:19,1,Medium,Pending Trial
+CR20260458,Assam,Tinsukia,Theft,Property Crime,2026,12,11:52,22,Low,Chargesheet Filed
+CR20260459,Jammu and Kashmir,Srinagar,Theft,Property Crime,2026,6,06:24,21,Low,Under Investigation
+CR20260460,Gujarat,Rajkot,Fraud,Economic Crime,2026,12,15:42,16,Medium,Unreported/Unknown
+CR20260461,Haryana,Karnal,Cybercrime,Cyber Crime,2026,3,08:07,11,Medium,Under Investigation
+CR20260462,Tripura,Agartala,Robbery,Property Crime,2026,6,03:02,8,High,Unreported/Unknown
+CR20260463,Sikkim,Namchi,Assault,Violent Crime,2026,12,22:25,12,High,Pending Trial
+CR20260464,Nagaland,Kohima,Theft,Property Crime,2026,8,19:10,18,Low,Pending Trial
+CR20260465,Goa,Panaji,Theft,Property Crime,2026,10,11:41,7,Low,Under Investigation
+CR20260466,Nagaland,Kohima,Cybercrime,Cyber Crime,2026,3,10:52,13,Medium,Pending Trial
+CR20260467,Ladakh,Kargil,Fraud,Economic Crime,2026,1,16:51,15,Medium,Pending Trial
+CR20260468,Ladakh,Leh,Fraud,Economic Crime,2026,10,16:04,18,Medium,Pending Trial
+CR20260469,Andhra Pradesh,Kurnool,Burglary,Property Crime,2026,6,01:31,15,Medium,Unreported/Unknown
+CR20260470,Uttarakhand,Haldwani,Theft,Property Crime,2026,6,21:13,18,Low,Chargesheet Filed
+CR20260471,Haryana,Karnal,Theft,Property Crime,2026,6,07:44,12,Low,Closed
+CR20260472,Andaman and Nicobar Islands,Port Blair,Murder,Violent Crime,2026,2,10:05,12,Critical,Under Investigation
+CR20260473,Assam,Jorhat,Murder,Violent Crime,2026,8,11:36,11,Critical,Under Investigation
+CR20260474,Jharkhand,Dhanbad,Theft,Property Crime,2026,6,21:25,18,Low,Pending Trial
+CR20260475,Sikkim,Gyalshing,Burglary,Property Crime,2026,1,10:52,11,Medium,Chargesheet Filed
+CR20260476,Dadra and Nagar Haveli and Daman and Diu,Diu,Burglary,Property Crime,2026,10,07:46,4,Medium,Under Investigation
+CR20260477,Odisha,Puri,Murder,Violent Crime,2026,2,21:43,22,Critical,Under Investigation
+CR20260478,Telangana,Karimnagar,Burglary,Property Crime,2026,12,09:20,11,Medium,Chargesheet Filed
+CR20260479,Maharashtra,Kolhapur,Fraud,Economic Crime,2026,11,21:26,5,Medium,Under Investigation
+CR20260480,Sikkim,Gyalshing,Kidnapping,Violent Crime,2026,10,03:53,9,High,Closed
+CR20260481,Dadra and Nagar Haveli and Daman and Diu,Diu,Assault,Violent Crime,2026,9,06:02,17,High,Pending Trial
+CR20260482,Himachal Pradesh,Solan,Theft,Property Crime,2026,3,16:26,7,Low,Chargesheet Filed
+CR20260483,Bihar,Patna,Cybercrime,Cyber Crime,2026,4,19:26,21,Medium,Chargesheet Filed
+CR20260484,Kerala,Thiruvananthapuram,Robbery,Property Crime,2026,10,12:51,20,High,Chargesheet Filed
+CR20260485,Andhra Pradesh,Visakhapatnam,Theft,Property Crime,2026,10,00:21,17,Low,Chargesheet Filed
+CR20260486,Sikkim,Mangan,Assault,Violent Crime,2026,11,23:20,19,High,Closed
+CR20260487,Punjab,Ludhiana,Cybercrime,Cyber Crime,2026,12,06:54,15,Medium,Chargesheet Filed
+CR20260488,Uttar Pradesh,Prayagraj,Fraud,Economic Crime,2026,7,09:14,20,Medium,Chargesheet Filed
+CR20260489,Sikkim,Gangtok,Robbery,Property Crime,2026,7,13:56,14,High,Closed
+CR20260490,Kerala,Kochi,Kidnapping,Violent Crime,2026,5,00:46,3,High,Closed
+CR20260491,Dadra and Nagar Haveli and Daman and Diu,Silvassa,Cybercrime,Cyber Crime,2026,10,03:33,3,Medium,Under Investigation
+CR20260492,Tripura,Belonia,Robbery,Property Crime,2026,7,12:30,5,High,Unreported/Unknown
+CR20260493,Delhi,West Delhi,Fraud,Economic Crime,2026,8,06:37,7,Medium,Unreported/Unknown
+CR20260494,Himachal Pradesh,Mandi,Cybercrime,Cyber Crime,2026,6,14:27,4,Medium,Pending Trial
+CR20260495,Uttar Pradesh,Prayagraj,Burglary,Property Crime,2026,2,04:26,16,Medium,Closed
+CR20260496,Bihar,Patna,Burglary,Property Crime,2026,11,14:35,22,Medium,Unreported/Unknown
+CR20260497,Uttarakhand,Dehradun,Burglary,Property Crime,2026,7,09:31,10,Medium,Closed
+CR20260498,Dadra and Nagar Haveli and Daman and Diu,Diu,Assault,Violent Crime,2026,1,10:21,10,High,Under Investigation
+CR20260499,Odisha,Rourkela,Kidnapping,Violent Crime,2026,9,20:37,5,High,Under Investigation
+CR20260500,Tamil Nadu,Erode,Assault,Violent Crime,2026,4,16:23,9,High,Chargesheet Filed
+CR20260501,Madhya Pradesh,Sagar,Burglary,Property Crime,2026,1,14:57,23,Medium,Unreported/Unknown
+CR20260502,Odisha,Cuttack,Cybercrime,Cyber Crime,2026,9,12:05,6,Medium,Pending Trial
+CR20260503,Karnataka,Bengaluru,Fraud,Economic Crime,2026,12,15:44,15,Medium,Under Investigation
+CR20260504,Odisha,Puri,Assault,Violent Crime,2026,4,03:48,18,High,Closed
+CR20260505,Lakshadweep,Agatti,Fraud,Economic Crime,2026,2,22:23,4,Medium,Closed
+CR20260506,Sikkim,Gyalshing,Fraud,Economic Crime,2026,1,16:18,8,Medium,Unreported/Unknown
+CR20260507,Tamil Nadu,Salem,Fraud,Economic Crime,2026,6,07:47,13,Medium,Closed
+CR20260508,Chhattisgarh,Korba,Theft,Property Crime,2026,11,09:30,20,Low,Pending Trial
+CR20260509,Tripura,Udaipur,Cybercrime,Cyber Crime,2026,3,04:06,8,Medium,Closed
+CR20260510,Assam,Tinsukia,Kidnapping,Violent Crime,2026,2,19:07,16,High,Pending Trial
+CR20260511,Andaman and Nicobar Islands,Port Blair,Theft,Property Crime,2026,5,10:26,5,Low,Pending Trial
+CR20260512,Odisha,Balasore,Robbery,Property Crime,2026,9,13:53,5,High,Closed
+CR20260513,Andaman and Nicobar Islands,Car Nicobar,Theft,Property Crime,2026,9,18:04,22,Low,Closed
+CR20260514,Maharashtra,Aurangabad,Burglary,Property Crime,2026,4,00:19,13,Medium,Closed
+CR20260515,Sikkim,Mangan,Robbery,Property Crime,2026,2,09:56,9,High,Chargesheet Filed
+CR20260516,Sikkim,Namchi,Theft,Property Crime,2026,6,04:04,9,Low,Chargesheet Filed
+CR20260517,Nagaland,Wokha,Burglary,Property Crime,2026,11,16:06,12,Medium,Closed
+CR20260518,Karnataka,Mysuru,Assault,Violent Crime,2026,3,15:59,2,High,Chargesheet Filed
+CR20260519,Goa,Margao,Assault,Violent Crime,2026,7,14:19,6,High,Closed
+CR20260520,Himachal Pradesh,Kullu,Burglary,Property Crime,2026,3,14:29,2,Medium,Unreported/Unknown
+CR20260521,Dadra and Nagar Haveli and Daman and Diu,Daman,Murder,Violent Crime,2026,11,09:32,9,Critical,Under Investigation
+CR20260522,Maharashtra,Thane,Theft,Property Crime,2026,3,09:14,21,Low,Closed
+CR20260523,Goa,Vasco da Gama,Cybercrime,Cyber Crime,2026,11,23:35,22,Medium,Chargesheet Filed
+CR20260524,Jammu and Kashmir,Srinagar,Theft,Property Crime,2026,1,16:03,13,Low,Under Investigation
+CR20260525,West Bengal,Siliguri,Kidnapping,Violent Crime,2026,10,03:44,9,High,Chargesheet Filed
+CR20260526,Puducherry,Yanam,Theft,Property Crime,2026,6,16:49,10,Low,Closed
+CR20260527,Lakshadweep,Minicoy,Theft,Property Crime,2026,9,14:03,15,Low,Unreported/Unknown
+CR20260528,West Bengal,Darjeeling,Theft,Property Crime,2026,8,16:56,11,Low,Under Investigation
+CR20260529,Himachal Pradesh,Solan,Theft,Property Crime,2026,1,20:46,23,Low,Pending Trial
+CR20260530,Andaman and Nicobar Islands,Port Blair,Theft,Property Crime,2026,11,15:39,2,Low,Closed
+CR20260531,Karnataka,Tumakuru,Assault,Violent Crime,2026,11,15:29,18,High,Chargesheet Filed
+CR20260532,Jharkhand,Deoghar,Burglary,Property Crime,2026,4,12:45,24,Medium,Closed
+CR20260533,Telangana,Rangareddy,Fraud,Economic Crime,2026,8,13:50,8,Medium,Chargesheet Filed
+CR20260534,Odisha,Bhubaneswar,Theft,Property Crime,2026,11,06:59,17,Low,Pending Trial
+CR20260535,Andaman and Nicobar Islands,Car Nicobar,Cybercrime,Cyber Crime,2026,2,23:01,21,Medium,Unreported/Unknown
+CR20260536,Madhya Pradesh,Jabalpur,Burglary,Property Crime,2026,6,10:03,13,Medium,Unreported/Unknown
+CR20260537,Manipur,Bishnupur,Theft,Property Crime,2026,1,22:13,3,Low,Chargesheet Filed
+CR20260538,Tamil Nadu,Tirunelveli,Theft,Property Crime,2026,5,16:27,10,Low,Unreported/Unknown
+CR20260539,Gujarat,Vadodara,Cybercrime,Cyber Crime,2026,4,18:03,3,Medium,Unreported/Unknown
+CR20260540,Tamil Nadu,Tiruchirappalli,Kidnapping,Violent Crime,2026,11,23:22,10,High,Under Investigation
+CR20260541,Uttarakhand,Roorkee,Burglary,Property Crime,2026,4,23:54,13,Medium,Unreported/Unknown
+CR20260542,Assam,Guwahati,Robbery,Property Crime,2026,9,05:44,19,High,Closed
+CR20260543,Goa,Panaji,Cybercrime,Cyber Crime,2026,10,22:11,17,Medium,Closed
+CR20260544,Jammu and Kashmir,Srinagar,Theft,Property Crime,2026,9,14:22,5,Low,Unreported/Unknown
+CR20260545,Puducherry,Karaikal,Burglary,Property Crime,2026,7,12:54,17,Medium,Unreported/Unknown
+CR20260546,Maharashtra,Thane,Fraud,Economic Crime,2026,2,21:32,22,Medium,Under Investigation
+CR20260547,Puducherry,Karaikal,Cybercrime,Cyber Crime,2026,10,09:59,15,Medium,Closed
+CR20260548,Dadra and Nagar Haveli and Daman and Diu,Silvassa,Theft,Property Crime,2026,11,13:54,7,Low,Closed
+CR20260549,Madhya Pradesh,Rewa,Murder,Violent Crime,2026,8,10:46,9,Critical,Under Investigation
+CR20260550,Andaman and Nicobar Islands,Diglipur,Fraud,Economic Crime,2026,8,14:00,10,Medium,Unreported/Unknown
+CR20260551,Dadra and Nagar Haveli and Daman and Diu,Diu,Assault,Violent Crime,2026,1,01:46,16,High,Unreported/Unknown
+CR20260552,Sikkim,Namchi,Assault,Violent Crime,2026,5,16:06,3,High,Chargesheet Filed
+CR20260553,Tamil Nadu,Chennai,Assault,Violent Crime,2026,11,02:28,15,High,Unreported/Unknown
+CR20260554,Puducherry,Karaikal,Robbery,Property Crime,2026,9,21:55,9,High,Under Investigation
+CR20260555,Sikkim,Gangtok,Cybercrime,Cyber Crime,2026,9,18:50,12,Medium,Under Investigation
+CR20260556,Gujarat,Jamnagar,Assault,Violent Crime,2026,3,01:44,9,High,Closed
+CR20260557,Andhra Pradesh,Nellore,Burglary,Property Crime,2026,9,07:50,18,Medium,Chargesheet Filed
+CR20260558,Puducherry,Yanam,Cybercrime,Cyber Crime,2026,12,14:35,8,Medium,Pending Trial
+CR20260559,Jharkhand,Jamshedpur,Assault,Violent Crime,2026,6,14:28,20,High,Closed
+CR20260560,Sikkim,Gyalshing,Theft,Property Crime,2026,6,13:58,8,Low,Pending Trial
+CR20260561,Andhra Pradesh,Vijayawada,Burglary,Property Crime,2026,11,10:48,2,Medium,Under Investigation
+CR20260562,Mizoram,Serchhip,Theft,Property Crime,2026,8,14:24,16,Low,Pending Trial
+CR20260563,Rajasthan,Jaipur,Assault,Violent Crime,2026,5,15:38,13,High,Chargesheet Filed
+CR20260564,Odisha,Puri,Fraud,Economic Crime,2026,12,06:27,9,Medium,Unreported/Unknown
+CR20260565,Odisha,Berhampur,Assault,Violent Crime,2026,5,03:36,10,High,Unreported/Unknown
+CR20260566,Goa,Margao,Robbery,Property Crime,2026,11,21:07,16,High,Closed
+CR20260567,Maharashtra,Aurangabad,Cybercrime,Cyber Crime,2026,10,11:14,11,Medium,Under Investigation
+CR20260568,Nagaland,Dimapur,Theft,Property Crime,2026,3,22:31,18,Low,Under Investigation
+CR20260569,Karnataka,Tumakuru,Fraud,Economic Crime,2026,1,12:57,21,Medium,Unreported/Unknown
+CR20260570,Arunachal Pradesh,Ziro,Cybercrime,Cyber Crime,2026,10,06:14,21,Medium,Pending Trial
+CR20260571,Puducherry,Mahe,Murder,Violent Crime,2026,8,19:19,5,Critical,Pending Trial
+CR20260572,Andaman and Nicobar Islands,Havelock,Theft,Property Crime,2026,5,21:20,6,Low,Closed
+CR20260573,Madhya Pradesh,Ujjain,Fraud,Economic Crime,2026,2,15:24,6,Medium,Closed
+CR20260574,Sikkim,Pakyong,Cybercrime,Cyber Crime,2026,2,07:32,11,Medium,Unreported/Unknown
+CR20260575,Arunachal Pradesh,Ziro,Kidnapping,Violent Crime,2026,11,09:44,3,High,Closed
+CR20260576,Lakshadweep,Minicoy,Theft,Property Crime,2026,1,02:10,20,Low,Closed
+CR20260577,Uttarakhand,Rishikesh,Burglary,Property Crime,2026,12,15:34,21,Medium,Chargesheet Filed
+CR20260578,Puducherry,Yanam,Theft,Property Crime,2026,11,02:15,3,Low,Unreported/Unknown
+CR20260579,Uttarakhand,Roorkee,Assault,Violent Crime,2026,9,03:42,19,High,Chargesheet Filed
+CR20260580,Telangana,Khammam,Burglary,Property Crime,2026,4,15:22,19,Medium,Closed
+CR20260581,Dadra and Nagar Haveli and Daman and Diu,Diu,Assault,Violent Crime,2026,11,04:20,19,High,Pending Trial
+CR20260582,Kerala,Kollam,Cybercrime,Cyber Crime,2026,4,05:10,14,Medium,Closed
+CR20260583,Jharkhand,Dhanbad,Fraud,Economic Crime,2026,2,23:10,23,Medium,Unreported/Unknown
+CR20260584,Uttar Pradesh,Ghaziabad,Fraud,Economic Crime,2026,9,08:09,22,Medium,Closed
+CR20260585,Tamil Nadu,Thanjavur,Cybercrime,Cyber Crime,2026,1,14:11,8,Medium,Chargesheet Filed
+CR20260586,Odisha,Sambalpur,Kidnapping,Violent Crime,2026,2,19:47,18,High,Under Investigation
+CR20260587,Madhya Pradesh,Jabalpur,Burglary,Property Crime,2026,4,05:27,3,Medium,Chargesheet Filed
+CR20260588,Jammu and Kashmir,Udhampur,Theft,Property Crime,2026,5,16:01,6,Low,Pending Trial
+CR20260589,Nagaland,Mokokchung,Assault,Violent Crime,2026,8,10:19,22,High,Unreported/Unknown
+CR20260590,Nagaland,Kohima,Assault,Violent Crime,2026,4,22:45,16,High,Closed
+CR20260591,Gujarat,Bhavnagar,Murder,Violent Crime,2026,8,15:22,21,Critical,Under Investigation
+CR20260592,Lakshadweep,Minicoy,Theft,Property Crime,2026,10,16:30,15,Low,Under Investigation
+CR20260593,Rajasthan,Alwar,Cybercrime,Cyber Crime,2026,4,06:54,21,Medium,Pending Trial
+CR20260594,Odisha,Cuttack,Kidnapping,Violent Crime,2026,3,13:33,11,High,Chargesheet Filed
+CR20260595,Gujarat,Rajkot,Theft,Property Crime,2026,11,19:37,18,Low,Chargesheet Filed
+CR20260596,Puducherry,Yanam,Burglary,Property Crime,2026,4,02:56,5,Medium,Pending Trial
+CR20260597,Tripura,Dharmanagar,Robbery,Property Crime,2026,8,23:38,10,High,Pending Trial
+CR20260598,Haryana,Hisar,Theft,Property Crime,2026,6,03:37,18,Low,Chargesheet Filed
+CR20260599,Ladakh,Leh,Fraud,Economic Crime,2026,5,05:39,10,Medium,Closed
+CR20260600,Tripura,Agartala,Burglary,Property Crime,2026,10,22:52,10,Medium,Chargesheet Filed
+CR20260601,West Bengal,Asansol,Fraud,Economic Crime,2026,2,18:39,12,Medium,Under Investigation
+CR20260602,Madhya Pradesh,Indore,Robbery,Property Crime,2026,7,06:16,13,High,Under Investigation
+CR20260603,Himachal Pradesh,Dharamshala,Theft,Property Crime,2026,2,12:08,16,Low,Pending Trial
+CR20260604,Chhattisgarh,Korba,Burglary,Property Crime,2026,3,15:15,18,Medium,Pending Trial
+CR20260605,Meghalaya,Baghmara,Cybercrime,Cyber Crime,2026,1,04:18,6,Medium,Unreported/Unknown
+CR20260606,Nagaland,Wokha,Murder,Violent Crime,2026,8,12:37,6,Critical,Pending Trial
+CR20260607,Jammu and Kashmir,Anantnag,Theft,Property Crime,2026,6,01:21,16,Low,Unreported/Unknown
+CR20260608,Rajasthan,Alwar,Assault,Violent Crime,2026,9,05:31,14,High,Closed
+CR20260609,Telangana,Nizamabad,Kidnapping,Violent Crime,2026,12,16:51,5,High,Under Investigation
+CR20260610,Ladakh,Kargil,Assault,Violent Crime,2026,4,06:03,22,High,Unreported/Unknown
+CR20260611,Himachal Pradesh,Kullu,Fraud,Economic Crime,2026,6,03:00,1,Medium,Unreported/Unknown
+CR20260612,Odisha,Cuttack,Theft,Property Crime,2026,11,12:45,23,Low,Closed
+CR20260613,Nagaland,Mokokchung,Assault,Violent Crime,2026,5,16:54,16,High,Chargesheet Filed
+CR20260614,Jharkhand,Giridih,Assault,Violent Crime,2026,7,12:28,18,High,Chargesheet Filed
+CR20260615,Haryana,Panipat,Theft,Property Crime,2026,5,15:16,23,Low,Closed
+CR20260616,Madhya Pradesh,Bhopal,Burglary,Property Crime,2026,12,20:51,23,Medium,Under Investigation
+CR20260617,West Bengal,Asansol,Murder,Violent Crime,2026,12,02:33,11,Critical,Under Investigation
+CR20260618,Puducherry,Mahe,Burglary,Property Crime,2026,9,07:26,8,Medium,Pending Trial
+CR20260619,Tamil Nadu,Coimbatore,Cybercrime,Cyber Crime,2026,3,10:42,7,Medium,Under Investigation
+CR20260620,Andaman and Nicobar Islands,Havelock,Assault,Violent Crime,2026,5,20:22,8,High,Chargesheet Filed
+CR20260621,Rajasthan,Jaipur,Robbery,Property Crime,2026,3,10:48,24,High,Unreported/Unknown
+CR20260622,Maharashtra,Kolhapur,Theft,Property Crime,2026,7,16:18,6,Low,Pending Trial
+CR20260623,Maharashtra,Aurangabad,Kidnapping,Violent Crime,2026,3,19:21,4,High,Chargesheet Filed
+CR20260624,Haryana,Hisar,Fraud,Economic Crime,2026,1,08:54,4,Medium,Pending Trial
+CR20260625,Chhattisgarh,Bilaspur,Robbery,Property Crime,2026,8,23:41,1,High,Chargesheet Filed
+CR20260626,Andaman and Nicobar Islands,Diglipur,Murder,Violent Crime,2026,8,15:03,18,Critical,Pending Trial
+CR20260627,Arunachal Pradesh,Itanagar,Theft,Property Crime,2026,8,11:54,24,Low,Unreported/Unknown
+CR20260628,Meghalaya,Tura,Theft,Property Crime,2026,8,21:08,10,Low,Chargesheet Filed
+CR20260629,Himachal Pradesh,Dharamshala,Theft,Property Crime,2026,8,04:57,3,Low,Closed
+CR20260630,Assam,Guwahati,Theft,Property Crime,2026,12,08:43,21,Low,Chargesheet Filed
+CR20260631,Dadra and Nagar Haveli and Daman and Diu,Diu,Cybercrime,Cyber Crime,2026,4,11:03,23,Medium,Under Investigation
+CR20260632,Meghalaya,Tura,Theft,Property Crime,2026,10,20:48,20,Low,Pending Trial
+CR20260633,Goa,Ponda,Fraud,Economic Crime,2026,1,19:14,6,Medium,Chargesheet Filed
+CR20260634,Madhya Pradesh,Rewa,Fraud,Economic Crime,2026,8,04:48,6,Medium,Closed
+CR20260635,Tripura,Kailashahar,Assault,Violent Crime,2026,5,02:39,22,High,Closed
+CR20260636,Telangana,Hyderabad,Kidnapping,Violent Crime,2026,8,22:04,11,High,Chargesheet Filed
+CR20260637,Sikkim,Pakyong,Theft,Property Crime,2026,2,00:59,8,Low,Closed
+CR20260638,Jammu and Kashmir,Anantnag,Assault,Violent Crime,2026,12,06:58,13,High,Unreported/Unknown
+CR20260639,Mizoram,Lunglei,Cybercrime,Cyber Crime,2026,7,20:46,24,Medium,Chargesheet Filed
+CR20260640,Ladakh,Kargil,Theft,Property Crime,2026,1,22:39,22,Low,Unreported/Unknown
+CR20260641,Tamil Nadu,Chennai,Theft,Property Crime,2026,10,21:20,10,Low,Under Investigation
+CR20260642,Goa,Vasco da Gama,Burglary,Property Crime,2026,8,14:16,17,Medium,Chargesheet Filed
+CR20260643,Haryana,Gurugram,Cybercrime,Cyber Crime,2026,6,02:13,14,Medium,Unreported/Unknown
+CR20260644,Madhya Pradesh,Rewa,Fraud,Economic Crime,2026,1,20:34,24,Medium,Pending Trial
+CR20260645,Delhi,West Delhi,Kidnapping,Violent Crime,2026,1,22:25,2,High,Unreported/Unknown
+CR20260646,Nagaland,Wokha,Robbery,Property Crime,2026,11,17:03,18,High,Under Investigation
+CR20260647,Bihar,Purnia,Theft,Property Crime,2026,12,22:18,15,Low,Closed
+CR20260648,Lakshadweep,Kavaratti,Fraud,Economic Crime,2026,4,03:31,3,Medium,Chargesheet Filed
+CR20260649,Manipur,Ukhrul,Burglary,Property Crime,2026,7,10:00,18,Medium,Closed
+CR20260650,Puducherry,Yanam,Burglary,Property Crime,2026,10,13:47,5,Medium,Pending Trial
+CR20260651,Assam,Jorhat,Kidnapping,Violent Crime,2026,4,12:01,13,High,Closed
+CR20260652,Rajasthan,Alwar,Fraud,Economic Crime,2026,9,06:01,13,Medium,Pending Trial
+CR20260653,Assam,Silchar,Theft,Property Crime,2026,6,17:04,18,Low,Unreported/Unknown
+CR20260654,Sikkim,Mangan,Burglary,Property Crime,2026,7,04:55,6,Medium,Chargesheet Filed
+CR20260655,Kerala,Kannur,Kidnapping,Violent Crime,2026,10,17:39,15,High,Chargesheet Filed
+CR20260656,Puducherry,Puducherry,Robbery,Property Crime,2026,4,05:55,16,High,Closed
+CR20260657,Karnataka,Mysuru,Theft,Property Crime,2026,1,03:16,4,Low,Under Investigation
+CR20260658,Chhattisgarh,Bastar,Cybercrime,Cyber Crime,2026,8,05:21,3,Medium,Under Investigation
+CR20260659,Himachal Pradesh,Kangra,Cybercrime,Cyber Crime,2026,11,12:02,10,Medium,Under Investigation
+CR20260660,Punjab,Pathankot,Burglary,Property Crime,2026,2,16:08,9,Medium,Chargesheet Filed
+CR20260661,Chhattisgarh,Bastar,Theft,Property Crime,2026,4,22:44,2,Low,Under Investigation
+CR20260662,Telangana,Rangareddy,Fraud,Economic Crime,2026,10,22:24,9,Medium,Closed
+CR20260663,Dadra and Nagar Haveli and Daman and Diu,Daman,Theft,Property Crime,2026,11,20:21,21,Low,Unreported/Unknown
+CR20260664,Gujarat,Gandhinagar,Robbery,Property Crime,2026,2,11:17,10,High,Closed
+CR20260665,Andhra Pradesh,Visakhapatnam,Theft,Property Crime,2026,3,20:05,16,Low,Under Investigation
+CR20260666,Punjab,Patiala,Burglary,Property Crime,2026,7,21:25,2,Medium,Closed
+CR20260667,Arunachal Pradesh,Pasighat,Assault,Violent Crime,2026,8,06:54,15,High,Pending Trial
+CR20260668,Punjab,Bathinda,Cybercrime,Cyber Crime,2026,1,16:35,24,Medium,Unreported/Unknown
+CR20260669,Rajasthan,Ajmer,Theft,Property Crime,2026,4,21:11,15,Low,Unreported/Unknown
+CR20260670,Jammu and Kashmir,Jammu,Fraud,Economic Crime,2026,4,04:14,3,Medium,Pending Trial
+CR20260671,Chhattisgarh,Bastar,Assault,Violent Crime,2026,5,22:28,20,High,Pending Trial
+CR20260672,Meghalaya,Nongpoh,Burglary,Property Crime,2026,2,04:35,22,Medium,Unreported/Unknown
+CR20260673,Chhattisgarh,Jagdalpur,Cybercrime,Cyber Crime,2026,11,21:21,4,Medium,Pending Trial
+CR20260674,West Bengal,Murshidabad,Theft,Property Crime,2026,6,05:46,20,Low,Under Investigation
+CR20260675,Himachal Pradesh,Shimla,Assault,Violent Crime,2026,2,17:19,5,High,Closed
+CR20260676,Goa,Margao,Theft,Property Crime,2026,12,01:41,13,Low,Under Investigation
+CR20260677,Ladakh,Leh,Theft,Property Crime,2026,10,02:30,21,Low,Closed
+CR20260678,Ladakh,Leh,Fraud,Economic Crime,2026,11,19:01,10,Medium,Chargesheet Filed
+CR20260679,Manipur,Imphal,Assault,Violent Crime,2026,7,20:23,11,High,Under Investigation
+CR20260680,Andhra Pradesh,Rajahmundry,Theft,Property Crime,2026,7,14:11,18,Low,Under Investigation
+CR20260681,Andaman and Nicobar Islands,Diglipur,Murder,Violent Crime,2026,1,14:41,21,Critical,Chargesheet Filed
+CR20260682,Manipur,Bishnupur,Theft,Property Crime,2026,10,10:49,8,Low,Closed
+CR20260683,Andhra Pradesh,Nellore,Theft,Property Crime,2026,3,09:53,17,Low,Chargesheet Filed
+CR20260684,Assam,Dibrugarh,Assault,Violent Crime,2026,4,05:59,10,High,Chargesheet Filed
+CR20260685,Andaman and Nicobar Islands,Port Blair,Fraud,Economic Crime,2026,6,09:36,15,Medium,Unreported/Unknown
+CR20260686,Goa,Panaji,Cybercrime,Cyber Crime,2026,11,08:33,16,Medium,Chargesheet Filed
+CR20260687,Meghalaya,Tura,Burglary,Property Crime,2026,9,11:09,9,Medium,Under Investigation
+CR20260688,Dadra and Nagar Haveli and Daman and Diu,Diu,Fraud,Economic Crime,2026,1,18:23,4,Medium,Closed
+CR20260689,Maharashtra,Kolhapur,Cybercrime,Cyber Crime,2026,2,14:36,12,Medium,Pending Trial
+CR20260690,Himachal Pradesh,Solan,Theft,Property Crime,2026,5,09:13,14,Low,Unreported/Unknown
+CR20260691,Jharkhand,Deoghar,Cybercrime,Cyber Crime,2026,10,11:55,22,Medium,Pending Trial
+CR20260692,Goa,Ponda,Kidnapping,Violent Crime,2026,9,00:35,13,High,Pending Trial
+CR20260693,Jharkhand,Deoghar,Robbery,Property Crime,2026,11,15:03,5,High,Unreported/Unknown
+CR20260694,Bihar,Nalanda,Theft,Property Crime,2026,6,11:16,16,Low,Unreported/Unknown
+CR20260695,Tripura,Belonia,Burglary,Property Crime,2026,12,16:53,9,Medium,Pending Trial
+CR20260696,Dadra and Nagar Haveli and Daman and Diu,Silvassa,Theft,Property Crime,2026,4,22:58,8,Low,Closed
+CR20260697,Andaman and Nicobar Islands,Port Blair,Fraud,Economic Crime,2026,1,18:53,14,Medium,Unreported/Unknown
+CR20260698,Himachal Pradesh,Mandi,Kidnapping,Violent Crime,2026,6,21:44,2,High,Unreported/Unknown
+CR20260699,Arunachal Pradesh,Itanagar,Burglary,Property Crime,2026,1,19:22,12,Medium,Closed
+CR20260700,Manipur,Thoubal,Assault,Violent Crime,2026,10,15:19,3,High,Closed
+CR20260701,Tamil Nadu,Erode,Robbery,Property Crime,2026,1,16:28,2,High,Pending Trial
+CR20260702,Delhi,West Delhi,Fraud,Economic Crime,2026,1,02:04,3,Medium,Closed
+CR20260703,Punjab,Patiala,Fraud,Economic Crime,2026,9,06:50,4,Medium,Closed
+CR20260704,Arunachal Pradesh,Bomdila,Cybercrime,Cyber Crime,2026,12,21:46,20,Medium,Unreported/Unknown
+CR20260705,Goa,Vasco da Gama,Theft,Property Crime,2026,4,07:25,10,Low,Closed
+CR20260706,Nagaland,Mokokchung,Robbery,Property Crime,2026,9,19:18,24,High,Closed
+CR20260707,Punjab,Pathankot,Assault,Violent Crime,2026,11,09:37,11,High,Chargesheet Filed
+CR20260708,Chhattisgarh,Rajnandgaon,Robbery,Property Crime,2026,6,16:27,10,High,Under Investigation
+CR20260709,Lakshadweep,Minicoy,Theft,Property Crime,2026,8,06:38,11,Low,Unreported/Unknown
+CR20260710,Kerala,Thiruvananthapuram,Fraud,Economic Crime,2026,6,13:42,12,Medium,Closed
+CR20260711,Manipur,Imphal,Murder,Violent Crime,2026,6,21:53,20,Critical,Pending Trial
+CR20260712,Andhra Pradesh,Visakhapatnam,Fraud,Economic Crime,2026,10,10:40,22,Medium,Unreported/Unknown
+CR20260713,Tripura,Udaipur,Assault,Violent Crime,2026,9,21:32,19,High,Pending Trial
+CR20260714,Bihar,Purnia,Theft,Property Crime,2026,12,16:15,3,Low,Pending Trial
+CR20260715,Sikkim,Pakyong,Theft,Property Crime,2026,8,18:41,6,Low,Closed
+CR20260716,Tripura,Agartala,Kidnapping,Violent Crime,2026,6,16:48,18,High,Under Investigation
+CR20260717,Telangana,Warangal,Robbery,Property Crime,2026,2,05:32,20,High,Under Investigation
+CR20260718,Dadra and Nagar Haveli and Daman and Diu,Silvassa,Assault,Violent Crime,2026,6,03:06,1,High,Chargesheet Filed
+CR20260719,West Bengal,Durgapur,Assault,Violent Crime,2026,8,18:49,4,High,Pending Trial
+CR20260720,Arunachal Pradesh,Itanagar,Burglary,Property Crime,2026,12,15:46,3,Medium,Closed
+CR20260721,Ladakh,Kargil,Assault,Violent Crime,2026,7,15:25,14,High,Under Investigation
+CR20260722,Kerala,Kollam,Theft,Property Crime,2026,11,01:11,12,Low,Pending Trial
+CR20260723,Jharkhand,Jamshedpur,Robbery,Property Crime,2026,7,00:25,23,High,Unreported/Unknown
+CR20260724,Delhi,Central Delhi,Assault,Violent Crime,2026,8,21:36,19,High,Chargesheet Filed
+CR20260725,Ladakh,Kargil,Kidnapping,Violent Crime,2026,9,09:09,1,High,Unreported/Unknown
+CR20260726,Punjab,Mohali,Assault,Violent Crime,2026,7,08:20,22,High,Pending Trial
+CR20260727,Sikkim,Gangtok,Assault,Violent Crime,2026,5,14:51,2,High,Unreported/Unknown
+CR20260728,Jharkhand,Dhanbad,Theft,Property Crime,2026,2,11:36,6,Low,Chargesheet Filed
+CR20260729,Andaman and Nicobar Islands,Havelock,Theft,Property Crime,2026,10,10:58,4,Low,Chargesheet Filed
+CR20260730,Kerala,Thiruvananthapuram,Assault,Violent Crime,2026,8,21:43,2,High,Chargesheet Filed
+CR20260731,Meghalaya,Shillong,Theft,Property Crime,2026,11,15:38,14,Low,Pending Trial
+CR20260732,Puducherry,Yanam,Theft,Property Crime,2026,1,08:21,13,Low,Unreported/Unknown
+CR20260733,Tripura,Belonia,Fraud,Economic Crime,2026,11,09:57,7,Medium,Unreported/Unknown
+CR20260734,Karnataka,Mangaluru,Fraud,Economic Crime,2026,3,05:46,12,Medium,Unreported/Unknown
+CR20260735,Sikkim,Gyalshing,Cybercrime,Cyber Crime,2026,8,22:46,20,Medium,Pending Trial
+CR20260736,Uttarakhand,Rishikesh,Theft,Property Crime,2026,7,15:02,13,Low,Under Investigation
+CR20260737,Bihar,Darbhanga,Theft,Property Crime,2026,7,14:37,7,Low,Chargesheet Filed
+CR20260738,Goa,Panaji,Fraud,Economic Crime,2026,1,09:15,11,Medium,Under Investigation
+CR20260739,Meghalaya,Tura,Theft,Property Crime,2026,1,13:13,16,Low,Under Investigation
+CR20260740,Tripura,Dharmanagar,Fraud,Economic Crime,2026,5,10:12,18,Medium,Closed
+CR20260741,Bihar,Bhagalpur,Theft,Property Crime,2026,12,18:26,24,Low,Under Investigation
+CR20260742,Puducherry,Yanam,Assault,Violent Crime,2026,4,13:47,2,High,Closed
+CR20260743,Nagaland,Tuensang,Theft,Property Crime,2026,9,19:17,22,Low,Chargesheet Filed
+CR20260744,Maharashtra,Pune,Assault,Violent Crime,2026,2,14:46,12,High,Unreported/Unknown
+CR20260745,Andhra Pradesh,Guntur,Murder,Violent Crime,2026,5,13:53,14,Critical,Unreported/Unknown
+CR20260746,Manipur,Imphal,Fraud,Economic Crime,2026,11,22:22,22,Medium,Closed
+CR20260747,Jharkhand,Bokaro,Fraud,Economic Crime,2026,12,00:27,19,Medium,Closed
+CR20260748,Nagaland,Mokokchung,Theft,Property Crime,2026,3,07:37,16,Low,Unreported/Unknown
+CR20260749,Tripura,Kailashahar,Murder,Violent Crime,2026,12,15:59,3,Critical,Unreported/Unknown
+CR20260750,Rajasthan,Kota,Fraud,Economic Crime,2026,6,20:20,8,Medium,Under Investigation
+CR20260751,Tamil Nadu,Tirunelveli,Burglary,Property Crime,2026,7,10:22,11,Medium,Unreported/Unknown
+CR20260752,Jharkhand,Giridih,Robbery,Property Crime,2026,5,06:26,23,High,Unreported/Unknown
+CR20260753,Jharkhand,Dhanbad,Cybercrime,Cyber Crime,2026,3,09:49,7,Medium,Pending Trial
+CR20260754,Arunachal Pradesh,Pasighat,Fraud,Economic Crime,2026,9,20:47,8,Medium,Unreported/Unknown
+CR20260755,Haryana,Gurugram,Theft,Property Crime,2026,5,21:27,21,Low,Under Investigation
+CR20260756,Mizoram,Aizawl,Theft,Property Crime,2026,10,17:05,9,Low,Closed
+CR20260757,Delhi,West Delhi,Robbery,Property Crime,2026,2,07:54,3,High,Unreported/Unknown
+CR20260758,Lakshadweep,Kavaratti,Theft,Property Crime,2026,2,16:23,20,Low,Unreported/Unknown
+CR20260759,Lakshadweep,Agatti,Fraud,Economic Crime,2026,9,12:59,17,Medium,Closed
+CR20260760,Dadra and Nagar Haveli and Daman and Diu,Silvassa,Robbery,Property Crime,2026,3,22:24,19,High,Closed
+CR20260761,West Bengal,Kolkata,Robbery,Property Crime,2026,1,01:43,16,High,Chargesheet Filed
+CR20260762,Dadra and Nagar Haveli and Daman and Diu,Silvassa,Assault,Violent Crime,2026,6,20:31,6,High,Under Investigation
+CR20260763,Ladakh,Kargil,Cybercrime,Cyber Crime,2026,9,19:59,18,Medium,Pending Trial
+CR20260764,West Bengal,Murshidabad,Theft,Property Crime,2026,8,08:08,13,Low,Chargesheet Filed
+CR20260765,Kerala,Thiruvananthapuram,Theft,Property Crime,2026,3,19:54,5,Low,Unreported/Unknown
+CR20260766,Himachal Pradesh,Una,Fraud,Economic Crime,2026,2,12:41,4,Medium,Unreported/Unknown
+CR20260767,Telangana,Khammam,Robbery,Property Crime,2026,8,02:45,16,High,Under Investigation
+CR20260768,Jammu and Kashmir,Udhampur,Theft,Property Crime,2026,5,09:35,13,Low,Unreported/Unknown
+CR20260769,Punjab,Bathinda,Theft,Property Crime,2026,8,08:06,20,Low,Chargesheet Filed
+CR20260770,Tripura,Belonia,Kidnapping,Violent Crime,2026,10,18:54,5,High,Under Investigation
+CR20260771,Ladakh,Kargil,Robbery,Property Crime,2026,7,16:01,13,High,Under Investigation
+CR20260772,Haryana,Faridabad,Assault,Violent Crime,2026,10,22:02,6,High,Chargesheet Filed
+CR20260773,Lakshadweep,Agatti,Theft,Property Crime,2026,4,04:21,19,Low,Closed
+CR20260774,Chhattisgarh,Rajnandgaon,Theft,Property Crime,2026,8,08:14,4,Low,Under Investigation
+CR20260775,Lakshadweep,Minicoy,Theft,Property Crime,2026,3,05:06,4,Low,Closed
+CR20260776,Meghalaya,Jowai,Robbery,Property Crime,2026,12,15:18,20,High,Chargesheet Filed
+CR20260777,Odisha,Berhampur,Kidnapping,Violent Crime,2026,7,09:35,2,High,Under Investigation
+CR20260778,Delhi,North Delhi,Kidnapping,Violent Crime,2026,9,22:45,17,High,Closed
+CR20260779,Nagaland,Mokokchung,Robbery,Property Crime,2026,12,02:37,11,High,Unreported/Unknown
+CR20260780,Bihar,Muzaffarpur,Murder,Violent Crime,2026,5,21:38,24,Critical,Closed
+CR20260781,Rajasthan,Udaipur,Kidnapping,Violent Crime,2026,6,06:44,9,High,Under Investigation
+CR20260782,Sikkim,Mangan,Assault,Violent Crime,2026,3,21:39,13,High,Closed
+CR20260783,Tamil Nadu,Coimbatore,Theft,Property Crime,2026,7,11:40,23,Low,Closed
+CR20260784,Andhra Pradesh,Vijayawada,Assault,Violent Crime,2026,2,03:40,5,High,Closed
+CR20260785,Odisha,Puri,Cybercrime,Cyber Crime,2026,3,19:34,15,Medium,Pending Trial
+CR20260786,Bihar,Nalanda,Fraud,Economic Crime,2026,1,23:22,20,Medium,Chargesheet Filed
+CR20260787,Bihar,Gaya,Theft,Property Crime,2026,6,14:35,18,Low,Closed
+CR20260788,Haryana,Gurugram,Theft,Property Crime,2026,8,19:12,17,Low,Under Investigation
+CR20260789,Dadra and Nagar Haveli and Daman and Diu,Daman,Robbery,Property Crime,2026,9,01:53,18,High,Unreported/Unknown
+CR20260790,Ladakh,Kargil,Assault,Violent Crime,2026,6,13:26,8,High,Chargesheet Filed
+CR20260791,Odisha,Sambalpur,Fraud,Economic Crime,2026,8,19:52,21,Medium,Closed
+CR20260792,Assam,Dibrugarh,Fraud,Economic Crime,2026,1,10:15,17,Medium,Chargesheet Filed
+CR20260793,Maharashtra,Nashik,Assault,Violent Crime,2026,2,05:38,17,High,Under Investigation
+CR20260794,Uttar Pradesh,Prayagraj,Kidnapping,Violent Crime,2026,3,08:39,5,High,Under Investigation
+CR20260795,Uttar Pradesh,Kanpur,Theft,Property Crime,2026,9,10:21,4,Low,Chargesheet Filed
+CR20260796,Sikkim,Gyalshing,Theft,Property Crime,2026,2,06:32,1,Low,Under Investigation
+CR20260797,Manipur,Bishnupur,Assault,Violent Crime,2026,2,10:27,1,High,Chargesheet Filed
+CR20260798,Delhi,Central Delhi,Theft,Property Crime,2026,7,17:23,10,Low,Under Investigation
+CR20260799,Haryana,Faridabad,Burglary,Property Crime,2026,1,04:38,11,Medium,Unreported/Unknown
+CR20260800,Odisha,Berhampur,Cybercrime,Cyber Crime,2026,6,18:57,2,Medium,Pending Trial
+CR20260801,Karnataka,Shivamogga,Assault,Violent Crime,2026,10,06:05,8,High,Chargesheet Filed
+CR20260802,Tamil Nadu,Tiruchirappalli,Murder,Violent Crime,2026,4,17:28,11,Critical,Unreported/Unknown
+CR20260803,Nagaland,Kohima,Theft,Property Crime,2026,12,09:55,19,Low,Closed
+CR20260804,Delhi,East Delhi,Cybercrime,Cyber Crime,2026,6,07:53,1,Medium,Under Investigation
+CR20260805,Manipur,Thoubal,Burglary,Property Crime,2026,9,22:29,3,Medium,Unreported/Unknown
+CR20260806,Goa,Vasco da Gama,Kidnapping,Violent Crime,2026,3,08:33,10,High,Under Investigation
+CR20260807,Ladakh,Kargil,Theft,Property Crime,2026,7,16:13,6,Low,Under Investigation
+CR20260808,Madhya Pradesh,Rewa,Kidnapping,Violent Crime,2026,3,23:18,23,High,Under Investigation
+CR20260809,Dadra and Nagar Haveli and Daman and Diu,Diu,Fraud,Economic Crime,2026,1,19:28,21,Medium,Unreported/Unknown
+CR20260810,Tamil Nadu,Coimbatore,Assault,Violent Crime,2026,5,20:43,16,High,Closed
+CR20260811,Nagaland,Wokha,Fraud,Economic Crime,2026,10,10:56,17,Medium,Closed
+CR20260812,Tripura,Kailashahar,Assault,Violent Crime,2026,12,14:45,2,High,Unreported/Unknown
+CR20260813,Kerala,Kollam,Assault,Violent Crime,2026,7,18:09,2,High,Chargesheet Filed
+CR20260814,Odisha,Sambalpur,Cybercrime,Cyber Crime,2026,6,08:00,20,Medium,Unreported/Unknown
+CR20260815,Delhi,South Delhi,Burglary,Property Crime,2026,1,22:25,23,Medium,Unreported/Unknown
+CR20260816,Gujarat,Gandhinagar,Murder,Violent Crime,2026,10,00:35,15,Critical,Unreported/Unknown
+CR20260817,Arunachal Pradesh,Itanagar,Fraud,Economic Crime,2026,2,22:15,1,Medium,Unreported/Unknown
+CR20260818,Nagaland,Mokokchung,Assault,Violent Crime,2026,7,01:40,1,High,Under Investigation
+CR20260819,Tripura,Dharmanagar,Cybercrime,Cyber Crime,2026,2,10:40,7,Medium,Under Investigation
+CR20260820,Bihar,Bhagalpur,Fraud,Economic Crime,2026,7,09:25,7,Medium,Chargesheet Filed
+CR20260821,Jammu and Kashmir,Baramulla,Assault,Violent Crime,2026,12,16:09,1,High,Closed
+CR20260822,Punjab,Amritsar,Assault,Violent Crime,2026,11,16:58,14,High,Chargesheet Filed
+CR20260823,Maharashtra,Kolhapur,Theft,Property Crime,2026,7,12:24,15,Low,Pending Trial
+CR20260824,Goa,Margao,Robbery,Property Crime,2026,10,04:42,16,High,Unreported/Unknown
+CR20260825,Manipur,Imphal,Theft,Property Crime,2026,5,01:08,24,Low,Pending Trial
+CR20260826,Odisha,Bhubaneswar,Theft,Property Crime,2026,8,10:20,21,Low,Chargesheet Filed
+CR20260827,Sikkim,Namchi,Assault,Violent Crime,2026,2,09:19,16,High,Unreported/Unknown
+CR20260828,Jharkhand,Ranchi,Burglary,Property Crime,2026,1,03:58,18,Medium,Pending Trial
+CR20260829,West Bengal,Durgapur,Robbery,Property Crime,2026,12,04:18,23,High,Chargesheet Filed
+CR20260830,Nagaland,Kohima,Fraud,Economic Crime,2026,12,16:31,18,Medium,Unreported/Unknown
+CR20260831,Karnataka,Mysuru,Kidnapping,Violent Crime,2026,3,16:32,12,High,Pending Trial
+CR20260832,Karnataka,Mangaluru,Cybercrime,Cyber Crime,2026,10,02:51,8,Medium,Pending Trial
+CR20260833,Gujarat,Jamnagar,Fraud,Economic Crime,2026,8,21:48,1,Medium,Under Investigation
+CR20260834,Telangana,Rangareddy,Fraud,Economic Crime,2026,10,07:27,7,Medium,Pending Trial
+CR20260835,Assam,Tinsukia,Fraud,Economic Crime,2026,11,13:32,7,Medium,Chargesheet Filed
+CR20260836,Himachal Pradesh,Una,Theft,Property Crime,2026,4,10:13,2,Low,Pending Trial
+CR20260837,Jammu and Kashmir,Srinagar,Kidnapping,Violent Crime,2026,12,00:13,13,High,Chargesheet Filed
+CR20260838,Nagaland,Tuensang,Theft,Property Crime,2026,4,07:41,2,Low,Under Investigation
+CR20260839,Tripura,Belonia,Fraud,Economic Crime,2026,12,01:19,20,Medium,Closed
+CR20260840,Karnataka,Shivamogga,Fraud,Economic Crime,2026,2,03:15,14,Medium,Closed
+CR20260841,Dadra and Nagar Haveli and Daman and Diu,Silvassa,Assault,Violent Crime,2026,4,21:11,18,High,Pending Trial
+CR20260842,Jammu and Kashmir,Udhampur,Burglary,Property Crime,2026,7,15:05,19,Medium,Pending Trial
+CR20260843,Arunachal Pradesh,Bomdila,Theft,Property Crime,2026,7,04:14,11,Low,Closed
+CR20260844,Uttar Pradesh,Ghaziabad,Cybercrime,Cyber Crime,2026,9,14:28,3,Medium,Under Investigation
+CR20260845,Nagaland,Tuensang,Fraud,Economic Crime,2026,9,10:07,6,Medium,Chargesheet Filed
+CR20260846,Manipur,Ukhrul,Burglary,Property Crime,2026,7,13:11,10,Medium,Pending Trial
+CR20260847,Dadra and Nagar Haveli and Daman and Diu,Silvassa,Cybercrime,Cyber Crime,2026,1,16:30,3,Medium,Closed
+CR20260848,Tamil Nadu,Tiruchirappalli,Theft,Property Crime,2026,10,12:41,2,Low,Unreported/Unknown
+CR20260849,Goa,Panaji,Murder,Violent Crime,2026,5,18:11,2,Critical,Under Investigation
+CR20260850,Telangana,Warangal,Theft,Property Crime,2026,3,10:08,12,Low,Chargesheet Filed
+CR20260851,Rajasthan,Jodhpur,Robbery,Property Crime,2026,5,03:20,10,High,Pending Trial
+CR20260852,Rajasthan,Kota,Theft,Property Crime,2026,12,13:53,16,Low,Chargesheet Filed
+CR20260853,Uttarakhand,Haldwani,Assault,Violent Crime,2026,2,06:23,20,High,Under Investigation
+CR20260854,Tamil Nadu,Madurai,Fraud,Economic Crime,2026,6,11:43,22,Medium,Chargesheet Filed
+CR20260855,Delhi,New Delhi,Assault,Violent Crime,2026,6,23:09,19,High,Unreported/Unknown
+CR20260856,Delhi,West Delhi,Robbery,Property Crime,2026,7,23:58,1,High,Chargesheet Filed
+CR20260857,Mizoram,Aizawl,Burglary,Property Crime,2026,12,15:26,10,Medium,Chargesheet Filed
+CR20260858,Puducherry,Karaikal,Assault,Violent Crime,2026,11,22:56,2,High,Pending Trial
+CR20260859,Tripura,Belonia,Fraud,Economic Crime,2026,7,07:20,1,Medium,Chargesheet Filed
+CR20260860,Jharkhand,Giridih,Burglary,Property Crime,2026,2,19:50,3,Medium,Chargesheet Filed
+CR20260861,Jharkhand,Deoghar,Burglary,Property Crime,2026,8,11:09,21,Medium,Pending Trial
+CR20260862,Andhra Pradesh,Vijayawada,Murder,Violent Crime,2026,4,00:12,15,Critical,Under Investigation
+CR20260863,Kerala,Kochi,Fraud,Economic Crime,2026,5,18:58,23,Medium,Under Investigation
+CR20260864,Punjab,Ludhiana,Theft,Property Crime,2026,8,17:04,16,Low,Chargesheet Filed
+CR20260865,Jammu and Kashmir,Udhampur,Robbery,Property Crime,2026,3,07:01,12,High,Closed
+CR20260866,Mizoram,Lunglei,Burglary,Property Crime,2026,6,11:36,2,Medium,Chargesheet Filed
+CR20260867,Nagaland,Wokha,Theft,Property Crime,2026,8,08:36,15,Low,Unreported/Unknown
+CR20260868,Uttar Pradesh,Varanasi,Kidnapping,Violent Crime,2026,9,20:49,14,High,Chargesheet Filed
+CR20260869,Gujarat,Rajkot,Fraud,Economic Crime,2026,4,20:00,6,Medium,Pending Trial
+CR20260870,Andhra Pradesh,Tirupati,Assault,Violent Crime,2026,5,22:47,21,High,Unreported/Unknown
+CR20260871,Arunachal Pradesh,Bomdila,Theft,Property Crime,2026,4,07:30,16,Low,Unreported/Unknown
+CR20260872,Meghalaya,Nongpoh,Burglary,Property Crime,2026,5,15:27,1,Medium,Under Investigation
+CR20260873,Punjab,Bathinda,Kidnapping,Violent Crime,2026,6,23:04,3,High,Chargesheet Filed
+CR20260874,Dadra and Nagar Haveli and Daman and Diu,Silvassa,Burglary,Property Crime,2026,10,13:41,11,Medium,Pending Trial
+CR20260875,Andaman and Nicobar Islands,Diglipur,Fraud,Economic Crime,2026,8,04:09,19,Medium,Closed
+CR20260876,Madhya Pradesh,Rewa,Robbery,Property Crime,2026,3,21:09,19,High,Pending Trial
+CR20260877,Kerala,Alappuzha,Fraud,Economic Crime,2026,8,03:11,23,Medium,Chargesheet Filed
+CR20260878,Karnataka,Bengaluru,Cybercrime,Cyber Crime,2026,2,10:56,3,Medium,Chargesheet Filed
+CR20260879,Bihar,Bhagalpur,Assault,Violent Crime,2026,2,14:15,10,High,Pending Trial
+CR20260880,Uttar Pradesh,Kanpur,Assault,Violent Crime,2026,7,16:58,16,High,Closed
+CR20260881,Manipur,Thoubal,Assault,Violent Crime,2026,6,06:37,17,High,Pending Trial
+CR20260882,West Bengal,Siliguri,Assault,Violent Crime,2026,2,16:39,24,High,Closed
+CR20260883,Dadra and Nagar Haveli and Daman and Diu,Diu,Kidnapping,Violent Crime,2026,12,15:12,15,High,Closed
+CR20260884,Kerala,Palakkad,Assault,Violent Crime,2026,12,03:21,3,High,Under Investigation
+CR20260885,Goa,Margao,Cybercrime,Cyber Crime,2026,7,16:54,12,Medium,Unreported/Unknown
+CR20260886,Kerala,Alappuzha,Cybercrime,Cyber Crime,2026,10,22:52,22,Medium,Pending Trial
+CR20260887,Madhya Pradesh,Sagar,Murder,Violent Crime,2026,5,20:16,15,Critical,Chargesheet Filed
+CR20260888,Haryana,Panipat,Robbery,Property Crime,2026,2,13:35,4,High,Pending Trial
+CR20260889,Chhattisgarh,Bastar,Theft,Property Crime,2026,9,11:03,21,Low,Closed
+CR20260890,Dadra and Nagar Haveli and Daman and Diu,Daman,Burglary,Property Crime,2026,10,09:12,9,Medium,Unreported/Unknown
+CR20260891,Telangana,Warangal,Fraud,Economic Crime,2026,12,18:07,21,Medium,Under Investigation
+CR20260892,Mizoram,Aizawl,Robbery,Property Crime,2026,5,20:08,17,High,Under Investigation
+CR20260893,Uttar Pradesh,Kanpur,Theft,Property Crime,2026,4,07:42,6,Low,Closed
+CR20260894,Andaman and Nicobar Islands,Port Blair,Fraud,Economic Crime,2026,1,10:35,17,Medium,Chargesheet Filed
+CR20260895,Telangana,Adilabad,Cybercrime,Cyber Crime,2026,1,06:27,21,Medium,Pending Trial
+CR20260896,Himachal Pradesh,Kangra,Robbery,Property Crime,2026,12,04:20,24,High,Chargesheet Filed
+CR20260897,Delhi,New Delhi,Robbery,Property Crime,2026,1,00:02,13,High,Chargesheet Filed
+CR20260898,Uttarakhand,Rishikesh,Theft,Property Crime,2026,3,12:44,6,Low,Pending Trial
+CR20260899,Dadra and Nagar Haveli and Daman and Diu,Silvassa,Assault,Violent Crime,2026,7,05:52,19,High,Unreported/Unknown
+CR20260900,Tripura,Agartala,Theft,Property Crime,2026,2,18:55,19,Low,Chargesheet Filed
+CR20260901,Himachal Pradesh,Shimla,Theft,Property Crime,2026,2,03:16,19,Low,Unreported/Unknown
+CR20260902,Jharkhand,Hazaribagh,Murder,Violent Crime,2026,7,16:35,7,Critical,Unreported/Unknown
+CR20260903,Kerala,Kollam,Theft,Property Crime,2026,12,03:28,24,Low,Under Investigation
+CR20260904,Kerala,Kozhikode,Theft,Property Crime,2026,5,17:56,10,Low,Closed
+CR20260905,Punjab,Ludhiana,Burglary,Property Crime,2026,8,10:22,3,Medium,Under Investigation
+CR20260906,Tamil Nadu,Erode,Theft,Property Crime,2026,9,14:59,24,Low,Unreported/Unknown
+CR20260907,Lakshadweep,Agatti,Cybercrime,Cyber Crime,2026,12,19:20,1,Medium,Under Investigation
+CR20260908,Tamil Nadu,Madurai,Robbery,Property Crime,2026,11,06:17,22,High,Closed
+CR20260909,Mizoram,Lunglei,Fraud,Economic Crime,2026,1,17:07,12,Medium,Chargesheet Filed
+CR20260910,Gujarat,Rajkot,Theft,Property Crime,2026,6,08:45,9,Low,Closed
+CR20260911,Lakshadweep,Agatti,Robbery,Property Crime,2026,12,03:19,7,High,Under Investigation
+CR20260912,Mizoram,Serchhip,Theft,Property Crime,2026,6,22:19,16,Low,Unreported/Unknown
+CR20260913,Kerala,Alappuzha,Burglary,Property Crime,2026,1,06:41,12,Medium,Unreported/Unknown
+CR20260914,Punjab,Pathankot,Burglary,Property Crime,2026,10,14:57,12,Medium,Under Investigation
+CR20260915,Kerala,Alappuzha,Fraud,Economic Crime,2026,3,22:54,7,Medium,Chargesheet Filed
+CR20260916,Delhi,North Delhi,Assault,Violent Crime,2026,10,18:43,2,High,Chargesheet Filed
+CR20260917,Puducherry,Mahe,Kidnapping,Violent Crime,2026,6,09:02,19,High,Unreported/Unknown
+CR20260918,Punjab,Bathinda,Burglary,Property Crime,2026,7,12:01,24,Medium,Pending Trial
+CR20260919,Telangana,Adilabad,Fraud,Economic Crime,2026,4,05:04,19,Medium,Chargesheet Filed
+CR20260920,West Bengal,Darjeeling,Assault,Violent Crime,2026,5,23:03,6,High,Closed
+CR20260921,Lakshadweep,Minicoy,Burglary,Property Crime,2026,5,07:53,16,Medium,Closed
+CR20260922,Ladakh,Kargil,Assault,Violent Crime,2026,8,12:45,4,High,Unreported/Unknown
+CR20260923,Arunachal Pradesh,Itanagar,Theft,Property Crime,2026,1,02:40,17,Low,Chargesheet Filed
+CR20260924,Haryana,Hisar,Theft,Property Crime,2026,12,10:46,22,Low,Closed
+CR20260925,Karnataka,Mangaluru,Cybercrime,Cyber Crime,2026,12,23:19,5,Medium,Unreported/Unknown
+CR20260926,Punjab,Bathinda,Kidnapping,Violent Crime,2026,1,07:15,22,High,Unreported/Unknown
+CR20260927,Lakshadweep,Minicoy,Robbery,Property Crime,2026,10,10:52,7,High,Chargesheet Filed
+CR20260928,Dadra and Nagar Haveli and Daman and Diu,Diu,Theft,Property Crime,2026,11,12:44,7,Low,Chargesheet Filed
+CR20260929,Delhi,New Delhi,Theft,Property Crime,2026,4,01:15,18,Low,Under Investigation
+CR20260930,Punjab,Pathankot,Robbery,Property Crime,2026,11,05:26,23,High,Chargesheet Filed
+CR20260931,Goa,Mapusa,Theft,Property Crime,2026,12,16:36,8,Low,Under Investigation
+CR20260932,Andaman and Nicobar Islands,Car Nicobar,Cybercrime,Cyber Crime,2026,5,06:37,18,Medium,Unreported/Unknown
+CR20260933,Jammu and Kashmir,Anantnag,Robbery,Property Crime,2026,10,14:58,10,High,Pending Trial
+CR20260934,Jharkhand,Giridih,Theft,Property Crime,2026,6,05:33,3,Low,Pending Trial
+CR20260935,Maharashtra,Aurangabad,Fraud,Economic Crime,2026,11,04:27,23,Medium,Unreported/Unknown
+CR20260936,Himachal Pradesh,Solan,Theft,Property Crime,2026,10,12:41,7,Low,Unreported/Unknown
+CR20260937,Uttar Pradesh,Ghaziabad,Cybercrime,Cyber Crime,2026,5,14:30,16,Medium,Closed
+CR20260938,West Bengal,Durgapur,Cybercrime,Cyber Crime,2026,10,18:03,7,Medium,Closed
+CR20260939,Sikkim,Mangan,Fraud,Economic Crime,2026,6,10:20,1,Medium,Chargesheet Filed
+CR20260940,Arunachal Pradesh,Ziro,Cybercrime,Cyber Crime,2026,2,00:34,3,Medium,Pending Trial
+CR20260941,Tamil Nadu,Chennai,Fraud,Economic Crime,2026,4,02:01,19,Medium,Chargesheet Filed
+CR20260942,Telangana,Khammam,Cybercrime,Cyber Crime,2026,2,05:49,10,Medium,Pending Trial
+CR20260943,Uttarakhand,Dehradun,Robbery,Property Crime,2026,1,02:04,10,High,Chargesheet Filed
+CR20260944,Uttarakhand,Roorkee,Fraud,Economic Crime,2026,12,07:14,5,Medium,Closed
+CR20260945,Assam,Guwahati,Theft,Property Crime,2026,3,19:30,15,Low,Unreported/Unknown
+CR20260946,Assam,Tinsukia,Assault,Violent Crime,2026,2,21:25,6,High,Chargesheet Filed
+CR20260947,Meghalaya,Jowai,Burglary,Property Crime,2026,1,20:37,7,Medium,Unreported/Unknown
+CR20260948,Rajasthan,Udaipur,Fraud,Economic Crime,2026,5,23:07,20,Medium,Chargesheet Filed
+CR20260949,Ladakh,Kargil,Burglary,Property Crime,2026,9,14:28,10,Medium,Pending Trial
+CR20260950,Himachal Pradesh,Solan,Theft,Property Crime,2026,6,06:40,23,Low,Unreported/Unknown
+CR20260951,Assam,Nagaon,Theft,Property Crime,2026,6,13:32,21,Low,Under Investigation
+CR20260952,West Bengal,Kolkata,Assault,Violent Crime,2026,8,12:48,19,High,Closed
+CR20260953,Mizoram,Serchhip,Fraud,Economic Crime,2026,5,09:41,7,Medium,Pending Trial
+CR20260954,Arunachal Pradesh,Tawang,Theft,Property Crime,2026,9,08:26,21,Low,Under Investigation
+CR20260955,Tripura,Udaipur,Assault,Violent Crime,2026,9,21:05,3,High,Unreported/Unknown
+CR20260956,Delhi,West Delhi,Cybercrime,Cyber Crime,2026,10,17:01,23,Medium,Pending Trial
+CR20260957,Goa,Ponda,Assault,Violent Crime,2026,8,15:00,20,High,Under Investigation
+CR20260958,Odisha,Puri,Murder,Violent Crime,2026,4,12:46,9,Critical,Closed
+CR20260959,Andhra Pradesh,Kurnool,Assault,Violent Crime,2026,10,12:23,1,High,Chargesheet Filed
+CR20260960,Lakshadweep,Minicoy,Fraud,Economic Crime,2026,6,14:14,16,Medium,Under Investigation
+CR20260961,Dadra and Nagar Haveli and Daman and Diu,Diu,Cybercrime,Cyber Crime,2026,10,18:42,4,Medium,Unreported/Unknown
+CR20260962,Lakshadweep,Kavaratti,Murder,Violent Crime,2026,2,01:40,7,Critical,Chargesheet Filed
+CR20260963,Tripura,Dharmanagar,Burglary,Property Crime,2026,12,06:25,17,Medium,Under Investigation
+CR20260964,Madhya Pradesh,Indore,Kidnapping,Violent Crime,2026,7,03:49,20,High,Unreported/Unknown
+CR20260965,Puducherry,Yanam,Assault,Violent Crime,2026,12,23:47,3,High,Pending Trial
+CR20260966,Meghalaya,Tura,Assault,Violent Crime,2026,5,18:23,22,High,Closed
+CR20260967,Kerala,Thrissur,Theft,Property Crime,2026,2,17:40,16,Low,Chargesheet Filed
+CR20260968,Goa,Margao,Fraud,Economic Crime,2026,12,06:38,15,Medium,Unreported/Unknown
+CR20260969,Nagaland,Tuensang,Burglary,Property Crime,2026,12,18:30,9,Medium,Under Investigation
+CR20260970,Maharashtra,Nashik,Theft,Property Crime,2026,11,00:57,3,Low,Chargesheet Filed
+CR20260971,Himachal Pradesh,Dharamshala,Theft,Property Crime,2026,3,04:15,18,Low,Pending Trial
+CR20260972,Punjab,Bathinda,Burglary,Property Crime,2026,7,11:04,3,Medium,Under Investigation
+CR20260973,Puducherry,Karaikal,Kidnapping,Violent Crime,2026,5,12:08,10,High,Under Investigation
+CR20260974,Andaman and Nicobar Islands,Havelock,Theft,Property Crime,2026,9,17:24,14,Low,Chargesheet Filed
+CR20260975,Sikkim,Pakyong,Robbery,Property Crime,2026,2,16:38,12,High,Closed
+CR20260976,Bihar,Muzaffarpur,Burglary,Property Crime,2026,10,05:41,13,Medium,Chargesheet Filed
+CR20260977,Himachal Pradesh,Dharamshala,Theft,Property Crime,2026,9,05:03,13,Low,Under Investigation
+CR20260978,Mizoram,Serchhip,Kidnapping,Violent Crime,2026,12,01:04,12,High,Unreported/Unknown
+CR20260979,Ladakh,Leh,Murder,Violent Crime,2026,1,02:11,18,Critical,Unreported/Unknown
+CR20260980,Karnataka,Mysuru,Burglary,Property Crime,2026,9,01:45,3,Medium,Pending Trial
+CR20260981,Meghalaya,Jowai,Theft,Property Crime,2026,12,02:22,23,Low,Under Investigation
+CR20260982,Maharashtra,Thane,Theft,Property Crime,2026,12,11:01,15,Low,Chargesheet Filed
+CR20260983,Haryana,Ambala,Assault,Violent Crime,2026,10,11:55,10,High,Closed
+CR20260984,Meghalaya,Tura,Fraud,Economic Crime,2026,7,05:54,22,Medium,Closed
+CR20260985,Haryana,Panipat,Assault,Violent Crime,2026,8,20:42,6,High,Pending Trial
+CR20260986,Punjab,Amritsar,Fraud,Economic Crime,2026,11,06:25,2,Medium,Chargesheet Filed
+CR20260987,Uttarakhand,Nainital,Theft,Property Crime,2026,12,21:58,21,Low,Chargesheet Filed
+CR20260988,Jammu and Kashmir,Jammu,Theft,Property Crime,2026,9,18:39,20,Low,Under Investigation
+CR20260989,Chhattisgarh,Bastar,Burglary,Property Crime,2026,8,18:26,23,Medium,Chargesheet Filed
+CR20260990,Arunachal Pradesh,Pasighat,Assault,Violent Crime,2026,10,06:32,9,High,Closed
+CR20260991,Chhattisgarh,Raipur,Theft,Property Crime,2026,7,06:07,12,Low,Unreported/Unknown
+CR20260992,Mizoram,Kolasib,Cybercrime,Cyber Crime,2026,10,04:14,22,Medium,Unreported/Unknown
+CR20260993,Mizoram,Aizawl,Assault,Violent Crime,2026,1,10:49,18,High,Unreported/Unknown
+CR20260994,Jammu and Kashmir,Jammu,Burglary,Property Crime,2026,7,00:00,16,Medium,Under Investigation
+CR20260995,Maharashtra,Mumbai,Cybercrime,Cyber Crime,2026,2,05:23,10,Medium,Chargesheet Filed
+CR20260996,Arunachal Pradesh,Itanagar,Assault,Violent Crime,2026,10,16:28,23,High,Chargesheet Filed
+CR20260997,Delhi,Central Delhi,Robbery,Property Crime,2026,6,06:34,12,High,Closed
+CR20260998,Tripura,Udaipur,Kidnapping,Violent Crime,2026,5,08:52,10,High,Closed
+CR20260999,West Bengal,Murshidabad,Burglary,Property Crime,2026,9,12:50,2,Medium,Chargesheet Filed
+CR20261000,Dadra and Nagar Haveli and Daman and Diu,Diu,Assault,Violent Crime,2026,10,23:54,6,High,Under Investigation
