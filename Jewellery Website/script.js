@@ -1,54 +1,24 @@
-$(function(){
-    var $root = $('html, body');
-$('a').click(function(){
-    $root.animate({
-       scrollTop: $($.attr(this, 'href')).offset().top
-    }, 800);
-    return false;
-});
-$(document).on('scroll', function(){
-    if($(this).scrollTop() > 185){
-        $('nav').addClass('nav-sticky');
-    }else{
-        $('nav').removeClass('nav-sticky');
+/* Navigation behavior for the credited jewellery frontend adaptation. */
+$(function () {
+  const $root = $("html, body");
+  const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+
+  // Restrict scrolling to real local anchors. External links keep normal behavior.
+  $("a[href^='#']").on("click", function (event) {
+    const id = this.getAttribute("href").slice(1);
+    const target = document.getElementById(id);
+    if (!target) return;
+    event.preventDefault();
+    $root.stop().animate({ scrollTop: $(target).offset().top }, reducedMotion.matches ? 0 : 800);
+    if ($(this).closest("nav").length) {
+      $("nav li a").removeClass("active");
+      $(this).addClass("active");
     }
-});
-$('nav li a').click(function(){
-    $('nav li a').removeClass('active');
-    $(this).addClass('active');
-});
-$('nav li a').scroll(function(){
-    $('nav li a').removeClass('active');
-    $(this).addClass('active');
-});
-$(function(){
-    //Smooth scroll
-    var $root = $('html, body');
-    $('a').click(function(){
-       $root.animate({
-          scrollTop: $($.attr(this, 'href')).offset().top
-       }, 800);
-      return false;
-    });
+  });
 
-   //Sticky navigation on scroll.
-      $(document).on('scroll', function(){
-        if($(this).scrollTop() > 185){
-            $('nav').addClass('nav-sticky');
-        }else{
-            $('nav').removeClass('nav-sticky');
-        }
-    });
-    //Add active class to the nav on click.
-    $('nav li a').click(function(){
-    $('nav li a').removeClass('active');
-    $(this).addClass('active');
-    });
-
-    $('nav li a').scroll(function(){
-    $('nav li a').removeClass('active');
-    $(this).addClass('active');
-    });
-
+  function updateStickyNavigation() {
+    $("nav").toggleClass("nav-sticky", $(window).scrollTop() > 185);
+  }
+  $(window).on("scroll", updateStickyNavigation);
+  updateStickyNavigation();
 });
-

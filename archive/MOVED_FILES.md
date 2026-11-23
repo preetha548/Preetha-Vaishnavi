@@ -1,0 +1,85 @@
+# Preserved file moves
+
+All paths below were moved without modifying their contents. Source folders and root application URLs remain in place.
+
+| Original path | Current path |
+| --- | --- |
+| `Screenshot_1-5-2026_15365_127.0.0.1.jpeg` | `screenshots/archive/Screenshot_1-5-2026_15365_127.0.0.1.jpeg` |
+| `Screenshot_1-5-2026_155231_127.0.0.1.jpeg` | `screenshots/archive/Screenshot_1-5-2026_155231_127.0.0.1.jpeg` |
+| `Screenshot_1-5-2026_161030_127.0.0.1.jpeg` | `screenshots/archive/Screenshot_1-5-2026_161030_127.0.0.1.jpeg` |
+| `Screenshot_11-5-2026_183324_.jpeg` | `screenshots/archive/Screenshot_11-5-2026_183324_.jpeg` |
+| `Screenshot_11-6-2026_115524_.jpeg` | `screenshots/archive/Screenshot_11-6-2026_115524_.jpeg` |
+| `Screenshot_11-6-2026_145051_.jpeg` | `screenshots/archive/Screenshot_11-6-2026_145051_.jpeg` |
+| `Screenshot_12-4-2026_191550_127.0.0.1.jpeg` | `screenshots/archive/Screenshot_12-4-2026_191550_127.0.0.1.jpeg` |
+| `Screenshot_12-7-2026_124517_127.0.0.1.jpeg` | `screenshots/archive/Screenshot_12-7-2026_124517_127.0.0.1.jpeg` |
+| `Screenshot_13-7-2026_141138_127.0.0.1.jpeg` | `screenshots/archive/Screenshot_13-7-2026_141138_127.0.0.1.jpeg` |
+| `Screenshot_14-5-2026_204321_127.0.0.1.jpeg` | `screenshots/archive/Screenshot_14-5-2026_204321_127.0.0.1.jpeg` |
+| `Screenshot_14-6-2026_183523_localhost.jpeg` | `screenshots/archive/Screenshot_14-6-2026_183523_localhost.jpeg` |
+| `Screenshot_15-6-2026_10366_localhost (1).jpeg` | `screenshots/archive/Screenshot_15-6-2026_10366_localhost (1).jpeg` |
+| `Screenshot_15-6-2026_163639_127.0.0.1.jpeg` | `screenshots/archive/Screenshot_15-6-2026_163639_127.0.0.1.jpeg` |
+| `Screenshot_16-6-2026_161728_127.0.0.1 (1).jpeg` | `screenshots/archive/Screenshot_16-6-2026_161728_127.0.0.1 (1).jpeg` |
+| `Screenshot_17-5-2026_155714_127.0.0.1.jpeg` | `screenshots/archive/Screenshot_17-5-2026_155714_127.0.0.1.jpeg` |
+| `Screenshot_17-6-2026_155030_localhost.jpeg` | `screenshots/archive/Screenshot_17-6-2026_155030_localhost.jpeg` |
+| `Screenshot_18-7-2026_94446_127.0.0.1.jpeg` | `screenshots/archive/Screenshot_18-7-2026_94446_127.0.0.1.jpeg` |
+| `Screenshot_19-4-2026_121854_127.0.0.1.jpeg` | `screenshots/archive/Screenshot_19-4-2026_121854_127.0.0.1.jpeg` |
+| `Screenshot_19-4-2026_122840_127.0.0.1.jpeg` | `screenshots/archive/Screenshot_19-4-2026_122840_127.0.0.1.jpeg` |
+| `Screenshot_19-4-2026_125752_127.0.0.1.jpeg` | `screenshots/archive/Screenshot_19-4-2026_125752_127.0.0.1.jpeg` |
+| `Screenshot_19-4-2026_125845_127.0.0.1.jpeg` | `screenshots/archive/Screenshot_19-4-2026_125845_127.0.0.1.jpeg` |
+| `Screenshot_2-6-2026_1190_.jpeg` | `screenshots/archive/Screenshot_2-6-2026_1190_.jpeg` |
+| `Screenshot_2-6-2026_154211_localhost.jpeg` | `screenshots/archive/Screenshot_2-6-2026_154211_localhost.jpeg` |
+| `Screenshot_21-5-2026_01655_localhost.jpeg` | `screenshots/archive/Screenshot_21-5-2026_01655_localhost.jpeg` |
+| `Screenshot_21-5-2026_03810_localhost.jpeg` | `screenshots/archive/Screenshot_21-5-2026_03810_localhost.jpeg` |
+| `Screenshot_21-7-2026_201456_127.0.0.1.jpeg` | `screenshots/archive/Screenshot_21-7-2026_201456_127.0.0.1.jpeg` |
+| `Screenshot_21-7-2026_201611_127.0.0.1.jpeg` | `screenshots/archive/Screenshot_21-7-2026_201611_127.0.0.1.jpeg` |
+| `Screenshot_22-5-2026_12131_localhost.jpeg` | `screenshots/archive/Screenshot_22-5-2026_12131_localhost.jpeg` |
+| `Screenshot_22-5-2026_202312_localhost.jpeg` | `screenshots/archive/Screenshot_22-5-2026_202312_localhost.jpeg` |
+| `Screenshot_22-5-2026_22258_localhost.jpeg` | `screenshots/archive/Screenshot_22-5-2026_22258_localhost.jpeg` |
+| `Screenshot_22-5-2026_224842_localhost.jpeg` | `screenshots/archive/Screenshot_22-5-2026_224842_localhost.jpeg` |
+| `Screenshot_22-7-2026_20525_127.0.0.1.jpeg` | `screenshots/archive/Screenshot_22-7-2026_20525_127.0.0.1.jpeg` |
+| `Screenshot_23-5-2026_134139_localhost.jpeg` | `screenshots/archive/Screenshot_23-5-2026_134139_localhost.jpeg` |
+| `Screenshot_23-7-2026_23116_127.0.0.1.jpeg` | `screenshots/archive/Screenshot_23-7-2026_23116_127.0.0.1.jpeg` |
+| `Screenshot_26-4-2026_214413_127.0.0.1.jpeg` | `screenshots/archive/Screenshot_26-4-2026_214413_127.0.0.1.jpeg` |
+| `Screenshot_28-5-2026_142524_127.0.0.1.jpeg` | `screenshots/archive/Screenshot_28-5-2026_142524_127.0.0.1.jpeg` |
+| `Screenshot_28-5-2026_22193_127.0.0.1.jpeg` | `screenshots/archive/Screenshot_28-5-2026_22193_127.0.0.1.jpeg` |
+| `Screenshot_28-5-2026_51052_localhost.jpeg` | `screenshots/archive/Screenshot_28-5-2026_51052_localhost.jpeg` |
+| `Screenshot_28-5-2026_5229_127.0.0.1.jpeg` | `screenshots/archive/Screenshot_28-5-2026_5229_127.0.0.1.jpeg` |
+| `Screenshot_28-5-2026_54212_localhost.jpeg` | `screenshots/archive/Screenshot_28-5-2026_54212_localhost.jpeg` |
+| `Screenshot_28-5-2026_55710_127.0.0.1.jpeg` | `screenshots/archive/Screenshot_28-5-2026_55710_127.0.0.1.jpeg` |
+| `Screenshot_29-4-2026_125136_127.0.0.1.jpeg` | `screenshots/archive/Screenshot_29-4-2026_125136_127.0.0.1.jpeg` |
+| `Screenshot_29-4-2026_12518_127.0.0.1.jpeg` | `screenshots/archive/Screenshot_29-4-2026_12518_127.0.0.1.jpeg` |
+| `Screenshot_29-4-2026_12528_127.0.0.1.jpeg` | `screenshots/archive/Screenshot_29-4-2026_12528_127.0.0.1.jpeg` |
+| `Screenshot_29-4-2026_142859_127.0.0.1.jpeg` | `screenshots/archive/Screenshot_29-4-2026_142859_127.0.0.1.jpeg` |
+| `Screenshot_29-4-2026_155012_.jpeg` | `screenshots/archive/Screenshot_29-4-2026_155012_.jpeg` |
+| `Screenshot_29-4-2026_155028_.jpeg` | `screenshots/archive/Screenshot_29-4-2026_155028_.jpeg` |
+| `Screenshot_29-4-2026_155044_.jpeg` | `screenshots/archive/Screenshot_29-4-2026_155044_.jpeg` |
+| `Screenshot_29-4-2026_15510_.jpeg` | `screenshots/archive/Screenshot_29-4-2026_15510_.jpeg` |
+| `Screenshot_3-5-2026_192143_127.0.0.1.jpeg` | `screenshots/archive/Screenshot_3-5-2026_192143_127.0.0.1.jpeg` |
+| `Screenshot_3-5-2026_19841_127.0.0.1.jpeg` | `screenshots/archive/Screenshot_3-5-2026_19841_127.0.0.1.jpeg` |
+| `Screenshot_3-5-2026_19917_127.0.0.1.jpeg` | `screenshots/archive/Screenshot_3-5-2026_19917_127.0.0.1.jpeg` |
+| `Screenshot_3-5-2026_1994_127.0.0.1.jpeg` | `screenshots/archive/Screenshot_3-5-2026_1994_127.0.0.1.jpeg` |
+| `Screenshot_30-5-2026_121623_127.0.0.1.jpeg` | `screenshots/archive/Screenshot_30-5-2026_121623_127.0.0.1.jpeg` |
+| `Screenshot_30-5-2026_13727_localhost.jpeg` | `screenshots/archive/Screenshot_30-5-2026_13727_localhost.jpeg` |
+| `Screenshot_30-5-2026_145239_localhost.jpeg` | `screenshots/archive/Screenshot_30-5-2026_145239_localhost.jpeg` |
+| `Screenshot_31-5-2026_21853_127.0.0.1.jpeg` | `screenshots/archive/Screenshot_31-5-2026_21853_127.0.0.1.jpeg` |
+| `Screenshot_31-5-2026_21936_127.0.0.1.jpeg` | `screenshots/archive/Screenshot_31-5-2026_21936_127.0.0.1.jpeg` |
+| `Screenshot_5-5-2026_165557_127.0.0.1.jpeg` | `screenshots/archive/Screenshot_5-5-2026_165557_127.0.0.1.jpeg` |
+| `Screenshot_5-5-2026_193321_127.0.0.1.jpeg` | `screenshots/archive/Screenshot_5-5-2026_193321_127.0.0.1.jpeg` |
+| `Screenshot_6-6-2026_13325_127.0.0.1.jpeg` | `screenshots/archive/Screenshot_6-6-2026_13325_127.0.0.1.jpeg` |
+| `banner.png` | `archive/unused/banner.png` |
+| `logo_lite-cbb357.png` | `archive/unused/logo_lite-cbb357.png` |
+| `retro-games.jpg` | `archive/unused/retro-games.jpg` |
+| `tests.html` | `archive/unused/tests.html` |
+| `thumbnail.jpg` | `archive/unused/thumbnail.jpg` |
+| `Projects.zip` | `archive/Projects.zip` |
+| `.github/workflows/0-welcome.yml` | `archive/github-skills/workflows/0-welcome.yml` |
+| `.github/workflows/1-copilot-extension.yml` | `archive/github-skills/workflows/1-copilot-extension.yml` |
+| `.github/workflows/2-skills-javascript.yml` | `archive/github-skills/workflows/2-skills-javascript.yml` |
+| `.github/workflows/3-copilot-hub.yml` | `archive/github-skills/workflows/3-copilot-hub.yml` |
+| `.github/workflows/4-copilot-comment.yml` | `archive/github-skills/workflows/4-copilot-comment.yml` |
+| `.github/steps/-step.txt` | `archive/github-skills/steps/-step.txt` |
+| `.github/steps/0-welcome.md` | `archive/github-skills/steps/0-welcome.md` |
+| `.github/steps/1-copilot-extension.md` | `archive/github-skills/steps/1-copilot-extension.md` |
+| `.github/steps/2-skills-javascript.md` | `archive/github-skills/steps/2-skills-javascript.md` |
+| `.github/steps/3-copilot-hub.md` | `archive/github-skills/steps/3-copilot-hub.md` |
+| `.github/steps/4-copilot-comment.md` | `archive/github-skills/steps/4-copilot-comment.md` |
+| `.github/steps/X-finish.md` | `archive/github-skills/steps/X-finish.md` |

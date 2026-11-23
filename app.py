@@ -1,68 +1,90 @@
+"""Local educational image-classification demo. Not for medical diagnosis."""
 import os
-import tensorflow as tf
-import numpy as np
-from tensorflow.keras.preprocessing import image
-from PIL import Image
-import cv2
-from keras.models import load_model
-from flask import Flask, request, render_template
+from pathlib import Path
+from tempfile import TemporaryDirectory
+
+from flask import Flask, render_template, request
+from PIL import Image, UnidentifiedImageError
 from werkzeug.utils import secure_filename
 
-app = Flask(__name__)
-model = load_model('BrainTumor10EpochsCategorical.h5')
-print('Model loaded. Check http://127.0.0.1:5000/')
+from brain_tumor import DEFAULT_MODEL, ROOT, WEB_THRESHOLD, predict_file
 
-# Ensure the uploads folder exists
-UPLOAD_FOLDER = 'uploads'
-if not os.path.exists(UPLOAD_FOLDER):
-    os.makedirs(UPLOAD_FOLDER)
+MAX_PIXELS = 16_000_000
+FORMATS = {".jpg": "JPEG", ".jpeg": "JPEG", ".png": "PNG"}
 
-# Function to process and predict tumor
-def getResult(img):
-    image = cv2.imread(img)
-    img = Image.fromarray(image)
-    img = img.resize((64, 64))
-    img = np.array(img)
-    input_img = img.astype('float32') / 255.0
-    input_img = np.expand_dims(input_img, axis=0)
-    predictions = model.predict(input_img)
-    tumor_probability = predictions[0][1] * 100
-    
-    # Determine the binary classification based on a threshold
-    threshold = 30  # Adjust the threshold as needed
-    if tumor_probability >= threshold:
-        binary_result = "Yes"
-    else:
-        binary_result = "No"
-    
-    return tumor_probability, binary_result
 
-@app.route('/', methods=['GET'])
-def index():
-    return render_template('index.html')
+def validate_image(path, extension):
+    """Check the decoded format and pixel budget, not just the filename."""
+    try:
+        with Image.open(path) as uploaded:
+            if uploaded.format != FORMATS[extension]:
+                raise ValueError("The file content must match its JPEG or PNG extension.")
+            if uploaded.width * uploaded.height > MAX_PIXELS:
+                raise ValueError("Use an image with at most 16 million pixels.")
+            uploaded.verify()
+    except (UnidentifiedImageError, OSError, Image.DecompressionBombError) as exc:
+        raise ValueError("Upload a valid, undamaged JPEG or PNG image.") from exc
 
-@app.route('/predict', methods=['GET', 'POST'])
-def upload():
-    if request.method == 'POST':
-        f = request.files['file']
-        # Ensure the uploads directory is used to store files
-        basepath = os.path.dirname(__file__)
-        file_path = os.path.join(basepath, UPLOAD_FOLDER, secure_filename(f.filename))
-        
-        # Save the file to the 'uploads' directory
-        f.save(file_path)
-        
-        # Process the image and get the result
-        tumor_probability, binary_result = getResult(file_path)
-        
-        # Return the result as a string
-        result = (
-            f"The probability of tumor presence is: {tumor_probability:.2f}%  and  "
-            f"Tumor presence: {binary_result}"
-        )
-        
-        return result
-    return None
 
-if __name__ == '__main__':
-    app.run(debug=True)
+def create_app(config=None, predictor=None):
+    application = Flask(__name__, template_folder=str(ROOT / "templates"))
+    model_path = Path(os.environ.get("BRAIN_TUMOR_MODEL_PATH", str(DEFAULT_MODEL)))
+    application.config.update(
+        MAX_CONTENT_LENGTH=6 * 1024 * 1024,
+        MODEL_PATH=model_path if model_path.is_absolute() else ROOT / model_path,
+    )
+    if config:
+        application.config.update(config)
+    predict = predictor or predict_file
+
+    def page(status=200, **context):
+        return render_template("brain_tumor.html", threshold=WEB_THRESHOLD, **context), status
+
+    @application.get("/")
+    def index():
+        return page()
+
+    @application.post("/predict")
+    def upload():
+        uploaded = request.files.get("file")
+        if uploaded is None or not uploaded.filename:
+            return page(400, error="Choose a JPEG or PNG image first.")
+        extension = Path(secure_filename(uploaded.filename)).suffix.lower()
+        if extension not in FORMATS:
+            return page(400, error="Only JPEG and PNG images are accepted.")
+        # A new private directory per request prevents traversal and collisions.
+        # The original filename is never used on disk; cleanup also runs on errors.
+        try:
+            with TemporaryDirectory(prefix="brain-tumor-") as folder:
+                path = Path(folder) / ("image" + extension)
+                uploaded.save(path)
+                validate_image(path, extension)
+                score, binary_result = predict(path, application.config["MODEL_PATH"])
+            return page(score=score, binary_result=binary_result)
+        except ValueError as exc:
+            return page(400, error=str(exc))
+        except RuntimeError:
+            application.logger.warning("Inference unavailable; check the local model environment.")
+            return page(503, error="The model is unavailable. Check the model path and project setup guide.")
+        except Exception:
+            # Do not log submitted filenames, image data, or arbitrary exception text.
+            application.logger.error("Image processing failed.")
+            return page(500, error="The image could not be processed. Please try another sample image.")
+
+    @application.errorhandler(413)
+    def too_large(_error):
+        return page(413, error="The upload request must be smaller than 6 MB.")
+
+    @application.after_request
+    def response_headers(response):
+        response.headers["Cache-Control"] = "no-store"
+        response.headers["X-Content-Type-Options"] = "nosniff"
+        return response
+
+    return application
+
+
+app = create_app()
+
+if __name__ == "__main__":
+    app.run(host="127.0.0.1", port=5000, debug=False)

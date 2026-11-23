@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Educational Image Classification Prototype</title>
+  <style>
+    * { box-sizing: border-box; }
+    body { margin: 0; background: #f1f5f9; color: #172b3a; font: 16px/1.6 system-ui, sans-serif; }
+    main { width: min(700px, calc(100% - 32px)); margin: 48px auto; padding: clamp(20px, 4vw, 40px); background: white; border: 1px solid #d5dfe8; border-radius: 12px; }
+    h1 { line-height: 1.2; font-size: clamp(26px, 5vw, 36px); }
+    .notice { padding: 16px; background: #fff5da; border-left: 4px solid #96680c; }
+    label, input { display: block; margin: 12px 0; max-width: 100%; }
+    button { border: 0; background: #184b68; color: white; padding: 12px 20px; border-radius: 5px; font: inherit; cursor: pointer; }
+    button:focus-visible, input:focus-visible { outline: 3px solid #96680c; outline-offset: 4px; }
+    .error { color: #912c21; }
+    .result { margin-top: 24px; border-top: 1px solid #d5dfe8; }
+    small { display: block; color: #40586b; }
+  </style>
+</head>
+<body>
+<main>
+  <p>PREETHA VAISHNAVI · LEARNING LAB</p>
+  <h1>Brain Tumor Image Classification</h1>
+  <p class="notice"><strong>Educational / research image-classification prototype. Not intended for medical diagnosis.</strong> Use non-sensitive sample images only.</p>
+  <p>Explore the output of an existing two-class image model. This demo cannot establish whether an image contains a tumor or whether an image is a suitable scan.</p>
+  <form action="{{ url_for('upload') }}" method="post" enctype="multipart/form-data">
+    <label for="file">Sample image (JPEG or PNG)</label>
+    <input id="file" name="file" type="file" accept="image/jpeg,image/png" required aria-describedby="upload-help">
+    <small id="upload-help">Maximum request size: 6 MB. Maximum image size: 16 million pixels. Uploaded files are removed after processing.</small>
+    <p><button type="submit">Run educational example</button></p>
+  </form>
+  {% if error %}<p class="error" role="alert">{{ error }}</p>{% endif %}
+  {% if score is defined %}
+  <section class="result" aria-labelledby="result-title">
+    <h2 id="result-title">Model output</h2>
+    <p>Class-1 score: <strong>{{ '%.2f' | format(score) }}%</strong></p>
+    <p>Threshold output: <strong>{{ binary_result }}</strong> (manual threshold: {{ threshold | int }}%).</p>
+    <p>This score is not a calibrated disease probability. “Yes” / “No” are legacy class labels, not a diagnosis. The threshold and preprocessing have not been medically validated.</p>
+  </section>
+  {% endif %}
+</main>
+</body>
+</html>

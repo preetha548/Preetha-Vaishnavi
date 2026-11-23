@@ -35,3 +35,43 @@
 .Trashes
 ehthumbs.db
 Thumbs.db
+
+# Node / frontend output
+node_modules/
+dist/
+build/
+.parcel-cache/
+.cache/
+coverage/
+
+# Python environments, caches and analysis output
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.venv/
+venv/
+env/
+.ipynb_checkpoints/
+
+# Local configuration and credentials (examples are safe to commit)
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# Runtime / private input data
+uploads/
+datasets/
+*.pkl
+logs/
+Company IT Prediction analysis/output/
+
+# Editor / OS files
+.idea/
+.vscode/
+*.swp
+*.swo
+.DS_Store

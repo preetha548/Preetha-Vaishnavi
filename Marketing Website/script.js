@@ -61,6 +61,7 @@ let count = 6;
 likeButton.addEventListener("click", () => {
 
     liked = !liked;
+    likeButton.setAttribute("aria-pressed", String(liked));
 
     if (liked) {
         count++;
@@ -88,9 +89,11 @@ repostButton.addEventListener("click", () => {
 
     if (label.textContent === "Repost") {
         label.textContent = "Reposted";
+        repostButton.setAttribute("aria-pressed", "true");
         repostButton.classList.add("liked");
     } else {
         label.textContent = "Repost";
+        repostButton.setAttribute("aria-pressed", "false");
         repostButton.classList.remove("liked");
     }
 });
