@@ -1,0 +1,16 @@
+Feature,Importance
+num__Academic Pressure,0.13909081214665894
+cat__Have you ever had suicidal thoughts ?_No,0.11599286217511022
+cat__Have you ever had suicidal thoughts ?_Yes,0.11126074681958824
+num__Financial Stress,0.08518762063072338
+num__Age,0.06612376327441608
+num__CGPA,0.06076821121361601
+num__Work/Study Hours,0.05866664419087473
+num__Study Satisfaction,0.03772962926907754
+cat__Dietary Habits_Unhealthy,0.01723515946399105
+cat__Dietary Habits_Healthy,0.012922884701957214
+cat__Gender_Male,0.010560731218308615
+cat__Gender_Female,0.010295295709616521
+cat__Degree_Class 12,0.010266120446225092
+cat__Sleep Duration_Less than 5 hours,0.009830974584947796
+cat__Sleep Duration_7-8 hours,0.009583856940869218
