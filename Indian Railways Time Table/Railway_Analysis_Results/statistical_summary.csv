@@ -1,0 +1,13 @@
+,count,unique,top,freq,mean,std,min,25%,50%,75%,max
+Train No.,69006,2810,'59386',128,,,,,,,
+train Name,69006,2187,INTERCITY EXP,411,,,,,,,
+islno,69006.0,,,,18.033489841463062,16.012941113208576,1.0,7.0,14.0,24.0,120.0
+station Code,69006,4344,BZA,313,,,,,,,
+Station Name,69006,4337,VIJAYAWADA JN,313,,,,,,,
+Arrival time,69006,1440,'00:00:00',2828,,,,,,,
+Departure time,69006,1440,'00:00:00',2889,,,,,,,
+Distance,69006.0,,,,647.7985827319363,643.4164706632032,0.0,173.0,432.0,931.0,4273.0
+Source Station Code,69006,357,HWH,2504,,,,,,,
+source Station Name,69006,355,HOWRAH JN,2504,,,,,,,
+Destination station Code,69006,358,HWH,2656,,,,,,,
+Destination Station Name,69006,356,HOWRAH JN,2656,,,,,,,
