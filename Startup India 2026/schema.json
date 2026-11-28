@@ -1,0 +1,158 @@
+[
+  {
+    "name": "startup_name",
+    "csv_type": "string",
+    "parquet_type": "string",
+    "description": "Registered or trading name of the startup as shown on Startup India.",
+    "null_pct": 0.0,
+    "example": "PYTWO FOODS & HOSPITALITY PRIVATE LIMITED"
+  },
+  {
+    "name": "website",
+    "csv_type": "string",
+    "parquet_type": "string",
+    "description": "Company website, normalised to include a scheme. Null when missing, invalid or a social-media profile.",
+    "null_pct": 57.61,
+    "example": "https://pigeonis.in/"
+  },
+  {
+    "name": "detail_url",
+    "csv_type": "string",
+    "parquet_type": "string",
+    "description": "Public Startup India profile URL. Contains the public profile slug.",
+    "null_pct": 0.0,
+    "example": "https://www.startupindia.gov.in/content/sih/en/profile.Startup.5abf7570e4b026aa2861d5d3.html"
+  },
+  {
+    "name": "country",
+    "csv_type": "string",
+    "parquet_type": "string",
+    "description": "Country of operation. Constant 'India' in this snapshot.",
+    "null_pct": 0.0,
+    "example": "India"
+  },
+  {
+    "name": "state",
+    "csv_type": "string",
+    "parquet_type": "string",
+    "description": "Normalised Indian state / union territory.",
+    "null_pct": 0.0,
+    "example": "Uttar Pradesh"
+  },
+  {
+    "name": "city",
+    "csv_type": "string",
+    "parquet_type": "string",
+    "description": "Normalised city / district name.",
+    "null_pct": 5.45,
+    "example": "Lucknow"
+  },
+  {
+    "name": "city_raw",
+    "csv_type": "string",
+    "parquet_type": "string",
+    "description": "Original city value, only populated when normalisation changed it.",
+    "null_pct": 93.2,
+    "example": "Bengaluru Urban"
+  },
+  {
+    "name": "industries",
+    "csv_type": "string",
+    "parquet_type": "list<string>",
+    "description": "Industry labels. Semicolon-delimited in CSV; list<string> in Parquet.",
+    "null_pct": 2.41,
+    "example": [
+      "Agriculture"
+    ]
+  },
+  {
+    "name": "sectors",
+    "csv_type": "string",
+    "parquet_type": "list<string>",
+    "description": "Sector labels. Semicolon-delimited in CSV; list<string> in Parquet.",
+    "null_pct": 2.44,
+    "example": [
+      "Agri-Tech"
+    ]
+  },
+  {
+    "name": "stages",
+    "csv_type": "string",
+    "parquet_type": "string",
+    "description": "DPIIT/Startup India maturity stage: Prototype, Validation, EarlyTraction or Scaling.",
+    "null_pct": 0.0,
+    "example": "Scaling"
+  },
+  {
+    "name": "dipp_number",
+    "csv_type": "string",
+    "parquet_type": "string",
+    "description": "DPIIT recognition number (DIPP + digits). Null when not published.",
+    "null_pct": 57.25,
+    "example": "DIPP17535"
+  },
+  {
+    "name": "cin",
+    "csv_type": "string",
+    "parquet_type": "string",
+    "description": "Company Identification Number, LLPIN or other registration number as published.",
+    "null_pct": 27.46,
+    "example": "U55204UP2016PTC077561"
+  },
+  {
+    "name": "cin_type",
+    "csv_type": "string",
+    "parquet_type": "string",
+    "description": "Classification of `cin`: `cin` (21-character company CIN), `llpin` (LLP registration, e.g. AAA-1234), `other` (unrecognised format), or null.",
+    "null_pct": 27.46,
+    "example": "cin"
+  },
+  {
+    "name": "cin_valid",
+    "csv_type": "boolean",
+    "parquet_type": "bool",
+    "description": "True when `cin_type` is `cin` or `llpin`; false for `other`; null when `cin` is null.",
+    "null_pct": 27.46,
+    "example": true
+  },
+  {
+    "name": "listed_date",
+    "csv_type": "string",
+    "parquet_type": "string",
+    "description": "Date the profile was listed on Startup India (ISO 8601, UTC).",
+    "null_pct": 0.0,
+    "example": "2018-03-31T11:48:00+00:00"
+  },
+  {
+    "name": "scraped_at",
+    "csv_type": "string",
+    "parquet_type": "string",
+    "description": "Timestamp of the scrape that produced the record (ISO 8601, UTC).",
+    "null_pct": 0.0,
+    "example": "2026-09-21T13:43:37+00:00"
+  },
+  {
+    "name": "idea_brief",
+    "csv_type": "string",
+    "parquet_type": "string",
+    "description": "Free-text company description. HTML stripped, PII redacted.",
+    "null_pct": 9.66,
+    "example": "Pigeon Innovative Solutions, is a Drone Survey company in India specializing in professional aerial photography servi..."
+  },
+  {
+    "name": "id",
+    "csv_type": "string",
+    "parquet_type": "string",
+    "description": "Startup India profile slug; stable row identifier within this snapshot.",
+    "null_pct": 0.0,
+    "example": "5abf7570e4b026aa2861d5d3"
+  },
+  {
+    "name": "split",
+    "csv_type": "string",
+    "parquet_type": "string",
+    "description": "Deterministic 80/10/10 split (train/validation/test), stratified by first sector, seed 42.",
+    "null_pct": 0.0,
+    "example": "train"
+  }
+]
